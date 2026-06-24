@@ -1,0 +1,1528 @@
+[
+  {
+    "slug": "new-york-ny",
+    "city": "New York",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 40.7128,
+    "lng": -74.006,
+    "seeded": true
+  },
+  {
+    "slug": "los-angeles-ca",
+    "city": "Los Angeles",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 34.0522,
+    "lng": -118.2437,
+    "seeded": true
+  },
+  {
+    "slug": "chicago-il",
+    "city": "Chicago",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "lat": 41.8781,
+    "lng": -87.6298,
+    "seeded": true
+  },
+  {
+    "slug": "houston-tx",
+    "city": "Houston",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 29.7604,
+    "lng": -95.3698,
+    "seeded": true
+  },
+  {
+    "slug": "san-antonio-tx",
+    "city": "San Antonio",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 29.4241,
+    "lng": -98.4936,
+    "seeded": true
+  },
+  {
+    "slug": "dallas-tx",
+    "city": "Dallas",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 32.7767,
+    "lng": -96.797,
+    "seeded": true
+  },
+  {
+    "slug": "austin-tx",
+    "city": "Austin",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 30.2672,
+    "lng": -97.7431,
+    "seeded": true
+  },
+  {
+    "slug": "phoenix-az",
+    "city": "Phoenix",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "lat": 33.4484,
+    "lng": -112.074,
+    "seeded": true
+  },
+  {
+    "slug": "san-diego-ca",
+    "city": "San Diego",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 32.7157,
+    "lng": -117.1611,
+    "seeded": true
+  },
+  {
+    "slug": "denver-co",
+    "city": "Denver",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "lat": 39.7392,
+    "lng": -104.9903,
+    "seeded": true
+  },
+  {
+    "slug": "atlanta-ga",
+    "city": "Atlanta",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "lat": 33.749,
+    "lng": -84.388,
+    "seeded": true
+  },
+  {
+    "slug": "albuquerque-nm",
+    "city": "Albuquerque",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "lat": 35.0844,
+    "lng": -106.6504,
+    "seeded": true
+  },
+  {
+    "slug": "philadelphia-pa",
+    "city": "Philadelphia",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 39.9526,
+    "lng": -75.1652,
+    "seeded": true
+  },
+  {
+    "slug": "san-jose-ca",
+    "city": "San Jose",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 37.3382,
+    "lng": -121.8863,
+    "seeded": true
+  },
+  {
+    "slug": "san-francisco-ca",
+    "city": "San Francisco",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 37.7749,
+    "lng": -122.4194,
+    "seeded": true
+  },
+  {
+    "slug": "seattle-wa",
+    "city": "Seattle",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "lat": 47.6062,
+    "lng": -122.3321,
+    "seeded": true
+  },
+  {
+    "slug": "miami-fl",
+    "city": "Miami",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 25.7617,
+    "lng": -80.1918,
+    "seeded": true
+  },
+  {
+    "slug": "jacksonville-fl",
+    "city": "Jacksonville",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 30.3322,
+    "lng": -81.6557,
+    "seeded": true
+  },
+  {
+    "slug": "columbus-oh",
+    "city": "Columbus",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 39.9612,
+    "lng": -82.9988,
+    "seeded": true
+  },
+  {
+    "slug": "charlotte-nc",
+    "city": "Charlotte",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 35.2271,
+    "lng": -80.8431,
+    "seeded": true
+  },
+  {
+    "slug": "indianapolis-in",
+    "city": "Indianapolis",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "lat": 39.7684,
+    "lng": -86.1581,
+    "seeded": true
+  },
+  {
+    "slug": "washington-dc",
+    "city": "Washington",
+    "state": "District of Columbia",
+    "stateAbbr": "DC",
+    "lat": 38.9072,
+    "lng": -77.0369,
+    "seeded": true
+  },
+  {
+    "slug": "boston-ma",
+    "city": "Boston",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "lat": 42.3601,
+    "lng": -71.0589,
+    "seeded": true
+  },
+  {
+    "slug": "nashville-tn",
+    "city": "Nashville",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 36.1627,
+    "lng": -86.7816,
+    "seeded": true
+  },
+  {
+    "slug": "portland-or",
+    "city": "Portland",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "lat": 45.5152,
+    "lng": -122.6784,
+    "seeded": true
+  },
+  {
+    "slug": "las-vegas-nv",
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "lat": 36.1699,
+    "lng": -115.1398,
+    "seeded": true
+  },
+  {
+    "slug": "orlando-fl",
+    "city": "Orlando",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 28.5384,
+    "lng": -81.3789,
+    "seeded": true
+  },
+  {
+    "slug": "tampa-fl",
+    "city": "Tampa",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 27.9506,
+    "lng": -82.4572,
+    "seeded": true
+  },
+  {
+    "slug": "sacramento-ca",
+    "city": "Sacramento",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 38.5816,
+    "lng": -121.4944,
+    "seeded": true
+  },
+  {
+    "slug": "minneapolis-mn",
+    "city": "Minneapolis",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "lat": 44.9778,
+    "lng": -93.265,
+    "seeded": true
+  },
+  {
+    "slug": "st-louis-mo",
+    "city": "St. Louis",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "lat": 38.627,
+    "lng": -90.1994,
+    "seeded": true
+  },
+  {
+    "slug": "pittsburgh-pa",
+    "city": "Pittsburgh",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 40.4406,
+    "lng": -79.9959,
+    "seeded": true
+  },
+  {
+    "slug": "cincinnati-oh",
+    "city": "Cincinnati",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 39.1031,
+    "lng": -84.512,
+    "seeded": true
+  },
+  {
+    "slug": "kansas-city-mo",
+    "city": "Kansas City",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "lat": 39.0997,
+    "lng": -94.5786,
+    "seeded": true
+  },
+  {
+    "slug": "salt-lake-city-ut",
+    "city": "Salt Lake City",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "lat": 40.7608,
+    "lng": -111.891,
+    "seeded": true
+  },
+  {
+    "slug": "raleigh-nc",
+    "city": "Raleigh",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 35.7796,
+    "lng": -78.6382,
+    "seeded": true
+  },
+  {
+    "slug": "fort-worth-tx",
+    "city": "Fort Worth",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 32.7555,
+    "lng": -97.3308,
+    "seeded": true
+  },
+  {
+    "slug": "el-paso-tx",
+    "city": "El Paso",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 31.7619,
+    "lng": -106.485,
+    "seeded": true
+  },
+  {
+    "slug": "oklahoma-city-ok",
+    "city": "Oklahoma City",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "lat": 35.4676,
+    "lng": -97.5164,
+    "seeded": true
+  },
+  {
+    "slug": "tulsa-ok",
+    "city": "Tulsa",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "lat": 36.154,
+    "lng": -95.9928,
+    "seeded": true
+  },
+  {
+    "slug": "louisville-ky",
+    "city": "Louisville",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "lat": 38.2527,
+    "lng": -85.7585,
+    "seeded": true
+  },
+  {
+    "slug": "memphis-tn",
+    "city": "Memphis",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 35.1495,
+    "lng": -90.049,
+    "seeded": true
+  },
+  {
+    "slug": "milwaukee-wi",
+    "city": "Milwaukee",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 43.0389,
+    "lng": -87.9065,
+    "seeded": true
+  },
+  {
+    "slug": "baltimore-md",
+    "city": "Baltimore",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "lat": 39.2904,
+    "lng": -76.6122,
+    "seeded": true
+  },
+  {
+    "slug": "detroit-mi",
+    "city": "Detroit",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 42.3314,
+    "lng": -83.0458,
+    "seeded": true
+  },
+  {
+    "slug": "cleveland-oh",
+    "city": "Cleveland",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 41.4993,
+    "lng": -81.6944,
+    "seeded": true
+  },
+  {
+    "slug": "new-orleans-la",
+    "city": "New Orleans",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "lat": 29.9511,
+    "lng": -90.0715,
+    "seeded": true
+  },
+  {
+    "slug": "tucson-az",
+    "city": "Tucson",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "lat": 32.2226,
+    "lng": -110.9747,
+    "seeded": true
+  },
+  {
+    "slug": "fresno-ca",
+    "city": "Fresno",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 36.7378,
+    "lng": -119.7871,
+    "seeded": true
+  },
+  {
+    "slug": "omaha-ne",
+    "city": "Omaha",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "lat": 41.2565,
+    "lng": -95.9345,
+    "seeded": true
+  },
+  {
+    "slug": "richmond-va",
+    "city": "Richmond",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "lat": 37.5407,
+    "lng": -77.436,
+    "seeded": true
+  },
+  {
+    "slug": "virginia-beach-va",
+    "city": "Virginia Beach",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "lat": 36.8529,
+    "lng": -75.978,
+    "seeded": true
+  },
+  {
+    "slug": "buffalo-ny",
+    "city": "Buffalo",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 42.8864,
+    "lng": -78.8784,
+    "seeded": true
+  },
+  {
+    "slug": "hartford-ct",
+    "city": "Hartford",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "lat": 41.7658,
+    "lng": -72.6734,
+    "seeded": true
+  },
+  {
+    "slug": "birmingham-al",
+    "city": "Birmingham",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "lat": 33.5186,
+    "lng": -86.8104,
+    "seeded": true
+  },
+  {
+    "slug": "grand-rapids-mi",
+    "city": "Grand Rapids",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 42.9634,
+    "lng": -85.6681,
+    "seeded": true
+  },
+  {
+    "slug": "knoxville-tn",
+    "city": "Knoxville",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 35.9606,
+    "lng": -83.9207,
+    "seeded": true
+  },
+  {
+    "slug": "london-uk",
+    "city": "London",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 51.5074,
+    "lng": -0.1278,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "birmingham-uk",
+    "city": "Birmingham",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 52.4862,
+    "lng": -1.8904,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "manchester-uk",
+    "city": "Manchester",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 53.4808,
+    "lng": -2.2426,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "leeds-uk",
+    "city": "Leeds",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 53.8008,
+    "lng": -1.5491,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "liverpool-uk",
+    "city": "Liverpool",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 53.4084,
+    "lng": -2.9916,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "bristol-uk",
+    "city": "Bristol",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 51.4545,
+    "lng": -2.5879,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "sheffield-uk",
+    "city": "Sheffield",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 53.3811,
+    "lng": -1.4701,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "glasgow-uk",
+    "city": "Glasgow",
+    "state": "Scotland",
+    "stateAbbr": "UK",
+    "lat": 55.8642,
+    "lng": -4.2518,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "edinburgh-uk",
+    "city": "Edinburgh",
+    "state": "Scotland",
+    "stateAbbr": "UK",
+    "lat": 55.9533,
+    "lng": -3.1883,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "cardiff-uk",
+    "city": "Cardiff",
+    "state": "Wales",
+    "stateAbbr": "UK",
+    "lat": 51.4816,
+    "lng": -3.1791,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "dublin-ie",
+    "city": "Dublin",
+    "state": "Ireland",
+    "stateAbbr": "Ireland",
+    "lat": 53.3498,
+    "lng": -6.2603,
+    "seeded": true,
+    "country": "Ireland",
+    "countryCode": "IE"
+  },
+  {
+    "slug": "cork-ie",
+    "city": "Cork",
+    "state": "Ireland",
+    "stateAbbr": "Ireland",
+    "lat": 51.8985,
+    "lng": -8.4756,
+    "seeded": true,
+    "country": "Ireland",
+    "countryCode": "IE"
+  },
+  {
+    "slug": "galway-ie",
+    "city": "Galway",
+    "state": "Ireland",
+    "stateAbbr": "Ireland",
+    "lat": 53.2707,
+    "lng": -9.0568,
+    "seeded": true,
+    "country": "Ireland",
+    "countryCode": "IE"
+  },
+  {
+    "slug": "limerick-ie",
+    "city": "Limerick",
+    "state": "Ireland",
+    "stateAbbr": "Ireland",
+    "lat": 52.6638,
+    "lng": -8.6267,
+    "seeded": true,
+    "country": "Ireland",
+    "countryCode": "IE"
+  },
+  {
+    "slug": "sydney-nsw",
+    "city": "Sydney",
+    "state": "New South Wales",
+    "stateAbbr": "NSW",
+    "lat": -33.8688,
+    "lng": 151.2093,
+    "seeded": true,
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "melbourne-vic",
+    "city": "Melbourne",
+    "state": "Victoria",
+    "stateAbbr": "VIC",
+    "lat": -37.8136,
+    "lng": 144.9631,
+    "seeded": true,
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "brisbane-qld",
+    "city": "Brisbane",
+    "state": "Queensland",
+    "stateAbbr": "QLD",
+    "lat": -27.4698,
+    "lng": 153.0251,
+    "seeded": true,
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "perth-wa",
+    "city": "Perth",
+    "state": "Western Australia",
+    "stateAbbr": "WA",
+    "lat": -31.9523,
+    "lng": 115.8613,
+    "seeded": true,
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "adelaide-sa",
+    "city": "Adelaide",
+    "state": "South Australia",
+    "stateAbbr": "SA",
+    "lat": -34.9285,
+    "lng": 138.6007,
+    "seeded": true,
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "gold-coast-qld",
+    "city": "Gold Coast",
+    "state": "Queensland",
+    "stateAbbr": "QLD",
+    "lat": -28.0167,
+    "lng": 153.4,
+    "seeded": true,
+    "country": "Australia",
+    "countryCode": "AU"
+  },
+  {
+    "slug": "toronto-on",
+    "city": "Toronto",
+    "state": "Ontario",
+    "stateAbbr": "ON",
+    "lat": 43.6532,
+    "lng": -79.3832,
+    "seeded": true,
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "vancouver-bc",
+    "city": "Vancouver",
+    "state": "British Columbia",
+    "stateAbbr": "BC",
+    "lat": 49.2827,
+    "lng": -123.1207,
+    "seeded": true,
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "montreal-qc",
+    "city": "Montreal",
+    "state": "Quebec",
+    "stateAbbr": "QC",
+    "lat": 45.5019,
+    "lng": -73.5674,
+    "seeded": true,
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "calgary-ab",
+    "city": "Calgary",
+    "state": "Alberta",
+    "stateAbbr": "AB",
+    "lat": 51.0447,
+    "lng": -114.0719,
+    "seeded": true,
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "edmonton-ab",
+    "city": "Edmonton",
+    "state": "Alberta",
+    "stateAbbr": "AB",
+    "lat": 53.5461,
+    "lng": -113.4938,
+    "seeded": true,
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "ottawa-on",
+    "city": "Ottawa",
+    "state": "Ontario",
+    "stateAbbr": "ON",
+    "lat": 45.4215,
+    "lng": -75.6972,
+    "seeded": true,
+    "country": "Canada",
+    "countryCode": "CA"
+  },
+  {
+    "slug": "mesa-az",
+    "city": "Mesa",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "lat": 33.4152,
+    "lng": -111.8315,
+    "seeded": true
+  },
+  {
+    "slug": "colorado-springs-co",
+    "city": "Colorado Springs",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "lat": 38.8339,
+    "lng": -104.8214,
+    "seeded": true
+  },
+  {
+    "slug": "arlington-tx",
+    "city": "Arlington",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 32.7357,
+    "lng": -97.1081,
+    "seeded": true
+  },
+  {
+    "slug": "corpus-christi-tx",
+    "city": "Corpus Christi",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 27.8006,
+    "lng": -97.3964,
+    "seeded": true
+  },
+  {
+    "slug": "plano-tx",
+    "city": "Plano",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 33.0198,
+    "lng": -96.6989,
+    "seeded": true
+  },
+  {
+    "slug": "lubbock-tx",
+    "city": "Lubbock",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 33.5779,
+    "lng": -101.8552,
+    "seeded": true
+  },
+  {
+    "slug": "laredo-tx",
+    "city": "Laredo",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 27.5306,
+    "lng": -99.4803,
+    "seeded": true
+  },
+  {
+    "slug": "greensboro-nc",
+    "city": "Greensboro",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 36.0726,
+    "lng": -79.792,
+    "seeded": true
+  },
+  {
+    "slug": "durham-nc",
+    "city": "Durham",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 35.994,
+    "lng": -78.8986,
+    "seeded": true
+  },
+  {
+    "slug": "winston-salem-nc",
+    "city": "Winston-Salem",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 36.0999,
+    "lng": -80.2442,
+    "seeded": true
+  },
+  {
+    "slug": "toledo-oh",
+    "city": "Toledo",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 41.6528,
+    "lng": -83.5379,
+    "seeded": true
+  },
+  {
+    "slug": "akron-oh",
+    "city": "Akron",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 41.0814,
+    "lng": -81.519,
+    "seeded": true
+  },
+  {
+    "slug": "dayton-oh",
+    "city": "Dayton",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 39.7589,
+    "lng": -84.1916,
+    "seeded": true
+  },
+  {
+    "slug": "lexington-ky",
+    "city": "Lexington",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "lat": 38.0406,
+    "lng": -84.5037,
+    "seeded": true
+  },
+  {
+    "slug": "madison-wi",
+    "city": "Madison",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 43.0731,
+    "lng": -89.4012,
+    "seeded": true
+  },
+  {
+    "slug": "des-moines-ia",
+    "city": "Des Moines",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "lat": 41.5868,
+    "lng": -93.625,
+    "seeded": true
+  },
+  {
+    "slug": "wichita-ks",
+    "city": "Wichita",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "lat": 37.6872,
+    "lng": -97.3301,
+    "seeded": true
+  },
+  {
+    "slug": "boise-id",
+    "city": "Boise",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "lat": 43.615,
+    "lng": -116.2023,
+    "seeded": true
+  },
+  {
+    "slug": "spokane-wa",
+    "city": "Spokane",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "lat": 47.6588,
+    "lng": -117.426,
+    "seeded": true
+  },
+  {
+    "slug": "tacoma-wa",
+    "city": "Tacoma",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "lat": 47.2529,
+    "lng": -122.4443,
+    "seeded": true
+  },
+  {
+    "slug": "reno-nv",
+    "city": "Reno",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "lat": 39.5296,
+    "lng": -119.8138,
+    "seeded": true
+  },
+  {
+    "slug": "henderson-nv",
+    "city": "Henderson",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "lat": 36.0395,
+    "lng": -114.9817,
+    "seeded": true
+  },
+  {
+    "slug": "honolulu-hi",
+    "city": "Honolulu",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "lat": 21.3069,
+    "lng": -157.8583,
+    "seeded": true
+  },
+  {
+    "slug": "anchorage-ak",
+    "city": "Anchorage",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "lat": 61.2181,
+    "lng": -149.9003,
+    "seeded": true
+  },
+  {
+    "slug": "little-rock-ar",
+    "city": "Little Rock",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "lat": 34.7465,
+    "lng": -92.2896,
+    "seeded": true
+  },
+  {
+    "slug": "columbia-sc",
+    "city": "Columbia",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "lat": 34.0007,
+    "lng": -81.0348,
+    "seeded": true
+  },
+  {
+    "slug": "charleston-sc",
+    "city": "Charleston",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "lat": 32.7765,
+    "lng": -79.9311,
+    "seeded": true
+  },
+  {
+    "slug": "greenville-sc",
+    "city": "Greenville",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "lat": 34.8526,
+    "lng": -82.394,
+    "seeded": true
+  },
+  {
+    "slug": "chattanooga-tn",
+    "city": "Chattanooga",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 35.0456,
+    "lng": -85.3097,
+    "seeded": true
+  },
+  {
+    "slug": "huntsville-al",
+    "city": "Huntsville",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "lat": 34.7304,
+    "lng": -86.5861,
+    "seeded": true
+  },
+  {
+    "slug": "montgomery-al",
+    "city": "Montgomery",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "lat": 32.3668,
+    "lng": -86.3,
+    "seeded": true
+  },
+  {
+    "slug": "mobile-al",
+    "city": "Mobile",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "lat": 30.6954,
+    "lng": -88.0399,
+    "seeded": true
+  },
+  {
+    "slug": "baton-rouge-la",
+    "city": "Baton Rouge",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "lat": 30.4515,
+    "lng": -91.1871,
+    "seeded": true
+  },
+  {
+    "slug": "providence-ri",
+    "city": "Providence",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "lat": 41.824,
+    "lng": -71.4128,
+    "seeded": true
+  },
+  {
+    "slug": "worcester-ma",
+    "city": "Worcester",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "lat": 42.2626,
+    "lng": -71.8023,
+    "seeded": true
+  },
+  {
+    "slug": "rochester-ny",
+    "city": "Rochester",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 43.1566,
+    "lng": -77.6088,
+    "seeded": true
+  },
+  {
+    "slug": "albany-ny",
+    "city": "Albany",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 42.6526,
+    "lng": -73.7562,
+    "seeded": true
+  },
+  {
+    "slug": "syracuse-ny",
+    "city": "Syracuse",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 43.0481,
+    "lng": -76.1474,
+    "seeded": true
+  },
+  {
+    "slug": "newark-nj",
+    "city": "Newark",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "lat": 40.7357,
+    "lng": -74.1724,
+    "seeded": true
+  },
+  {
+    "slug": "jersey-city-nj",
+    "city": "Jersey City",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "lat": 40.7178,
+    "lng": -74.0431,
+    "seeded": true
+  },
+  {
+    "slug": "new-haven-ct",
+    "city": "New Haven",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "lat": 41.3083,
+    "lng": -72.9279,
+    "seeded": true
+  },
+  {
+    "slug": "norfolk-va",
+    "city": "Norfolk",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "lat": 36.8508,
+    "lng": -76.2859,
+    "seeded": true
+  },
+  {
+    "slug": "fort-wayne-in",
+    "city": "Fort Wayne",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "lat": 41.0793,
+    "lng": -85.1394,
+    "seeded": true
+  },
+  {
+    "slug": "springfield-mo",
+    "city": "Springfield",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "lat": 37.209,
+    "lng": -93.2923,
+    "seeded": true
+  },
+  {
+    "slug": "lincoln-ne",
+    "city": "Lincoln",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "lat": 40.8136,
+    "lng": -96.7026,
+    "seeded": true
+  },
+  {
+    "slug": "fort-collins-co",
+    "city": "Fort Collins",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "lat": 40.5853,
+    "lng": -105.0844,
+    "seeded": true
+  },
+  {
+    "slug": "eugene-or",
+    "city": "Eugene",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "lat": 44.0521,
+    "lng": -123.0868,
+    "seeded": true
+  },
+  {
+    "slug": "provo-ut",
+    "city": "Provo",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "lat": 40.2338,
+    "lng": -111.6585,
+    "seeded": true
+  },
+  {
+    "slug": "savannah-ga",
+    "city": "Savannah",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "lat": 32.0809,
+    "lng": -81.0912,
+    "seeded": true
+  },
+  {
+    "slug": "tallahassee-fl",
+    "city": "Tallahassee",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 30.4383,
+    "lng": -84.2807,
+    "seeded": true
+  },
+  {
+    "slug": "fort-lauderdale-fl",
+    "city": "Fort Lauderdale",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 26.1224,
+    "lng": -80.1373,
+    "seeded": true
+  },
+  {
+    "slug": "st-petersburg-fl",
+    "city": "St. Petersburg",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 27.7676,
+    "lng": -82.6403,
+    "seeded": true
+  },
+  {
+    "slug": "ann-arbor-mi",
+    "city": "Ann Arbor",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 42.2808,
+    "lng": -83.743,
+    "seeded": true
+  },
+  {
+    "slug": "lansing-mi",
+    "city": "Lansing",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 42.7325,
+    "lng": -84.5555,
+    "seeded": true
+  },
+  {
+    "slug": "allentown-pa",
+    "city": "Allentown",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 40.6084,
+    "lng": -75.4902,
+    "seeded": true
+  },
+  {
+    "slug": "nottingham-uk",
+    "city": "Nottingham",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 52.9548,
+    "lng": -1.1581,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "newcastle-uk",
+    "city": "Newcastle",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 54.9783,
+    "lng": -1.6178,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "leicester-uk",
+    "city": "Leicester",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 52.6369,
+    "lng": -1.1398,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "coventry-uk",
+    "city": "Coventry",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 52.4068,
+    "lng": -1.5197,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "brighton-uk",
+    "city": "Brighton",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 50.8225,
+    "lng": -0.1372,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "southampton-uk",
+    "city": "Southampton",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 50.9097,
+    "lng": -1.4044,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "portsmouth-uk",
+    "city": "Portsmouth",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 50.8198,
+    "lng": -1.088,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "reading-uk",
+    "city": "Reading",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 51.4543,
+    "lng": -0.9781,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "belfast-uk",
+    "city": "Belfast",
+    "state": "Northern Ireland",
+    "stateAbbr": "UK",
+    "lat": 54.5973,
+    "lng": -5.9301,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "aberdeen-uk",
+    "city": "Aberdeen",
+    "state": "Scotland",
+    "stateAbbr": "UK",
+    "lat": 57.1497,
+    "lng": -2.0943,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "dundee-uk",
+    "city": "Dundee",
+    "state": "Scotland",
+    "stateAbbr": "UK",
+    "lat": 56.462,
+    "lng": -2.9707,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "hull-uk",
+    "city": "Hull",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 53.7676,
+    "lng": -0.3274,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "plymouth-uk",
+    "city": "Plymouth",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 50.3755,
+    "lng": -4.1427,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "derby-uk",
+    "city": "Derby",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 52.9226,
+    "lng": -1.4746,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "waterford-ie",
+    "city": "Waterford",
+    "state": "Ireland",
+    "stateAbbr": "Ireland",
+    "lat": 52.2593,
+    "lng": -7.1101,
+    "seeded": true,
+    "country": "Ireland",
+    "countryCode": "IE"
+  },
+  {
+    "slug": "drogheda-ie",
+    "city": "Drogheda",
+    "state": "Ireland",
+    "stateAbbr": "Ireland",
+    "lat": 53.7179,
+    "lng": -6.3561,
+    "seeded": true,
+    "country": "Ireland",
+    "countryCode": "IE"
+  },
+  {
+    "slug": "dundalk-ie",
+    "city": "Dundalk",
+    "state": "Ireland",
+    "stateAbbr": "Ireland",
+    "lat": 54.0019,
+    "lng": -6.4058,
+    "seeded": true,
+    "country": "Ireland",
+    "countryCode": "IE"
+  },
+  {
+    "slug": "sarasota-fl",
+    "city": "Sarasota",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 27.3364,
+    "lng": -82.5307,
+    "seeded": true
+  },
+  {
+    "slug": "asheville-nc",
+    "city": "Asheville",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 35.5951,
+    "lng": -82.5515,
+    "seeded": true
+  },
+  {
+    "slug": "waco-tx",
+    "city": "Waco",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 31.5493,
+    "lng": -97.1467,
+    "seeded": true
+  },
+  {
+    "slug": "shreveport-la",
+    "city": "Shreveport",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "lat": 32.5252,
+    "lng": -93.7502,
+    "seeded": true
+  },
+  {
+    "slug": "gainesville-fl",
+    "city": "Gainesville",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 29.6516,
+    "lng": -82.3248,
+    "seeded": true
+  }
+]

@@ -1,0 +1,193 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ListingCard from '../../components/ListingCard.astro';
+import Faq from '../../components/Faq.astro';
+import PlaceholderNotice from '../../components/PlaceholderNotice.astro';
+import CityCalendar from '../../components/CityCalendar.astro';
+import EmailSignup from '../../components/EmailSignup.astro';
+import GearStrip from '../../components/GearStrip.astro';
+import CityLinks from '../../components/CityLinks.astro';
+import { getGearSection } from '../../lib/gear';
+import {
+  categories,
+  getQualifyingCitiesForCategory,
+  getNearbyCitiesForCategory,
+  isPlaceholder,
+  logQualityGate,
+  toCalendarItems,
+  type Category,
+  type City,
+  type Listing,
+} from '../../lib/data';
+import { SITE, SHOW_PLACEHOLDER_WARNING } from '../../site.config';
+import {
+  absoluteUrl,
+  categoryPath,
+  cityHubPath,
+  cityPath,
+} from '../../lib/utils';
+import {
+  breadcrumbSchema,
+  buildCityIntro,
+  cityMetaDescription,
+  cityTitle,
+  faqSchema,
+  itemListSchema,
+  localBusinessSchema,
+} from '../../lib/seo';
+
+interface Props {
+  category: Category;
+  city: City;
+  listings: Listing[];
+}
+
+type PathEntry = {
+  params: { category: string; citySlug: string };
+  props: Props;
+};
+
+export function getStaticPaths() {
+  // Print the quality-gate summary once per build.
+  logQualityGate();
+
+  const paths: PathEntry[] = [];
+  for (const category of categories) {
+    // QUALITY GATE: only cities with >= MIN_LISTINGS_PER_CITY come back here,
+    // so thin pages are never generated.
+    for (const { city, listings } of getQualifyingCitiesForCategory(category.slug)) {
+      paths.push({
+        params: { category: category.slug, citySlug: city.slug },
+        props: { category, city, listings },
+      });
+    }
+  }
+  return paths;
+}
+
+const { category, city, listings } = Astro.props;
+const site = Astro.site;
+
+const title = cityTitle(category, city);
+const description = cityMetaDescription(category, city, listings);
+const intro = buildCityIntro(category, city, listings);
+const path = cityPath(category, city);
+
+const calendarItems = toCalendarItems(listings);
+const calendarHeading = `Upcoming sensory-friendly ${category.serviceNoun} near ${city.city}`;
+const gear = getGearSection(category.slug);
+const nearbyCategoryLinks = getNearbyCitiesForCategory(category.slug, city, 10).map(
+  (c) => ({ label: `${c.city}, ${c.stateAbbr}`, href: cityPath(category, c) }),
+);
+
+const placeholderCount = listings.filter(isPlaceholder).length;
+const showNotice = SHOW_PLACEHOLDER_WARNING && placeholderCount > 0;
+
+const suggestHref = `mailto:${SITE.contactEmail}?subject=${encodeURIComponent(
+  `Suggested ${category.placeNoun} in ${city.city}, ${city.stateAbbr}`,
+)}`;
+
+const crumbs = [
+  { name: 'Home', url: absoluteUrl('/', site) },
+  { name: category.name, url: absoluteUrl(categoryPath(category), site) },
+  { name: `${city.city}, ${city.stateAbbr}`, url: absoluteUrl(path, site) },
+];
+
+const jsonLd = [
+  breadcrumbSchema(crumbs),
+  itemListSchema(
+    `${category.name} in ${city.city}, ${city.stateAbbr}`,
+    listings.map((l) => ({
+      name: l.name,
+      url: `${absoluteUrl(path, site)}#${l.id}`,
+    })),
+  ),
+  ...listings.map((l) => localBusinessSchema(l, city, category, site)),
+  faqSchema(category.faqs),
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={path}
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+    <Breadcrumbs
+      items={[
+        { name: 'Home', href: '/' },
+        { name: category.name, href: categoryPath(category) },
+        { name: `${city.city}, ${city.stateAbbr}` },
+      ]}
+    />
+
+    <header class="mt-6 max-w-3xl">
+      <h1 class="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+        {category.name} in {city.city}, {city.state}
+      </h1>
+      <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">{intro}</p>
+      <p class="mt-4 text-sm">
+        <a
+          class="link-underline font-semibold text-brand-strong"
+          href={cityHubPath(city)}
+        >
+          See all sensory-friendly things to do in {city.city} →
+        </a>
+      </p>
+    </header>
+
+    {
+      showNotice && (
+        <div class="mt-6 max-w-3xl">
+          <PlaceholderNotice count={placeholderCount} />
+        </div>
+      )
+    }
+
+    <CityCalendar city={city} items={calendarItems} heading={calendarHeading} />
+
+    <section aria-label={`${category.name} listings`} class="mt-10">
+      <h2 class="sr-only">Listings</h2>
+      <div class="grid gap-6 lg:grid-cols-2">
+        {listings.map((listing) => <ListingCard listing={listing} city={city} />)}
+      </div>
+    </section>
+
+    <section class="mt-14 max-w-3xl rounded-card border border-brand-soft bg-brand-soft/40 p-6 sm:p-8">
+      <h2 class="text-2xl font-bold text-ink">What to look for in {city.city}</h2>
+      <p class="mt-4 leading-relaxed text-muted prose-readable">{category.guide}</p>
+    </section>
+
+    {gear && <GearStrip section={gear} />}
+
+    <div class="mt-14 max-w-3xl">
+      <Faq faqs={category.faqs} />
+    </div>
+
+    <EmailSignup cityName={city.city} />
+
+    <section
+      class="mt-14 max-w-3xl rounded-card border border-line bg-surface p-6 text-center sm:p-8"
+    >
+      <h2 class="text-xl font-bold text-ink">
+        Know a {category.placeNoun} we're missing in {city.city}?
+      </h2>
+      <p class="mt-2 text-muted">
+        Help other families by suggesting a place you've had a good experience with.
+      </p>
+      <a
+        class="mt-5 inline-block rounded-lg bg-brand px-5 py-2.5 font-semibold text-white transition-colors hover:bg-brand-strong"
+        href={suggestHref}
+      >
+        Suggest a place
+      </a>
+    </section>
+
+    <CityLinks
+      heading={`Sensory-friendly ${category.serviceNoun} in nearby cities`}
+      links={nearbyCategoryLinks}
+    />
+  </div>
+</BaseLayout>

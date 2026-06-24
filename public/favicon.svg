@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Sensory-Friendly Kids">
+  <rect width="32" height="32" rx="8" fill="#1f5e54" />
+  <circle cx="16" cy="16" r="7" fill="#ffffff" />
+  <circle cx="16" cy="16" r="3" fill="#1f5e54" />
+</svg>

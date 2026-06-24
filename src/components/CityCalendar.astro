@@ -1,0 +1,167 @@
+---
+import type { CalendarItem, City } from '../lib/data';
+
+interface Props {
+  city: City;
+  items: CalendarItem[];
+  /** Override the section heading (defaults to the city-hub wording). */
+  heading?: string;
+  /** Override the supporting line under the heading. */
+  subhead?: string;
+}
+const { city, items, heading, subhead } = Astro.props;
+
+const headingText = heading ?? `Upcoming sensory-friendly events near ${city.city}`;
+const subheadText =
+  subhead ??
+  `Recurring sensory-friendly times in the ${city.city} area, with the next dates worked out for you. Always confirm the exact date and showtime with each place before you go.`;
+
+const recurring = items.filter((i) => i.recurrence.length > 0);
+
+const ORDINAL = ['', '1st', '2nd', '3rd', '4th', '5th'];
+function describe(item: CalendarItem): string {
+  return item.recurrence
+    .map((r) => {
+      const note = r.note ? ` — ${r.note}` : '';
+      if (r.weeks.length) {
+        const ord = r.weeks.map((n) => ORDINAL[n] ?? `${n}th`).join(' & ');
+        return `${ord} ${r.weekday}s${note}`;
+      }
+      return `Every ${r.weekday}${note}`;
+    })
+    .join('; ');
+}
+
+// Payload for the client-side "upcoming dates" computation.
+const calendarData = items.map((i) => ({
+  name: i.name,
+  recurrence: i.recurrence,
+  dates: i.dates,
+  href: `#${i.id}`,
+}));
+---
+
+{
+  items.length > 0 && (
+    <section
+      aria-labelledby="calendar-heading"
+      class="mt-12 rounded-card border border-line bg-surface p-6 sm:p-8"
+    >
+      <h2 id="calendar-heading" class="text-2xl font-bold text-ink">
+        {headingText}
+      </h2>
+      <p class="mt-2 text-sm text-muted">{subheadText}</p>
+
+      <div class="mt-6 grid gap-8 lg:grid-cols-2">
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wide text-brand-strong">
+            Recurring times
+          </h3>
+          <ul class="mt-3 space-y-3">
+            {recurring.map((item) => (
+              <li class="border-l-2 border-brand-soft pl-3">
+                <p class="font-semibold text-ink">{item.name}</p>
+                <p class="text-sm text-muted">{describe(item)}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-semibold uppercase tracking-wide text-brand-strong">
+            Next dates
+          </h3>
+          <ul id="calendar-upcoming" class="mt-3 space-y-2">
+            <li class="text-sm text-muted">Loading upcoming dates…</li>
+          </ul>
+          <p id="calendar-fallback" class="mt-3 text-sm text-muted" hidden>
+            See each listing's schedule above for upcoming dates.
+          </p>
+        </div>
+      </div>
+
+      <script
+        type="application/json"
+        id="calendar-data"
+        set:html={JSON.stringify(calendarData)}
+      />
+    </section>
+  )
+}
+
+<script>
+  // ---- Per-city sensory calendar: compute upcoming concrete dates client-side ----
+  import { computeUpcoming } from '../lib/calendarUtils';
+
+  const dataEl = document.getElementById('calendar-data');
+  const listEl = document.getElementById('calendar-upcoming');
+  const fallbackEl = document.getElementById('calendar-fallback');
+
+  // Days until the upcoming Saturday (0 if today is Saturday).
+  function daysUntilSaturday(today: Date): number {
+    return (6 - today.getDay() + 7) % 7;
+  }
+
+  if (dataEl && listEl) {
+    const items = JSON.parse(dataEl.textContent || '[]');
+    const occ = computeUpcoming(items, 75);
+
+    if (occ.length === 0) {
+      listEl.innerHTML = '';
+      if (fallbackEl) fallbackEl.hidden = false;
+    } else {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const satOffset = daysUntilSaturday(today);
+      // This weekend = the coming Saturday and Sunday.
+      const weekendStart = new Date(today);
+      weekendStart.setDate(today.getDate() + satOffset);
+      const weekendEnd = new Date(weekendStart);
+      weekendEnd.setDate(weekendStart.getDate() + 1);
+      const weekEnd = new Date(today);
+      weekEnd.setDate(today.getDate() + 7);
+
+      const fmt = new Intl.DateTimeFormat('en-US', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+      });
+
+      // Small coloured pill calling out near-term dates.
+      function tagFor(date: Date): string | null {
+        if (date >= weekendStart && date <= weekendEnd) return 'This weekend';
+        if (date <= weekEnd) return 'This week';
+        return null;
+      }
+
+      listEl.innerHTML = '';
+      for (const o of occ.slice(0, 12)) {
+        const li = document.createElement('li');
+        li.className = 'flex flex-wrap items-center gap-x-2 gap-y-1 text-sm';
+
+        const date = document.createElement('span');
+        date.className = 'w-28 shrink-0 font-semibold text-ink';
+        date.textContent = fmt.format(o.date);
+        li.appendChild(date);
+
+        const tag = tagFor(o.date);
+        if (tag) {
+          const pill = document.createElement('span');
+          pill.className =
+            'rounded-full bg-brand px-2 py-0.5 text-xs font-semibold text-white';
+          pill.textContent = tag;
+          li.appendChild(pill);
+        }
+
+        const desc = document.createElement('a');
+        desc.href = o.href || '#';
+        desc.className =
+          'text-brand-strong underline decoration-1 underline-offset-2 hover:text-brand';
+        desc.textContent = o.note ? `${o.name} · ${o.note}` : o.name;
+        li.appendChild(desc);
+
+        listEl.appendChild(li);
+      }
+    }
+  }
+</script>

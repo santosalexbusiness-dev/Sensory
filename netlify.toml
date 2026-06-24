@@ -1,0 +1,9 @@
+# Netlify deploy config for this static Astro site.
+# Connect the repo in Netlify and these settings are picked up automatically.
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Match the Node version used locally (also set in .nvmrc).
+  NODE_VERSION = "22"

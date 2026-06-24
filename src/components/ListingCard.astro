@@ -1,0 +1,150 @@
+---
+import type { City, Listing } from '../lib/data';
+import { effectiveStatus } from '../lib/data';
+import { formatDate, statusLabel } from '../lib/utils';
+
+interface Props {
+  listing: Listing;
+  city: City;
+}
+const { listing } = Astro.props;
+
+const isProgram = !!listing.operator;
+const hasPhone = listing.phone.trim().length > 0;
+const hasHours = listing.hours.trim().length > 0;
+const hasEvents = !!listing.sensoryEventDates?.length;
+
+const telHref = hasPhone ? `tel:${listing.phone.replace(/[^+\d]/g, '')}` : '';
+const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  listing.address,
+)}`;
+
+const status = effectiveStatus(listing);
+const badge = statusLabel(status);
+const dateLabel = status === 'documented' ? 'Source checked' : 'Last verified';
+---
+
+<article
+  id={listing.id}
+  class="rounded-card border border-line bg-surface p-5 shadow-sm sm:p-6"
+>
+  <header class="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
+    <h3 class="text-lg font-bold text-ink">{listing.name}</h3>
+    {
+      badge && (
+        <span
+          class:list={[
+            'inline-block whitespace-nowrap rounded-full px-2.5 py-0.5 text-xs font-medium',
+            badge.tone === 'documented'
+              ? 'border border-notice-line bg-notice text-notice-ink'
+              : 'bg-brand-soft text-brand-strong',
+          ]}
+        >
+          {badge.text}
+        </span>
+      )
+    }
+  </header>
+
+  <p class="mt-1 text-sm text-muted">
+    {
+      isProgram ? (
+        <span>{listing.address}</span>
+      ) : (
+        <a
+          class="link-underline hover:text-brand-strong"
+          href={mapsHref}
+          target="_blank"
+          rel="noopener"
+        >
+          {listing.address}
+        </a>
+      )
+    }
+  </p>
+
+  <h4 class="sr-only">Sensory features</h4>
+  <ul class="mt-4 flex flex-wrap gap-2">
+    {
+      listing.sensoryFeatures.map((feature) => (
+        <li class="rounded-full bg-brand-soft px-3 py-1 text-xs font-medium text-brand-strong">
+          {feature}
+        </li>
+      ))
+    }
+  </ul>
+
+  <dl class="mt-5 grid grid-cols-1 gap-x-6 gap-y-3 text-sm sm:grid-cols-2">
+    {
+      listing.schedule && (
+        <div class="sm:col-span-2">
+          <dt class="font-semibold text-ink">Schedule</dt>
+          <dd class="text-muted">{listing.schedule}</dd>
+        </div>
+      )
+    }
+    {
+      hasHours && (
+        <div>
+          <dt class="font-semibold text-ink">Hours</dt>
+          <dd class="text-muted">{listing.hours}</dd>
+        </div>
+      )
+    }
+    <div>
+      <dt class="font-semibold text-ink">Cost</dt>
+      <dd class="text-muted">{listing.cost}</dd>
+    </div>
+    <div>
+      <dt class="font-semibold text-ink">Ages</dt>
+      <dd class="text-muted">{listing.ageRange}</dd>
+    </div>
+    {
+      hasPhone && (
+        <div>
+          <dt class="font-semibold text-ink">Phone</dt>
+          <dd class="text-muted">
+            <a class="link-underline hover:text-brand-strong" href={telHref}>
+              {listing.phone}
+            </a>
+          </dd>
+        </div>
+      )
+    }
+    {
+      hasEvents && (
+        <div class="sm:col-span-2">
+          <dt class="font-semibold text-ink">Sensory-friendly dates</dt>
+          <dd class="text-muted">{listing.sensoryEventDates!.join('; ')}</dd>
+        </div>
+      )
+    }
+  </dl>
+
+  <div class="mt-5 rounded-lg border-l-4 border-brand bg-surface-soft p-4">
+    <p class="text-sm leading-relaxed">
+      <span class="font-semibold text-ink">Parent tip:</span>
+      <span class="text-muted">{listing.parentTip}</span>
+    </p>
+  </div>
+
+  <footer
+    class="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 border-t border-line pt-4 text-sm"
+  >
+    <a
+      class="font-semibold text-brand-strong link-underline"
+      href={listing.website}
+      target="_blank"
+      rel="noopener">Official website ↗</a
+    >
+    <a
+      class="text-muted link-underline hover:text-brand-strong"
+      href={listing.sourceUrl}
+      target="_blank"
+      rel="noopener">Source ↗</a
+    >
+    <span class="ml-auto text-muted">
+      {dateLabel} {formatDate(listing.lastVerified)}
+    </span>
+  </footer>
+</article>

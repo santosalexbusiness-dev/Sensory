@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import HeroArt from '../../components/HeroArt.astro';
+import { getCitiesByCountry } from '../../lib/data';
+import { absoluteUrl, cityHubPath, formatTitle } from '../../lib/utils';
+import { breadcrumbSchema, itemListSchema } from '../../lib/seo';
+
+const site = Astro.site;
+const countries = getCitiesByCountry();
+const available = countries.flatMap((g) => g.cities.filter((c) => c.qualifies));
+
+const FLAG: Record<string, string> = {
+  US: '🇺🇸',
+  GB: '🇬🇧',
+  IE: '🇮🇪',
+  AU: '🇦🇺',
+  CA: '🇨🇦',
+};
+const countrySlug = (name: string) =>
+  name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+const description =
+  'Browse sensory-friendly and autism-friendly places for kids by country and city — across the US, UK, Ireland, Australia and Canada. Pick your city to see movies, museums, play, and attractions with real sensory accommodations.';
+
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', site) },
+    { name: 'Cities', url: absoluteUrl('/cities/', site) },
+  ]),
+  itemListSchema(
+    'Cities',
+    available.map((c) => ({
+      name: `${c.city.city}, ${c.city.stateAbbr}`,
+      url: absoluteUrl(cityHubPath(c.city), site),
+    })),
+  ),
+];
+---
+
+<BaseLayout
+  title={formatTitle('Sensory-Friendly Places by City')}
+  description={description}
+  canonicalPath="/cities/"
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Cities' }]} />
+
+    <header class="mt-6 grid items-center gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+          Browse by country &amp; city
+        </h1>
+        <p class="mt-4 leading-relaxed text-muted prose-readable">
+          Pick your city to see every sensory-friendly option we've gathered
+          there. In the US you can also
+          <a class="link-underline font-medium text-brand-strong" href="/#find"
+            >search by zip code</a
+          >. New cities open up as they reach three verified listings.
+        </p>
+        <nav aria-label="Jump to country" class="mt-5 flex flex-wrap gap-2">
+          {
+            countries.map((g) => (
+              <a
+                href={`#${countrySlug(g.country)}`}
+                class="inline-flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1.5 text-sm font-medium text-brand-strong hover:border-brand hover:bg-brand-soft/40"
+              >
+                <span>{FLAG[g.countryCode] ?? '🌍'}</span>
+                {g.country}
+              </a>
+            ))
+          }
+        </nav>
+      </div>
+      <div class="hidden lg:block">
+        <HeroArt class="mx-auto w-full max-w-xs" />
+      </div>
+    </header>
+
+    {
+      countries.map((group) => {
+        const avail = group.cities.filter((c) => c.qualifies);
+        const soon = group.cities.filter((c) => !c.qualifies);
+        if (avail.length === 0 && soon.length === 0) return null;
+        return (
+          <section id={countrySlug(group.country)} class="mt-12 scroll-mt-24">
+            <h2 class="flex items-center gap-2 text-2xl font-bold text-ink">
+              <span aria-hidden="true">{FLAG[group.countryCode] ?? '🌍'}</span>
+              {group.country}
+              <span class="text-base font-normal text-muted">
+                ({avail.length})
+              </span>
+            </h2>
+
+            {avail.length > 0 && (
+              <ul class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {avail.map((c) => (
+                  <li>
+                    <a
+                      href={cityHubPath(c.city)}
+                      class="block h-full rounded-card border border-line bg-surface p-5 transition-colors hover:border-brand hover:bg-brand-soft/30"
+                    >
+                      <span class="text-lg font-semibold text-ink">
+                        {c.city.city}, {c.city.stateAbbr}
+                      </span>
+                      <span class="mt-1 block text-sm text-muted">
+                        {c.count} {c.count === 1 ? 'place' : 'places'} →
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+
+            {soon.length > 0 && (
+              <div class="mt-5">
+                <p class="text-sm font-semibold text-muted">Coming soon</p>
+                <ul class="mt-2 flex flex-wrap gap-2">
+                  {soon.map((c) => (
+                    <li class="rounded-full border border-line bg-surface-soft px-3 py-1 text-sm text-muted">
+                      {c.city.city}, {c.city.stateAbbr}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </section>
+        );
+      })
+    }
+  </div>
+</BaseLayout>

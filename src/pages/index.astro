@@ -1,0 +1,329 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroArt from '../components/HeroArt.astro';
+import { categories, getCategoryReach, getCitiesByCountry } from '../lib/data';
+import { absoluteUrl, categoryPath, cityHubPath } from '../lib/utils';
+import { itemListSchema, websiteSchema } from '../lib/seo';
+import { SITE } from '../site.config';
+
+const site = Astro.site;
+const cats = categories.map((category) => ({
+  category,
+  stats: getCategoryReach(category.slug),
+}));
+
+// Country → city data for the "Worldwide" picker (qualifying cities only, so
+// every selection lands on a real hub page).
+const pickerCountries = getCitiesByCountry()
+  .map((g) => ({
+    country: g.country,
+    cities: g.cities
+      .filter((c) => c.qualifies)
+      .map((c) => ({
+        label: `${c.city.city}, ${c.city.stateAbbr}`,
+        path: cityHubPath(c.city),
+      })),
+  }))
+  .filter((g) => g.cities.length > 0);
+
+const jsonLd = [
+  websiteSchema(site),
+  itemListSchema(
+    'Categories',
+    categories.map((c) => ({
+      name: c.name,
+      url: absoluteUrl(categoryPath(c), site),
+    })),
+  ),
+];
+
+const howItWorks = [
+  {
+    title: 'Verified, not scraped',
+    body: 'Every listing is checked against a written standard before it goes live, and each one shows the date it was last verified.',
+  },
+  {
+    title: 'Sensory details up front',
+    body: "Quiet hours, noise-reducing headphones, lighting, smells, pacing — the things that actually decide how a visit goes are listed on every card.",
+  },
+  {
+    title: 'Organized by city',
+    body: 'Browse by category, then by your city, so you only ever see places you can realistically get to.',
+  },
+];
+---
+
+<BaseLayout
+  title="Sensory-Friendly Kids — Autism-Friendly Activities & Places"
+  description={SITE.description}
+  jsonLd={jsonLd}
+>
+  {/* Hero */}
+  <section class="border-b border-line bg-surface">
+    <div
+      class="mx-auto grid max-w-5xl items-center gap-10 px-4 py-14 sm:px-6 sm:py-16 lg:grid-cols-[1.1fr_0.9fr]"
+    >
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-wide text-brand-strong">
+          For parents of sensory-sensitive &amp; autistic kids
+        </p>
+        <h1
+          class="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl"
+        >
+          Calm, verified places for sensory-sensitive kids
+        </h1>
+        <p class="mt-5 text-lg leading-relaxed text-muted prose-readable">
+          {SITE.name} is a parent-built directory of sensory-friendly and
+          autism-friendly places and services for children. We list the
+          accommodations that matter — and verify every entry — so an everyday
+          outing feels manageable instead of overwhelming.
+        </p>
+        <div id="find" class="mt-8 scroll-mt-24">
+          <div
+            role="tablist"
+            aria-label="Find sensory-friendly places"
+            class="flex gap-1 border-b border-line"
+          >
+            <button
+              id="tab-us"
+              role="tab"
+              type="button"
+              aria-selected="true"
+              aria-controls="panel-us"
+              class="-mb-px border-b-2 border-brand px-4 py-2 text-sm font-semibold text-brand-strong"
+            >
+              United States (ZIP)
+            </button>
+            <button
+              id="tab-ww"
+              role="tab"
+              type="button"
+              aria-selected="false"
+              aria-controls="panel-ww"
+              class="-mb-px border-b-2 border-transparent px-4 py-2 text-sm font-semibold text-muted hover:text-brand-strong"
+            >
+              🌍 Worldwide
+            </button>
+          </div>
+
+          <div id="panel-us" role="tabpanel" aria-labelledby="tab-us" class="pt-5">
+            <form method="get" action="/search/" class="flex flex-wrap items-end gap-3">
+              <div>
+                <label for="hero-zip" class="block text-sm font-semibold text-ink">
+                  Find sensory-friendly places near you
+                </label>
+                <input
+                  id="hero-zip"
+                  name="zip"
+                  type="text"
+                  inputmode="numeric"
+                  autocomplete="postal-code"
+                  pattern="[0-9]{5}"
+                  maxlength="5"
+                  placeholder="Enter your zip code"
+                  class="mt-1 w-60 rounded-lg border border-line bg-canvas px-3 py-2.5 text-ink placeholder:text-muted/70 focus:border-brand"
+                />
+              </div>
+              <button
+                type="submit"
+                class="rounded-lg bg-brand px-6 py-2.5 font-semibold text-white transition-colors hover:bg-brand-strong"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+
+          <div id="panel-ww" role="tabpanel" aria-labelledby="tab-ww" hidden class="pt-5">
+            <p class="text-sm font-semibold text-ink">Choose your country and city</p>
+            <div class="mt-1 flex flex-wrap items-end gap-3">
+              <select
+                id="ww-country"
+                aria-label="Country"
+                class="rounded-lg border border-line bg-canvas px-3 py-2.5 text-ink focus:border-brand"
+              >
+                <option value="">Country…</option>
+              </select>
+              <select
+                id="ww-city"
+                aria-label="City"
+                disabled
+                class="rounded-lg border border-line bg-canvas px-3 py-2.5 text-ink focus:border-brand disabled:opacity-60"
+              >
+                <option value="">City…</option>
+              </select>
+              <button
+                id="ww-go"
+                type="button"
+                disabled
+                class="rounded-lg bg-brand px-6 py-2.5 font-semibold text-white transition-colors hover:bg-brand-strong disabled:opacity-50"
+              >
+                Go
+              </button>
+            </div>
+            <p class="mt-2 text-xs text-muted">
+              Don't see your city?{' '}
+              <a class="link-underline font-medium text-brand-strong" href="/cities/"
+                >Browse all countries &amp; cities →</a
+              >
+            </p>
+          </div>
+
+          <script
+            type="application/json"
+            id="ww-data"
+            set:html={JSON.stringify(pickerCountries)}
+          />
+        </div>
+        <div class="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+          <a
+            href="/cities/"
+            class="link-underline font-semibold text-brand-strong"
+          >
+            Browse by city →
+          </a>
+          <a
+            href="/how-we-verify/"
+            class="link-underline font-semibold text-brand-strong"
+          >
+            How we verify listings
+          </a>
+        </div>
+      </div>
+      <div>
+        <HeroArt class="mx-auto w-full max-w-md" />
+      </div>
+    </div>
+  </section>
+
+  {/* How it works */}
+  <section class="mx-auto max-w-5xl px-4 py-14 sm:px-6">
+    <h2 class="text-2xl font-bold text-ink">How this directory works</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-3">
+      {
+        howItWorks.map((item) => (
+          <div class="rounded-card border border-line bg-surface p-6">
+            <h3 class="text-lg font-semibold text-ink">{item.title}</h3>
+            <p class="mt-2 leading-relaxed text-muted">{item.body}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  {/* Categories */}
+  <section class="border-t border-line bg-surface-soft">
+    <div class="mx-auto max-w-5xl px-4 py-14 sm:px-6">
+      <h2 class="text-2xl font-bold text-ink">Browse by category</h2>
+      <p class="mt-2 max-w-2xl text-muted">
+        New categories — museums, indoor play gyms, sensory-friendly Santa
+        events, and more — are added over time. Each links through to the cities
+        where we have verified listings.
+      </p>
+      <ul class="mt-8 grid gap-5 sm:grid-cols-2">
+        {
+          cats.map(({ category, stats }) => (
+            <li>
+              <a
+                href={categoryPath(category)}
+                class="block h-full rounded-card border border-line bg-surface p-6 transition-colors hover:border-brand hover:bg-brand-soft/30"
+              >
+                <h3 class="text-xl font-bold text-ink">{category.name}</h3>
+                <p class="mt-2 leading-relaxed text-muted">{category.tagline}</p>
+                <p class="mt-4 text-sm font-medium text-brand-strong">
+                  {stats.listingCount}{' '}
+                  {stats.listingCount === 1 ? 'listing' : 'listings'} in{' '}
+                  {stats.cityCount}{' '}
+                  {stats.cityCount === 1 ? 'city' : 'cities'} →
+                </p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  {/* Why it matters */}
+  <section class="mx-auto max-w-5xl px-4 py-14 sm:px-6">
+    <div class="max-w-3xl">
+      <h2 class="text-2xl font-bold text-ink">Why we built this</h2>
+      <p class="mt-4 leading-relaxed text-muted prose-readable">
+        For a lot of families, the hardest part of an outing isn't the activity —
+        it's not knowing what to expect. A salon that turns the music down, a
+        museum with a quiet hour, a play gym that isn't packed: small
+        accommodations change everything, but they're hard to find and rarely
+        advertised. This directory exists to collect that information in one
+        calm, trustworthy place.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-4 text-sm">
+        <a class="link-underline font-semibold text-brand-strong" href="/about/">
+          Read about who's behind this →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // ---- Hero: US/Worldwide tabs + country → city picker ----
+    const dataEl = document.getElementById('ww-data');
+    const countries: { country: string; cities: { label: string; path: string }[] }[] =
+      dataEl ? JSON.parse(dataEl.textContent || '[]') : [];
+    const countrySel = document.getElementById('ww-country') as HTMLSelectElement | null;
+    const citySel = document.getElementById('ww-city') as HTMLSelectElement | null;
+    const goBtn = document.getElementById('ww-go') as HTMLButtonElement | null;
+
+    if (countrySel && citySel && goBtn) {
+      countries.forEach((c, i) => {
+        const o = document.createElement('option');
+        o.value = String(i);
+        o.textContent = c.country;
+        countrySel.appendChild(o);
+      });
+      countrySel.addEventListener('change', () => {
+        citySel.innerHTML = '<option value="">City…</option>';
+        if (countrySel.value === '') {
+          citySel.disabled = true;
+          goBtn.disabled = true;
+          return;
+        }
+        for (const city of countries[Number(countrySel.value)].cities) {
+          const o = document.createElement('option');
+          o.value = city.path;
+          o.textContent = city.label;
+          citySel.appendChild(o);
+        }
+        citySel.disabled = false;
+        goBtn.disabled = true;
+      });
+      citySel.addEventListener('change', () => {
+        goBtn.disabled = citySel.value === '';
+      });
+      goBtn.addEventListener('click', () => {
+        if (citySel.value) window.location.href = citySel.value;
+      });
+    }
+
+    const tabUs = document.getElementById('tab-us');
+    const tabWw = document.getElementById('tab-ww');
+    const panelUs = document.getElementById('panel-us') as HTMLElement | null;
+    const panelWw = document.getElementById('panel-ww') as HTMLElement | null;
+    if (tabUs && tabWw && panelUs && panelWw) {
+      const activate = (us: boolean) => {
+        panelUs.hidden = !us;
+        panelWw.hidden = us;
+        tabUs.setAttribute('aria-selected', String(us));
+        tabWw.setAttribute('aria-selected', String(!us));
+        tabUs.classList.toggle('border-brand', us);
+        tabUs.classList.toggle('text-brand-strong', us);
+        tabUs.classList.toggle('border-transparent', !us);
+        tabUs.classList.toggle('text-muted', !us);
+        tabWw.classList.toggle('border-brand', !us);
+        tabWw.classList.toggle('text-brand-strong', !us);
+        tabWw.classList.toggle('border-transparent', us);
+        tabWw.classList.toggle('text-muted', us);
+      };
+      tabUs.addEventListener('click', () => activate(true));
+      tabWw.addEventListener('click', () => activate(false));
+    }
+  </script>
+</BaseLayout>

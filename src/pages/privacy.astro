@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { absoluteUrl, formatTitle } from '../lib/utils';
+import { breadcrumbSchema } from '../lib/seo';
+import { SITE } from '../site.config';
+
+const site = Astro.site;
+const lastUpdated = 'June 18, 2026';
+const description =
+  `Privacy policy and disclaimer for ${SITE.name}: what the site does and ` +
+  `doesn't collect, how the "find near you" search works, and the limits of ` +
+  `the information here.`;
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', site) },
+    { name: 'Privacy & Disclaimer', url: absoluteUrl('/privacy/', site) },
+  ]),
+];
+---
+
+<BaseLayout
+  title={formatTitle('Privacy & Disclaimer')}
+  description={description}
+  canonicalPath="/privacy/"
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <Breadcrumbs
+      items={[{ name: 'Home', href: '/' }, { name: 'Privacy & Disclaimer' }]}
+    />
+
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      Privacy &amp; disclaimer
+    </h1>
+    <p class="mt-2 text-sm text-muted">Last updated {lastUpdated}</p>
+
+    <div class="mt-8 space-y-5 leading-relaxed text-muted prose-readable">
+      <h2 class="text-xl font-bold text-ink">The short version</h2>
+      <p>
+        {SITE.name} is a free, static information site. There are no accounts to
+        create and nothing to log in to. We don't sell your data and we don't
+        build advertising profiles about you.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">What we collect</h2>
+      <p>
+        Browsing the directory doesn't require you to give us anything — no name,
+        email, or address is needed to read a page.
+      </p>
+      <p>
+        We use Vercel Web Analytics, a privacy-friendly, cookieless tool, to count
+        visits — which pages are popular and roughly where traffic comes from. It
+        does not use cookies, track you across the web, sell your data, or identify
+        you personally, so the site needs no cookie-consent banner.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">The "find near you" search</h2>
+      <p>
+        On the search page you can sort listings by distance in one of two ways,
+        and both happen in your browser:
+      </p>
+      <ul class="space-y-2">
+        <li class="flex gap-3">
+          <span aria-hidden="true" class="mt-1 font-bold text-brand-strong">•</span>
+          <span>
+            <strong class="text-ink">Zip code:</strong> to turn a zip code into an
+            approximate location, your browser sends just that zip code to a
+            third-party lookup service (Zippopotam.us). We don't store it.
+          </span>
+        </li>
+        <li class="flex gap-3">
+          <span aria-hidden="true" class="mt-1 font-bold text-brand-strong">•</span>
+          <span>
+            <strong class="text-ink">"Use my location":</strong> your browser asks
+            your permission and uses your device location only to sort the list. It
+            stays in your browser and is never sent to us.
+          </span>
+        </li>
+      </ul>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">Links, ads &amp; affiliates</h2>
+      <p>
+        Every listing links to the venue's own website and the source we used.
+        Those sites have their own privacy practices, which we don't control. Our
+        Sensory gear page uses Amazon affiliate links: if you buy something after
+        clicking one, we may earn a small commission at no extra cost to you. We
+        disclose this on that page, and it never changes which places we list or how
+        they're ranked. We don't run display ads.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">Children's privacy</h2>
+      <p>
+        This site is written for parents and caregivers. It isn't directed at
+        children and doesn't knowingly collect information from them.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">Disclaimer</h2>
+      <p>
+        {SITE.name} shares practical, lived-experience and well-researched
+        information — it is <strong class="text-ink"
+          >not medical, legal, or professional advice</strong
+        >, and we are not medical professionals.
+      </p>
+      <p>
+        Listings are documented from official and recognized sources and marked
+        with the date they were checked, but programs, hours, prices, and
+        accommodations change often. We can't guarantee every detail is current, or
+        that a place will meet your child's specific needs.{' '}
+        <strong class="text-ink"
+          >Always confirm the details — especially sensory hours and
+          relaxed-performance dates — directly with the venue before you go.</strong
+        >{' '}
+        Use of this site is at your own discretion, and we aren't liable for
+        decisions made based on it.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">Contact</h2>
+      <p>
+        Questions, corrections, or a place to suggest? Email{' '}
+        <a
+          class="link-underline font-medium text-brand-strong"
+          href={`mailto:${SITE.contactEmail}`}>{SITE.contactEmail}</a
+        >.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">Changes</h2>
+      <p>
+        If we update this policy, we'll change the "last updated" date at the top
+        of this page.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

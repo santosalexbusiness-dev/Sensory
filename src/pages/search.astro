@@ -1,0 +1,461 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  categories,
+  listings,
+  getCity,
+  getCategory,
+  getListingsFor,
+  cityHubQualifies,
+  listingCoords,
+  effectiveStatus,
+  MIN_LISTINGS_PER_CITY,
+} from '../lib/data';
+import { cityHubPath, cityPath, formatTitle } from '../lib/utils';
+
+interface Row {
+  id: string;
+  name: string;
+  categorySlug: string;
+  categoryName: string;
+  cityName: string;
+  stateAbbr: string;
+  lat: number;
+  lng: number;
+  features: string[];
+  status: string;
+  href: string;
+}
+
+const rows: Row[] = listings
+  .map((l): Row | null => {
+    const coords = listingCoords(l);
+    const city = getCity(l.citySlug);
+    const category = getCategory(l.category);
+    if (!coords || !city || !category) return null;
+
+    // Prefer an internal link: city hub anchor, then category-in-city, else the
+    // official site.
+    let href = l.website;
+    if (cityHubQualifies(l.citySlug)) {
+      href = `${cityHubPath(city)}#${l.id}`;
+    } else if (getListingsFor(l.category, l.citySlug).length >= MIN_LISTINGS_PER_CITY) {
+      href = `${cityPath(category, city)}#${l.id}`;
+    }
+
+    return {
+      id: l.id,
+      name: l.name,
+      categorySlug: l.category,
+      categoryName: category.name,
+      cityName: city.city,
+      stateAbbr: city.stateAbbr,
+      lat: coords.lat,
+      lng: coords.lng,
+      features: l.sensoryFeatures.slice(0, 3),
+      status: effectiveStatus(l),
+      href,
+    };
+  })
+  .filter((r): r is Row => r !== null)
+  .sort(
+    (a, b) =>
+      a.cityName.localeCompare(b.cityName) ||
+      a.categoryName.localeCompare(b.categoryName),
+  );
+
+// Calendar data (recurring times + specific dates) keyed by listing id. The
+// search-page calendar is rebuilt from whichever listings are within the radius.
+const hrefById: Record<string, string> = Object.fromEntries(
+  rows.map((r) => [r.id, r.href]),
+);
+const calData: Record<
+  string,
+  { name: string; recurrence: unknown[]; dates: string[]; href: string }
+> = {};
+for (const l of listings) {
+  const recurrence = l.recurrence ?? [];
+  const dates = l.sensoryEventDates ?? [];
+  if (recurrence.length || dates.length) {
+    calData[l.id] = {
+      name: l.name,
+      recurrence,
+      dates,
+      href: hrefById[l.id] || l.website,
+    };
+  }
+}
+
+const description =
+  'Enter your zip code to find sensory-friendly and autism-friendly places for kids near you — movies, museums, play, haircuts, and more, sorted by distance.';
+---
+
+<BaseLayout
+  title={formatTitle('Find Sensory-Friendly Places Near You')}
+  description={description}
+  canonicalPath="/search/"
+>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+    <header class="max-w-3xl">
+      <h1 class="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+        Find sensory-friendly places near you
+      </h1>
+      <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
+        Enter your zip code to see sensory-friendly places for kids sorted by
+        distance. You can also filter by what you're looking for.
+      </p>
+    </header>
+
+    {/* Search controls */}
+    <form id="zip-form" class="mt-8 rounded-card border border-line bg-surface p-5 sm:p-6">
+      <div class="flex flex-wrap items-end gap-4">
+        <div>
+          <label for="zip" class="block text-sm font-semibold text-ink">
+            Zip code
+          </label>
+          <input
+            id="zip"
+            name="zip"
+            type="text"
+            inputmode="numeric"
+            autocomplete="postal-code"
+            pattern="[0-9]{5}"
+            maxlength="5"
+            placeholder="e.g. 78205"
+            class="mt-1 w-40 rounded-lg border border-line bg-canvas px-3 py-2 text-ink placeholder:text-muted/70 focus:border-brand"
+          />
+        </div>
+        <div>
+          <label for="radius" class="block text-sm font-semibold text-ink">
+            Within
+          </label>
+          <select
+            id="radius"
+            name="radius"
+            class="mt-1 rounded-lg border border-line bg-canvas px-3 py-2 text-ink focus:border-brand"
+          >
+            <option value="10">10 miles</option>
+            <option value="25" selected>25 miles</option>
+            <option value="50">50 miles</option>
+            <option value="100">100 miles</option>
+          </select>
+        </div>
+        <button
+          type="submit"
+          class="rounded-lg bg-brand px-5 py-2.5 font-semibold text-white transition-colors hover:bg-brand-strong"
+        >
+          Search
+        </button>
+        <button
+          type="button"
+          id="geo-btn"
+          class="link-underline py-2.5 text-sm font-semibold text-brand-strong"
+        >
+          Use my location
+        </button>
+        <button
+          type="button"
+          id="reset-btn"
+          class="py-2.5 text-sm text-muted hover:text-brand-strong"
+          hidden
+        >
+          Clear
+        </button>
+      </div>
+
+      {/* Category filters */}
+      <fieldset class="mt-5 border-t border-line pt-4">
+        <legend class="text-sm font-semibold text-ink">Show</legend>
+        <div class="mt-2 flex flex-wrap gap-x-5 gap-y-2">
+          {
+            categories.map((c) => (
+              <label class="flex items-center gap-2 text-sm text-muted">
+                <input
+                  type="checkbox"
+                  class="cat-filter h-4 w-4 rounded border-line text-brand focus:ring-brand"
+                  value={c.slug}
+                  checked
+                />
+                {c.name}
+              </label>
+            ))
+          }
+        </div>
+      </fieldset>
+    </form>
+
+    <p id="result-summary" class="mt-6 text-sm font-medium text-ink" aria-live="polite">
+      Showing all {rows.length} places. Enter a zip code to find what's nearest you.
+    </p>
+
+    {/* Calendar — rebuilt from the places within the searched radius */}
+    <section
+      id="search-calendar"
+      class="mt-6 rounded-card border border-line bg-surface p-5 sm:p-6"
+      hidden
+    >
+      <h2 class="text-lg font-bold text-ink">Upcoming sensory-friendly dates nearby</h2>
+      <p class="mt-1 text-sm text-muted">
+        The next dates for the places shown below — always confirm the exact time
+        with each venue.
+      </p>
+      <ul id="search-calendar-list" class="mt-4 grid gap-2 sm:grid-cols-2"></ul>
+    </section>
+
+    <script
+      type="application/json"
+      id="search-cal-data"
+      set:html={JSON.stringify(calData)}
+    />
+
+    <ul id="results" class="mt-4 grid gap-3">
+      {
+        rows.map((row, i) => (
+          <li
+            class="result-item"
+            data-id={row.id}
+            data-cat={row.categorySlug}
+            data-lat={row.lat}
+            data-lng={row.lng}
+            data-order={i}
+          >
+            <a
+              href={row.href}
+              class="block rounded-card border border-line bg-surface p-4 transition-colors hover:border-brand hover:bg-brand-soft/20"
+            >
+              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+                <span class="font-semibold text-ink">{row.name}</span>
+                <span class="result-distance text-sm font-medium text-brand-strong" hidden />
+              </div>
+              <p class="mt-0.5 text-sm text-muted">
+                {row.categoryName} · {row.cityName}, {row.stateAbbr}
+              </p>
+              <ul class="mt-2 flex flex-wrap gap-1.5">
+                {row.features.map((f) => (
+                  <li class="rounded-full bg-brand-soft px-2.5 py-0.5 text-xs font-medium text-brand-strong">
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p id="no-results" class="mt-4 rounded-card border border-line bg-surface p-6 text-muted" hidden>
+      No places match within that distance yet. Try a larger radius, or
+      <a class="link-underline font-medium text-brand-strong" href="/cities/">browse by city</a>.
+      We add new verified listings regularly.
+    </p>
+  </div>
+</BaseLayout>
+
+<script>
+  import { computeUpcoming } from '../lib/calendarUtils';
+
+  // ---- Zip-code radius search (client-side, no backend) ----
+  const R_MILES = 3958.8;
+  const toRad = (d: number) => (d * Math.PI) / 180;
+  function haversine(aLat: number, aLng: number, bLat: number, bLng: number) {
+    const dLat = toRad(bLat - aLat);
+    const dLng = toRad(bLng - aLng);
+    const h =
+      Math.sin(dLat / 2) ** 2 +
+      Math.cos(toRad(aLat)) * Math.cos(toRad(bLat)) * Math.sin(dLng / 2) ** 2;
+    return 2 * R_MILES * Math.asin(Math.sqrt(h));
+  }
+
+  const form = document.getElementById('zip-form') as HTMLFormElement | null;
+  const zipInput = document.getElementById('zip') as HTMLInputElement | null;
+  const radiusSel = document.getElementById('radius') as HTMLSelectElement | null;
+  const resultsEl = document.getElementById('results') as HTMLUListElement | null;
+  const summaryEl = document.getElementById('result-summary');
+  const noResultsEl = document.getElementById('no-results');
+  const geoBtn = document.getElementById('geo-btn');
+  const resetBtn = document.getElementById('reset-btn');
+  const catFilters = Array.from(
+    document.querySelectorAll<HTMLInputElement>('.cat-filter'),
+  );
+
+  if (form && zipInput && radiusSel && resultsEl && summaryEl && noResultsEl) {
+    const items = Array.from(
+      resultsEl.querySelectorAll<HTMLLIElement>('.result-item'),
+    );
+    let center: { lat: number; lng: number; label: string } | null = null;
+
+    const calSection = document.getElementById('search-calendar');
+    const calListEl = document.getElementById('search-calendar-list');
+    const calDataEl = document.getElementById('search-cal-data');
+    const calData: Record<string, any> = calDataEl
+      ? JSON.parse(calDataEl.textContent || '{}')
+      : {};
+
+    const activeCats = () =>
+      new Set(catFilters.filter((c) => c.checked).map((c) => c.value));
+
+    function render() {
+      const cats = activeCats();
+      const radius = Number(radiusSel!.value);
+      let visible = 0;
+      const visibleIds: string[] = [];
+
+      const scored = items.map((li) => {
+        const inCat = cats.has(li.dataset.cat || '');
+        const lat = Number(li.dataset.lat);
+        const lng = Number(li.dataset.lng);
+        const dist = center ? haversine(center.lat, center.lng, lat, lng) : null;
+        const distEl = li.querySelector<HTMLElement>('.result-distance');
+        if (dist !== null && distEl) {
+          distEl.textContent = `${dist < 10 ? dist.toFixed(1) : Math.round(dist)} mi`;
+          distEl.hidden = false;
+        } else if (distEl) {
+          distEl.hidden = true;
+        }
+        const show = inCat && (dist === null || dist <= radius);
+        li.hidden = !show;
+        if (show) {
+          visible++;
+          visibleIds.push(li.dataset.id || '');
+        }
+        return { li, dist };
+      });
+
+      // Sort by distance when a center is set; otherwise keep original order.
+      const order = scored.slice();
+      if (center) {
+        order.sort((a, b) => (a.dist ?? Infinity) - (b.dist ?? Infinity));
+      } else {
+        order.sort(
+          (a, b) =>
+            Number(a.li.dataset.order) - Number(b.li.dataset.order),
+        );
+      }
+      order.forEach(({ li }) => resultsEl!.appendChild(li));
+
+      noResultsEl!.hidden = visible > 0;
+      if (center) {
+        summaryEl!.textContent = `${visible} ${
+          visible === 1 ? 'place' : 'places'
+        } within ${radius} miles of ${center.label}.`;
+      } else {
+        summaryEl!.textContent = `Showing ${visible} ${
+          visible === 1 ? 'place' : 'places'
+        }. Enter a zip code to find what's nearest you.`;
+      }
+      if (resetBtn) resetBtn.hidden = !center;
+      renderCalendar(visibleIds);
+    }
+
+    function renderCalendar(ids: string[]) {
+      if (!calSection || !calListEl) return;
+      // Only show the calendar once a zip/location search has narrowed the area.
+      if (!center) {
+        calSection.hidden = true;
+        return;
+      }
+      const calItems = ids.map((id) => calData[id]).filter(Boolean);
+      const occ = computeUpcoming(calItems, 75);
+      if (occ.length === 0) {
+        calSection.hidden = true;
+        return;
+      }
+      calSection.hidden = false;
+      const fmt = new Intl.DateTimeFormat('en-US', {
+        weekday: 'short',
+        month: 'short',
+        day: 'numeric',
+      });
+      calListEl.innerHTML = '';
+      for (const o of occ.slice(0, 10)) {
+        const li = document.createElement('li');
+        li.className = 'flex flex-wrap gap-x-2 text-sm';
+        const d = document.createElement('span');
+        d.className = 'w-24 shrink-0 font-semibold text-ink';
+        d.textContent = fmt.format(o.date);
+        const desc = document.createElement('a');
+        desc.href = o.href || '#';
+        desc.className =
+          'text-brand-strong underline decoration-1 underline-offset-2 hover:text-brand';
+        desc.textContent = o.note ? `${o.name} · ${o.note}` : o.name;
+        li.append(d, desc);
+        calListEl.appendChild(li);
+      }
+    }
+
+    async function searchZip(zip: string) {
+      if (!/^\d{5}$/.test(zip)) {
+        summaryEl!.textContent = 'Please enter a valid 5-digit US zip code.';
+        return;
+      }
+      summaryEl!.textContent = 'Looking up your area…';
+      try {
+        const res = await fetch(`https://api.zippopotam.us/us/${zip}`);
+        if (!res.ok) throw new Error('not found');
+        const data = await res.json();
+        const place = data.places && data.places[0];
+        center = {
+          lat: Number(place.latitude),
+          lng: Number(place.longitude),
+          label: `${zip} (${place['place name']}, ${place['state abbreviation']})`,
+        };
+        render();
+      } catch {
+        summaryEl!.textContent =
+          "We couldn't find that zip code. Check the digits and try again.";
+      }
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      searchZip(zipInput.value.trim());
+    });
+    catFilters.forEach((c) => c.addEventListener('change', render));
+    radiusSel.addEventListener('change', render);
+
+    if (geoBtn) {
+      geoBtn.addEventListener('click', () => {
+        if (!navigator.geolocation) {
+          summaryEl!.textContent = 'Location isn’t available in this browser.';
+          return;
+        }
+        summaryEl!.textContent = 'Getting your location…';
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            center = {
+              lat: pos.coords.latitude,
+              lng: pos.coords.longitude,
+              label: 'your location',
+            };
+            zipInput.value = '';
+            render();
+          },
+          () => {
+            summaryEl!.textContent =
+              'We couldn’t get your location. Try entering a zip code instead.';
+          },
+        );
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', () => {
+        center = null;
+        zipInput.value = '';
+        render();
+      });
+    }
+
+    // Auto-run if arriving with ?zip=NNNNN (e.g. from the homepage search box).
+    const params = new URLSearchParams(window.location.search);
+    const presetZip = params.get('zip');
+    const presetRadius = params.get('radius');
+    if (presetRadius && ['10', '25', '50', '100'].includes(presetRadius)) {
+      radiusSel.value = presetRadius;
+    }
+    if (presetZip) {
+      zipInput.value = presetZip;
+      searchZip(presetZip);
+    }
+  }
+</script>

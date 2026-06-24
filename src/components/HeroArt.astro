@@ -1,0 +1,76 @@
+---
+/**
+ * Calm, original illustration of children playing — intentionally an
+ * illustration, not a photo. (We don't use stock photos of real children, and
+ * especially not labelled as autistic.) Swap in your own licensed or
+ * venue-provided photography here whenever you have it.
+ */
+interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+
+<svg
+  class={className}
+  viewBox="0 0 520 420"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Illustration of children playing calmly together"
+>
+  <rect x="10" y="18" width="500" height="362" rx="42" fill="#eaf1ee" />
+
+  {/* sky elements */}
+  <circle cx="412" cy="92" r="38" fill="#f4dca8" />
+  <g fill="#ffffff" opacity="0.75">
+    <ellipse cx="118" cy="74" rx="28" ry="16" />
+    <ellipse cx="146" cy="78" rx="20" ry="12" />
+    <ellipse cx="92" cy="80" rx="16" ry="10" />
+  </g>
+  <circle cx="250" cy="70" r="7" fill="#ffffff" opacity="0.6" />
+  <circle cx="280" cy="96" r="5" fill="#ffffff" opacity="0.5" />
+  <circle cx="360" cy="150" r="6" fill="#ffffff" opacity="0.5" />
+
+  {/* ground */}
+  <ellipse cx="260" cy="372" rx="244" ry="74" fill="#d6e5dc" />
+  <ellipse cx="260" cy="392" rx="244" ry="54" fill="#c9ddd1" />
+
+  {/* little potted plant */}
+  <g>
+    <path d="M70 322 Q 56 292 68 282 Q 73 300 75 322 Z" fill="#7faa86" />
+    <path d="M76 322 Q 92 292 80 282 Q 75 300 73 322 Z" fill="#6f9e7e" />
+    <path d="M64 318 h20 l-3 20 h-14 z" fill="#c98a5e" />
+  </g>
+
+  {/* balloon */}
+  <path d="M392 148 Q 372 210 360 250" stroke="#9aa6a0" stroke-width="2" fill="none" />
+  <ellipse cx="396" cy="136" rx="26" ry="30" fill="#e08a7d" />
+  <path d="M390 165 l12 0 l-6 9 z" fill="#e08a7d" />
+
+  {/* Figure A — seated, wearing headphones, stacking blocks */}
+  <g>
+    <rect x="120" y="298" width="74" height="22" rx="11" fill="#4b6b8a" />
+    <rect x="134" y="252" width="42" height="54" rx="19" fill="#2c6e63" />
+    <rect x="166" y="276" width="30" height="12" rx="6" fill="#f1c9a5" />
+    <circle cx="155" cy="236" r="21" fill="#f1c9a5" />
+    <path d="M135 233 Q 155 209 175 233 Q 168 220 155 218 Q 142 220 135 233 Z" fill="#5b4636" />
+    <path d="M133 235 Q 155 210 177 235" stroke="#2a3f4a" stroke-width="5" fill="none" stroke-linecap="round" />
+    <rect x="129" y="230" width="9" height="17" rx="4" fill="#2a3f4a" />
+    <rect x="172" y="230" width="9" height="17" rx="4" fill="#2a3f4a" />
+  </g>
+
+  {/* building blocks */}
+  <rect x="198" y="294" width="26" height="26" rx="5" fill="#7ba7bd" />
+  <rect x="228" y="294" width="26" height="26" rx="5" fill="#e0a458" />
+  <rect x="213" y="266" width="26" height="26" rx="5" fill="#2c6e63" />
+
+  {/* Figure B — standing, holding the balloon string */}
+  <g>
+    <rect x="318" y="300" width="13" height="40" rx="6" fill="#6f8f86" />
+    <rect x="337" y="300" width="13" height="40" rx="6" fill="#6f8f86" />
+    <rect x="314" y="252" width="42" height="56" rx="19" fill="#e0a458" />
+    <rect x="345" y="244" width="12" height="32" rx="6" fill="#d9a06b" transform="rotate(26 351 260)" />
+    <circle cx="335" cy="234" r="21" fill="#d9a06b" />
+    <path d="M315 232 Q 335 207 355 232 Q 348 219 335 217 Q 322 219 315 232 Z" fill="#2e2a26" />
+  </g>
+</svg>

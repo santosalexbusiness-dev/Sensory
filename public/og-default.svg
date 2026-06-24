@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Sensory-Friendly Kids — calm, verified places for sensory-sensitive kids — sensoryfriendly.guide">
+  <rect width="1200" height="630" fill="#F6F4EE"/>
+  <rect x="706" y="56" width="438" height="518" rx="40" fill="#E7F1EA"/>
+
+  <ellipse cx="925" cy="514" rx="180" ry="40" fill="#D2E7DA"/>
+
+  <g fill="#FFFFFF">
+    <ellipse cx="812" cy="168" rx="56" ry="15"/>
+    <circle cx="786" cy="160" r="22"/>
+    <circle cx="812" cy="148" r="29"/>
+    <circle cx="842" cy="160" r="20"/>
+  </g>
+
+  <g fill="none" stroke="#A7BEB3" stroke-width="2" stroke-linecap="round">
+    <path d="M1040 198 Q1028 252 1018 304"/>
+    <path d="M1086 220 Q1050 262 1018 304"/>
+    <path d="M1062 174 Q1036 240 1018 304"/>
+  </g>
+  <ellipse cx="1062" cy="142" rx="24" ry="30" fill="#6FC3A8"/>
+  <ellipse cx="1040" cy="160" rx="30" ry="37" fill="#E58B6E"/>
+  <ellipse cx="1086" cy="186" rx="27" ry="33" fill="#F0C25E"/>
+
+  <rect x="772" y="470" width="46" height="46" rx="11" fill="#F0C25E"/>
+  <rect x="781" y="436" width="34" height="34" rx="9" fill="#E58B6E"/>
+
+  <ellipse cx="900" cy="502" rx="64" ry="26" fill="#2F7D6F"/>
+  <rect x="864" y="436" width="72" height="74" rx="32" fill="#3E9C7E"/>
+  <circle cx="900" cy="410" r="38" fill="#F1C9A6"/>
+  <path d="M864 404 Q870 366 900 364 Q930 366 936 404 Q917 389 900 389 Q883 389 864 404 Z" fill="#6B4A35"/>
+  <path d="M860 406 Q860 360 900 358 Q940 360 940 406" fill="none" stroke="#1F5E54" stroke-width="11" stroke-linecap="round"/>
+  <ellipse cx="861" cy="411" rx="11" ry="17" fill="#1F5E54"/>
+  <ellipse cx="939" cy="411" rx="11" ry="17" fill="#1F5E54"/>
+  <circle cx="889" cy="410" r="3.4" fill="#2E2A26"/>
+  <circle cx="911" cy="410" r="3.4" fill="#2E2A26"/>
+  <path d="M889 422 Q900 430 911 422" fill="none" stroke="#2E2A26" stroke-width="3" stroke-linecap="round"/>
+
+  <rect x="965" y="496" width="28" height="22" rx="5" fill="#D08C6A"/>
+  <ellipse cx="974" cy="485" rx="7" ry="16" fill="#6FA888" transform="rotate(-20 974 485)"/>
+  <ellipse cx="987" cy="485" rx="7" ry="16" fill="#6FA888" transform="rotate(20 987 485)"/>
+
+  <rect x="70" y="62" width="56" height="56" rx="16" fill="#1F5E54"/>
+  <circle cx="98" cy="90" r="16" fill="#FFFFFF"/>
+  <circle cx="92" cy="87" r="2.5" fill="#1F5E54"/>
+  <circle cx="104" cy="87" r="2.5" fill="#1F5E54"/>
+  <path d="M91 94 Q98 101 105 94" fill="none" stroke="#1F5E54" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="142" y="99" font-family="'Segoe UI',system-ui,-apple-system,Arial,sans-serif" font-size="26" font-weight="700" fill="#15423B">Sensory-Friendly Kids</text>
+
+  <rect x="70" y="156" width="436" height="44" rx="22" fill="#DCEBE3"/>
+  <text x="92" y="184" font-family="'Segoe UI',system-ui,-apple-system,Arial,sans-serif" font-size="20" font-weight="600" fill="#1F5E54">Sensory-friendly &amp; autism-friendly places</text>
+
+  <text x="70" y="278" font-family="'Segoe UI',system-ui,-apple-system,Arial,sans-serif" font-size="40" font-weight="700" fill="#15423B">Calm, verified places for</text>
+  <text x="70" y="328" font-family="'Segoe UI',system-ui,-apple-system,Arial,sans-serif" font-size="40" font-weight="700" fill="#15423B">sensory-sensitive kids</text>
+
+  <text x="70" y="378" font-family="'Segoe UI',system-ui,-apple-system,Arial,sans-serif" font-size="21" font-weight="400" fill="#566A64">Quiet hours, sensory bags &amp; relaxed shows &#8212; by city.</text>
+
+  <rect x="70" y="424" width="372" height="56" rx="28" fill="#1F5E54"/>
+  <circle cx="102" cy="452" r="13" fill="none" stroke="#FFFFFF" stroke-width="2.4"/>
+  <ellipse cx="102" cy="452" rx="6" ry="13" fill="none" stroke="#FFFFFF" stroke-width="2.4"/>
+  <line x1="89" y1="452" x2="115" y2="452" stroke="#FFFFFF" stroke-width="2.4"/>
+  <text x="130" y="460" font-family="'Segoe UI',system-ui,-apple-system,Arial,sans-serif" font-size="25" font-weight="600" fill="#FFFFFF">sensoryfriendly.guide</text>
+</svg>

@@ -1,0 +1,36 @@
+---
+/** Visual breadcrumb trail. The matching BreadcrumbList JSON-LD is emitted by
+ *  the page via `breadcrumbSchema()` so search engines and humans stay in sync. */
+interface Crumb {
+  name: string;
+  href?: string;
+}
+interface Props {
+  items: Crumb[];
+}
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="text-sm">
+  <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-muted">
+    {
+      items.map((item, i) => {
+        const isLast = i === items.length - 1;
+        return (
+          <li class="flex items-center gap-x-2">
+            {item.href && !isLast ? (
+              <a class="link-underline hover:text-brand-strong" href={item.href}>
+                {item.name}
+              </a>
+            ) : (
+              <span aria-current={isLast ? 'page' : undefined} class="text-ink">
+                {item.name}
+              </span>
+            )}
+            {!isLast && <span aria-hidden="true" class="text-muted/60">/</span>}
+          </li>
+        );
+      })
+    }
+  </ol>
+</nav>

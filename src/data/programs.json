@@ -1,0 +1,422 @@
+[
+  {
+    "id": "amc-sensory-friendly-films",
+    "name": "AMC Sensory Friendly Films",
+    "operator": "AMC Theatres",
+    "category": "sensory-friendly-movies",
+    "website": "https://www.amctheatres.com/programs/sensory-friendly-films",
+    "sourceUrl": "https://www.amctheatres.com/programs/sensory-friendly-films",
+    "schedule": "2nd & 4th Saturdays (family films); select Wednesday evenings (mature films)",
+    "recurrence": [
+      {
+        "weekday": "Saturday",
+        "weeks": [
+          2,
+          4
+        ],
+        "note": "family films"
+      }
+    ],
+    "sensoryFeatures": [
+      "lights left up",
+      "sound turned down",
+      "free to get up, move, talk or sing",
+      "no trailers before the movie"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard ticket price",
+    "parentTip": "Use the official page to find a participating AMC near you and confirm the title and showtime — films rotate each month.",
+    "lastVerified": "2026-06-17"
+  },
+  {
+    "id": "regal-my-way-matinee",
+    "name": "Regal My Way Matinee (Sensory Friendly)",
+    "operator": "Regal Cinemas",
+    "category": "sensory-friendly-movies",
+    "website": "https://www.regmovies.com/promotions/my-way-matinee",
+    "sourceUrl": "https://www.regmovies.com/promotions/my-way-matinee",
+    "schedule": "Select matinees at participating Regal locations (see schedule)",
+    "sensoryFeatures": [
+      "lights turned up",
+      "volume turned down",
+      "free to sing, move, talk or dance",
+      "relaxed theater rules"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard matinee price",
+    "parentTip": "Search your local Regal on the My Way Matinee page — participating theaters and dates vary by market.",
+    "lastVerified": "2026-06-17"
+  },
+  {
+    "id": "cinemark-sensory-friendly",
+    "name": "Cinemark Sensory Friendly Showtimes",
+    "operator": "Cinemark",
+    "category": "sensory-friendly-movies",
+    "website": "https://www.cinemark.com/accessibility-at-cinemark/",
+    "sourceUrl": "https://www.cinemark.com/accessibility-at-cinemark/",
+    "schedule": "First Saturday morning of each month at participating locations",
+    "recurrence": [
+      {
+        "weekday": "Saturday",
+        "weeks": [
+          1
+        ],
+        "note": "morning"
+      }
+    ],
+    "sensoryFeatures": [
+      "lights left up",
+      "volume reduced",
+      "talking and movement welcome",
+      "calm morning showtime"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard ticket price",
+    "parentTip": "Availability varies by theater — check your nearest Cinemark's page or call to confirm the sensory-friendly showtime.",
+    "lastVerified": "2026-06-17"
+  },
+  {
+    "id": "chuck-e-cheese-sensory-sundays",
+    "name": "Chuck E. Cheese Sensory Sensitive Sundays",
+    "operator": "Chuck E. Cheese",
+    "category": "sensory-friendly-play",
+    "website": "https://www.chuckecheese.com/sensory-sensitive-sundays/",
+    "sourceUrl": "https://www.chuckecheese.com/sensory-sensitive-sundays/participating-locations/",
+    "schedule": "First Sunday of each month, opening two hours before normal hours",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          1
+        ],
+        "note": "opens 2 hrs early"
+      }
+    ],
+    "sensoryFeatures": [
+      "dimmed lighting",
+      "reduced/quieter sound",
+      "no flashing effects",
+      "calmer game room and dining area",
+      "trained, welcoming staff"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard play/food pricing; no reservation needed",
+    "parentTip": "Check the participating-locations page first — not every Chuck E. Cheese runs Sensory Sensitive Sundays, and start times can vary.",
+    "lastVerified": "2026-06-17"
+  },
+  {
+    "id": "snip-its-autism-support",
+    "name": "Snip-its (Autism Support)",
+    "operator": "Snip-its",
+    "category": "sensory-friendly-haircuts",
+    "availableIn": [
+      "charlotte-nc",
+      "miami-fl",
+      "houston-tx",
+      "dallas-tx",
+      "austin-tx",
+      "phoenix-az",
+      "boston-ma",
+      "seattle-wa",
+      "baltimore-md",
+      "las-vegas-nv",
+      "hartford-ct",
+      "oklahoma-city-ok"
+    ],
+    "website": "https://snipits.com/autism-support/",
+    "sourceUrl": "https://snipits.com/autism-support/",
+    "schedule": "By appointment at quieter times; stylists trained through the Autism Speaks program",
+    "sensoryFeatures": [
+      "stylists trained in autism support (Autism Speaks program)",
+      "quiet-time appointments (lights & sound lowered)",
+      "kid-focused salon",
+      "extra patience and time"
+    ],
+    "ageRange": "Kids",
+    "cost": "Standard kids' haircut pricing",
+    "parentTip": "Call your local Snip-its and ask for a quiet-time appointment — they schedule these specifically for kids with sensory needs.",
+    "lastVerified": "2026-06-17"
+  },
+  {
+    "id": "sharkeys-cuts-for-kids",
+    "name": "Sharkey's Cuts for Kids (Sensory Support)",
+    "operator": "Sharkey's Cuts for Kids",
+    "category": "sensory-friendly-haircuts",
+    "availableIn": [
+      "new-york-ny",
+      "san-francisco-ca"
+    ],
+    "website": "https://sharkeyscutsforkids.com/",
+    "sourceUrl": "https://www.fox5ny.com/news/seaford-sharkeys-salon-special-needs-kids-haircuts",
+    "schedule": "Low-sensory hours twice a week; longer appointments on request",
+    "sensoryFeatures": [
+      "low-sensory hours twice a week",
+      "weighted lap pads & sensory toys on request",
+      "vibration pillow available",
+      "stylists experienced with autism"
+    ],
+    "ageRange": "Kids",
+    "cost": "Standard kids' haircut pricing",
+    "parentTip": "Ask the front desk for a weighted lap pad or sensory toy at check-in, and request one of their low-sensory hours when you book.",
+    "lastVerified": "2026-06-17"
+  },
+  {
+    "id": "odeon-uk",
+    "name": "ODEON Autism Friendly Screenings",
+    "operator": "ODEON",
+    "category": "sensory-friendly-movies",
+    "website": "https://www.odeon.co.uk/accessibility/autism-friendly/",
+    "sourceUrl": "https://www.odeon.co.uk/accessibility/autism-friendly/",
+    "schedule": "One Sunday morning each month (about 11:30am) at 90+ ODEON cinemas — check your local cinema",
+    "sensoryFeatures": [
+      "lights left on low",
+      "sound turned down",
+      "free to move around, talk and make noise",
+      "developed with the autism charity Dimensions"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard/discounted ticket price",
+    "parentTip": "Search your nearest ODEON on the autism-friendly page — the exact Sunday and film vary by cinema each month, so confirm before you travel.",
+    "lastVerified": "2026-06-21",
+    "country": "GB"
+  },
+  {
+    "id": "cineworld-uk",
+    "name": "Cineworld Autism Friendly Screenings",
+    "operator": "Cineworld",
+    "category": "sensory-friendly-movies",
+    "website": "https://www.cineworld.co.uk/static/en/uk/blog/everything-to-know-about-autism-friendly-screenings-at-cineworld",
+    "sourceUrl": "https://www.autismfriendly.uk/autism-friendly-venues/cinema-screenings/cineworld/",
+    "schedule": "First Sunday morning of each month (most locations)",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          1
+        ],
+        "note": "morning"
+      }
+    ],
+    "sensoryFeatures": [
+      "lights up, sound reduced",
+      "relaxed — free to move and make noise",
+      "one designated screening a month",
+      "developed with Dimensions"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard ticket price",
+    "parentTip": "Most Cineworlds run these on the first Sunday morning — check your local cinema listings to confirm the title and exact time.",
+    "lastVerified": "2026-06-21",
+    "country": "GB"
+  },
+  {
+    "id": "vue-uk",
+    "name": "Vue Autism Friendly Screenings",
+    "operator": "Vue",
+    "category": "sensory-friendly-movies",
+    "website": "https://www.myvue.com/",
+    "sourceUrl": "https://www.autismfriendly.uk/autism-friendly-venues/cinema-screenings/vue/",
+    "schedule": "Last Sunday of every month (about 10:30am), at all Vue sites",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          -1
+        ],
+        "note": "about 10:30am"
+      }
+    ],
+    "sensoryFeatures": [
+      "lights left on, sound lowered",
+      "relaxed, judgement-free environment",
+      "running monthly since 2013",
+      "developed with Dimensions"
+    ],
+    "ageRange": "All ages",
+    "cost": "Discounted ticket price",
+    "parentTip": "Vue has run these the longest — they fall on the last Sunday each month; book ahead as the popular family titles sell out.",
+    "lastVerified": "2026-06-21",
+    "country": "GB"
+  },
+  {
+    "id": "odeon-ie",
+    "name": "ODEON Autism Friendly Screenings (Ireland)",
+    "operator": "ODEON",
+    "category": "sensory-friendly-movies",
+    "website": "https://www.odeoncinemas.ie/accessibility/autism-friendly/",
+    "sourceUrl": "https://www.odeoncinemas.ie/accessibility/autism-friendly/",
+    "schedule": "One Sunday morning each month — check your local ODEON in Ireland",
+    "sensoryFeatures": [
+      "lights left on low",
+      "sound turned down",
+      "free to move around, talk and make noise",
+      "developed with Dimensions"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard/discounted ticket price",
+    "parentTip": "Confirm the Sunday and film on the ODEON Ireland page — dates and titles rotate monthly by cinema.",
+    "lastVerified": "2026-06-21",
+    "country": "IE"
+  },
+  {
+    "id": "omniplex-ie",
+    "name": "Omniplex Sensory Friendly Screenings",
+    "operator": "Omniplex",
+    "category": "sensory-friendly-movies",
+    "website": "https://www.omniplex.ie/",
+    "sourceUrl": "https://www.omniplex.ie/company/faq",
+    "schedule": "Every weekend (Saturdays in the Republic of Ireland), around 12pm, at all Omniplex cinemas",
+    "recurrence": [
+      {
+        "weekday": "Saturday",
+        "weeks": [],
+        "note": "around 12pm"
+      }
+    ],
+    "sensoryFeatures": [
+      "lights left on low",
+      "sound turned down",
+      "free to move around during the film",
+      "a sensory-friendly screening every weekend"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard ticket price",
+    "parentTip": "Omniplex runs these weekly — a Saturday option most weekends, so you are rarely far from the next screening.",
+    "lastVerified": "2026-06-21",
+    "country": "IE"
+  },
+  {
+    "id": "imc-ie",
+    "name": "IMC Cinemas Sensory Friendly Screenings",
+    "operator": "IMC Cinemas",
+    "category": "sensory-friendly-movies",
+    "website": "https://imc.ie/",
+    "sourceUrl": "https://imc.ie/faq/",
+    "schedule": "Monthly sensory-friendly screenings — check your local IMC cinema",
+    "sensoryFeatures": [
+      "lights left on low, sound reduced",
+      "relaxed atmosphere — moving and noise welcome",
+      "designed for guests with autism or sensory disorders"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard ticket price",
+    "parentTip": "IMC schedules these monthly and the date varies by location — check the cinema page or call ahead to confirm.",
+    "lastVerified": "2026-06-21",
+    "country": "IE"
+  },
+  {
+    "id": "event-cinemas-au",
+    "name": "Event Cinemas Sensory Friendly Screenings",
+    "operator": "Event Cinemas",
+    "category": "sensory-friendly-movies",
+    "website": "https://www.eventcinemas.com.au/EventsFestivals/SensoryFriendlyScreenings",
+    "sourceUrl": "https://www.eventcinemas.com.au/EventsFestivals/SensoryFriendlyScreenings",
+    "schedule": "Sundays at selected locations across Australia (not during school holidays)",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [],
+        "note": "selected locations"
+      }
+    ],
+    "sensoryFeatures": [
+      "lights left on dim",
+      "sound turned down",
+      "freedom to move, talk and dance",
+      "low-cost tickets for families living with autism"
+    ],
+    "ageRange": "All ages",
+    "cost": "Low-cost (from about $8)",
+    "parentTip": "Sessions run Sundays at selected cinemas and pause during school holidays — check the Event Cinemas sensory page for the next date near you.",
+    "lastVerified": "2026-06-21",
+    "country": "AU"
+  },
+  {
+    "id": "hoyts-au",
+    "name": "HOYTS Sensory Screenings",
+    "operator": "HOYTS",
+    "category": "sensory-friendly-movies",
+    "website": "https://www.hoyts.com.au/events/sensory-screenings",
+    "sourceUrl": "https://www.hoyts.com.au/events/sensory-screenings",
+    "schedule": "Once a month on a Saturday at participating HOYTS cinemas",
+    "sensoryFeatures": [
+      "lights up, sound down",
+      "relaxed cinema rules — get up and move freely",
+      "a monthly sensory screening",
+      "welcoming to guests with autism or sensory difficulties"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard/low-cost ticket",
+    "parentTip": "HOYTS runs one sensory Saturday a month — the date and film vary by cinema, so confirm on the HOYTS sensory page before you go.",
+    "lastVerified": "2026-06-21",
+    "country": "AU"
+  },
+  {
+    "id": "village-cinemas-au",
+    "name": "Village Cinemas Sensory Friendly Films",
+    "operator": "Village Cinemas",
+    "category": "sensory-friendly-movies",
+    "availableIn": [
+      "melbourne-vic"
+    ],
+    "website": "https://villagecinemas.com.au/events/sensory-friendly-films",
+    "sourceUrl": "https://villagecinemas.com.au/events/sensory-friendly-films",
+    "schedule": "Sensory-friendly sessions at Village Cinemas (Victoria) — see session times",
+    "sensoryFeatures": [
+      "lights left on, sound reduced",
+      "free to move, talk and respond",
+      "specially designed for autistic children, adults and families",
+      "low-cost Vrewards tickets (from about $6)"
+    ],
+    "ageRange": "All ages",
+    "cost": "Low-cost (Vrewards from about $6)",
+    "parentTip": "Village runs these across its Victorian cinemas — check the session finder for your nearest Melbourne-area location.",
+    "lastVerified": "2026-06-21"
+  },
+  {
+    "id": "cineplex-ca",
+    "name": "Cineplex Sensory Friendly Screenings",
+    "operator": "Cineplex",
+    "category": "sensory-friendly-movies",
+    "website": "https://www.cineplex.com/experiences/sensory-friendly-screenings",
+    "sourceUrl": "https://www.cineplex.com/experiences/sensory-friendly-screenings",
+    "schedule": "Select Saturday mornings (about every 4–6 weeks), lights up and sound down, at theatres across Canada",
+    "sensoryFeatures": [
+      "lights up, sound down environment",
+      "free to get up, move and make noise",
+      "family-friendly titles",
+      "tickets at a reduced price"
+    ],
+    "ageRange": "All ages",
+    "cost": "Reduced ticket price",
+    "parentTip": "Cineplex posts titles up to two weeks ahead — screenings run roughly every 4–6 weeks on Saturday mornings, so check the schedule before you plan.",
+    "lastVerified": "2026-06-21",
+    "country": "CA"
+  },
+  {
+    "id": "landmark-ca",
+    "name": "Landmark Cinemas Sensory Friendly Films",
+    "operator": "Landmark Cinemas",
+    "category": "sensory-friendly-movies",
+    "availableIn": [
+      "vancouver-bc",
+      "calgary-ab",
+      "edmonton-ab",
+      "toronto-on",
+      "ottawa-on"
+    ],
+    "website": "https://www.landmarkcinemas.com/experiences/sensory-friendly-films/",
+    "sourceUrl": "https://www.landmarkcinemas.com/experiences/sensory-friendly-films/",
+    "schedule": "About one Saturday a month at Morning Movies pricing — check your local Landmark",
+    "sensoryFeatures": [
+      "sensory-friendly environment (lights up, sound down)",
+      "relaxed, judgement-free setting",
+      "Morning Movies pricing",
+      "screenings for guests with sensory needs"
+    ],
+    "ageRange": "All ages",
+    "cost": "Morning Movies (reduced) pricing",
+    "parentTip": "Landmark runs roughly one sensory-friendly Saturday a month — the exact date varies by location, so confirm on the cinema page.",
+    "lastVerified": "2026-06-21"
+  }
+]

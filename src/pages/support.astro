@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { absoluteUrl, formatTitle } from '../lib/utils';
+import { breadcrumbSchema } from '../lib/seo';
+import { SITE } from '../site.config';
+
+const site = Astro.site;
+const description =
+  `Help keep ${SITE.name} free and online. We take no paid listings — small ` +
+  `donations from families cover the domain, hosting, and the time it takes to ` +
+  `research and verify places.`;
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', site) },
+    { name: 'Support', url: absoluteUrl('/support/', site) },
+  ]),
+];
+
+const methods = [
+  { label: 'Donate on Ko-fi', note: 'One-off or monthly', url: SITE.support.kofi },
+  { label: 'Buy me a coffee', note: 'Quick one-off tip', url: SITE.support.buyMeACoffee },
+  { label: 'Donate with PayPal', note: 'Send any amount', url: SITE.support.paypal },
+  { label: 'Sponsor on GitHub', note: 'Monthly sponsorship', url: SITE.support.github },
+  { label: 'Donate by card or Apple Pay', note: 'Choose any amount', url: SITE.support.stripe },
+].filter((m) => m.url && m.url.trim().length > 0);
+---
+
+<BaseLayout
+  title={formatTitle('Support')}
+  description={description}
+  canonicalPath="/support/"
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Support' }]} />
+
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      Keep this site free &amp; running
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
+      {SITE.name} is free for every family, and it always will be. It's run by one
+      parent, not a company — and it does cost real money and hours to keep going:
+      the domain, the hosting, and the time it takes to research and verify each
+      place. If the site has helped you, a small donation keeps it online and
+      independent.
+    </p>
+
+    {
+      methods.length > 0 ? (
+        <ul class="mt-8 grid gap-4 sm:grid-cols-2">
+          {methods.map((m) => (
+            <li>
+              <a
+                href={m.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex h-full flex-col rounded-card border border-line bg-surface p-5 transition-colors hover:border-brand hover:bg-brand-soft/30"
+              >
+                <span class="text-lg font-semibold text-ink">{m.label}</span>
+                <span class="mt-1 text-sm font-medium text-brand-strong">
+                  {m.note} →
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div class="mt-8 rounded-card border border-line bg-surface p-6 text-muted">
+          <p>
+            Donation options are being set up right now. In the meantime, the best
+            way to help is to share the site with another family, or email{' '}
+            <a
+              class="link-underline font-medium text-brand-strong"
+              href={`mailto:${SITE.contactEmail}`}
+            >
+              {SITE.contactEmail}
+            </a>
+            .
+          </p>
+        </div>
+      )
+    }
+
+    <div class="mt-12 space-y-5 leading-relaxed text-muted prose-readable">
+      <h2 class="text-xl font-bold text-ink">Where your donation goes</h2>
+      <p>
+        Straight into running costs — the domain name, the hosting, and the tools
+        used to check listings — plus the time to keep them current. There are no
+        salaries and no investors. We don't take payment from businesses to be
+        listed or ranked (you can read our{' '}
+        <a
+          class="link-underline font-medium text-brand-strong"
+          href="/how-we-verify/">verification policy</a
+        >), so your support is exactly what keeps the listings honest and free of
+        pay-to-play.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">Free ways to help, too</h2>
+      <p>
+        Not everyone can give, and that's completely okay. Sharing a city page with
+        another parent, posting it in a support group, or{' '}
+        <a
+          class="link-underline font-medium text-brand-strong"
+          href={`mailto:${SITE.contactEmail}`}>telling us about a place</a
+        >{' '}
+        we've missed helps just as much — and keeps the directory growing for every
+        family.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

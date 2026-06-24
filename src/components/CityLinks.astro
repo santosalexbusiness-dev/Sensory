@@ -1,0 +1,32 @@
+---
+/**
+ * A compact internal-linking block: a heading and a wrap of city pill-links.
+ * Used to cross-link city hubs ("nearby cities") and category-in-city pages
+ * ("same category in other cities") so crawlers — and parents — can hop laterally.
+ */
+interface Props {
+  heading: string;
+  links: { label: string; href: string }[];
+}
+const { heading, links } = Astro.props;
+---
+
+{
+  links.length > 0 && (
+    <section aria-label={heading} class="mt-14">
+      <h2 class="text-xl font-bold text-ink">{heading}</h2>
+      <ul class="mt-4 flex flex-wrap gap-2">
+        {links.map((l) => (
+          <li>
+            <a
+              href={l.href}
+              class="inline-block rounded-full border border-line bg-surface px-3.5 py-1.5 text-sm font-medium text-brand-strong transition-colors hover:border-brand hover:bg-brand-soft/40"
+            >
+              {l.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )
+}

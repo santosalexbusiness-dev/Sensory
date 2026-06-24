@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import ListingCard from '../../components/ListingCard.astro';
+import PlaceholderNotice from '../../components/PlaceholderNotice.astro';
+import CityCalendar from '../../components/CityCalendar.astro';
+import EmailSignup from '../../components/EmailSignup.astro';
+import GearStrip from '../../components/GearStrip.astro';
+import Faq from '../../components/Faq.astro';
+import CityLinks from '../../components/CityLinks.astro';
+import { getGearSection } from '../../lib/gear';
+import {
+  getQualifyingCities,
+  getNearbyCityHubs,
+  getCityCategoryGroups,
+  getCityCalendarItems,
+  getListingsFor,
+  isPlaceholder,
+  logQualityGate,
+  MIN_LISTINGS_PER_CITY,
+  type City,
+} from '../../lib/data';
+import { SHOW_PLACEHOLDER_WARNING } from '../../site.config';
+import {
+  absoluteUrl,
+  categoryPath,
+  cityHubPath,
+  cityPath,
+} from '../../lib/utils';
+import {
+  breadcrumbSchema,
+  buildCityHubIntro,
+  buildCityHubFaqs,
+  cityHubMetaDescription,
+  cityHubTitle,
+  faqSchema,
+  itemListSchema,
+  localBusinessSchema,
+} from '../../lib/seo';
+
+interface Props {
+  city: City;
+}
+
+export function getStaticPaths() {
+  logQualityGate();
+  // QUALITY GATE: only cities with >= MIN total listings get a hub page.
+  return getQualifyingCities().map((city) => ({
+    params: { citySlug: city.slug },
+    props: { city },
+  }));
+}
+
+const { city } = Astro.props;
+const site = Astro.site;
+
+const groups = getCityCategoryGroups(city.slug);
+const calendarItems = getCityCalendarItems(city.slug);
+const allListings = groups.flatMap((g) => g.listings);
+const path = cityHubPath(city);
+const title = cityHubTitle(city);
+const description = cityHubMetaDescription(city, groups);
+const intro = buildCityHubIntro(city, groups);
+const gear = getGearSection('city-hub');
+const cityFaqs = buildCityHubFaqs(city, groups);
+const nearbyLinks = getNearbyCityHubs(city, 6).map((c) => ({
+  label: `${c.city}, ${c.stateAbbr}`,
+  href: cityHubPath(c),
+}));
+
+const placeholderCount = allListings.filter(isPlaceholder).length;
+const showNotice = SHOW_PLACEHOLDER_WARNING && placeholderCount > 0;
+
+const crumbs = [
+  { name: 'Home', url: absoluteUrl('/', site) },
+  { name: 'Cities', url: absoluteUrl('/cities/', site) },
+  { name: `${city.city}, ${city.stateAbbr}`, url: absoluteUrl(path, site) },
+];
+
+const jsonLd = [
+  breadcrumbSchema(crumbs),
+  faqSchema(cityFaqs),
+  itemListSchema(
+    title,
+    allListings.map((l) => ({ name: l.name, url: `${absoluteUrl(path, site)}#${l.id}` })),
+  ),
+  ...groups.flatMap((g) =>
+    g.listings.map((l) => localBusinessSchema(l, city, g.category, site)),
+  ),
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={path}
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+    <Breadcrumbs
+      items={[
+        { name: 'Home', href: '/' },
+        { name: 'Cities', href: '/cities/' },
+        { name: `${city.city}, ${city.stateAbbr}` },
+      ]}
+    />
+
+    <header class="mt-6 max-w-3xl">
+      <h1 class="text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+        Sensory-Friendly Activities in {city.city}, {city.state}
+      </h1>
+      <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">{intro}</p>
+      <p class="mt-4 text-sm">
+        <a class="link-underline font-semibold text-brand-strong" href={`/search/`}>
+          Searching a specific neighborhood? Filter by zip code →
+        </a>
+      </p>
+    </header>
+
+    {
+      showNotice && (
+        <div class="mt-6 max-w-3xl">
+          <PlaceholderNotice count={placeholderCount} />
+        </div>
+      )
+    }
+
+    <CityCalendar city={city} items={calendarItems} />
+
+    <EmailSignup cityName={city.city} />
+
+    {
+      groups.map((group) => {
+        const categoryQualifies =
+          getListingsFor(group.category.slug, city.slug).length >=
+          MIN_LISTINGS_PER_CITY;
+        const moreHref = categoryQualifies
+          ? cityPath(group.category, city)
+          : categoryPath(group.category);
+        return (
+          <section class="mt-12">
+            <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+              <h2 class="text-2xl font-bold text-ink">{group.category.name}</h2>
+              <a
+                class="link-underline text-sm font-semibold text-brand-strong"
+                href={moreHref}
+              >
+                {categoryQualifies
+                  ? `All ${group.category.name.toLowerCase()} in ${city.city} →`
+                  : `About ${group.category.name.toLowerCase()} →`}
+              </a>
+            </div>
+            <div class="mt-5 grid gap-6 lg:grid-cols-2">
+              {group.listings.map((listing) => (
+                <ListingCard listing={listing} city={city} />
+              ))}
+            </div>
+          </section>
+        );
+      })
+    }
+
+    <div class="mt-14 max-w-3xl">
+      <Faq
+        faqs={cityFaqs}
+        id="city-faq"
+        heading={`Sensory-friendly activities in ${city.city}: FAQ`}
+      />
+    </div>
+
+    {gear && <GearStrip section={gear} />}
+
+    <CityLinks
+      heading={`Sensory-friendly activities in cities near ${city.city}`}
+      links={nearbyLinks}
+    />
+  </div>
+</BaseLayout>

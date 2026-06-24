@@ -1,0 +1,50 @@
+---
+/**
+ * A compact, in-page affiliate "what to bring" section. Renders a context
+ * heading, a short intro, a few product cards linking to Amazon (with the
+ * Associates tag applied upstream in lib/gear.ts), an FTC disclosure, and a
+ * link to the full sensory-gear page.
+ */
+import type { GearSection } from '../lib/gear';
+import { SITE } from '../site.config';
+
+interface Props {
+  section: GearSection;
+}
+const { section } = Astro.props;
+---
+
+<section
+  aria-labelledby="gear-heading"
+  class="mt-14 rounded-card border border-line bg-surface-soft p-6 sm:p-8"
+>
+  <h2 id="gear-heading" class="text-2xl font-bold text-ink">{section.heading}</h2>
+  <p class="mt-2 max-w-2xl leading-relaxed text-muted">{section.intro}</p>
+
+  <ul class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      section.items.map((item) => (
+        <li class="flex h-full flex-col rounded-card border border-line bg-surface p-4">
+          <h3 class="text-base font-semibold text-ink">{item.name}</h3>
+          <p class="mt-1 flex-1 text-sm leading-relaxed text-muted">{item.note}</p>
+          <a
+            href={item.href}
+            target="_blank"
+            rel="sponsored nofollow noopener noreferrer"
+            class="mt-3 inline-flex w-fit items-center text-sm font-semibold text-brand-strong link-underline hover:text-brand"
+          >
+            View on Amazon →
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <p class="mt-5 text-xs leading-relaxed text-muted">
+    As an Amazon Associate, {SITE.name} earns from qualifying purchases, at no extra
+    cost to you. We only suggest gear that genuinely helps.{' '}
+    <a class="link-underline font-medium text-brand-strong" href="/sensory-gear/">
+      See all sensory gear we recommend →
+    </a>
+  </p>
+</section>

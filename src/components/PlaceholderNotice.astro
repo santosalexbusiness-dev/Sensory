@@ -1,0 +1,23 @@
+---
+/** Visible warning shown on any page built from the placeholder sample data.
+ *  Controlled by SHOW_PLACEHOLDER_WARNING in src/site.config.ts. */
+interface Props {
+  count?: number;
+}
+const { count } = Astro.props;
+---
+
+<aside
+  role="note"
+  class="rounded-card border border-notice-line bg-notice px-4 py-3 text-sm leading-relaxed text-notice-ink"
+>
+  <p class="font-semibold">⚠ Sample data — not for publication</p>
+  <p class="mt-1">
+    {count ? `${count} listing(s) on this page are` : 'The listings here are'} clearly-marked
+    placeholders, included only so the site builds and runs immediately. Replace
+    them with real, verified businesses before publishing, then set
+    <code class="rounded bg-white/70 px-1 py-0.5">SHOW_PLACEHOLDER_WARNING</code>
+    to <code class="rounded bg-white/70 px-1 py-0.5">false</code> in
+    <code class="rounded bg-white/70 px-1 py-0.5">src/site.config.ts</code>.
+  </p>
+</aside>

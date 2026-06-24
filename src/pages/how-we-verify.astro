@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { absoluteUrl, formatTitle } from '../lib/utils';
+import { breadcrumbSchema } from '../lib/seo';
+import { SITE } from '../site.config';
+
+const site = Astro.site;
+const description = `How ${SITE.name} verifies listings: the checklist every sensory-friendly place is checked against, what "last verified" means, and how often we re-check.`;
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', site) },
+    { name: 'How We Verify', url: absoluteUrl('/how-we-verify/', site) },
+  ]),
+];
+
+const checklist = [
+  'The place has a real, sourced sensory-friendly or autism-friendly program — documented on its own official website, through a recognized certification (such as KultureCity Sensory Inclusive or an IBCCES Certified Autism Center), or via an official source like a city, parks department, library, or tourism office.',
+  'At least one concrete, checkable accommodation is described — quiet or sensory hours, sensory bags or kits, a quiet room, dimmed lighting, a relaxed performance — not just a general willingness to "be flexible."',
+  'We link to that source on every listing, so you can read it for yourself.',
+  'The details were checked within the last 12 months, and the date is shown on each listing.',
+  'Anything we could not confirm from an official or recognized source is left off, not guessed at.',
+];
+---
+
+<BaseLayout
+  title={formatTitle('How We Verify Listings')}
+  description={description}
+  canonicalPath="/how-we-verify/"
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <Breadcrumbs
+      items={[{ name: 'Home', href: '/' }, { name: 'How We Verify' }]}
+    />
+
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      How we verify listings
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
+      A directory is only as trustworthy as the worst entry in it. Here's exactly
+      what we check before a place is published, and how we keep entries current.
+    </p>
+
+    <div class="mt-8 space-y-5 leading-relaxed text-muted prose-readable">
+      <h2 class="text-xl font-bold text-ink">Our verification checklist</h2>
+      <p>Before any listing goes live, we confirm that:</p>
+      <ul class="space-y-3">
+        {
+          checklist.map((item) => (
+            <li class="flex gap-3">
+              <span aria-hidden="true" class="mt-1 font-bold text-brand-strong">
+                ✓
+              </span>
+              <span>{item}</span>
+            </li>
+          ))
+        }
+      </ul>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">
+        What "last verified" means
+      </h2>
+      <p>
+        Every listing shows a "Last verified" date — the day we most recently
+        checked the details against the venue's official page or a recognized
+        certification or source, which we link on the listing. We have not
+        personally visited every place, so most listings are marked
+        "Documented — confirm locally." Treat them as a well-researched starting
+        point, and confirm the specifics — especially the exact dates and times
+        for sensory hours or relaxed performances — directly with the venue
+        before you go.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">How often we re-check</h2>
+      <p>
+        We aim to re-verify each listing at least once a year, and sooner for
+        anything time-sensitive like seasonal sensory events. Accommodations,
+        hours, and staff change, so a date that's more than a year old is our
+        signal to re-confirm before relying on it.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">What we don't do</h2>
+      <p>
+        We don't accept payment for listings or placement — businesses can't buy
+        their way onto the site or to the top of a page. We don't scrape and
+        republish data we haven't checked against a primary source. And we don't
+        present guesses as facts: anything we couldn't confirm from an official or
+        recognized source is left off rather than invented.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">Found something wrong?</h2>
+      <p>
+        Please tell us. Reports from families are one of the fastest ways we catch
+        changes. Email{' '}
+        <a
+          class="link-underline font-medium text-brand-strong"
+          href={`mailto:${SITE.contactEmail}`}
+        >
+          {SITE.contactEmail}
+        </a>{' '}
+        with the listing name and what's changed, and we'll re-verify it.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

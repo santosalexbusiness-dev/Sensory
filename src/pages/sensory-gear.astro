@@ -1,0 +1,147 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import productsData from '../data/products.json';
+import { absoluteUrl, formatTitle } from '../lib/utils';
+import { breadcrumbSchema } from '../lib/seo';
+import { SITE } from '../site.config';
+
+interface Product {
+  name: string;
+  category: string;
+  blurb: string;
+  search: string;
+  /** Specific Amazon product to link. Falls back to a tagged search when absent. */
+  asin?: string;
+  /** Short "best for" use case, shown under the blurb. */
+  useCase?: string;
+}
+
+const site = Astro.site;
+const products = productsData as Product[];
+const tag = SITE.amazonAssociateTag.trim();
+const amazonLink = (search: string) =>
+  `https://www.amazon.com/s?k=${encodeURIComponent(search)}${
+    tag ? `&tag=${encodeURIComponent(tag)}` : ''
+  }`;
+const productLink = (p: Product) =>
+  p.asin
+    ? // `ref=nosim` stops Amazon's canonical redirect from stripping the ?tag=
+      // associate ID, so the tag survives the click and the visit is tracked.
+      `https://www.amazon.com/dp/${encodeURIComponent(p.asin)}/ref=nosim${
+        tag ? `?tag=${encodeURIComponent(tag)}` : ''
+      }`
+    : amazonLink(p.search);
+
+const order = [
+  'Sound & noise',
+  'Light & visual',
+  'Calming & pressure',
+  'Movement & body',
+  'Chewing & oral',
+  'Fidget & focus',
+  'Calm-down & regulation',
+  'Tactile & sensory play',
+  'Communication & learning',
+  'Bedtime & sleep',
+  'Clothing & comfort',
+  'Mealtime',
+  'Out-and-about',
+  'Safety & peace of mind',
+];
+const groups = order
+  .map((category) => ({
+    category,
+    items: products.filter((p) => p.category === category),
+  }))
+  .filter((g) => g.items.length > 0);
+
+const description =
+  `Sensory gear we recommend for sensory-sensitive and autistic kids — ` +
+  `noise-reducing headphones, weighted lap pads, fidgets, sunglasses and more, ` +
+  `with a note on why each one helps on a day out.`;
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', site) },
+    { name: 'Sensory gear', url: absoluteUrl('/sensory-gear/', site) },
+  ]),
+];
+---
+
+<BaseLayout
+  title={formatTitle('Sensory Gear We Recommend')}
+  description={description}
+  canonicalPath="/sensory-gear/"
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Sensory gear' }]} />
+
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      Sensory gear we recommend
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
+      The small kit that makes a hard outing manageable — headphones for a loud
+      room, something to fidget with in a queue, a weighted lap pad for a haircut.
+      Here's the gear we'd actually pack, grouped by what it helps with.
+    </p>
+
+    <div
+      class="mt-6 rounded-card border border-line bg-brand-soft/40 p-5 text-sm leading-relaxed text-muted"
+    >
+      <p>
+        <span class="font-semibold text-ink">Affiliate disclosure:</span> As an
+        Amazon Associate, {SITE.name} earns from qualifying purchases — at no extra
+        cost to you. Buying through these links is one way to{' '}
+        <a class="link-underline font-medium text-brand-strong" href="/support/"
+          >support the site</a
+        >. We only suggest gear that genuinely helps, and it never affects which
+        places we list. Each link opens the product on Amazon, where you can check
+        the current price and read recent reviews yourself.
+      </p>
+    </div>
+
+    {
+      groups.map((group) => (
+        <section class="mt-12">
+          <h2 class="text-2xl font-bold text-ink">{group.category}</h2>
+          <ul class="mt-5 grid gap-4 sm:grid-cols-2">
+            {group.items.map((p) => (
+              <li class="flex h-full flex-col rounded-card border border-line bg-surface p-5">
+                <h3 class="text-lg font-semibold text-ink">{p.name}</h3>
+                <div class="flex-1">
+                  <p class="mt-1.5 leading-relaxed text-muted">{p.blurb}</p>
+                  {p.useCase && (
+                    <p class="mt-2 text-sm leading-relaxed text-muted">
+                      <span class="font-semibold text-ink">Best for:</span> {p.useCase}
+                    </p>
+                  )}
+                </div>
+                <a
+                  href={productLink(p)}
+                  target="_blank"
+                  rel="sponsored nofollow noopener noreferrer"
+                  class="mt-4 inline-flex w-fit items-center rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-strong"
+                >
+                  View on Amazon →
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    }
+
+    <div class="mt-14 max-w-3xl space-y-5 leading-relaxed text-muted prose-readable">
+      <h2 class="text-xl font-bold text-ink">How we choose</h2>
+      <p>
+        These are everyday sensory tools that parents and occupational therapists
+        commonly reach for. The specific products we link are well-reviewed,
+        widely available starting points — not brands we've been paid to feature.
+        Read recent reviews and compare options to pick what fits your child and
+        your budget. Every child is different; what calms one can overwhelm
+        another, so introduce new gear gently and follow your child's lead.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,56 @@
+---
+import { SITE } from '../site.config';
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/search/', label: 'Find Nearby' },
+  { href: '/cities/', label: 'Cities' },
+  { href: '/about/', label: 'About' },
+  { href: '/how-we-verify/', label: 'How We Verify' },
+  { href: '/sensory-gear/', label: 'Sensory Gear' },
+  { href: '/support/', label: 'Donate' },
+];
+
+const current = Astro.url.pathname;
+const isActive = (href: string) =>
+  href === '/' ? current === '/' : current.startsWith(href);
+---
+
+<header class="border-b border-line bg-surface">
+  <div
+    class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-4 py-4 sm:px-6"
+  >
+    <a href="/" class="flex items-center gap-2.5 text-ink">
+      <span
+        aria-hidden="true"
+        class="flex h-8 w-8 items-center justify-center rounded-lg bg-brand"
+      >
+        <span class="h-3 w-3 rounded-full bg-white"></span>
+      </span>
+      <span class="text-lg font-bold tracking-tight">{SITE.name}</span>
+    </a>
+
+    <nav aria-label="Primary" class="w-full sm:w-auto">
+      <ul class="flex flex-wrap gap-x-5 gap-y-1.5 text-sm">
+        {
+          links.map((l) => (
+            <li>
+              <a
+                href={l.href}
+                aria-current={isActive(l.href) ? 'page' : undefined}
+                class:list={[
+                  'inline-block py-1 font-medium transition-colors',
+                  isActive(l.href)
+                    ? 'text-brand-strong'
+                    : 'text-muted hover:text-brand-strong',
+                ]}
+              >
+                {l.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

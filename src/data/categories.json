@@ -1,0 +1,230 @@
+[
+  {
+    "slug": "sensory-friendly-haircuts",
+    "name": "Sensory-Friendly Haircuts",
+    "shortLabel": "Haircuts",
+    "nameSingular": "Sensory-Friendly Haircut",
+    "serviceNoun": "haircuts",
+    "placeNoun": "salon or barbershop",
+    "placeNounPlural": "salons and barbershops",
+    "schemaType": "HairSalon",
+    "tagline": "Calm, patient haircuts for kids who find typical salons overwhelming.",
+    "description": "Haircuts can be genuinely hard for autistic and sensory-sensitive kids — the buzzing clippers, the spray bottle, the cape, the bright lights and unfamiliar smells. The places below have made specific changes to lower that sensory load, from quiet appointment times to noise-reducing headphones and stylists who are trained to go slowly and explain each step.",
+    "guide": "When you call ahead, it helps to ask a few concrete questions: Can we book the first or last slot of the day, when it's quietest? Can the clippers be swapped for scissors, or introduced gradually? Is there a private chair away from the window and the dryers? Can my child stay in their own clothes instead of a cape? Most sensory-friendly providers will happily walk through their accommodations before you book — and a five-minute phone call often prevents a difficult visit.",
+    "faqs": [
+      {
+        "question": "What makes a haircut sensory-friendly?",
+        "answer": "A sensory-friendly haircut lowers the sensory load of a normally overwhelming experience. In practice that can mean quieter appointment times, dimmable lighting, no loud hair dryers, fragrance-free products, noise-reducing headphones, a weighted lap pad, a private chair, extra appointment time so nobody feels rushed, and — most importantly — a stylist who is patient, explains each step, and lets the child set the pace."
+      },
+      {
+        "question": "How do I prepare my child for a haircut?",
+        "answer": "Preparation makes a real difference. Talk through what will happen using a simple social story or photos of the salon. Visit once beforehand just to look around and meet the stylist, with no haircut planned. Book the first or last appointment of the day when it is calmest, bring a comfort item or a familiar video, and let the stylist know your child's specific triggers in advance so they can adapt. Practicing with a spray bottle or quiet clippers at home can also help."
+      },
+      {
+        "question": "Are sensory-friendly haircuts more expensive?",
+        "answer": "Usually not. Most providers charge their standard children's haircut price and simply build in extra time and patience. Some offer dedicated quiet hours or sensory-friendly days at no added cost. Pricing varies by location, so check each listing's cost field and confirm when you book."
+      },
+      {
+        "question": "What ages are these services for?",
+        "answer": "It varies by provider. Some specialize in toddlers and young children, while others welcome older kids, teens, and adults who prefer a low-stimulation environment. Each listing shows an age range — confirm directly with the business if your child falls near the edges of it."
+      },
+      {
+        "question": "How do you choose and verify these listings?",
+        "answer": "Every listing is reviewed against a written checklist before it is published, and each one shows the date it was last verified. We explain exactly what that process involves on our How We Verify page, and we re-check listings periodically because hours, staff, and accommodations change over time."
+      }
+    ]
+  },
+  {
+    "slug": "sensory-friendly-museums",
+    "name": "Sensory-Friendly Museums",
+    "shortLabel": "Museums",
+    "nameSingular": "Sensory-Friendly Museum",
+    "serviceNoun": "museum visits",
+    "placeNoun": "museum",
+    "placeNounPlural": "museums",
+    "schemaType": "Museum",
+    "tagline": "Museums with quiet hours, low-sensory mornings, and space to take a break.",
+    "description": "Museums can be wonderful for curious kids — and also a lot: echoing halls, crowds, sudden interactive sounds, and few obvious places to take a break. The museums below have added specific supports, from low-sensory mornings and borrowable sensory backpacks to quiet rooms and social stories you can preview before you go.",
+    "guide": "Before you visit, it helps to check a few things: Is there a low-sensory morning or quiet hour, and does it need booking? Can you borrow noise-reducing headphones or a sensory backpack, or should you bring your own? Where is the quiet room or calm-down space, and is there a step-free route to it? Many museums publish a social story or visual map online — previewing the entrance, ticket line, and first gallery the night before removes a surprising amount of first-visit stress.",
+    "faqs": [
+      {
+        "question": "What makes a museum sensory-friendly?",
+        "answer": "It's a mix of timing, tools, and space. Sensory-friendly museums often run low-sensory mornings or quiet hours with dimmed lights and muted interactive exhibits, lend out sensory backpacks and noise-reducing headphones, set aside a quiet room to decompress, and publish a social story or visual map so families know exactly what to expect before they arrive."
+      },
+      {
+        "question": "How do I prepare my child for a museum visit?",
+        "answer": "Preview the museum's social story or photo map together the night before so the entrance, ticket line, and first gallery aren't a surprise. Go at the quietest time you can — a low-sensory morning or a weekday before lunch — and agree on a plan for breaks and a meeting spot. Pack headphones and a comfort item, and pick the two or three exhibits that matter most so the visit doesn't have to be exhaustive."
+      },
+      {
+        "question": "Do sensory-friendly sessions cost extra?",
+        "answer": "Usually not. Many museums run their sensory-friendly mornings at standard admission, and some offer them free or by donation. A few of the listings here note free sensory sessions — check each card's cost line and confirm whether the session needs to be booked in advance."
+      },
+      {
+        "question": "Are these only for autistic children?",
+        "answer": "No. Sensory-friendly accommodations help any child who finds crowds, noise, or bright lights overwhelming — including kids with ADHD, anxiety, or sensory processing differences — as well as their siblings and caregivers. Everyone is welcome at the times and spaces described here."
+      }
+    ]
+  },
+  {
+    "slug": "sensory-friendly-movies",
+    "name": "Sensory-Friendly Movie Screenings",
+    "shortLabel": "Movies",
+    "nameSingular": "Sensory-Friendly Movie Screening",
+    "serviceNoun": "movie screenings",
+    "placeNoun": "theater",
+    "placeNounPlural": "movie theaters",
+    "schemaType": "MovieTheater",
+    "tagline": "Lights up, sound down, and freedom to move — movies the way your child needs them.",
+    "description": "At a sensory-friendly screening the house lights stay up, the volume comes down, and nobody minds if your child gets up, talks, sings, or moves around. The major theater chains all run versions of this, usually on a set day each month, so there's likely one near you — the listings below link straight to each chain's official schedule.",
+    "guide": "Sensory-friendly showtimes are scheduled — usually one set day a month — so timing is everything. Each major cinema chain runs its own version on its own schedule; you'll find the specific chains and days in the listings below for your city. Because the exact film and time rotate and not every location participates, always open the chain's official schedule and confirm your specific cinema before you go. Arriving a few minutes early to pick seats near an exit can make leaving for a break easier.",
+    "faqs": [
+      {
+        "question": "What is a sensory-friendly movie screening?",
+        "answer": "It's a regular movie shown with the lights left up and the sound turned down, in a relaxed setting where guests are free to move, talk, sing, or step out and come back. Trailers are often skipped so the film starts right at showtime. The format is designed so families who find a standard dark, loud theater overwhelming can still enjoy a movie together."
+      },
+      {
+        "question": "Which theaters offer sensory-friendly films?",
+        "answer": "Most of the big cinema chains run a version. In the US that's AMC's Sensory Friendly Films, Regal's My Way Matinee, and Cinemark's sensory-friendly showtimes; in the UK and Ireland, ODEON, Cineworld, Vue, Omniplex and IMC; in Australia, Event Cinemas, HOYTS and Village; and in Canada, Cineplex and Landmark. Each runs on its own schedule at participating locations only, so use the official links on each listing to confirm the nearest cinema, date and title."
+      },
+      {
+        "question": "Do sensory-friendly screenings cost more?",
+        "answer": "No — they're priced as a standard (usually matinee) ticket. There's no premium for the relaxed format. Pricing and any membership discounts work the same as a normal showing at that theater."
+      }
+    ]
+  },
+  {
+    "slug": "sensory-friendly-play",
+    "name": "Sensory-Friendly Play & Entertainment",
+    "shortLabel": "Play",
+    "nameSingular": "Sensory-Friendly Play Session",
+    "serviceNoun": "play sessions",
+    "placeNoun": "play venue",
+    "placeNounPlural": "play & entertainment venues",
+    "schemaType": "EntertainmentBusiness",
+    "tagline": "Arcades and play spaces with the lights, sound, and crowds dialed down.",
+    "description": "Arcades and indoor play centers are some of the loudest, brightest, most overstimulating places a kid can go — which is exactly why dedicated sensory-friendly hours matter. The venues below open early or set aside times with dimmed lights, lower sound, and no flashing effects, so play stays fun instead of overwhelming.",
+    "guide": "Sensory-friendly play times are usually scheduled and sometimes lower-capacity, so it pays to plan ahead. Chuck E. Cheese, for example, runs Sensory Sensitive Sundays on the first Sunday of the month, opening two hours before normal hours with dimmed lights and quieter games. Confirm the date and start time at your specific location, arrive near opening when it's calmest, and ask staff where the quietest corner of the room is.",
+    "faqs": [
+      {
+        "question": "What makes an arcade or play center sensory-friendly?",
+        "answer": "During sensory-friendly hours the venue dims the lighting, lowers or mutes game and music volume, turns off flashing effects, and often limits how many people are admitted so the space feels calmer. Staff are usually briefed to be patient and welcoming. The goal is to keep the fun of play while removing the sensory overload that normally comes with it."
+      },
+      {
+        "question": "How often are sensory-friendly play sessions held?",
+        "answer": "It varies by venue. A common pattern is one set morning a month — Chuck E. Cheese runs Sensory Sensitive Sundays on the first Sunday, for instance — while some independent play centers offer weekly quiet hours. Always confirm the schedule for your specific location, since participation and timing differ."
+      },
+      {
+        "question": "Do I need to reserve a spot?",
+        "answer": "Often no reservation is required, but because some sessions are reduced-capacity it's worth checking ahead. Siblings, parents, and caregivers are typically welcome to join. Confirm pricing too — most venues charge their normal rates during sensory-friendly hours."
+      }
+    ]
+  },
+  {
+    "slug": "sensory-friendly-attractions",
+    "name": "Sensory-Friendly Zoos, Aquariums & Attractions",
+    "shortLabel": "Zoos & Attractions",
+    "nameSingular": "Sensory-Friendly Attraction",
+    "serviceNoun": "visits",
+    "placeNoun": "attraction",
+    "placeNounPlural": "zoos, aquariums & attractions",
+    "schemaType": "TouristAttraction",
+    "tagline": "Zoos, aquariums, and attractions with real sensory accommodations — many autism-certified.",
+    "description": "Zoos and aquariums are wonderful for kids — and full of crowds, echoing halls, and unpredictable sounds. The attractions below have gone further than good intentions: many are Certified Autism Centers through IBCCES, with trained staff, sensory guides, quiet spaces, and borrowable sensory bags so a big day out stays manageable.",
+    "guide": "Look for two things in particular: a formal certification (IBCCES Certified Autism Center status means staff have completed autism and sensory training) and practical tools on the day — sensory bags or backpacks, a sensory guide rating each area's noise and crowd levels, and a designated quiet room. Plan your route around the calmer exhibits first, go on a weekday morning when you can, and check whether the attraction publishes a sensory map before you arrive.",
+    "faqs": [
+      {
+        "question": "What is a Certified Autism Center?",
+        "answer": "A Certified Autism Center (CAC) is a designation from IBCCES given to venues whose staff have completed autism and sensory-awareness training and that meet accessibility requirements. For families it's a reliable signal that accommodations — trained staff, sensory guides, quiet spaces — are genuinely in place rather than just advertised. IBCCES lists certified destinations publicly on AutismTravel.com."
+      },
+      {
+        "question": "What accommodations do these attractions usually offer?",
+        "answer": "Common ones include borrowable sensory bags (noise-reducing headphones, fidgets, a visual guide), a sensory guide or map rating each exhibit's noise, lighting, and crowd level, designated quiet rooms or calm spaces, and staff trained to help. Some also run lower-capacity sensory mornings. Check each listing for the specifics and confirm directly before visiting."
+      },
+      {
+        "question": "Are sensory accommodations included with admission?",
+        "answer": "Almost always, yes — sensory bags, quiet spaces, and sensory guides are typically free with regular admission. Some venues also hold special low-sensory event mornings that may be separately ticketed. The listing's cost line and the venue's website will tell you what's included."
+      }
+    ]
+  },
+  {
+    "slug": "sensory-friendly-theater",
+    "name": "Sensory-Friendly Theater & Performances",
+    "shortLabel": "Theater",
+    "nameSingular": "Sensory-Friendly Performance",
+    "serviceNoun": "performances",
+    "placeNoun": "theater",
+    "placeNounPlural": "theaters & performing arts venues",
+    "schemaType": "PerformingArtsTheater",
+    "tagline": "Relaxed, judgment-free performances where kids can move, talk, and react.",
+    "description": "Live theater can be magical for kids — and a lot to handle: dark rooms, sudden loud effects, and an unspoken rule to sit still and stay quiet. At a sensory-friendly performance (sometimes called a relaxed or autism-friendly performance), the house lights stay up a little, startling sounds are softened, and nobody minds if your child talks, moves, or needs to step out and come back. The companies below build these adaptations into select shows, with social stories and trained staff so a first trip to the theater feels welcoming rather than risky.",
+    "guide": "Sensory-friendly performances are scheduled — usually one designated show per production — so timing matters: check each company's accessibility page for the next dated performance and book early, as they're popular and often capped. Most theaters post a social story and character guide ahead of time; previewing it together removes a lot of first-visit anxiety. Look for a designated quiet space (a 'Cozy Zone' or break room) and ask whether headphones, ear defenders, or fidgets are available to borrow. Arriving a few minutes early to 'meet your seat' and find the exits makes leaving for a break much easier.",
+    "faqs": [
+      {
+        "question": "What is a sensory-friendly (or relaxed) performance?",
+        "answer": "It's a live performance adapted for people on the autism spectrum, with sensory sensitivities, or anyone who benefits from a more relaxed setting. House lights are kept partly up, sound levels and startling effects are reduced, and the audience is free to move, vocalize, and leave and re-enter as needed. Trained staff are on hand, a designated quiet space is available, and a social story is usually provided in advance. The terms 'relaxed performance' and 'autism-friendly performance' mean essentially the same thing."
+      },
+      {
+        "question": "How do I prepare my child for the theater?",
+        "answer": "Download the company's social story and character guide and read them together beforehand so the building, the seats, and the story aren't a surprise. Many theaters offer a 'meet your seat' visit before the show. Pack headphones or ear defenders and a comfort item, plan ahead for where you'll take a break, and sit near an aisle or exit so stepping out is easy. Let staff know your child's specific triggers when you arrive — they're there to help."
+      },
+      {
+        "question": "Do sensory-friendly performances cost more?",
+        "answer": "No — they're priced the same as a regular performance, and some companies offer them at a reduced rate (a few list sensory-friendly tickets around $10). Because seating is sometimes general admission or capacity-limited, it's worth booking ahead. Check each listing's cost line and the company's accessibility page for specifics."
+      }
+    ]
+  },
+  {
+    "slug": "inclusive-playgrounds",
+    "name": "Inclusive & Accessible Playgrounds",
+    "shortLabel": "Playgrounds",
+    "nameSingular": "Inclusive Playground",
+    "serviceNoun": "visits",
+    "placeNoun": "playground",
+    "placeNounPlural": "playgrounds & parks",
+    "schemaType": "Park",
+    "tagline": "All-abilities playgrounds with smooth paths, calm retreats, and play for every body.",
+    "description": "Most playgrounds quietly leave some kids out — loose wood chips a wheelchair can't cross, swings with no support, ladders a child with low muscle tone can't climb, and nowhere to go when it all gets to be too much. Inclusive (or all-abilities) playgrounds are designed the opposite way: rubberized, roll-on surfaces, ramped play structures, high-backed and wheelchair-accessible swings, sensory-rich features, and quiet retreat spaces built right in. The playgrounds below go beyond basic accessibility to be genuinely welcoming for children of every physical, cognitive, and sensory ability — and they're free.",
+    "guide": "Inclusive playgrounds are usually free, outdoor city or county parks, so the main things to check are timing and layout. Go on a weekday morning or later afternoon when it's calmest, and look for the features that matter for your child: smooth unitary surfacing for wheels, a wheelchair-accessible (often locking 'Liberty') swing, ramped structures, and — importantly — a designated quiet or 'retreat' space to decompress without leaving. A few of these playgrounds have their own rules (no food, no outside toys, gates kept closed) to keep the space safe and clean for everyone, so it's worth reading the park's page before you go.",
+    "faqs": [
+      {
+        "question": "What makes a playground 'inclusive' rather than just accessible?",
+        "answer": "An accessible playground lets a child with a disability enter and move through the space. An inclusive playground goes further — it's intentionally designed so children of all abilities can play together on the same equipment, at the same time. That usually means smooth roll-on surfacing instead of wood chips or sand, ramped and ground-level play, supportive and wheelchair-accessible swings, sensory features, clear sightlines and fencing, and calm retreat spots for kids who get overstimulated."
+      },
+      {
+        "question": "Are these playgrounds free?",
+        "answer": "Almost always, yes. Most are public parks run by a city or county parks department and are free and open during daylight hours. A few have a small fee or reservation for an attached feature like a carousel or train. Check each listing for hours and any specifics."
+      },
+      {
+        "question": "Will there be a quiet space if my child gets overwhelmed?",
+        "answer": "Often, yes — that's part of what sets these playgrounds apart. Many are designed with 'retreat huts,' 'hideaway' nooks, or quieter zones away from the busiest equipment, so a child who needs a break can step out of the action without leaving the playground. The listing notes calm-down features where a playground has them."
+      }
+    ]
+  },
+  {
+    "slug": "sensory-storytime",
+    "name": "Sensory Storytime at Libraries",
+    "shortLabel": "Storytime",
+    "nameSingular": "Sensory Storytime",
+    "serviceNoun": "storytimes",
+    "placeNoun": "library",
+    "placeNounPlural": "libraries",
+    "schemaType": "Library",
+    "tagline": "Free, small-group library storytimes adapted for kids who learn and move differently.",
+    "description": "A standard library storytime — fifty kids, bright lights, and an unspoken expectation to sit still — can be impossible for a child who is autistic or sensory-sensitive, and a lot of families simply stop coming. Sensory storytime fixes that: small groups, a predictable routine, a visual schedule, dimmer lighting and quieter music, and lots of movement, songs, and hands-on sensory play. Nobody gets 'the look' for being bouncy or loud. The library programs below were built specifically to welcome neurodivergent kids and their families — and they're free.",
+    "guide": "Sensory storytimes are free but usually small and often need registration, so check the library's events calendar and sign up early. Programs run on a set schedule (weekly or monthly) and can change term to term — it's always worth confirming the next date before you go. Ask whether the branch lends a 'sensory kit' (headphones, fidgets, a wiggle cushion) or has a quiet room; many systems now keep these on hand. Because libraries are local and program schedules shift, treat each listing as a starting point and confirm the current dates on the library's own site.",
+    "faqs": [
+      {
+        "question": "What happens at a sensory storytime?",
+        "answer": "It keeps the heart of a normal storytime — books, songs, rhymes — but adapts the format: a small group, a visual schedule the librarian refers to throughout so kids know what's next, dimmer lights and quieter music, and movement and sensory activities (bubbles, stretchy bands, scarves, fidgets) woven in. Children are free to move around, make noise, and participate however works for them. Siblings and kids of all abilities are welcome."
+      },
+      {
+        "question": "Is it only for autistic children?",
+        "answer": "No. Sensory storytimes are designed with autistic kids in mind, but the same things that help them — small groups, routine, a calmer sensory environment — help lots of children, including those with ADHD, anxiety, developmental or expressive-language differences, and their siblings. Most are explicitly open to children 'with and without disabilities.'"
+      },
+      {
+        "question": "Does it cost anything, and do I need to register?",
+        "answer": "Library sensory storytimes are free. Many are small-group and require advance registration (one sign-up per family), and some are drop-in. Schedules vary by branch and can change each season, so check the library's events calendar for the next date and whether you need to sign up."
+      }
+    ]
+  }
+]

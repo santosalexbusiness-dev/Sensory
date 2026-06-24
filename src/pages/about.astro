@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { absoluteUrl, formatTitle } from '../lib/utils';
+import { breadcrumbSchema } from '../lib/seo';
+import { SITE } from '../site.config';
+
+const site = Astro.site;
+const description = `About ${SITE.name} — who is behind this directory of sensory-friendly places for kids, what we cover, and how to get in touch.`;
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', site) },
+    { name: 'About', url: absoluteUrl('/about/', site) },
+  ]),
+];
+---
+
+<BaseLayout
+  title={formatTitle('About')}
+  description={description}
+  canonicalPath="/about/"
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'About' }]} />
+
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      About {SITE.name}
+    </h1>
+
+    <div class="mt-6 space-y-5 leading-relaxed text-muted prose-readable">
+      <p>
+        {SITE.name} is a directory of sensory-friendly and autism-friendly places
+        and services for children. We started it for a simple reason: finding out
+        whether somewhere will work for a sensory-sensitive child is far harder
+        than it should be. The details that matter — whether the lights can be
+        dimmed, whether staff are patient, whether there's a quieter time of day —
+        are rarely on a business's website, and they're exactly what we collect here.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">Who's behind it</h2>
+      <p>
+        This project is run by me, Alex — a parent and
+        caregiver who has spent years figuring out which places work and which
+        don't. I'm not a medical professional and nothing here is medical
+        advice — I'm sharing practical, lived-experience information so other
+        families can spend less time guessing.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">What we cover</h2>
+      <p>
+        We organize places by category and by city. Our first category is
+        sensory-friendly haircuts, and we're expanding into museums, indoor play
+        gyms, sensory-friendly seasonal events, and more. A city only appears once
+        we have enough verified listings to make the page genuinely useful, so you
+        won't land on a near-empty page.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">How we keep it accurate</h2>
+      <p>
+        Every listing is checked against a written standard, and each one shows
+        the date it was last verified. We re-check listings periodically because
+        hours, staff, and accommodations change. You can read exactly how we do
+        this on our{' '}
+        <a class="link-underline font-medium text-brand-strong" href="/how-we-verify/">
+          How We Verify
+        </a>{' '}
+        page.
+      </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">Help us improve a listing</h2>
+      <p>
+        If something here is out of date, or you know a great place we've missed,
+        please tell us — corrections from families are one of our most valuable
+        sources. Email us at{' '}
+        <a
+          class="link-underline font-medium text-brand-strong"
+          href={`mailto:${SITE.contactEmail}`}
+        >
+          {SITE.contactEmail}
+        </a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

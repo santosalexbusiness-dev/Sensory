@@ -1,0 +1,26 @@
+{
+  "name": "sensory-friendly-directory",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Programmatic SEO directory for sensory-friendly / autism-friendly places and services for kids.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "@vercel/analytics": "^2.0.1",
+    "astro": "^6.4.7",
+    "tailwindcss": "^4.3.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@tailwindcss/postcss": "^4.3.1",
+    "typescript": "^6.0.3"
+  }
+}

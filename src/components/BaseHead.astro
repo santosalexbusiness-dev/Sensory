@@ -1,0 +1,75 @@
+---
+/**
+ * Everything that goes in <head>: title, meta description, canonical URL,
+ * Open Graph + Twitter cards, theme color, and any JSON-LD structured data.
+ * Canonical and social URLs are all derived from the configured `site` domain.
+ */
+import { SITE } from '../site.config';
+import { absoluteUrl } from '../lib/utils';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Site-relative path or absolute URL for the social image. */
+  image?: string;
+  /** Override the canonical path (defaults to the current URL path). */
+  canonicalPath?: string;
+  type?: 'website' | 'article';
+  noindex?: boolean;
+  /** JSON-LD objects to embed as <script type="application/ld+json">. */
+  jsonLd?: object[];
+}
+
+const {
+  title,
+  description,
+  image = '/og-default.png',
+  canonicalPath,
+  type = 'website',
+  noindex = false,
+  jsonLd = [],
+} = Astro.props;
+
+const site = Astro.site;
+const canonicalURL = absoluteUrl(canonicalPath ?? Astro.url.pathname, site);
+const ogImage = absoluteUrl(image, site);
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+{
+  SITE.googleSiteVerification && (
+    <meta name="google-site-verification" content={SITE.googleSiteVerification} />
+  )
+}
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+<meta name="theme-color" content="#1f5e54" />
+
+{/* Open Graph */}
+<meta property="og:type" content={type} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:locale" content={SITE.locale} />
+
+{/* Twitter */}
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+{SITE.twitter && <meta name="twitter:site" content={SITE.twitter} />}
+
+{/* Structured data */}
+{
+  jsonLd.map((schema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))
+}

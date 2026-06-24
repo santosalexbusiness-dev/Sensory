@@ -1,0 +1,578 @@
+[
+  {
+    "name": "Kids' noise-reducing ear defenders",
+    "category": "Sound & noise",
+    "blurb": "Slip these on before a movie, a sporting event, or a loud attraction. They take the edge off the volume without cutting sound out completely, so your child can still hear you.",
+    "useCase": "Loud movies, sporting events, fireworks, and busy attractions",
+    "search": "kids noise reducing ear defenders",
+    "asin": "B07YRPX74G"
+  },
+  {
+    "name": "Noise-cancelling headphones for kids",
+    "category": "Sound & noise",
+    "blurb": "For older kids who'd rather have quiet or their own music on a hard day out — active noise cancelling muffles more of the background hum of a mall or arena.",
+    "useCase": "Older kids on long, loud days out — malls, arenas, travel",
+    "search": "noise cancelling headphones for kids",
+    "asin": "B0CP4NZSSZ"
+  },
+  {
+    "name": "Low-profile reusable ear plugs",
+    "category": "Sound & noise",
+    "blurb": "Discreet, reusable ear plugs that lower the volume of the world a notch without blocking it out — handy for tweens and teens who don't want bulky earmuffs.",
+    "useCase": "Older kids and parents who want subtle, packable sound relief",
+    "search": "Loop Experience 2 Plus ear plugs",
+    "asin": "B0D4D8MY67"
+  },
+  {
+    "name": "Foldable noise-reduction earmuffs (teen & adult sizes)",
+    "category": "Sound & noise",
+    "blurb": "A larger, higher-reduction earmuff for bigger kids, teens, and parents — folds flat to keep in a bag for unexpectedly loud places.",
+    "useCase": "Teens and grown-ups at concerts, fireworks, and loud venues",
+    "search": "foldable noise reduction ear muffs adult",
+    "asin": "B07SYWRTMK"
+  },
+  {
+    "name": "Kids' sunglasses",
+    "category": "Light & visual",
+    "blurb": "Bright, fluorescent-lit stores and arenas are a common trigger. A simple pair of shades can make an indoor space far easier to tolerate.",
+    "useCase": "Bright, fluorescent-lit stores and arenas",
+    "search": "kids polarized sunglasses",
+    "asin": "B00K4W4AAA"
+  },
+  {
+    "name": "Wide-brim or bucket hat",
+    "category": "Light & visual",
+    "blurb": "Cuts overhead glare and harsh lighting — useful indoors under bright lights as well as outside in the sun.",
+    "useCase": "Cutting overhead glare indoors and sun outdoors",
+    "search": "kids bucket hat",
+    "asin": "B0C4153ZYJ"
+  },
+  {
+    "name": "Galaxy star projector night light",
+    "category": "Light & visual",
+    "blurb": "Projects slow-moving stars and color across the ceiling — a calming visual focus for winding down a bedroom or a quiet corner.",
+    "useCase": "Calming a bedroom or quiet space at the end of the day",
+    "search": "galaxy star projector night light",
+    "asin": "B09FL6YR9L"
+  },
+  {
+    "name": "Fiber-optic color-changing lamp",
+    "category": "Light & visual",
+    "blurb": "Soft, shifting strands of color give eyes something gentle to follow. A low-key visual that many kids find soothing to hold and watch.",
+    "useCase": "A gentle visual focus during calm-down time",
+    "search": "fiber optic color changing sensory lamp",
+    "asin": "B00H4F8UX8"
+  },
+  {
+    "name": "Weighted lap pad",
+    "category": "Calming & pressure",
+    "blurb": "A few pounds across the lap can be grounding during a movie, a haircut, or a long wait. Small enough to keep in your bag for outings.",
+    "useCase": "Haircuts, movies, restaurants, and long waits",
+    "search": "weighted lap pad for kids",
+    "asin": "B07TKKYSVJ"
+  },
+  {
+    "name": "Kids' weighted blanket",
+    "category": "Calming & pressure",
+    "blurb": "Gentle, even pressure that can help with winding down at home or resetting after an overwhelming day. Choose a weight around 10% of your child's body weight.",
+    "useCase": "Winding down at home or resetting after a big day",
+    "search": "kids weighted blanket",
+    "asin": "B07MQT2C4F"
+  },
+  {
+    "name": "Weighted stuffed animal",
+    "category": "Calming & pressure",
+    "blurb": "A huggable comfort object with a calming bit of weight — easy to bring along for car rides, waiting rooms, and brand-new places.",
+    "useCase": "Car rides, waiting rooms, and new places",
+    "search": "weighted stuffed animal",
+    "asin": "B0C9545HFQ"
+  },
+  {
+    "name": "Chewable sensory necklace",
+    "category": "Calming & pressure",
+    "blurb": "A safe, discreet outlet for kids who chew to self-regulate, so sleeves and collars get a break. Handy in the car and during outings.",
+    "useCase": "Kids who chew to self-regulate; car rides and outings",
+    "search": "sensory chew necklace for kids",
+    "asin": "B088T7Q739"
+  },
+  {
+    "name": "Weighted compression vest",
+    "category": "Calming & pressure",
+    "blurb": "An adjustable vest that gives a steady, hug-like pressure some kids find grounding while sitting, working, or transitioning between activities.",
+    "useCase": "Steady deep-pressure input during seated or focus time",
+    "search": "weighted compression vest for kids sensory",
+    "asin": "B092CMJMPR"
+  },
+  {
+    "name": "Weighted shoulder wrap",
+    "category": "Calming & pressure",
+    "blurb": "Rests gently across the shoulders for a calming bit of pressure during homework, car rides, or a tough moment — easy to drape on and take off.",
+    "useCase": "Quick, grounding pressure during homework or travel",
+    "search": "weighted shoulder wrap kids",
+    "asin": "B07PVBV1CF"
+  },
+  {
+    "name": "Sensory body sock",
+    "category": "Movement & body",
+    "blurb": "A stretchy full-body sack kids climb inside to push, stretch, and feel resistance — a fun way to get calming deep-pressure and body-awareness input at home.",
+    "useCase": "Active deep-pressure play and body awareness at home",
+    "search": "body sock sensory sack kids",
+    "asin": "B07YVJQY16"
+  },
+  {
+    "name": "Doorway sensory swing",
+    "category": "Movement & body",
+    "blurb": "A cozy cocoon swing that hangs in a doorway or frame, giving gentle motion and a wrapped, snug feeling many kids seek out to settle.",
+    "useCase": "Calming motion and a snug retreat indoors",
+    "search": "doorway sensory swing for kids",
+    "asin": "B0743LXW61"
+  },
+  {
+    "name": "Wiggle (wobble) seat cushion",
+    "category": "Movement & body",
+    "blurb": "An inflatable cushion that lets a child wiggle and shift while staying seated — helpful for kids who focus better with a little movement.",
+    "useCase": "Staying seated at meals, homework, or circle time",
+    "search": "wiggle seat wobble cushion kids",
+    "asin": "B0C4GR3SJJ"
+  },
+  {
+    "name": "Mini toddler trampoline with handle",
+    "category": "Movement & body",
+    "blurb": "A sturdy little trampoline with a support handle for safe bouncing indoors — a good outlet for kids who need to move to feel regulated.",
+    "useCase": "Burning energy and getting movement input indoors",
+    "search": "mini trampoline for kids indoor handle",
+    "asin": "B0DTBTY8XK"
+  },
+  {
+    "name": "Wooden balance / wobble board",
+    "category": "Movement & body",
+    "blurb": "A simple curved board for rocking, balancing, and open-ended play that builds coordination and gives the body the movement it craves.",
+    "useCase": "Balance, coordination, and active play",
+    "search": "wooden balance board for kids",
+    "asin": "B08FYDYB1X"
+  },
+  {
+    "name": "Sensory crash pad",
+    "category": "Movement & body",
+    "blurb": "A soft, padded landing zone for kids who love to jump and crash — a safer way to get big deep-pressure input and active play at home.",
+    "useCase": "Safe jumping, crashing, and deep-pressure play",
+    "search": "crash pad for kids sensory",
+    "asin": "B0B9YQSMX4"
+  },
+  {
+    "name": "Scooter board with handles",
+    "category": "Movement & body",
+    "blurb": "A classic gym scooter with safe-grip handles for floor play that builds core strength and coordination — a favorite for movement breaks.",
+    "useCase": "Indoor movement breaks and core-strengthening play",
+    "search": "kids scooter board with handles",
+    "asin": "B0DHGB832F"
+  },
+  {
+    "name": "Chewable pencil toppers",
+    "category": "Chewing & oral",
+    "blurb": "Designed by a speech-language pathologist, these slip onto a pencil to give a safe outlet for kids who chew on pens and sleeves during schoolwork.",
+    "useCase": "Kids who chew on pencils and clothing at school",
+    "search": "chewable pencil toppers sensory",
+    "asin": "B0GFY9MM5C"
+  },
+  {
+    "name": "Textured handheld chew",
+    "category": "Chewing & oral",
+    "blurb": "A medical-grade, textured chew tool that gives oral sensory input for kids who chew to stay calm and focused — easy to keep in a pocket or bag.",
+    "useCase": "On-the-go oral input for kids who chew to self-regulate",
+    "search": "ARK textured chew sensory",
+    "asin": "B00NEZRS12"
+  },
+  {
+    "name": "Silicone chew bracelet",
+    "category": "Chewing & oral",
+    "blurb": "A discreet, wearable chew that looks like a regular bracelet — a low-profile option for older kids who'd rather not wear a necklace.",
+    "useCase": "Discreet chewing support for older kids",
+    "search": "silicone chew bracelet sensory kids",
+    "asin": "B07PPB3MS7"
+  },
+  {
+    "name": "Quiet fidget toy set",
+    "category": "Fidget & focus",
+    "blurb": "Pocket-sized, low-noise fidgets give busy hands something to do during a show, a meal out, or a wait — without distracting everyone nearby.",
+    "useCase": "Shows, meals out, and waits — without distracting others",
+    "search": "quiet fidget toys for kids",
+    "asin": "B0DHFNGQ4B"
+  },
+  {
+    "name": "Fidget rings & bracelets",
+    "category": "Fidget & focus",
+    "blurb": "Discreet self-regulation tools that don't look out of place at school or on a day out, so an older child can fidget without feeling singled out.",
+    "useCase": "Discreet self-regulation at school or out",
+    "search": "fidget ring for kids",
+    "asin": "B09YD31LHL"
+  },
+  {
+    "name": "Jumbo pop-it fidget",
+    "category": "Fidget & focus",
+    "blurb": "A big, satisfying bubble-popping mat that resets endlessly — simple, repetitive input that lots of kids find calming and absorbing.",
+    "useCase": "Repetitive, satisfying fidgeting for calm and focus",
+    "search": "large pop it fidget toy",
+    "asin": "B096XHHFWY"
+  },
+  {
+    "name": "Infinity cube",
+    "category": "Fidget & focus",
+    "blurb": "A pocket cube that folds over itself endlessly — a quiet, one-handed fidget that's easy to use under a desk or in a waiting room.",
+    "useCase": "Quiet one-handed fidgeting at a desk or out",
+    "search": "infinity cube fidget toy",
+    "asin": "B071X8S8WQ"
+  },
+  {
+    "name": "Tangle fidget (3-pack)",
+    "category": "Fidget & focus",
+    "blurb": "Twistable, connected segments to bend and turn — a near-silent fidget that's great for kids who like to keep their hands busy while listening.",
+    "useCase": "Silent hand-busy fidgeting while listening or learning",
+    "search": "Tangle Jr fidget toy",
+    "asin": "B0034EKP8Q"
+  },
+  {
+    "name": "Monkey noodles (stretchy strings)",
+    "category": "Fidget & focus",
+    "blurb": "Brightly colored strings that stretch several feet and snap back — a stretchy, tactile fidget for pulling, wrapping, and squeezing.",
+    "useCase": "Stretchy, tactile fidgeting for busy hands",
+    "search": "monkey noodles stretchy string fidget",
+    "asin": "B01LBSZQ3U"
+  },
+  {
+    "name": "Mesh & marble fidgets",
+    "category": "Fidget & focus",
+    "blurb": "A marble slides up and down inside a mesh tube — a quiet, repetitive motion that's easy to do one-handed and hard to put down.",
+    "useCase": "Quiet, repetitive fidgeting in class or on the go",
+    "search": "mesh and marble fidget toy",
+    "asin": "B08PB7Y44D"
+  },
+  {
+    "name": "Pop tubes",
+    "category": "Fidget & focus",
+    "blurb": "Bendy tubes that stretch, click, and connect — part fidget, part building toy, with a satisfying sound and feel kids return to again and again.",
+    "useCase": "Tactile, hands-on fidget play and quiet building",
+    "search": "pop tubes sensory toy set",
+    "asin": "B08GWPY8XP"
+  },
+  {
+    "name": "Fidget pen",
+    "category": "Fidget & focus",
+    "blurb": "A real pen with a built-in fidget, so an older kid can keep hands busy in class or at the table without an obvious toy.",
+    "useCase": "Discreet fidgeting for tweens, teens, and homework",
+    "search": "fidget pen for school",
+    "asin": "B0F9FXDMTN"
+  },
+  {
+    "name": "Liquid motion bubbler",
+    "category": "Calm-down & regulation",
+    "blurb": "Colored droplets drift slowly down through the chambers — a mesmerizing visual that gives kids something calming to watch and reset with.",
+    "useCase": "A calming visual focus during a reset",
+    "search": "liquid motion bubbler sensory",
+    "asin": "B00ZY6JHU4"
+  },
+  {
+    "name": "Therapy putty set",
+    "category": "Calm-down & regulation",
+    "blurb": "Stretch, squeeze, and pull through a set of resistances — hands-on input that's both calming and good for building hand strength.",
+    "useCase": "Hands-on calming input and hand strengthening",
+    "search": "therapy putty set resistance",
+    "asin": "B01KWDGIEQ"
+  },
+  {
+    "name": "Expandable breathing ball",
+    "category": "Calm-down & regulation",
+    "blurb": "Opens wide and shrinks back down, giving kids a visual to breathe along with — a simple, screen-free way to practice slow breaths together.",
+    "useCase": "Practicing slow breathing with a visual guide",
+    "search": "expandable breathing ball Hoberman sphere",
+    "asin": "B07N99K84Q"
+  },
+  {
+    "name": "Breathing exercise cards",
+    "category": "Calm-down & regulation",
+    "blurb": "Illustrated cards walk kids through a handful of simple breathing exercises — easy prompts for a calm-down corner or a tough moment.",
+    "useCase": "Guided calm-down moments at home or in a corner",
+    "search": "breathing exercise cards for kids",
+    "asin": "B087F6568X"
+  },
+  {
+    "name": "Squishy stress balls (set)",
+    "category": "Calm-down & regulation",
+    "blurb": "A set of squeezable balls in different textures for hands that need to squeeze and release — pocketable for school, the car, or out and about.",
+    "useCase": "Squeeze-and-release calming for busy or anxious hands",
+    "search": "squishy stress balls set for kids",
+    "asin": "B081VZH4JN"
+  },
+  {
+    "name": "Light-up glitter sensory tubes",
+    "category": "Calm-down & regulation",
+    "blurb": "Glitter swirls slowly through a glowing tube — a soothing visual that doubles as a gentle 'watch it settle' timer for transitions.",
+    "useCase": "A calming visual and gentle transition timer",
+    "search": "light up glitter sensory tubes",
+    "asin": "B0F8CRX3G4"
+  },
+  {
+    "name": "Pop-up blackout sensory tent",
+    "category": "Calm-down & regulation",
+    "blurb": "A small, dim retreat a child can crawl into when the world is too much — a portable 'quiet corner' for home, complete with soft lighting.",
+    "useCase": "A cozy quiet retreat for decompressing at home",
+    "search": "pop up blackout sensory tent for kids",
+    "asin": "B0DY9JW7WS"
+  },
+  {
+    "name": "Kinetic sand",
+    "category": "Tactile & sensory play",
+    "blurb": "Moldable sand that holds together and never dries out — a satisfying tactile activity that keeps hands happily busy at the table.",
+    "useCase": "Calming, hands-on tabletop sensory play",
+    "search": "kinetic sand sensory play",
+    "asin": "B07GTHTF9X"
+  },
+  {
+    "name": "Water beads (non-toxic)",
+    "category": "Tactile & sensory play",
+    "blurb": "Squishy, slippery beads for scooping and squeezing in a sensory bin — a favorite tactile activity. Best for older kids with supervision (small parts).",
+    "useCase": "Supervised tactile sensory-bin play for older kids",
+    "search": "water beads non toxic sensory",
+    "asin": "B0CFY6JRC2"
+  },
+  {
+    "name": "Spiky tactile / massage balls",
+    "category": "Tactile & sensory play",
+    "blurb": "Bumpy balls to roll, squeeze, and press — gentle tactile and deep-pressure input that's easy to keep in a calm-down kit or backpack.",
+    "useCase": "Tactile input and gentle deep-pressure rolling",
+    "search": "spiky sensory massage balls set",
+    "asin": "B001TZI4XK"
+  },
+  {
+    "name": "Montessori busy board",
+    "category": "Tactile & sensory play",
+    "blurb": "Latches, zippers, and switches all on one board — hands-on practice for everyday skills that keeps little fingers busy and engaged.",
+    "useCase": "Hands-on fine-motor and life-skills play",
+    "search": "montessori busy board toddler",
+    "asin": "B0B9MZ4BMP"
+  },
+  {
+    "name": "Magnetic visual schedule",
+    "category": "Communication & learning",
+    "blurb": "Picture magnets lay out the day step by step so kids know what's next — a predictable routine that takes the surprise out of transitions.",
+    "useCase": "Making daily routines and transitions predictable",
+    "search": "magnetic visual schedule for kids autism",
+    "asin": "B0FVMF68BS"
+  },
+  {
+    "name": "Feelings & emotions poster",
+    "category": "Communication & learning",
+    "blurb": "A clear visual of different feelings so kids can point to and name how they feel — a gentle way to build emotional vocabulary together.",
+    "useCase": "Helping kids identify and share how they feel",
+    "search": "feelings emotions chart poster for kids autism",
+    "asin": "B08JPTMWGW"
+  },
+  {
+    "name": "First-Then visual board",
+    "category": "Communication & learning",
+    "blurb": "A simple 'first this, then that' board with picture cards that makes expectations clear and eases the move from a task to a reward.",
+    "useCase": "Easing transitions with clear first-then expectations",
+    "search": "first then visual board autism",
+    "asin": "B00JNQ96KC"
+  },
+  {
+    "name": "Emotion flash cards",
+    "category": "Communication & learning",
+    "blurb": "A deck of clear feeling faces for talking through emotions and social situations — handy for quiet practice at home or in the car.",
+    "useCase": "Building emotional and social vocabulary",
+    "search": "emotion feelings flash cards for kids",
+    "asin": "B0893Z6G7B"
+  },
+  {
+    "name": "Portable white noise machine",
+    "category": "Bedtime & sleep",
+    "blurb": "A pocket-sized machine that masks unpredictable background noise with steady sound — useful for sleep, hotel rooms, and noisy travel.",
+    "useCase": "Masking unpredictable noise for sleep and travel",
+    "search": "portable white noise machine for kids",
+    "asin": "B01D50RYSC"
+  },
+  {
+    "name": "Blackout bed canopy / tent",
+    "category": "Bedtime & sleep",
+    "blurb": "A breathable canopy that darkens and encloses the bed into a calm, den-like space — comforting for kids who feel safer in a smaller, dimmer spot.",
+    "useCase": "A darker, enclosed, calming sleep space",
+    "search": "blackout bed canopy tent kids",
+    "asin": "B0BFL7DYZF"
+  },
+  {
+    "name": "Sensory compression bed sheet",
+    "category": "Bedtime & sleep",
+    "blurb": "A stretchy sheet that hugs the mattress and the child inside for light, even pressure — a cooler, lighter alternative to a weighted blanket.",
+    "useCase": "Light, breathable deep-pressure for settling at night",
+    "search": "sensory compression bed sheet twin",
+    "asin": "B081NJDGWC"
+  },
+  {
+    "name": "Seamless sensory socks",
+    "category": "Clothing & comfort",
+    "blurb": "Truly seamless socks with no toe ridge to rub or annoy — a small change that heads off a lot of morning meltdowns for sock-sensitive kids.",
+    "useCase": "Kids bothered by sock seams and toe ridges",
+    "search": "seamless sensory socks for kids",
+    "asin": "B097XRNJSW"
+  },
+  {
+    "name": "Tagless soft tee",
+    "category": "Clothing & comfort",
+    "blurb": "A super-soft, tagless shirt with flat, covered seams — designed to remove the scratchy spots that make ordinary clothes unbearable for some kids.",
+    "useCase": "Kids sensitive to tags, seams, and stiff fabric",
+    "search": "tagless sensory friendly t-shirt kids",
+    "asin": "B015BBFEV2"
+  },
+  {
+    "name": "Divided suction plates",
+    "category": "Mealtime",
+    "blurb": "Soft silicone plates with separated sections that suction to the table — keeping foods from touching (and from sliding away) at mealtimes.",
+    "useCase": "Mealtimes where foods can't touch and plates slide",
+    "search": "divided suction plates toddler silicone",
+    "asin": "B0BWDYTFZM"
+  },
+  {
+    "name": "Visual countdown timer",
+    "category": "Out-and-about",
+    "blurb": "Seeing time pass makes a transition feel predictable — 'when the red is gone, we leave.' Great for easing the end of a fun activity.",
+    "useCase": "Making transitions predictable; ending fun activities",
+    "search": "visual countdown timer for kids",
+    "asin": "B07WFDZ72L"
+  },
+  {
+    "name": "Sensory kit bag",
+    "category": "Out-and-about",
+    "blurb": "A small dedicated bag keeps headphones, fidgets, sunglasses, and a lap pad packed and ready, so a tough moment doesn't turn into a scramble.",
+    "useCase": "Keeping the whole sensory kit packed and ready",
+    "search": "sensory kit bag",
+    "asin": "B0DQ2JZSWK"
+  },
+  {
+    "name": "Communication picture cards",
+    "category": "Out-and-about",
+    "blurb": "Picture cards give a non-speaking or overwhelmed child a fast way to ask for a break, the bathroom, or home when words are hard.",
+    "useCase": "Fast requests when words are hard, on the go",
+    "search": "PECS communication cards autism",
+    "asin": "B0CX1C6V6Q"
+  },
+  {
+    "name": "Sand timer set",
+    "category": "Out-and-about",
+    "blurb": "A set of colorful sand timers for a few common lengths — a quiet, screen-free way to show how long is left for a turn, a task, or a break.",
+    "useCase": "Showing 'how much longer' without a screen",
+    "search": "sand timer set for kids classroom",
+    "asin": "B0C22XR1XC"
+  },
+  {
+    "name": "Car-seat travel tray",
+    "category": "Out-and-about",
+    "blurb": "A sturdy lap tray that turns a car seat into a steady surface for snacks, drawing, and fidgets — a lifesaver on longer drives and waits.",
+    "useCase": "Long car rides and keeping activities within reach",
+    "search": "car seat travel tray for kids",
+    "asin": "B099XCWH22"
+  },
+  {
+    "name": "Toddler harness backpack",
+    "category": "Safety & peace of mind",
+    "blurb": "A cute backpack with a detachable tether so a child can explore in crowded places while staying close — reassuring for kids who may bolt.",
+    "useCase": "Crowded outings — zoos, airports, festivals",
+    "search": "toddler backpack with safety harness leash",
+    "asin": "B06Y2XR8P5"
+  },
+  {
+    "name": "Door & window safety alarms",
+    "category": "Safety & peace of mind",
+    "blurb": "Simple stick-on alarms that chime when a door or window opens — peace of mind at home for families of kids who wander or elope.",
+    "useCase": "Home peace of mind for kids who wander",
+    "search": "door window safety alarm for kids",
+    "asin": "B07MWSNDFL"
+  },
+  {
+    "name": "Kids GPS smartwatch",
+    "category": "Safety & peace of mind",
+    "blurb": "A kid-friendly watch with location and two-way calling — a way to stay connected and locate your child on busy outings, no phone required.",
+    "useCase": "Staying connected and locating kids on outings",
+    "search": "kids GPS tracker smartwatch",
+    "asin": "B0CRTDT5NH"
+  },
+  {
+    "name": "Autism medical ID bracelet",
+    "category": "Safety & peace of mind",
+    "blurb": "A comfortable, waterproof ID band noting your child is autistic and may not respond — helpful information for first responders or a helpful stranger.",
+    "useCase": "Outings where a child may get separated or not respond",
+    "search": "autism medical ID bracelet for kids",
+    "asin": "B01MR2E5D5"
+  },
+  {
+    "name": "FL-41 tinted light-sensitivity glasses",
+    "category": "Light & visual",
+    "blurb": "Rose-tinted FL-41 lenses are made for the kind of light that triggers sensory overload — the flicker and glare of fluorescent and LED lighting. Gentler than sunglasses indoors, they take the harsh edge off bright stores, classrooms, and screens.",
+    "useCase": "Fluorescent and LED glare indoors, classrooms, and screens",
+    "search": "FL-41 tinted glasses light sensitivity",
+    "asin": "B097MQ1SDK"
+  },
+  {
+    "name": "Fluorescent light filter covers",
+    "category": "Light & visual",
+    "blurb": "Magnetic fabric panels that fit over standard ceiling light fixtures and soften the harsh glare and flicker that many kids find overwhelming. A calmer-feeling classroom, bedroom, or therapy room without changing the bulbs.",
+    "useCase": "Softening overhead fluorescent or LED glare in a room",
+    "search": "fluorescent light filter covers classroom",
+    "asin": "B001YT3G5C"
+  },
+  {
+    "name": "Weighted blackout sleep mask",
+    "category": "Bedtime & sleep",
+    "blurb": "A gently weighted, fully blackout eye mask that adds a little calming pressure while blocking out every bit of light. Packs flat for the car, the plane, or an unfamiliar hotel room where the light is never quite right.",
+    "useCase": "Calming, total-darkness rest at home or while traveling",
+    "search": "weighted blackout sleep eye mask",
+    "asin": "B0CMTXVT21"
+  },
+  {
+    "name": "Sunrise wake-up light alarm clock",
+    "category": "Bedtime & sleep",
+    "blurb": "Instead of a jarring buzz, the light brightens slowly like a sunrise so waking up is gradual rather than a shock to the system. Doubles as a dimmable night light and sound machine for a predictable bedtime routine.",
+    "useCase": "Gentle, gradual waking and a calmer bedtime routine",
+    "search": "sunrise wake up light alarm clock kids",
+    "asin": "B081CHLF46"
+  },
+  {
+    "name": "Sensory peanut therapy ball",
+    "category": "Movement & body",
+    "blurb": "The peanut shape rolls forward and back but not side to side, so it's far more stable than a round ball — kids can bounce, rock, and roll for the deep-pressure and movement input that helps them regulate and refocus.",
+    "useCase": "Active movement and proprioceptive input at home or therapy",
+    "search": "peanut therapy ball kids sensory",
+    "asin": "B0DZPDHK1J"
+  },
+  {
+    "name": "Vibrating oral sensory chew kit",
+    "category": "Chewing & oral",
+    "blurb": "A handheld vibrating tool with soft, textured swap-on tips for kids who seek strong oral input. The gentle vibration and chewable textures give a safe outlet for mouthing and can support oral-motor and feeding work.",
+    "useCase": "Kids who crave intense oral input or oral-motor support",
+    "search": "vibrating sensory oral chew tool",
+    "asin": "B0BKHF12KY"
+  },
+  {
+    "name": "Portable travel blackout blind",
+    "category": "Out-and-about",
+    "blurb": "Suction-cup blackout panel that sticks to any window and turns a bright hotel room or grandparent's spare room into a properly dark sleeping space. Velcro edges adjust to the window and the whole thing folds into its own travel bag.",
+    "useCase": "Blacking out unfamiliar rooms on trips and overnights",
+    "search": "portable blackout blind suction cups travel",
+    "asin": "B082XSZW6M"
+  },
+  {
+    "name": "Bluetooth sleep headphones headband",
+    "category": "Sound & noise",
+    "blurb": "A soft fabric headband with flat speakers tucked inside, so a child can fall asleep to white noise, a favorite story, or calm music without hard earbuds pressing in — comfortable even for side sleepers and easy to wash.",
+    "useCase": "Winding down to calming sound at bedtime or on the go",
+    "search": "bluetooth sleep headphones headband",
+    "asin": "B09ZV8SYRB"
+  },
+  {
+    "name": "Calm strips (textured sensory stickers)",
+    "category": "Calm-down & regulation",
+    "blurb": "Reusable, gritty-textured strips that stick to a phone, desk, or water bottle for a discreet bit of tactile input. A quiet way to rub or scratch out nervous energy that doesn't disturb anyone nearby.",
+    "useCase": "Discreet tactile regulation at school, desks, and outings",
+    "search": "calm strips sensory stickers",
+    "asin": "B0C86Q4PJM"
+  }
+]
