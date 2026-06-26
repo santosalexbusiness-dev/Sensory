@@ -1,0 +1,66 @@
+---
+/**
+ * Evergreen "ideas anywhere" block for city hubs.
+ *
+ * These are NOT listings. They are general, source-free strategies that tend to
+ * work in almost any town — useful especially in cities where we have only a few
+ * verified venues. Every idea is framed as "call ahead / ask locally" so it can
+ * never read as a confirmed sensory-friendly claim about a specific place. Keep
+ * it that way: do not add named venues, addresses, or schedules here. Anything
+ * specific belongs in listings.json with a sourceUrl.
+ */
+interface Props {
+  cityName: string;
+}
+const { cityName } = Astro.props;
+
+const ideas: { title: string; body: string }[] = [
+  {
+    title: 'Library sensory storytime & quiet hours',
+    body: 'Most public library branches run quieter morning sessions and some host a sensory or "relaxed" storytime. Call your nearest branch and ask what they offer this month.',
+  },
+  {
+    title: 'Parks, trails & botanic gardens at off-peak',
+    body: 'Open green space is naturally low-stimulation. Go right after opening or late afternoon on a weekday to skip crowds, and scope out a quiet bench to use as a reset spot.',
+  },
+  {
+    title: 'Supermarket "quiet hour"',
+    body: 'Several major grocery chains dim lights and cut music for a weekly low-sensory hour (often a weekday morning). Ask the customer-service desk whether your local store takes part.',
+  },
+  {
+    title: 'Pools & rec centres — relaxed sessions',
+    body: 'Council pools and leisure centres sometimes hold quieter family or "all-abilities" swim sessions. Ring ahead and ask for the least busy times if there isn\'t a dedicated session.',
+  },
+  {
+    title: 'Trampoline & play centres at quiet times',
+    body: 'Indoor play, bowling and trampoline parks are loudest after school and on weekends. Many offer toddler or sensory sessions earlier in the day — ask before you book.',
+  },
+  {
+    title: 'Cinema sensory screenings',
+    body: 'The big cinema chains run regular sensory-friendly screenings (lights up, sound down). Check the movies section above, or ask any local cinema when their next one is scheduled.',
+  },
+];
+---
+
+<section aria-labelledby="sensory-ideas-heading" class="mt-14 max-w-3xl">
+  <h2 id="sensory-ideas-heading" class="text-2xl font-bold text-ink">
+    More sensory-friendly ideas in {cityName}
+  </h2>
+  <p class="mt-3 text-sm leading-relaxed text-muted prose-readable">
+    These are general approaches that work well in most towns — handy when your
+    options nearby are limited. They are <strong class="font-semibold text-ink"
+      >ideas to try, not verified venues</strong
+    >, so call ahead to confirm times and accommodations before you go.
+  </p>
+
+  <ul class="mt-6 grid gap-4 sm:grid-cols-2">
+    {
+      ideas.map((idea) => (
+        <li class="rounded-xl border border-line bg-surface p-5">
+          <h3 class="text-base font-semibold text-ink">{idea.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted">{idea.body}</p>
+        </li>
+      ))
+    }
+  </ul>
+</section>
