@@ -24,6 +24,8 @@ export interface SiteConfig {
   locale: string;
   /** Google Search Console "HTML tag" verification token (the content="..." value). Empty = no tag. */
   googleSiteVerification: string;
+  /** Google AdSense publisher ID (e.g. "ca-pub-6235181222799113"). Empty = no ad loader script. */
+  adsensePublisherId: string;
   /** Amazon Associates tracking tag (e.g. "sensoryfri-20"). Appended to affiliate links; leave empty until you have it. */
   amazonAssociateTag: string;
   /** Email-list signup wiring for the "Get sensory-friendly events near you" forms. */
@@ -60,6 +62,8 @@ export const SITE: SiteConfig = {
   locale: 'en_US',
   // ── Google Search Console: paste the content value from the "HTML tag" verification method here, then redeploy. ──
   googleSiteVerification: '',
+  // ── Google AdSense: publisher ID from your AdSense account. Loads the ad code site-wide. Empty = no ad script. ──
+  adsensePublisherId: 'ca-pub-6235181222799113',
   // ── Affiliate: paste your Amazon Associates tag here once approved (e.g. 'sensoryfri-20'). ──
   amazonAssociateTag: 'sensoryfrie04-20',
   // ── Email list: Kit (ConvertKit). Subscribes visitors to the "Sensory-Friendly Events" tag (id 20533650). publicKey is the v3 api_key — public/safe; the API *secret* is NOT stored here. ──

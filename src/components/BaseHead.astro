@@ -44,6 +44,16 @@ const ogImage = absoluteUrl(image, site);
     <meta name="google-site-verification" content={SITE.googleSiteVerification} />
   )
 }
+{
+  SITE.adsensePublisherId && (
+    <script
+      is:inline
+      async
+      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${SITE.adsensePublisherId}`}
+      crossorigin="anonymous"
+    />
+  )
+}
 
 <title>{title}</title>
 <meta name="description" content={description} />

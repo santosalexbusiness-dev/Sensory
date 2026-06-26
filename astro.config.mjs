@@ -13,6 +13,14 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://sensoryfriendly.guide',
   trailingSlash: 'always',
+  // Honor a PORT assigned by the environment (e.g. the preview harness);
+  // fall back to Astro's default 4321 for normal local runs.
+  // host:true binds all interfaces (IPv4 + IPv6) — without it, Node on Windows
+  // resolves "localhost" to IPv6 ::1 only, which breaks IPv4 (127.0.0.1) clients.
+  server: {
+    host: true,
+    port: process.env.PORT ? Number(process.env.PORT) : 4321,
+  },
   build: {
     format: 'directory',
   },

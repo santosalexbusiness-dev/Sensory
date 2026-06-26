@@ -5,13 +5,15 @@
       "name": "Astro dev server",
       "runtimeExecutable": "C:\\Users\\santo\\nodejs\\npm.cmd",
       "runtimeArgs": ["run", "dev"],
-      "port": 4321
+      "port": 4321,
+      "autoPort": true
     },
     {
       "name": "Astro preview server",
       "runtimeExecutable": "C:\\Users\\santo\\nodejs\\npm.cmd",
       "runtimeArgs": ["run", "preview"],
-      "port": 4321
+      "port": 4321,
+      "autoPort": true
     }
   ]
 }
