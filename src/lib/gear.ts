@@ -60,6 +60,12 @@ const SECTIONS: Record<string, { heading: string; intro: string; asins: string[]
       'A relaxed screening is already gentler than a normal one — a couple of small things in your bag make it smoother still.',
     asins: ['B07YRPX74G', 'B07TKKYSVJ', 'B0DHFNGQ4B', 'B088T7Q739'],
   },
+  fireworks: {
+    heading: 'What to pack for fireworks',
+    intro:
+      "Fireworks are the loudest, most unpredictable sound of the year. The right kit — ear protection first — turns \"we had to leave\" into \"we watched from the car and had a great time.\"",
+    asins: ['B07YRPX74G', 'B07SYWRTMK', 'B00K4W4AAA', 'B07TKKYSVJ', 'B0DHFNGQ4B', 'B0DQ2JZSWK'],
+  },
   'sensory-friendly-haircuts': {
     heading: 'Helpful gear for haircut appointments',
     intro:
