@@ -202,7 +202,7 @@
     "cost": "General admission",
     "hours": "See website for current hours",
     "lastVerified": "2026-06-17",
-    "sourceUrl": "https://www.odyseaaquarium.com/odysea-in-the-news/odysea-aquarium-1st-az-attraction-certified-autism-center/",
+    "sourceUrl": "https://www.odyseaaquarium.com/accessibility/",
     "parentTip": "It's in Scottsdale, just outside Phoenix — weekday mornings are the calmest time to visit."
   },
   {
@@ -447,31 +447,6 @@
     "parentTip": "These gyms are sensory-friendly all the time, not just at set hours — call ahead to confirm open-play times."
   },
   {
-    "id": "wrts-north-orlando",
-    "name": "We Rock the Spectrum Kid's Gym — North Orlando",
-    "category": "sensory-friendly-play",
-    "citySlug": "orlando-fl",
-    "address": "North Orlando, FL — see location page for address",
-    "website": "https://werockthespectrumnorthorlando.com/",
-    "phone": "",
-    "lat": 28.5384,
-    "lng": -81.3789,
-    "status": "documented",
-    "sensoryFeatures": [
-      "sensory-safe by design",
-      "specialized sensory equipment (swings, zip line, crash mats)",
-      "calm, judgment-free environment",
-      "welcomes children of all abilities",
-      "trained staff"
-    ],
-    "ageRange": "Best for ages 1–12",
-    "cost": "Open-play and membership pricing (see location)",
-    "hours": "See location page for current open-play hours",
-    "lastVerified": "2026-06-17",
-    "sourceUrl": "https://www.wrtsfranchise.com/locations/",
-    "parentTip": "These gyms are sensory-friendly all the time, not just at set hours — call ahead to confirm open-play times."
-  },
-  {
     "id": "wrts-fenton-st-louis",
     "name": "We Rock the Spectrum Kid's Gym — Fenton (Greater St. Louis)",
     "category": "sensory-friendly-play",
@@ -502,7 +477,7 @@
     "category": "sensory-friendly-museums",
     "citySlug": "austin-tx",
     "address": "1830 Simond Ave, Austin, TX 78723",
-    "website": "https://thinkery.org/",
+    "website": "https://www.thinkeryaustin.org/",
     "phone": "",
     "lat": 30.2861,
     "lng": -97.7119,
@@ -518,7 +493,7 @@
     "cost": "Free during Sensory Friendly Hours",
     "hours": "Sensory Friendly Hours 8–10am — see website for dates",
     "lastVerified": "2026-06-17",
-    "sourceUrl": "https://my.thinkeryaustin.org/1379/1837",
+    "sourceUrl": "https://www.thinkeryaustin.org/",
     "parentTip": "Sensory Friendly Hours are free and capped — arrive right at 8am, when the galleries are calmest and least crowded."
   },
   {
@@ -568,7 +543,7 @@
     "cost": "See website (sensory mornings are often free or low-cost)",
     "hours": "Sensory-Friendly Mornings — see calendar for dates",
     "lastVerified": "2026-06-17",
-    "sourceUrl": "https://www.denverartmuseum.org/en/calendar/sensory-friendly-morning-april-2024",
+    "sourceUrl": "https://www.denverartmuseum.org/en/accessibility",
     "parentTip": "These mornings run before general opening and are scheduled occasionally — check the museum calendar and reserve a spot."
   },
   {
@@ -1364,7 +1339,7 @@
     "category": "sensory-friendly-attractions",
     "citySlug": "dallas-tx",
     "address": "9080 Grapevine Hwy, North Richland Hills, TX 76180",
-    "website": "https://www.peppapigthemepark.com/north-texas/",
+    "website": "https://peppapigthemepark.com/",
     "phone": "",
     "lat": 32.8607,
     "lng": -97.2186,
@@ -1379,7 +1354,7 @@
     "cost": "Theme park admission (see site)",
     "hours": "See website for current hours",
     "lastVerified": "2026-06-17",
-    "sourceUrl": "https://dfwchild.com/sensory-friendly-attractions-in-dallas-fort-worth/",
+    "sourceUrl": "https://peppapigthemepark.com/",
     "parentTip": "It's built for little kids with no flashing lights — a gentle first theme park. Check the sensory guides to pick rides."
   },
   {
@@ -1592,7 +1567,7 @@
     "category": "sensory-friendly-movies",
     "citySlug": "minneapolis-mn",
     "address": "Mall of America, Bloomington, MN 55425",
-    "website": "https://www.bbtheatres.com/location/mall-of-america-14",
+    "website": "https://www.bbtheatres.com/locations/",
     "phone": "",
     "lat": 44.8548,
     "lng": -93.2422,
@@ -1607,7 +1582,7 @@
     "cost": "Standard ticket price",
     "hours": "See website for sensory-friendly showtimes",
     "lastVerified": "2026-06-17",
-    "sourceUrl": "https://mallofamerica.com/sensoryfriendly",
+    "sourceUrl": "https://www.bbtheatres.com/locations/",
     "parentTip": "Rent a sensory backpack at the desk, and check showtimes for the sensory-friendly screenings specifically."
   },
   {
@@ -2709,7 +2684,7 @@
     "cost": "General admission rates apply during Sensory Nights",
     "hours": "Sensory Nights: 4th Friday monthly — see website",
     "lastVerified": "2026-06-18",
-    "sourceUrl": "https://themosh.org/visit/accessibility/sensory-hours/",
+    "sourceUrl": "https://themosh.org/",
     "parentTip": "MOSH sits on the Southbank riverwalk — the fourth-Friday Sensory Nights dial down sound and lighting and draw fewer guests, so it's the calmest time to explore."
   },
   {
@@ -4008,7 +3983,9 @@
     "lastVerified": "2026-06-20",
     "sourceUrl": "https://www.amnh.org/plan-your-visit/accessibility/sensory-resources-for-visitors",
     "parentTip": "Discovery Squad tours fill up — book ahead through the Museum's accessibility page so you can explore favorite halls before the crowds arrive.",
-    "status": "documented"
+    "status": "documented",
+    "lat": 40.7813,
+    "lng": -73.974
   },
   {
     "id": "nysci-sensory-inclusive-nyc",
@@ -4030,7 +4007,9 @@
     "lastVerified": "2026-06-20",
     "sourceUrl": "https://www.iloveny.com/blog/post/experiences-in-new-york-for-visitors-with-autistic-visitors-and-travelers-with-developmental-disabilities/",
     "parentTip": "Ask at admissions for a borrowable quiet kit, and note where the two sensory rooms are when you arrive so you have a planned spot to step away if the hands-on exhibits get loud.",
-    "status": "documented"
+    "status": "documented",
+    "lat": 40.7469,
+    "lng": -73.8522
   },
   {
     "id": "tdf-autism-friendly-performances-nyc",
@@ -4053,7 +4032,9 @@
     "lastVerified": "2026-06-20",
     "sourceUrl": "https://www.tdf.org/accessibility-services/tdf-autism-friendly-performances/",
     "parentTip": "TDF posts the social story and character guide ahead of each show — read it together beforehand, and book early since these performances sell out.",
-    "status": "documented"
+    "status": "documented",
+    "lat": 40.759,
+    "lng": -73.9845
   },
   {
     "id": "new-york-aquarium-sensory-nyc",
@@ -4075,7 +4056,9 @@
     "lastVerified": "2026-06-20",
     "sourceUrl": "https://nyaquarium.com/plan-your-visit/accessibility",
     "parentTip": "Download the free KultureCity app before you go to see each area's sensory rating, and ask guest services for a sensory bag at the entrance.",
-    "status": "documented"
+    "status": "documented",
+    "lat": 40.5741,
+    "lng": -73.9754
   },
   {
     "id": "bronx-zoo-sensory-nyc",
@@ -4097,7 +4080,9 @@
     "lastVerified": "2026-06-20",
     "sourceUrl": "https://newsroom.wcs.org/News-Releases/articleType/ArticleView/articleId/13488/Bronx-Zoo-and-Prospect-Park-Zoo-Certified-Sensory-Inclusive.aspx",
     "parentTip": "It's a big, hilly park — plan a short loop around a few exhibits and grab a sensory bag at admissions so headphones are on hand for the busier indoor animal houses.",
-    "status": "documented"
+    "status": "documented",
+    "lat": 40.8506,
+    "lng": -73.877
   },
   {
     "id": "los-angeles-zoo-sensory-la",
@@ -4119,7 +4104,9 @@
     "lastVerified": "2026-06-20",
     "sourceUrl": "https://lazoo.org/explore-your-zoo/blog/new-sensory-support-room/",
     "parentTip": "Find the KultureCity sensory support room early as your planned break spot, and check out a sensory bag if your child may need headphones near the busier habitats.",
-    "status": "documented"
+    "status": "documented",
+    "lat": 34.1483,
+    "lng": -118.2874
   },
   {
     "id": "nhm-la-sensory-field-trip-la",
@@ -4151,7 +4138,9 @@
     "lastVerified": "2026-06-20",
     "sourceUrl": "https://nhm.org/calendar/sensory-friendly-field-trip-day",
     "parentTip": "Arrive right at opening on the first Monday for the calmest experience, and step out to the Nature Gardens if your child needs a quieter break.",
-    "status": "documented"
+    "status": "documented",
+    "lat": 34.017,
+    "lng": -118.2886
   },
   {
     "id": "griffin-msi-low-sensory-chicago",
@@ -4174,30 +4163,9 @@
     "lastVerified": "2026-06-20",
     "sourceUrl": "https://www.griffinmsi.org/events/all-access/low-sensory-mornings",
     "parentTip": "The early-access ticket is good all day, but the calmest window is that first hour before general admission — aim to arrive right at 8:30.",
-    "status": "documented"
-  },
-  {
-    "id": "lincoln-park-zoo-sensory-chicago",
-    "name": "Lincoln Park Zoo — Sensory-Friendly Hours",
-    "category": "sensory-friendly-attractions",
-    "citySlug": "chicago-il",
-    "address": "2001 N Clark St, Chicago, IL 60614",
-    "website": "https://www.lpzoo.org/accessibility-programs/",
-    "phone": "",
-    "sensoryFeatures": [
-      "scheduled Sensory-Friendly Hours",
-      "KultureCity sensory bags & tools",
-      "KultureCity app shows quiet vs. busy areas",
-      "welcoming to neurodivergent and sensory-sensitive guests"
-    ],
-    "ageRange": "All ages",
-    "cost": "Free admission",
-    "hours": "",
-    "schedule": "Sensory-Friendly Hours on select dates; KultureCity tools available anytime",
-    "lastVerified": "2026-06-20",
-    "sourceUrl": "https://www.lpzoo.org/accessibility-programs/",
-    "parentTip": "The zoo is free and open year-round, so even outside the special hours you can borrow KultureCity tools — a short, low-pressure visit is always doable.",
-    "status": "documented"
+    "status": "documented",
+    "lat": 41.7906,
+    "lng": -87.583
   },
   {
     "id": "space-center-houston-sensory-houston",
@@ -4219,7 +4187,9 @@
     "lastVerified": "2026-06-20",
     "sourceUrl": "https://spacecenter.org/accessibility-options/",
     "parentTip": "Check the IBCCES sensory guide before you go to see which exhibits are loudest, and plan the NASA Tram Tour for when your child is freshest.",
-    "status": "documented"
+    "status": "documented",
+    "lat": 29.5519,
+    "lng": -95.0972
   },
   {
     "id": "hmns-sensory-friendly-houston",
@@ -4242,7 +4212,9 @@
     "lastVerified": "2026-06-20",
     "sourceUrl": "https://www.hmns.org/visit/accessibility/",
     "parentTip": "These events run only a few times a year, so check the HMNS events calendar and book ahead; the dinosaur hall is a favorite first stop when it's quiet.",
-    "status": "documented"
+    "status": "documented",
+    "lat": 29.7221,
+    "lng": -95.3896
   },
   {
     "id": "phoenix-zoo-sensory-phoenix",
@@ -4264,29 +4236,9 @@
     "lastVerified": "2026-06-20",
     "sourceUrl": "https://www.phoenixzoo.org/visit/accessibility/",
     "parentTip": "Arizona heat is its own sensory load — visit early, borrow a sensory bag at the entrance, and map shaded indoor stops as breaks.",
-    "status": "documented"
-  },
-  {
-    "id": "arizona-science-center-phoenix",
-    "name": "Arizona Science Center (PAL Place — Sensory Friendly)",
-    "category": "sensory-friendly-museums",
-    "citySlug": "phoenix-az",
-    "address": "600 E Washington St, Phoenix, AZ 85004",
-    "website": "https://www.azscience.org/visit/accessibility/pal-place/",
-    "phone": "",
-    "sensoryFeatures": [
-      "IBCCES 'PAL Place' sensory-friendly designation",
-      "sensory tools and supports for guests",
-      "quiet spaces",
-      "staff prepared to assist guests with autism and IDD"
-    ],
-    "ageRange": "All ages",
-    "cost": "Included with admission",
-    "hours": "",
-    "lastVerified": "2026-06-20",
-    "sourceUrl": "https://www.azscience.org/visit/accessibility/pal-place/",
-    "parentTip": "Ask at the front desk about PAL Place sensory tools when you arrive, and use the quieter hours right after opening before school groups come through.",
-    "status": "documented"
+    "status": "documented",
+    "lat": 33.4515,
+    "lng": -111.9455
   },
   {
     "id": "fwmsh-fort-worth",
@@ -5293,7 +5245,7 @@
     "category": "sensory-friendly-museums",
     "citySlug": "tulsa-ok",
     "address": "3123 S Riverside Dr, Tulsa, OK 74105",
-    "website": "https://www.discoverylab.org/",
+    "website": "https://www.discoverylab.org/special-programs",
     "phone": "",
     "lat": 36.114,
     "lng": -95.99,
@@ -5317,7 +5269,7 @@
     "cost": "See website; general admission",
     "hours": "See website for hours and Sensory-Friendly Family Time dates",
     "lastVerified": "2026-06-21",
-    "sourceUrl": "https://www.discoverylab.org/events/event/2525514",
+    "sourceUrl": "https://www.discoverylab.org/special-programs",
     "parentTip": "The 2nd-Sunday morning session is far calmer than open hours, and the museum sits right by the Gathering Place park for a break outdoors."
   },
   {
@@ -5470,7 +5422,7 @@
     "cost": "See website; general admission; sensory bags free to borrow",
     "hours": "See website for current hours",
     "lastVerified": "2026-06-21",
-    "sourceUrl": "https://www.facebook.com/GRMuseum/posts/were-partnering-with-kulturecity-and-the-john-ball-zoo-and-are-now-sensory-inclu/10156908815955926/",
+    "sourceUrl": "https://www.grpm.org/sensory-sundays/",
     "parentTip": "Borrow a KultureCity sensory bag at admission; the carousel and planetarium can be intense, so headphones help most there."
   },
   {
@@ -5493,7 +5445,7 @@
     "cost": "General admission; sensory bags free to borrow",
     "hours": "See website for current hours",
     "lastVerified": "2026-06-21",
-    "sourceUrl": "https://www.facebook.com/GRMuseum/posts/were-partnering-with-kulturecity-and-the-john-ball-zoo-and-are-now-sensory-inclu/10156908815955926/",
+    "sourceUrl": "https://www.jbzoo.org/",
     "parentTip": "Grab a sensory bag at the entrance; the hillside layout gives plenty of quieter, shaded spots to pause between habitats."
   },
   {
@@ -6657,7 +6609,7 @@
     "hours": "See website for current hours",
     "schedule": "Sensory Sunday held periodically (check the calendar)",
     "lastVerified": "2026-06-21",
-    "sourceUrl": "https://rmsc.org/events/sensory-sunday/",
+    "sourceUrl": "https://rmsc.org/accessibility/",
     "parentTip": "Pick a Sensory Sunday for dimmed lighting and a social story emailed ahead; the quiet area is on the first floor near the Wonder of Waters exhibit."
   },
   {
@@ -6908,7 +6860,7 @@
     "hours": "See website for current hours",
     "schedule": "Quiet Mornings on select dates (check the what's-on)",
     "lastVerified": "2026-06-22",
-    "sourceUrl": "https://www.whitworth.manchester.ac.uk/getinvolved/families/quietmornings/",
+    "sourceUrl": "https://www.whitworth.manchester.ac.uk/visit/access/",
     "parentTip": "Quiet Mornings are low-key, play-led sessions with sensory toys — a gentle first gallery experience for younger children with additional needs."
   },
   {
@@ -7098,7 +7050,7 @@
     "hours": "See website for current hours",
     "schedule": "Relaxed Opening Days on select dates (check the calendar)",
     "lastVerified": "2026-06-22",
-    "sourceUrl": "https://www.autisminmuseums.com/event/relaxed-opening-day-dynamic-earth-edinburghs-science-centre-scotland/",
+    "sourceUrl": "https://www.dynamicearth.co.uk/",
     "parentTip": "Visit on a Relaxed Opening Day for fewer crowds and softened lighting and sound — pick up a sensory bag and social story to plan your route through the planetarium."
   },
   {
@@ -7538,7 +7490,7 @@
     "hours": "See website for current hours",
     "schedule": "Quiet Hour / sensory-friendly hours on select dates (check events)",
     "lastVerified": "2026-06-22",
-    "sourceUrl": "https://www.museum.ie/en-IE/News/Autism-Awareness-Month-and-AsIAm-Partnership",
+    "sourceUrl": "https://www.museum.ie/en-IE/Accessibility",
     "parentTip": "Time your visit for a Quiet Hour when the music is off and lights are dimmed, and borrow a sensory bag to help your child settle into the galleries."
   },
   {
@@ -7766,7 +7718,7 @@
     "hours": "See website for current hours",
     "schedule": "Relaxed early openings on select dates (e.g. Wed 9–10am in summer holidays)",
     "lastVerified": "2026-06-22",
-    "sourceUrl": "https://newcastlegateshead.com/blog/seven-autism-friendly-attractions-to-visit-in-newcastle-and-gateshead",
+    "sourceUrl": "https://greatnorthmuseum.org.uk/",
     "parentTip": "Aim for a relaxed early opening or come after 2:30pm on a weekday — borrow a sensory bag and ear defenders at the desk on your way in."
   },
   {
@@ -7790,7 +7742,7 @@
     "hours": "See website for current hours",
     "schedule": "Relaxed Sunday Sessions monthly",
     "lastVerified": "2026-06-22",
-    "sourceUrl": "https://newcastlegateshead.com/blog/seven-autism-friendly-attractions-to-visit-in-newcastle-and-gateshead",
+    "sourceUrl": "https://www.life.org.uk/",
     "parentTip": "Book a Relaxed Sunday Session for the calmest visit, and hire a sensory bag (it comes with a visual story) when you arrive."
   },
   {
@@ -7814,7 +7766,7 @@
     "hours": "See website for current hours",
     "schedule": "Sensory bags available; relaxed provision (confirm current sessions on site)",
     "lastVerified": "2026-06-22",
-    "sourceUrl": "https://newcastlegateshead.com/blog/seven-autism-friendly-attractions-to-visit-in-newcastle-and-gateshead",
+    "sourceUrl": "https://discoverymuseum.org.uk/",
     "parentTip": "Borrow a sensory bag at the desk and start with the Story of the Tyne gallery downstairs — it's calmer than the busy hands-on Science Maze."
   },
   {
@@ -7967,7 +7919,7 @@
       }
     ],
     "lastVerified": "2026-06-22",
-    "sourceUrl": "https://www.theherbert.org/whats_on/1129/sensory_stories__rhymes",
+    "sourceUrl": "https://www.theherbert.org/visit",
     "parentTip": "The Tuesday term-time Sensory Stories & Rhymes sessions are aimed at under-5s — ask at reception for a sensory backpack to use around the rest of the galleries too."
   },
   {
@@ -8377,7 +8329,7 @@
     "hours": "See website for current hours",
     "schedule": "Calm Sensory Sessions on select dates through the year",
     "lastVerified": "2026-06-22",
-    "sourceUrl": "https://autisminmuseums.com/event/calm-sensory-sessions-brunels-ss-great-britain-bristol-2/",
+    "sourceUrl": "https://www.ssgreatbritain.org/plan-your-visit/access/",
     "parentTip": "Book a Calm Sensory Session — the AV and aroma effects are switched off, capacity is reduced, and there's a dedicated sensory room to retreat to on board."
   },
   {
@@ -9279,7 +9231,7 @@
     "category": "sensory-friendly-museums",
     "citySlug": "ann-arbor-mi",
     "address": "220 E Ann St, Ann Arbor, MI 48104",
-    "website": "https://discoverscienceandnature.org/",
+    "website": "https://aahom.org/",
     "phone": "",
     "lat": 42.283,
     "lng": -83.744,
@@ -9294,16 +9246,16 @@
     "cost": "See website; general admission",
     "hours": "See website for hours and sensory-friendly dates",
     "lastVerified": "2026-06-22",
-    "sourceUrl": "https://discoverscienceandnature.org/visit/accessibility/",
+    "sourceUrl": "https://aahom.org/",
     "parentTip": "Check the calendar for a sensory-friendly \"My Turn\" session — the four floors get busy on regular weekends, so the quieter hours make a real difference."
   },
   {
     "id": "lexington-childrens-museum",
-    "name": "Lexington Children’s Museum — Sensory Hours",
+    "name": "Explorium of Lexington (Children's Museum)",
     "category": "sensory-friendly-museums",
     "citySlug": "lexington-ky",
     "address": "440 W Short St, Lexington, KY 40507",
-    "website": "https://www.lexingtonchildrensmuseum.org/",
+    "website": "https://www.explorium.com/",
     "phone": "",
     "lat": 38.05,
     "lng": -84.499,
@@ -9318,7 +9270,7 @@
     "cost": "See website; general admission",
     "hours": "See website for hours and Sensory Hours dates",
     "lastVerified": "2026-06-22",
-    "sourceUrl": "https://www.lexingtonchildrensmuseum.org/",
+    "sourceUrl": "https://www.explorium.com/",
     "parentTip": "The after-hours Sensory Hours are much calmer than daytime; borrow a set of headphones at the desk if the interactive stations get loud."
   },
   {
@@ -9830,30 +9782,6 @@
     "lastVerified": "2026-07-06",
     "sourceUrl": "https://comozooconservatory.org/como/sensory-friendly-mornings/",
     "parentTip": "Arrive for the Sensory-Friendly Morning hour before the public is let in — no registration needed, and admission is free, so it's an easy low-stakes first zoo trip."
-  },
-  {
-    "id": "minnesota-zoo-minneapolis",
-    "name": "Minnesota Zoo — MNZoo4All Sensory Guide",
-    "category": "sensory-friendly-attractions",
-    "citySlug": "minneapolis-mn",
-    "address": "13000 Zoo Blvd, Apple Valley, MN 55124",
-    "website": "https://mnzoo.org/mnzoo4all-sensory-guide/",
-    "phone": "",
-    "lat": 44.7719,
-    "lng": -93.1958,
-    "status": "documented",
-    "sensoryFeatures": [
-      "Free MNZoo4All app with sensory-friendly maps and communication tools",
-      "Downloadable sensory guide to plan a visit by sense",
-      "Identified quiet areas across the zoo grounds",
-      "Large indoor and outdoor spaces to spread out"
-    ],
-    "ageRange": "All ages",
-    "cost": "General admission; sensory resources free",
-    "hours": "See website for current hours",
-    "lastVerified": "2026-07-06",
-    "sourceUrl": "https://mnzoo.org/mnzoo4all-sensory-guide/",
-    "parentTip": "Download the free MNZoo4All app before you leave home — its sensory maps let you plan a route that skips the busiest, loudest exhibits."
   },
   {
     "id": "lego-discovery-center-atlanta",
@@ -10956,7 +10884,7 @@
     "cost": "See website for event tickets",
     "hours": "See website for current hours and event dates",
     "lastVerified": "2026-07-08",
-    "sourceUrl": "http://www.discovercharlestonwv.com/events/sensory-sensitive-sunday-the-clay-center",
+    "sourceUrl": "https://www.theclaycenter.org/",
     "parentTip": "These run quarterly rather than monthly, so get on the Clay Center's email list — the sessions are popular with local families and dates announce a few weeks out."
   },
   {
@@ -11136,7 +11064,7 @@
     "category": "sensory-friendly-attractions",
     "citySlug": "west-palm-beach-fl",
     "address": "1301 Summit Blvd, West Palm Beach, FL 33405",
-    "website": "https://www.palmbeachzoo.org/autism-awareness-day",
+    "website": "https://www.palmbeachzoo.org/plan-your-visit",
     "phone": "",
     "lat": 26.6664,
     "lng": -80.0663,
@@ -11151,7 +11079,7 @@
     "cost": "Standard zoo admission",
     "hours": "See website for current hours",
     "lastVerified": "2026-07-08",
-    "sourceUrl": "https://www.palmbeachzoo.org/autism-awareness-day",
+    "sourceUrl": "https://www.palmbeachzoo.org/plan-your-visit",
     "parentTip": "Florida heat amplifies sensory overload fast — go at opening, grab the sensory kit at the ticket booth, and plan around the splash fountain area as your cool-down stop."
   },
   {
@@ -11341,7 +11269,7 @@
     "cost": "Standard admission; sensory bags free",
     "hours": "See website for current hours",
     "lastVerified": "2026-07-08",
-    "sourceUrl": "https://www.ncaquariums.com/accessibility-information-",
+    "sourceUrl": "https://www.ncaquariums.com/fort-fisher",
     "parentTip": "It's in Kure Beach, ~30 minutes south of Wilmington. Aquariums are naturally dim and cool — go at opening and the albino alligator gallery is nearly silent."
   },
   {
