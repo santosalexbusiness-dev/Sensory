@@ -2421,5 +2421,509 @@
     "lat": 39.4143,
     "lng": -77.4105,
     "seeded": true
+  },
+  {
+    "slug": "myrtle-beach-sc",
+    "city": "Myrtle Beach",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "lat": 33.6891,
+    "lng": -78.8867,
+    "seeded": true
+  },
+  {
+    "slug": "palm-springs-ca",
+    "city": "Palm Springs",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 33.8303,
+    "lng": -116.5453,
+    "seeded": true
+  },
+  {
+    "slug": "panama-city-fl",
+    "city": "Panama City",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 30.1588,
+    "lng": -85.6602,
+    "seeded": true
+  },
+  {
+    "slug": "ocala-fl",
+    "city": "Ocala",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 29.1872,
+    "lng": -82.1401,
+    "seeded": true
+  },
+  {
+    "slug": "atlantic-city-nj",
+    "city": "Atlantic City",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "lat": 39.3643,
+    "lng": -74.4229,
+    "seeded": true
+  },
+  {
+    "slug": "reading-pa",
+    "city": "Reading",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 40.3356,
+    "lng": -75.9269,
+    "seeded": true
+  },
+  {
+    "slug": "york-pa",
+    "city": "York",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 39.9626,
+    "lng": -76.7277,
+    "seeded": true
+  },
+  {
+    "slug": "utica-ny",
+    "city": "Utica",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 43.1009,
+    "lng": -75.2327,
+    "seeded": true
+  },
+  {
+    "slug": "binghamton-ny",
+    "city": "Binghamton",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 42.0987,
+    "lng": -75.918,
+    "seeded": true
+  },
+  {
+    "slug": "poughkeepsie-ny",
+    "city": "Poughkeepsie",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 41.7004,
+    "lng": -73.9209,
+    "seeded": true
+  },
+  {
+    "slug": "stamford-ct",
+    "city": "Stamford",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "lat": 41.0534,
+    "lng": -73.5387,
+    "seeded": true
+  },
+  {
+    "slug": "lowell-ma",
+    "city": "Lowell",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "lat": 42.6334,
+    "lng": -71.3162,
+    "seeded": true
+  },
+  {
+    "slug": "olympia-wa",
+    "city": "Olympia",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "lat": 47.0379,
+    "lng": -122.9007,
+    "seeded": true
+  },
+  {
+    "slug": "yakima-wa",
+    "city": "Yakima",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "lat": 46.6021,
+    "lng": -120.5059,
+    "seeded": true
+  },
+  {
+    "slug": "kennewick-wa",
+    "city": "Kennewick",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "lat": 46.2112,
+    "lng": -119.1372,
+    "seeded": true
+  },
+  {
+    "slug": "medford-or",
+    "city": "Medford",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "lat": 42.3265,
+    "lng": -122.8756,
+    "seeded": true
+  },
+  {
+    "slug": "traverse-city-mi",
+    "city": "Traverse City",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 44.7631,
+    "lng": -85.6206,
+    "seeded": true
+  },
+  {
+    "slug": "eau-claire-wi",
+    "city": "Eau Claire",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 44.8113,
+    "lng": -91.4985,
+    "seeded": true
+  },
+  {
+    "slug": "oshkosh-wi",
+    "city": "Oshkosh",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 44.0247,
+    "lng": -88.5426,
+    "seeded": true
+  },
+  {
+    "slug": "la-crosse-wi",
+    "city": "La Crosse",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 43.8014,
+    "lng": -91.2396,
+    "seeded": true
+  },
+  {
+    "slug": "st-cloud-mn",
+    "city": "St. Cloud",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "lat": 45.5579,
+    "lng": -94.1632,
+    "seeded": true
+  },
+  {
+    "slug": "sioux-city-ia",
+    "city": "Sioux City",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "lat": 42.4963,
+    "lng": -96.4049,
+    "seeded": true
+  },
+  {
+    "slug": "waterloo-ia",
+    "city": "Waterloo",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "lat": 42.4928,
+    "lng": -92.3426,
+    "seeded": true
+  },
+  {
+    "slug": "dubuque-ia",
+    "city": "Dubuque",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "lat": 42.5006,
+    "lng": -90.6646,
+    "seeded": true
+  },
+  {
+    "slug": "grand-junction-co",
+    "city": "Grand Junction",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "lat": 39.0639,
+    "lng": -108.5506,
+    "seeded": true
+  },
+  {
+    "slug": "greeley-co",
+    "city": "Greeley",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "lat": 40.4233,
+    "lng": -104.7091,
+    "seeded": true
+  },
+  {
+    "slug": "killeen-tx",
+    "city": "Killeen",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 31.1171,
+    "lng": -97.7278,
+    "seeded": true
+  },
+  {
+    "slug": "odessa-tx",
+    "city": "Odessa",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 31.8457,
+    "lng": -102.3676,
+    "seeded": true
+  },
+  {
+    "slug": "wichita-falls-tx",
+    "city": "Wichita Falls",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 33.9137,
+    "lng": -98.4934,
+    "seeded": true
+  },
+  {
+    "slug": "longview-tx",
+    "city": "Longview",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 32.5007,
+    "lng": -94.7405,
+    "seeded": true
+  },
+  {
+    "slug": "san-angelo-tx",
+    "city": "San Angelo",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 31.4638,
+    "lng": -100.437,
+    "seeded": true
+  },
+  {
+    "slug": "texarkana-tx",
+    "city": "Texarkana",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 33.4251,
+    "lng": -94.0477,
+    "seeded": true
+  },
+  {
+    "slug": "lawton-ok",
+    "city": "Lawton",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "lat": 34.6036,
+    "lng": -98.3959,
+    "seeded": true
+  },
+  {
+    "slug": "fort-smith-ar",
+    "city": "Fort Smith",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "lat": 35.3859,
+    "lng": -94.3985,
+    "seeded": true
+  },
+  {
+    "slug": "jonesboro-ar",
+    "city": "Jonesboro",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "lat": 35.8423,
+    "lng": -90.7043,
+    "seeded": true
+  },
+  {
+    "slug": "lake-charles-la",
+    "city": "Lake Charles",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "lat": 30.2266,
+    "lng": -93.2174,
+    "seeded": true
+  },
+  {
+    "slug": "monroe-la",
+    "city": "Monroe",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "lat": 32.5093,
+    "lng": -92.1193,
+    "seeded": true
+  },
+  {
+    "slug": "tuscaloosa-al",
+    "city": "Tuscaloosa",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "lat": 33.2098,
+    "lng": -87.5692,
+    "seeded": true
+  },
+  {
+    "slug": "clarksville-tn",
+    "city": "Clarksville",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 36.5298,
+    "lng": -87.3595,
+    "seeded": true
+  },
+  {
+    "slug": "johnson-city-tn",
+    "city": "Johnson City",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 36.3134,
+    "lng": -82.3535,
+    "seeded": true
+  },
+  {
+    "slug": "owensboro-ky",
+    "city": "Owensboro",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "lat": 37.7719,
+    "lng": -87.1112,
+    "seeded": true
+  },
+  {
+    "slug": "canton-oh",
+    "city": "Canton",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 40.7989,
+    "lng": -81.3784,
+    "seeded": true
+  },
+  {
+    "slug": "bloomington-in",
+    "city": "Bloomington",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "lat": 39.1653,
+    "lng": -86.5264,
+    "seeded": true
+  },
+  {
+    "slug": "terre-haute-in",
+    "city": "Terre Haute",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "lat": 39.4667,
+    "lng": -87.4139,
+    "seeded": true
+  },
+  {
+    "slug": "champaign-il",
+    "city": "Champaign",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "lat": 40.1164,
+    "lng": -88.2434,
+    "seeded": true
+  },
+  {
+    "slug": "bloomington-il",
+    "city": "Bloomington",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "lat": 40.4842,
+    "lng": -88.9937,
+    "seeded": true
+  },
+  {
+    "slug": "joplin-mo",
+    "city": "Joplin",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "lat": 37.0842,
+    "lng": -94.5133,
+    "seeded": true
+  },
+  {
+    "slug": "lawrence-ks",
+    "city": "Lawrence",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "lat": 38.9717,
+    "lng": -95.2353,
+    "seeded": true
+  },
+  {
+    "slug": "hickory-nc",
+    "city": "Hickory",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 35.7332,
+    "lng": -81.3412,
+    "seeded": true
+  },
+  {
+    "slug": "spartanburg-sc",
+    "city": "Spartanburg",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "lat": 34.9496,
+    "lng": -81.932,
+    "seeded": true
+  },
+  {
+    "slug": "fredericksburg-va",
+    "city": "Fredericksburg",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "lat": 38.3032,
+    "lng": -77.4605,
+    "seeded": true
+  },
+  {
+    "slug": "harrisonburg-va",
+    "city": "Harrisonburg",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "lat": 38.4496,
+    "lng": -78.8689,
+    "seeded": true
+  },
+  {
+    "slug": "coeur-dalene-id",
+    "city": "Coeur d'Alene",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "lat": 47.6777,
+    "lng": -116.7805,
+    "seeded": true
+  },
+  {
+    "slug": "great-falls-mt",
+    "city": "Great Falls",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "lat": 47.4942,
+    "lng": -111.2833,
+    "seeded": true
+  },
+  {
+    "slug": "juneau-ak",
+    "city": "Juneau",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "lat": 58.3019,
+    "lng": -134.4197,
+    "seeded": true
+  },
+  {
+    "slug": "grand-forks-nd",
+    "city": "Grand Forks",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "lat": 47.9253,
+    "lng": -97.0329,
+    "seeded": true
   }
 ]

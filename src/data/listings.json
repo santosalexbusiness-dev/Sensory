@@ -11469,5 +11469,29 @@
     "lastVerified": "2026-07-08",
     "sourceUrl": "https://ncartmuseum.org/accessibility/",
     "parentTip": "Admission is free, so there is zero pressure — download the visual schedule first, and if the galleries get to be too much, the outdoor park trails work as a giant built-in break space."
+  },
+  {
+    "id": "memorial-art-gallery-rochester",
+    "name": "Memorial Art Gallery (Wegmans Sensory Bags)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "rochester-ny",
+    "address": "500 University Ave, Rochester, NY 14607",
+    "website": "https://mag.rochester.edu/visit/accessibility/",
+    "phone": "",
+    "lat": 43.1524,
+    "lng": -77.5964,
+    "status": "documented",
+    "sensoryFeatures": [
+      "sensory bags at the Admissions Desk (noise-reduction headphones, sunglasses, fidgets)",
+      "social story designed with AutismUp — printed copies to borrow",
+      "calm, uncrowded galleries on the University of Rochester campus",
+      "email access@mag.rochester.edu for specific accommodations"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission — see website",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://mag.rochester.edu/visit/accessibility/",
+    "parentTip": "Read the AutismUp social story together the night before — the outdoor Centennial Sculpture Park is free and makes a good warm-up or wind-down on either side of the visit."
   }
 ]
