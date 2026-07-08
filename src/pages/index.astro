@@ -31,13 +31,21 @@ const pickerCountries = getCitiesByCountry()
   }))
   .filter((g) => g.cities.length > 0);
 
-// Top metros by listing count, linked directly from the homepage so the city
-// hubs (the pages that rank for "sensory friendly things to do in <city>") are
-// one click from the root instead of two.
-const popularCities = getAllCitiesWithCounts()
-  .filter((c) => c.qualifies)
-  .sort((a, b) => b.count - a.count)
-  .slice(0, 36);
+// One pill per US state (its most-listed city) plus every other US metro in
+// the overall top 25 — all 50 states + DC end up one click from the homepage,
+// and big multi-metro states keep their other major cities. Sorted by state
+// so visitors can scan straight to theirs.
+const usCities = getAllCitiesWithCounts()
+  .filter((c) => c.qualifies && (c.city.countryCode ?? 'US') === 'US')
+  .sort((a, b) => b.count - a.count);
+const topPerState = new Map<string, (typeof usCities)[number]>();
+for (const c of usCities) {
+  if (!topPerState.has(c.city.stateAbbr)) topPerState.set(c.city.stateAbbr, c);
+}
+const picks = new Set([...topPerState.values(), ...usCities.slice(0, 25)]);
+const popularCities = [...picks].sort(
+  (a, b) => a.city.stateAbbr.localeCompare(b.city.stateAbbr) || b.count - a.count,
+);
 
 const jsonLd = [
   websiteSchema(site),
@@ -282,10 +290,11 @@ const howItWorks = [
   {/* Popular cities */}
   <section class="border-t border-line">
     <div class="mx-auto max-w-5xl px-4 py-14 sm:px-6">
-      <h2 class="text-2xl font-bold text-ink">Popular cities</h2>
+      <h2 class="text-2xl font-bold text-ink">Popular cities — every state covered</h2>
       <p class="mt-2 max-w-2xl text-muted">
-        Jump straight to the sensory-friendly activities in the metros families
-        search for most.
+        The most-listed metro in every US state (plus the other big ones),
+        sorted by state — jump straight to the sensory-friendly activities near
+        you. Outside the US? Use the worldwide picker above or browse all cities.
       </p>
       <ul class="mt-6 flex flex-wrap gap-3">
         {
