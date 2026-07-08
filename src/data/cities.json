@@ -3744,5 +3744,437 @@
     "lat": 46.0646,
     "lng": -118.343,
     "seeded": true
+  },
+  {
+    "slug": "branson-mo",
+    "city": "Branson",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "lat": 36.6437,
+    "lng": -93.2185,
+    "seeded": true
+  },
+  {
+    "slug": "pigeon-forge-tn",
+    "city": "Pigeon Forge",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 35.7884,
+    "lng": -83.5543,
+    "seeded": true
+  },
+  {
+    "slug": "galveston-tx",
+    "city": "Galveston",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 29.3013,
+    "lng": -94.7977,
+    "seeded": true
+  },
+  {
+    "slug": "sandusky-oh",
+    "city": "Sandusky",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 41.4489,
+    "lng": -82.708,
+    "seeded": true
+  },
+  {
+    "slug": "the-villages-fl",
+    "city": "The Villages",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 28.9341,
+    "lng": -81.9598,
+    "seeded": true
+  },
+  {
+    "slug": "san-bernardino-ca",
+    "city": "San Bernardino",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 34.1083,
+    "lng": -117.2898,
+    "seeded": true
+  },
+  {
+    "slug": "vallejo-ca",
+    "city": "Vallejo",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 38.1041,
+    "lng": -122.2566,
+    "seeded": true
+  },
+  {
+    "slug": "chico-ca",
+    "city": "Chico",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 39.7285,
+    "lng": -121.8375,
+    "seeded": true
+  },
+  {
+    "slug": "merced-ca",
+    "city": "Merced",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 37.3022,
+    "lng": -120.483,
+    "seeded": true
+  },
+  {
+    "slug": "santa-maria-ca",
+    "city": "Santa Maria",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 34.953,
+    "lng": -120.4357,
+    "seeded": true
+  },
+  {
+    "slug": "victorville-ca",
+    "city": "Victorville",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 34.5362,
+    "lng": -117.2928,
+    "seeded": true
+  },
+  {
+    "slug": "salinas-ca",
+    "city": "Salinas",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 36.6777,
+    "lng": -121.6555,
+    "seeded": true
+  },
+  {
+    "slug": "newport-ri",
+    "city": "Newport",
+    "state": "Rhode Island",
+    "stateAbbr": "RI",
+    "lat": 41.4901,
+    "lng": -71.3128,
+    "seeded": true
+  },
+  {
+    "slug": "toms-river-nj",
+    "city": "Toms River",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "lat": 39.9537,
+    "lng": -74.1979,
+    "seeded": true
+  },
+  {
+    "slug": "glens-falls-ny",
+    "city": "Glens Falls",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 43.3095,
+    "lng": -73.644,
+    "seeded": true
+  },
+  {
+    "slug": "altoona-pa",
+    "city": "Altoona",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 40.5187,
+    "lng": -78.3947,
+    "seeded": true
+  },
+  {
+    "slug": "johnstown-pa",
+    "city": "Johnstown",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 40.3267,
+    "lng": -78.922,
+    "seeded": true
+  },
+  {
+    "slug": "williamsport-pa",
+    "city": "Williamsport",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 41.2412,
+    "lng": -77.0011,
+    "seeded": true
+  },
+  {
+    "slug": "mansfield-oh",
+    "city": "Mansfield",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 40.7584,
+    "lng": -82.5154,
+    "seeded": true
+  },
+  {
+    "slug": "findlay-oh",
+    "city": "Findlay",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 41.0442,
+    "lng": -83.6499,
+    "seeded": true
+  },
+  {
+    "slug": "kokomo-in",
+    "city": "Kokomo",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "lat": 40.4864,
+    "lng": -86.1336,
+    "seeded": true
+  },
+  {
+    "slug": "elkhart-in",
+    "city": "Elkhart",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "lat": 41.682,
+    "lng": -85.9767,
+    "seeded": true
+  },
+  {
+    "slug": "council-bluffs-ia",
+    "city": "Council Bluffs",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "lat": 41.2619,
+    "lng": -95.8608,
+    "seeded": true
+  },
+  {
+    "slug": "salina-ks",
+    "city": "Salina",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "lat": 38.8403,
+    "lng": -97.6114,
+    "seeded": true
+  },
+  {
+    "slug": "conway-ar",
+    "city": "Conway",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "lat": 35.0887,
+    "lng": -92.4421,
+    "seeded": true
+  },
+  {
+    "slug": "warner-robins-ga",
+    "city": "Warner Robins",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "lat": 32.613,
+    "lng": -83.6242,
+    "seeded": true
+  },
+  {
+    "slug": "rome-ga",
+    "city": "Rome",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "lat": 34.257,
+    "lng": -85.1647,
+    "seeded": true
+  },
+  {
+    "slug": "jacksonville-nc",
+    "city": "Jacksonville",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 34.7541,
+    "lng": -77.4302,
+    "seeded": true
+  },
+  {
+    "slug": "rocky-mount-nc",
+    "city": "Rocky Mount",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 35.9382,
+    "lng": -77.7905,
+    "seeded": true
+  },
+  {
+    "slug": "new-bern-nc",
+    "city": "New Bern",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 35.1085,
+    "lng": -77.0441,
+    "seeded": true
+  },
+  {
+    "slug": "boone-nc",
+    "city": "Boone",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 36.2168,
+    "lng": -81.6746,
+    "seeded": true
+  },
+  {
+    "slug": "murfreesboro-tn",
+    "city": "Murfreesboro",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 35.8456,
+    "lng": -86.3903,
+    "seeded": true
+  },
+  {
+    "slug": "cookeville-tn",
+    "city": "Cookeville",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 36.1628,
+    "lng": -85.5016,
+    "seeded": true
+  },
+  {
+    "slug": "florence-al",
+    "city": "Florence",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "lat": 34.7998,
+    "lng": -87.6773,
+    "seeded": true
+  },
+  {
+    "slug": "gadsden-al",
+    "city": "Gadsden",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "lat": 34.0143,
+    "lng": -86.0066,
+    "seeded": true
+  },
+  {
+    "slug": "sierra-vista-az",
+    "city": "Sierra Vista",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "lat": 31.5455,
+    "lng": -110.2773,
+    "seeded": true
+  },
+  {
+    "slug": "klamath-falls-or",
+    "city": "Klamath Falls",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "lat": 42.2249,
+    "lng": -121.7817,
+    "seeded": true
+  },
+  {
+    "slug": "roseburg-or",
+    "city": "Roseburg",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "lat": 43.2165,
+    "lng": -123.3417,
+    "seeded": true
+  },
+  {
+    "slug": "mount-vernon-wa",
+    "city": "Mount Vernon",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "lat": 48.4212,
+    "lng": -122.3341,
+    "seeded": true
+  },
+  {
+    "slug": "port-angeles-wa",
+    "city": "Port Angeles",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "lat": 48.1181,
+    "lng": -123.4307,
+    "seeded": true
+  },
+  {
+    "slug": "augusta-me",
+    "city": "Augusta",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "lat": 44.3106,
+    "lng": -69.7795,
+    "seeded": true
+  },
+  {
+    "slug": "pittsfield-ma",
+    "city": "Pittsfield",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "lat": 42.4501,
+    "lng": -73.2454,
+    "seeded": true
+  },
+  {
+    "slug": "norwich-ct",
+    "city": "Norwich",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "lat": 41.5243,
+    "lng": -72.0759,
+    "seeded": true
+  },
+  {
+    "slug": "midland-mi",
+    "city": "Midland",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 43.6156,
+    "lng": -84.2472,
+    "seeded": true
+  },
+  {
+    "slug": "port-huron-mi",
+    "city": "Port Huron",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 42.9709,
+    "lng": -82.4249,
+    "seeded": true
+  },
+  {
+    "slug": "jackson-mi",
+    "city": "Jackson",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 42.2459,
+    "lng": -84.4013,
+    "seeded": true
+  },
+  {
+    "slug": "st-joseph-mo",
+    "city": "St. Joseph",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "lat": 39.7675,
+    "lng": -94.8467,
+    "seeded": true
+  },
+  {
+    "slug": "muskogee-ok",
+    "city": "Muskogee",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "lat": 35.7479,
+    "lng": -95.3697,
+    "seeded": true
   }
 ]
