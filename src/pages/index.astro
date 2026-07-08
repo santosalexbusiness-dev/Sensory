@@ -1,7 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroArt from '../components/HeroArt.astro';
-import { categories, getCategoryReach, getCitiesByCountry } from '../lib/data';
+import {
+  categories,
+  getAllCitiesWithCounts,
+  getCategoryReach,
+  getCitiesByCountry,
+} from '../lib/data';
 import { absoluteUrl, categoryPath, cityHubPath } from '../lib/utils';
 import { itemListSchema, websiteSchema } from '../lib/seo';
 import { SITE } from '../site.config';
@@ -25,6 +30,14 @@ const pickerCountries = getCitiesByCountry()
       })),
   }))
   .filter((g) => g.cities.length > 0);
+
+// Top metros by listing count, linked directly from the homepage so the city
+// hubs (the pages that rank for "sensory friendly things to do in <city>") are
+// one click from the root instead of two.
+const popularCities = getAllCitiesWithCounts()
+  .filter((c) => c.qualifies)
+  .sort((a, b) => b.count - a.count)
+  .slice(0, 16);
 
 const jsonLd = [
   websiteSchema(site),
@@ -195,22 +208,26 @@ const howItWorks = [
     </div>
   </section>
 
-  {/* Seasonal callout */}
+  {/* Seasonal guides */}
   <section class="border-b border-line bg-brand-soft/40">
     <div
-      class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-4 sm:px-6"
+      class="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-4 sm:px-6"
     >
       <p class="text-sm font-medium text-ink">
-        🎆 Fireworks season is here — our
+        📅 Planning ahead? Our seasonal guides:
         <a
           class="link-underline font-semibold text-brand-strong"
-          href="/sensory-friendly-fireworks/">sensory-friendly 4th of July guide</a
-        > has the tips (and ear protection) that make the night manageable.
+          href="/sensory-friendly-fireworks/">fireworks &amp; July 4th</a
+        >,
+        <a
+          class="link-underline font-semibold text-brand-strong"
+          href="/sensory-friendly-halloween/">Halloween &amp; trick-or-treating</a
+        >, and
+        <a
+          class="link-underline font-semibold text-brand-strong"
+          href="/sensory-friendly-santa/">meeting Santa</a
+        > — all sensory-friendly, all parent-tested.
       </p>
-      <a
-        class="shrink-0 text-sm font-semibold text-brand-strong link-underline"
-        href="/sensory-friendly-fireworks/">Read the guide →</a
-      >
     </div>
   </section>
 
@@ -258,6 +275,40 @@ const howItWorks = [
             </li>
           ))
         }
+      </ul>
+    </div>
+  </section>
+
+  {/* Popular cities */}
+  <section class="border-t border-line">
+    <div class="mx-auto max-w-5xl px-4 py-14 sm:px-6">
+      <h2 class="text-2xl font-bold text-ink">Popular cities</h2>
+      <p class="mt-2 max-w-2xl text-muted">
+        Jump straight to the sensory-friendly activities in the metros families
+        search for most.
+      </p>
+      <ul class="mt-6 flex flex-wrap gap-3">
+        {
+          popularCities.map(({ city, count }) => (
+            <li>
+              <a
+                href={cityHubPath(city)}
+                class="inline-block rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink transition-colors hover:border-brand hover:bg-brand-soft/30"
+              >
+                {city.city}, {city.stateAbbr}
+                <span class="text-muted"> · {count}</span>
+              </a>
+            </li>
+          ))
+        }
+        <li>
+          <a
+            href="/cities/"
+            class="inline-block rounded-full border border-brand bg-brand-soft/40 px-4 py-2 text-sm font-semibold text-brand-strong transition-colors hover:bg-brand-soft"
+          >
+            All cities →
+          </a>
+        </li>
       </ul>
     </div>
   </section>

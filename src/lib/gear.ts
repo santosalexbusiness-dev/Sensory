@@ -66,6 +66,18 @@ const SECTIONS: Record<string, { heading: string; intro: string; asins: string[]
       "Fireworks are the loudest, most unpredictable sound of the year. The right kit — ear protection first — turns \"we had to leave\" into \"we watched from the car and had a great time.\"",
     asins: ['B07YRPX74G', 'B07SYWRTMK', 'B00K4W4AAA', 'B07TKKYSVJ', 'B0DHFNGQ4B', 'B0DQ2JZSWK'],
   },
+  halloween: {
+    heading: 'What to pack for Halloween night',
+    intro:
+      'Trick-or-treating is dark, loud, and unpredictable — a small kit (and a way to keep track of a wanderer) makes the night a lot calmer.',
+    asins: ['B07YRPX74G', 'B07WFDZ72L', 'B0DHFNGQ4B', 'B0CRTDT5NH', 'B0DQ2JZSWK'],
+  },
+  santa: {
+    heading: 'What to bring to a Santa visit',
+    intro:
+      'Even a quiet, reservation-only Santa event has waiting and newness in it — these small helpers keep the visit on your child’s terms.',
+    asins: ['B07YRPX74G', 'B0DHFNGQ4B', 'B07WFDZ72L', 'B0CX1C6V6Q'],
+  },
   'sensory-friendly-haircuts': {
     heading: 'Helpful gear for haircut appointments',
     intro:

@@ -10634,5 +10634,185 @@
     "lastVerified": "2026-07-07",
     "sourceUrl": "https://www.okcmoa.com/visit/accessibility/",
     "parentTip": "Print or preview the social narratives from the accessibility page before your visit — the 'Visiting' guide walks kids through exactly what they'll see from the front door onward."
+  },
+  {
+    "id": "cmnh-cleveland",
+    "name": "Cleveland Museum of Natural History — Sensory Friendly Sundays",
+    "category": "sensory-friendly-museums",
+    "citySlug": "cleveland-oh",
+    "address": "1 Wade Oval Dr, Cleveland, OH 44106",
+    "website": "https://www.cmnh.org/",
+    "phone": "",
+    "lat": 41.5115,
+    "lng": -81.6132,
+    "status": "documented",
+    "schedule": "Sensory Friendly Sundays on select dates, 9:30am–12pm (early opening before crowds)",
+    "sensoryFeatures": [
+      "KultureCity Certified Sensory Inclusive venue",
+      "sensory bags to borrow at the Welcome Desk",
+      "Headphone Zone & Quiet Area signage throughout",
+      "Sensory Friendly Sundays: early opening, dimmed lights, sound off in select areas",
+      "sensory-friendly planetarium show & 'Please Touch' stations"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission",
+    "hours": "See website for current hours and Sensory Friendly Sunday dates",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.cmnh.org/visit/accessibility-amenities",
+    "parentTip": "On Sensory Friendly Sundays the museum opens early just for sensory-sensitive visitors — arrive at 9:30 for the calmest stretch, and grab a sensory bag at the Welcome Desk on the way in."
+  },
+  {
+    "id": "cleveland-museum-of-art",
+    "name": "Cleveland Museum of Art — Sensory-Friendly Saturdays",
+    "category": "sensory-friendly-museums",
+    "citySlug": "cleveland-oh",
+    "address": "11150 East Blvd, Cleveland, OH 44106",
+    "website": "https://www.clevelandart.org/events/sensory-friendly-saturdays",
+    "phone": "",
+    "lat": 41.509,
+    "lng": -81.612,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Saturday",
+        "weeks": [
+          3
+        ],
+        "note": "9–10am, before public opening"
+      }
+    ],
+    "schedule": "Sensory-Friendly Saturdays on the third Saturday of each month, 9–10am (before the museum opens)",
+    "sensoryFeatures": [
+      "quiet early-morning hour before the museum opens to the public",
+      "explore the galleries at your own pace with less stimulation",
+      "designated 'calming corner' for breaks",
+      "adaptive equipment and noise-reducing headphones welcome",
+      "free general admission museum"
+    ],
+    "ageRange": "All ages",
+    "cost": "Free (general admission is free)",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.clevelandart.org/events/sensory-friendly-saturdays",
+    "parentTip": "The third-Saturday early hour is the calm window — and since general admission is free, there's zero pressure to 'get your money's worth' if your child is done after 20 minutes."
+  },
+  {
+    "id": "grand-rapids-art-museum",
+    "name": "Grand Rapids Art Museum (Sensory Kits)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "grand-rapids-mi",
+    "address": "101 Monroe Center St NW, Grand Rapids, MI 49503",
+    "website": "https://www.artmuseumgr.org/visit",
+    "phone": "",
+    "lat": 42.9639,
+    "lng": -85.6706,
+    "status": "documented",
+    "sensoryFeatures": [
+      "free sensory kits at the Visitor Services Desk (first-come, first-served)",
+      "kits include noise-reducing headphones, handheld fidgets & ear plugs (child and adult sizes)",
+      "periodic modified sensory-friendly hours (lower lighting, reduced noise)",
+      "calm, spacious galleries that rarely feel crowded"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission — see website",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.artmuseumgr.org/visit",
+    "parentTip": "Pick up a sensory kit at the Visitor Services Desk as you enter — the ear plugs come in adult sizes too, which helps when a parent is also noise-sensitive."
+  },
+  {
+    "id": "national-cowboy-museum-okc",
+    "name": "National Cowboy & Western Heritage Museum (Certified Autism Center)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "oklahoma-city-ok",
+    "address": "1700 NE 63rd St, Oklahoma City, OK 73111",
+    "website": "https://nationalcowboymuseum.org/plan-your-visit/museum-accessibility/",
+    "phone": "",
+    "lat": 35.536,
+    "lng": -97.4855,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Saturday",
+        "weeks": [
+          2
+        ],
+        "note": "'See You Saturdays' — free admission; first hour is sensory-friendly"
+      }
+    ],
+    "schedule": "'See You Saturdays' on the second Saturday of the month — free admission, with the first hour reserved for sensory-sensitive visitors",
+    "sensoryFeatures": [
+      "IBCCES Certified Autism Center — Oklahoma's first museum with the designation",
+      "sensory kits (noise-canceling headphones, weighted lap pad, communication cards, fidgets)",
+      "sensory guides available for every space in the museum",
+      "See You Saturdays: lowered lights, quieter music, sensory wall & calming room"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission; free on See You Saturdays",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://nationalcowboymuseum.org/plan-your-visit/museum-accessibility/",
+    "parentTip": "Come at opening on a second Saturday — admission is free and the whole first hour is set aside for sensory-sensitive visitors before the general crowd arrives."
+  },
+  {
+    "id": "buffalo-history-museum",
+    "name": "The Buffalo History Museum — Sensory Hour",
+    "category": "sensory-friendly-museums",
+    "citySlug": "buffalo-ny",
+    "address": "1 Museum Ct, Buffalo, NY 14216",
+    "website": "https://buffalohistory.org/visit-us/",
+    "phone": "",
+    "lat": 42.931,
+    "lng": -78.877,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "note": "10–11am, limited crowd, muted audio, dimmed lighting"
+      }
+    ],
+    "schedule": "Sensory Hour every Sunday, 10–11am",
+    "sensoryFeatures": [
+      "weekly Sensory Hour: limited crowd size, muted audio & dimmed lighting",
+      "sensory kits available at all times (noise-canceling headphones, sunglasses, fidget & texture toys)",
+      "calm, uncrowded galleries most of the week"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://buffalohistory.org/visit-us/",
+    "parentTip": "A weekly sensory hour is rare — if Sundays at 10am work for your family, this can become a predictable routine outing, which is half the battle."
+  },
+  {
+    "id": "herschell-carrousel-museum-buffalo",
+    "name": "Herschell Carrousel Factory Museum — Sensory Hours",
+    "category": "sensory-friendly-museums",
+    "citySlug": "buffalo-ny",
+    "address": "180 Thompson St, North Tonawanda, NY 14120",
+    "website": "https://www.carrouselmuseum.org/sensory-friendly-hours.html",
+    "phone": "",
+    "lat": 43.0334,
+    "lng": -78.8735,
+    "status": "documented",
+    "schedule": "Sensory Hours on select Sundays (roughly monthly, June–November), 10am–12pm",
+    "sensoryFeatures": [
+      "Sensory Hours: exhibit lights & sound effects adjusted, no band organs playing",
+      "sensory backpacks & noise-reducing headphones free to borrow anytime at the front desk",
+      "special hands-on activities during Sensory Hours",
+      "historic carousel rides at a gentler pace"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission",
+    "hours": "See website for current hours and Sensory Hour dates",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.carrouselmuseum.org/sensory-friendly-hours.html",
+    "parentTip": "It's in North Tonawanda, about 15 minutes north of Buffalo. The band organs are the loudest thing in the building — during Sensory Hours they stay silent, so that's the visit to aim for."
   }
 ]

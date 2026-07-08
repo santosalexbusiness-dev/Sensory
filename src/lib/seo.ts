@@ -24,11 +24,18 @@ export function topSensoryFeatures(listings: Listing[], n = 2): string[] {
 }
 
 /**
+ * Build-time year appended to directory titles — dated titles lift CTR in
+ * search results, and because it's computed at build time it stays current on
+ * every deploy (the site rebuilds far more often than yearly).
+ */
+const TITLE_YEAR = new Date().getFullYear();
+
+/**
  * <title> for a category-in-city page — short, city-led, brand-free to avoid
- * truncation. e.g. "Dallas, TX Sensory-Friendly Movies".
+ * truncation. e.g. "Dallas, TX Sensory-Friendly Movies (2026)".
  */
 export function cityTitle(category: Category, city: City): string {
-  return `${city.city}, ${city.stateAbbr} Sensory-Friendly ${category.shortLabel}`;
+  return `${city.city}, ${city.stateAbbr} Sensory-Friendly ${category.shortLabel} (${TITLE_YEAR})`;
 }
 
 /** Meta description for a category-in-city page, kept under ~160 characters. */
@@ -200,10 +207,11 @@ function shortCategoryNoun(category: Category): string {
 
 /**
  * <title> for a city hub page — short, city-led, and brand-free so Google
- * won't truncate it. e.g. "Atlanta, GA Sensory-Friendly Activities for Kids".
+ * won't truncate it. e.g. "Atlanta, GA Sensory-Friendly Activities for Kids (2026)".
+ * The year sits last so if Google truncates a long city name, only the year is lost.
  */
 export function cityHubTitle(city: City): string {
-  return `${city.city}, ${city.stateAbbr} Sensory-Friendly Activities for Kids`;
+  return `${city.city}, ${city.stateAbbr} Sensory-Friendly Activities for Kids (${TITLE_YEAR})`;
 }
 
 /** Meta description for a city hub page. */

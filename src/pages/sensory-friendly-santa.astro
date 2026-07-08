@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import GearStrip from '../components/GearStrip.astro';
+import Faq from '../components/Faq.astro';
+import { getGearSection } from '../lib/gear';
+import { absoluteUrl, formatTitle } from '../lib/utils';
+import { breadcrumbSchema, faqSchema } from '../lib/seo';
+
+const site = Astro.site;
+const gear = getGearSection('santa');
+
+const description =
+  'How to find a Sensitive Santa or Caring Santa event near you, when to book, and ' +
+  'how to prepare an autistic or sensory-sensitive child to meet Santa.';
+
+const faqs = [
+  {
+    question: 'What is a Sensitive Santa (or Caring Santa) event?',
+    answer:
+      'A Sensitive Santa event is a private or small-group Santa visit designed for autistic and sensory-sensitive kids: reserved time slots instead of a line, dimmed lights, no piped music, extra time with a patient Santa, and no pressure to sit on his lap or pose. "Caring Santa" is the reservation-only version run at many malls by Cherry Hill Programs (usually on a Sunday morning before the mall opens); libraries, community centers, zoos, and autism organizations run their own versions under names like Sensitive Santa, Sensory Santa, or Silent Santa.',
+  },
+  {
+    question: 'How do I find a sensory-friendly Santa near me?',
+    answer:
+      "Start with your local mall's Santa photo page and look for a \"Caring Santa\" or sensory event date — most take reservations from early November and slots go quickly. Then check your local autism society's events calendar, your library and parks department, and nearby zoos and museums (many pair a sensory-friendly morning with a Santa visit in December). Searching your city name plus \"sensitive Santa\" in November usually surfaces everything at once.",
+  },
+  {
+    question: 'How do I prepare my autistic child to meet Santa?',
+    answer:
+      "Preview everything: show photos or videos of Santa, the venue, and if possible last year's setup, and read a short social story about what will happen. Practice the visit at home — walk up, wave or say hi, hand over a list, get a candy cane, leave. On the day, keep expectations loose: sitting on Santa's lap is optional, photos can be taken from a distance, and a 90-second visit that ends happily beats a long one that ends in tears. Go at your child's pace and be ready to celebrate whatever version of the visit happens.",
+  },
+];
+
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', site) },
+    { name: 'Sensory-friendly Santa', url: absoluteUrl('/sensory-friendly-santa/', site) },
+  ]),
+  faqSchema(faqs),
+];
+---
+
+<BaseLayout
+  title={formatTitle('Sensory-Friendly Santa & Sensitive Santa Events')}
+  description={description}
+  canonicalPath="/sensory-friendly-santa/"
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <Breadcrumbs
+      items={[{ name: 'Home', href: '/' }, { name: 'Sensory-friendly Santa' }]}
+    />
+
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      Meeting Santa, the sensory-friendly way
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
+      The classic mall Santa visit — a long line, bright lights, a loud stranger in a
+      big red suit, and pressure to smile on cue — is close to the hardest possible
+      setup for a sensory-sensitive child. The good news: quiet, reservation-only
+      <strong>Sensitive Santa</strong> events now exist in most metros, and with a
+      little preparation the visit can genuinely be magic. Here's how to find one and
+      make it work.
+    </p>
+
+    <div class="mt-10 space-y-9 prose-readable">
+      <section>
+        <h2 class="text-2xl font-bold text-ink">What a Sensitive Santa event looks like</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          Instead of a line, you book a time slot — often on a Sunday morning before
+          the venue opens. The lights are turned down, the music is off, the crowd is
+          a handful of families instead of hundreds, and Santa himself has usually
+          been coached: he speaks softly, follows the child's lead, doesn't insist on
+          eye contact or lap-sitting, and takes as long as your child needs. Nobody
+          is rushed and nobody minds a meltdown.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Where to find one</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          The biggest program is <strong>Caring Santa</strong>, run by Cherry Hill
+          Programs (the company behind most mall Santa sets) at malls across the
+          country — check your local mall's Santa photo page for a "Caring Santa" or
+          sensory event date. Beyond the mall: your local autism society's December
+          calendar, libraries and community centers ("Sensitive Santa" or "Silent
+          Santa" events), and zoos and museums that pair Santa with a
+          sensory-friendly morning. The
+          <a class="link-underline font-medium text-brand-strong" href="/cities/"
+            >sensory-friendly venues near you</a
+          > are good candidates — many run holiday sensory events in December.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Book early — early November, not December</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          Sensitive Santa sessions are usually one or two dates per venue with a
+          small number of slots, and they fill up fast. Reservations typically open
+          in late October or early November. Put a reminder in your calendar now —
+          the families who get the calm 9:00 a.m. slot are the ones who booked three
+          weeks out.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Prepare with previews, not surprises</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          In the week before: show photos and videos of Santa (including the specific
+          venue if you can find pictures), read a short social story about the visit,
+          and practice at home — walk up, wave, hand over a wish list, take a candy
+          cane, done. If your child is nonverbal, a written or drawn list to hand
+          Santa gives the visit a script that doesn't need words. Talk through the
+          plan on the drive, including how to say "all done."
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Let go of the perfect photo</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          The visit is the win; the photo is a bonus. Sitting on Santa's lap is
+          optional — standing nearby, high-fiving, or waving from six feet away all
+          count as meeting Santa. Candid shots of your child inspecting Santa's boots
+          beat a forced-smile portrait every time. If it helps, tell the photographer
+          up front: "we'll take whatever we get, no re-dos needed."
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Good alternatives to the in-person visit</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          If in-person Santa isn't the right call this year, there are gentler
+          versions: a video call with Santa from your own couch (several services
+          offer them, and some Santas will follow your notes about your child), a
+          letter to Santa with a written reply, or a drive-through or window-visit
+          Santa event. A child who loves Santa from a distance this year may walk
+          right up to him next year — there's no deadline on the magic.
+        </p>
+      </section>
+    </div>
+
+    {gear && <GearStrip section={gear} />}
+
+    <div class="mt-14">
+      <Faq faqs={faqs} heading="Sensitive Santa: FAQ" id="santa-faq" />
+    </div>
+
+    <div
+      class="mt-12 rounded-card border border-line bg-surface-soft p-5 text-sm leading-relaxed text-muted"
+    >
+      <p>
+        More seasonal guides:
+        <a
+          class="link-underline font-medium text-brand-strong"
+          href="/sensory-friendly-halloween/">a sensory-friendly Halloween</a
+        > and
+        <a
+          class="link-underline font-medium text-brand-strong"
+          href="/sensory-friendly-fireworks/">sensory-friendly fireworks &amp; July 4th</a
+        >. However your family does the holidays, the right visit is the one that
+        works for your child.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

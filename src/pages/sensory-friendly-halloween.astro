@@ -1,0 +1,178 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import GearStrip from '../components/GearStrip.astro';
+import Faq from '../components/Faq.astro';
+import { getGearSection } from '../lib/gear';
+import { absoluteUrl, formatTitle } from '../lib/utils';
+import { breadcrumbSchema, faqSchema } from '../lib/seo';
+
+const site = Astro.site;
+const gear = getGearSection('halloween');
+
+const description =
+  "A parent's guide to a sensory-friendly Halloween: comfortable costumes, calmer " +
+  'trick-or-treating, trunk-or-treats and sensory events, and doing it your own way.';
+
+const faqs = [
+  {
+    question: 'What is a sensory-friendly Halloween event?',
+    answer:
+      'A sensory-friendly Halloween event tones down the things that make regular Halloween hard: no strobe lights, jump scares, or loud sound effects, smaller crowds, daylight or early-evening hours, and staff who understand sensory needs. Look for daytime trunk-or-treats, "Boo at the Zoo" sensory hours, museum and library Halloween events, and mall trick-or-treating. Your city\'s parks department and local autism organizations usually list them from late September.',
+  },
+  {
+    question: 'How can my nonverbal child trick-or-treat?',
+    answer:
+      'Saying "trick or treat" is a custom, not a requirement. Many families use a simple card the child can hand over or show ("Happy Halloween! I\'m nonverbal — thank you for the treat!"), a communication device, or a wave. Practicing the door routine at home a few times — knock, hold out the bucket, wave thank-you — makes the real thing familiar. Most neighbors are delighted to meet every trick-or-treater however they communicate.',
+  },
+  {
+    question: 'What is the Teal Pumpkin Project?',
+    answer:
+      'A teal pumpkin on a porch means that house offers non-food treats — small toys, glow sticks, stickers — as a safe option for kids with food allergies. It helps many sensory-sensitive and autistic kids too, since food textures and unfamiliar candy can be their own hurdle. You can look up participating homes at foodallergy.org, and putting out your own teal pumpkin is an easy way to make your street more inclusive.',
+  },
+];
+
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', site) },
+    { name: 'Sensory-friendly Halloween', url: absoluteUrl('/sensory-friendly-halloween/', site) },
+  ]),
+  faqSchema(faqs),
+];
+---
+
+<BaseLayout
+  title={formatTitle('Sensory-Friendly Halloween & Trick-or-Treating')}
+  description={description}
+  canonicalPath="/sensory-friendly-halloween/"
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <Breadcrumbs
+      items={[{ name: 'Home', href: '/' }, { name: 'Sensory-friendly Halloween' }]}
+    />
+
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      A sensory-friendly Halloween &amp; trick-or-treating guide
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
+      Halloween asks a lot of a sensory-sensitive kid: an itchy costume, strangers'
+      doorbells, strobe-lit porches, crowds in the dark, and a script to perform at
+      every door. With some preparation — and full permission to do it differently —
+      it can still be one of the best nights of the year. Here's how.
+    </p>
+
+    <div class="mt-10 space-y-9 prose-readable">
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Start with the costume — comfort wins</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          The costume is where most Halloweens fall apart, so solve it early. Buy or
+          make it weeks ahead and let your child wear it around the house until it's
+          familiar. Cut out tags, choose soft fabrics, and size up so it fits over
+          regular clothes. Skip masks and face paint if your child dislikes things on
+          their face — a themed t-shirt, character pajamas, or a favorite hoodie plus
+          one accessory absolutely counts as a costume. The rule: if it's not
+          comfortable at home, it won't survive the neighborhood.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Practice the routine before the night</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          Trick-or-treating is a social script, and scripts can be rehearsed. In the
+          week before, practice at your own front door: knock or ring, hold out the
+          bucket, take one treat, wave or say thanks, move on. Read or make a simple
+          social story about the night. If saying "trick or treat" is hard, that's
+          fine — a wave, a card, or a device works, and practicing the motions makes
+          the real doors much less strange.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Plan a short, familiar route</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          Go out at dusk, before the streets get dark, crowded, and loud — the first
+          hour is the calmest. Pick a handful of familiar houses rather than the
+          whole neighborhood, and tell your child the plan up front: "five houses,
+          then home for a movie." A visual countdown helps. Walk the route in
+          daylight a day or two before so nothing about it is new, and scout for
+          porches with strobe lights, fog machines, or animatronics so you can skip
+          them without a scene.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Pack for the dark (and for wandering)</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          Ear defenders take the edge off shrieking doorbells and screaming
+          decorations. Add a small fidget for waiting at doors, glow sticks or
+          reflective tape so your child is visible, and a familiar snack. If your
+          child is a runner, Halloween is a high-risk night — dark, exciting, and
+          full of open doors — so a hand to hold, a GPS watch, or both is worth
+          planning before you leave the house.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Look for teal pumpkins</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          A <strong>teal pumpkin</strong> on a porch means non-food treats — small
+          toys, glow sticks, stickers — offered for kids with food allergies. That
+          helps many autistic and sensory-sensitive kids too, since unfamiliar candy
+          textures can be their own obstacle. And consider putting one out yourself:
+          it quietly tells every family on your street that different kids are
+          welcome at your door.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Or choose a sensory-friendly event instead</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          Daytime <strong>trunk-or-treats</strong> (rows of decorated car trunks in a
+          parking lot — short, contained, and done before dark) are made for this.
+          Many zoos, museums, and malls run Halloween events with sensory-friendly
+          hours, and KultureCity-certified venues often add quiet rooms and sensory
+          bags. Check your city's parks &amp; recreation calendar, local autism
+          organizations, and the
+          <a class="link-underline font-medium text-brand-strong" href="/cities/"
+            >sensory-friendly venues near you</a
+          > — many host calmer Halloween sessions in late October.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">It's okay to do Halloween your own way</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          Some of the best Halloweens happen at home: handing out candy (great for
+          kids who love the ritual but not the walking), a decorated living room, a
+          themed movie night, or trick-or-treating between bedrooms. If your child
+          melts down three houses in, that's not a failed Halloween — that's three
+          houses more than zero, and next year builds on it.
+        </p>
+      </section>
+    </div>
+
+    {gear && <GearStrip section={gear} />}
+
+    <div class="mt-14">
+      <Faq faqs={faqs} heading="Sensory-friendly Halloween: FAQ" id="halloween-faq" />
+    </div>
+
+    <div
+      class="mt-12 rounded-card border border-line bg-surface-soft p-5 text-sm leading-relaxed text-muted"
+    >
+      <p>
+        More seasonal guides:
+        <a
+          class="link-underline font-medium text-brand-strong"
+          href="/sensory-friendly-santa/">meeting Santa without the meltdown</a
+        > and
+        <a
+          class="link-underline font-medium text-brand-strong"
+          href="/sensory-friendly-fireworks/">sensory-friendly fireworks &amp; July 4th</a
+        >. And whatever you decide, you know your child best — the right Halloween is
+        the one that works for your family.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

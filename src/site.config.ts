@@ -56,7 +56,7 @@ export const SITE: SiteConfig = {
   name: 'Sensory-Friendly Kids',
   tagline: 'Calm, verified places for sensory-sensitive kids',
   description:
-    'A parent-built directory of sensory-friendly and autism-friendly places and services for kids — organized by category and city, with the sensory details that matter listed up front.',
+    'A parent-built directory of sensory-friendly and autism-friendly places for kids, organized by category and city — with the sensory details up front.',
   author: 'Alex',
   contactEmail: 'info@sensoryfriendly.guide',
   locale: 'en_US',
