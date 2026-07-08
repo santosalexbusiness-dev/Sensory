@@ -1917,5 +1917,509 @@
     "seeded": true,
     "country": "United Kingdom",
     "countryCode": "GB"
+  },
+  {
+    "slug": "fairbanks-ak",
+    "city": "Fairbanks",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "lat": 64.8378,
+    "lng": -147.7164,
+    "seeded": true
+  },
+  {
+    "slug": "casper-wy",
+    "city": "Casper",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "lat": 42.8501,
+    "lng": -106.3252,
+    "seeded": true
+  },
+  {
+    "slug": "missoula-mt",
+    "city": "Missoula",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "lat": 46.8721,
+    "lng": -113.994,
+    "seeded": true
+  },
+  {
+    "slug": "bozeman-mt",
+    "city": "Bozeman",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "lat": 45.677,
+    "lng": -111.0429,
+    "seeded": true
+  },
+  {
+    "slug": "bismarck-nd",
+    "city": "Bismarck",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "lat": 46.8083,
+    "lng": -100.7837,
+    "seeded": true
+  },
+  {
+    "slug": "rapid-city-sd",
+    "city": "Rapid City",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "lat": 44.0805,
+    "lng": -103.231,
+    "seeded": true
+  },
+  {
+    "slug": "bangor-me",
+    "city": "Bangor",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "lat": 44.8016,
+    "lng": -68.7712,
+    "seeded": true
+  },
+  {
+    "slug": "nashua-nh",
+    "city": "Nashua",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "lat": 42.7654,
+    "lng": -71.4676,
+    "seeded": true
+  },
+  {
+    "slug": "dover-de",
+    "city": "Dover",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "lat": 39.1582,
+    "lng": -75.5244,
+    "seeded": true
+  },
+  {
+    "slug": "huntington-wv",
+    "city": "Huntington",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "lat": 38.4192,
+    "lng": -82.4452,
+    "seeded": true
+  },
+  {
+    "slug": "morgantown-wv",
+    "city": "Morgantown",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "lat": 39.6295,
+    "lng": -79.9559,
+    "seeded": true
+  },
+  {
+    "slug": "gulfport-ms",
+    "city": "Gulfport",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "lat": 30.3674,
+    "lng": -89.0928,
+    "seeded": true
+  },
+  {
+    "slug": "hattiesburg-ms",
+    "city": "Hattiesburg",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "lat": 31.3271,
+    "lng": -89.2903,
+    "seeded": true
+  },
+  {
+    "slug": "idaho-falls-id",
+    "city": "Idaho Falls",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "lat": 43.4917,
+    "lng": -112.0339,
+    "seeded": true
+  },
+  {
+    "slug": "santa-fe-nm",
+    "city": "Santa Fe",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "lat": 35.687,
+    "lng": -105.9378,
+    "seeded": true
+  },
+  {
+    "slug": "las-cruces-nm",
+    "city": "Las Cruces",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "lat": 32.3199,
+    "lng": -106.7637,
+    "seeded": true
+  },
+  {
+    "slug": "topeka-ks",
+    "city": "Topeka",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "lat": 39.0473,
+    "lng": -95.6752,
+    "seeded": true
+  },
+  {
+    "slug": "macon-ga",
+    "city": "Macon",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "lat": 32.8407,
+    "lng": -83.6324,
+    "seeded": true
+  },
+  {
+    "slug": "athens-ga",
+    "city": "Athens",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "lat": 33.9519,
+    "lng": -83.3576,
+    "seeded": true
+  },
+  {
+    "slug": "charlottesville-va",
+    "city": "Charlottesville",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "lat": 38.0293,
+    "lng": -78.4767,
+    "seeded": true
+  },
+  {
+    "slug": "lynchburg-va",
+    "city": "Lynchburg",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "lat": 37.4138,
+    "lng": -79.1422,
+    "seeded": true
+  },
+  {
+    "slug": "columbia-mo",
+    "city": "Columbia",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "lat": 38.9517,
+    "lng": -92.3341,
+    "seeded": true
+  },
+  {
+    "slug": "iowa-city-ia",
+    "city": "Iowa City",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "lat": 41.6611,
+    "lng": -91.5302,
+    "seeded": true
+  },
+  {
+    "slug": "davenport-ia",
+    "city": "Davenport",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "lat": 41.5236,
+    "lng": -90.5776,
+    "seeded": true
+  },
+  {
+    "slug": "duluth-mn",
+    "city": "Duluth",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "lat": 46.7867,
+    "lng": -92.1005,
+    "seeded": true
+  },
+  {
+    "slug": "rochester-mn",
+    "city": "Rochester",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "lat": 44.0121,
+    "lng": -92.4802,
+    "seeded": true
+  },
+  {
+    "slug": "appleton-wi",
+    "city": "Appleton",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 44.2619,
+    "lng": -88.4154,
+    "seeded": true
+  },
+  {
+    "slug": "rockford-il",
+    "city": "Rockford",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "lat": 42.2711,
+    "lng": -89.094,
+    "seeded": true
+  },
+  {
+    "slug": "peoria-il",
+    "city": "Peoria",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "lat": 40.6936,
+    "lng": -89.589,
+    "seeded": true
+  },
+  {
+    "slug": "flint-mi",
+    "city": "Flint",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 43.0125,
+    "lng": -83.6875,
+    "seeded": true
+  },
+  {
+    "slug": "youngstown-oh",
+    "city": "Youngstown",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 41.0998,
+    "lng": -80.6495,
+    "seeded": true
+  },
+  {
+    "slug": "scranton-pa",
+    "city": "Scranton",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 41.409,
+    "lng": -75.6624,
+    "seeded": true
+  },
+  {
+    "slug": "lancaster-pa",
+    "city": "Lancaster",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 40.0379,
+    "lng": -76.3055,
+    "seeded": true
+  },
+  {
+    "slug": "trenton-nj",
+    "city": "Trenton",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "lat": 40.2171,
+    "lng": -74.7429,
+    "seeded": true
+  },
+  {
+    "slug": "daytona-beach-fl",
+    "city": "Daytona Beach",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 29.2108,
+    "lng": -81.0228,
+    "seeded": true
+  },
+  {
+    "slug": "melbourne-fl",
+    "city": "Melbourne",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 28.0836,
+    "lng": -80.6081,
+    "seeded": true
+  },
+  {
+    "slug": "naples-fl",
+    "city": "Naples",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 26.142,
+    "lng": -81.7948,
+    "seeded": true
+  },
+  {
+    "slug": "brownsville-tx",
+    "city": "Brownsville",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 25.9017,
+    "lng": -97.4975,
+    "seeded": true
+  },
+  {
+    "slug": "beaumont-tx",
+    "city": "Beaumont",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 30.0802,
+    "lng": -94.1266,
+    "seeded": true
+  },
+  {
+    "slug": "midland-tx",
+    "city": "Midland",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 31.9973,
+    "lng": -102.0779,
+    "seeded": true
+  },
+  {
+    "slug": "college-station-tx",
+    "city": "College Station",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 30.628,
+    "lng": -96.3344,
+    "seeded": true
+  },
+  {
+    "slug": "tyler-tx",
+    "city": "Tyler",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 32.3513,
+    "lng": -95.3011,
+    "seeded": true
+  },
+  {
+    "slug": "abilene-tx",
+    "city": "Abilene",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 32.4487,
+    "lng": -99.7331,
+    "seeded": true
+  },
+  {
+    "slug": "modesto-ca",
+    "city": "Modesto",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 37.6391,
+    "lng": -120.9969,
+    "seeded": true
+  },
+  {
+    "slug": "oxnard-ca",
+    "city": "Oxnard",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 34.1975,
+    "lng": -119.1771,
+    "seeded": true
+  },
+  {
+    "slug": "santa-barbara-ca",
+    "city": "Santa Barbara",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 34.4208,
+    "lng": -119.6982,
+    "seeded": true
+  },
+  {
+    "slug": "santa-rosa-ca",
+    "city": "Santa Rosa",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 38.4404,
+    "lng": -122.7141,
+    "seeded": true
+  },
+  {
+    "slug": "boulder-co",
+    "city": "Boulder",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "lat": 40.015,
+    "lng": -105.2705,
+    "seeded": true
+  },
+  {
+    "slug": "pueblo-co",
+    "city": "Pueblo",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "lat": 38.2544,
+    "lng": -104.6091,
+    "seeded": true
+  },
+  {
+    "slug": "ogden-ut",
+    "city": "Ogden",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "lat": 41.223,
+    "lng": -111.9738,
+    "seeded": true
+  },
+  {
+    "slug": "st-george-ut",
+    "city": "St. George",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "lat": 37.0965,
+    "lng": -113.5684,
+    "seeded": true
+  },
+  {
+    "slug": "flagstaff-az",
+    "city": "Flagstaff",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "lat": 35.1983,
+    "lng": -111.6513,
+    "seeded": true
+  },
+  {
+    "slug": "bend-or",
+    "city": "Bend",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "lat": 44.0582,
+    "lng": -121.3153,
+    "seeded": true
+  },
+  {
+    "slug": "bellingham-wa",
+    "city": "Bellingham",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "lat": 48.7519,
+    "lng": -122.4787,
+    "seeded": true
+  },
+  {
+    "slug": "bowling-green-ky",
+    "city": "Bowling Green",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "lat": 36.9685,
+    "lng": -86.4808,
+    "seeded": true
+  },
+  {
+    "slug": "frederick-md",
+    "city": "Frederick",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "lat": 39.4143,
+    "lng": -77.4105,
+    "seeded": true
   }
 ]

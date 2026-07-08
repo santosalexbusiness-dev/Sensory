@@ -11202,5 +11202,221 @@
     "lastVerified": "2026-07-08",
     "sourceUrl": "https://www.whitakercenter.org/kids/sensory-saturdays/",
     "parentTip": "Check the Sensory Saturdays page for the next date before planning — downtown parking is easiest in the Market Square garage attached by skywalk."
+  },
+  {
+    "id": "discovery-cube-oc-anaheim",
+    "name": "Discovery Cube Orange County — Sensory Friendly Mornings",
+    "category": "sensory-friendly-museums",
+    "citySlug": "anaheim-ca",
+    "address": "2500 N Main St, Santa Ana, CA 92705",
+    "website": "https://www.discoverycube.org/orange-county/events/oc-sensory-friendly-mornings/",
+    "phone": "",
+    "lat": 33.7726,
+    "lng": -117.8674,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          3
+        ],
+        "note": "8–10am, before public opening"
+      }
+    ],
+    "schedule": "Sensory Friendly Mornings on the third Sunday of each month, 8–10am",
+    "sensoryFeatures": [
+      "early opening with background music off & reduced noise",
+      "sensory maps and visual cue cards provided",
+      "sound-reducing headphones available for checkout",
+      "free admission for one aide per family; quiet space available",
+      "staff trained with the Thompson Autism Center at CHOC"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission; one aide per family free",
+    "hours": "See website for current hours and Sensory Friendly Morning dates",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://www.discoverycube.org/sensory-friendly-mornings/",
+    "parentTip": "It's in Santa Ana, about 15 minutes from Anaheim. The 8am start beats both the crowds and the parking rush — the rocket-launch exhibit is the loudest spot, so save it for when your child is settled."
+  },
+  {
+    "id": "imas-mcallen",
+    "name": "International Museum of Art & Science (Sensory Explorer Backpacks)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "mcallen-tx",
+    "address": "1900 W Nolana Ave, McAllen, TX 78504",
+    "website": "https://theimasonline.org/explore-imas/visit-us/",
+    "phone": "",
+    "lat": 26.2263,
+    "lng": -98.2503,
+    "status": "documented",
+    "sensoryFeatures": [
+      "Sensory Explorer Backpacks to borrow during your visit",
+      "sensory guide & sensory map flag bright, loud and tactile areas",
+      "Smithsonian Affiliate with hands-on Discovery Pavilion for kids",
+      "accessibility woven into exhibit planning for sensory & developmental needs"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://theimasonline.org/explore-imas/visit-us/",
+    "parentTip": "Ask for the Sensory Explorer Backpack and the sensory map at the front desk — the art galleries are the naturally quiet half of the building when the science side gets busy."
+  },
+  {
+    "id": "springfield-museums-ma",
+    "name": "Springfield Museums — Sensory Friendly Saturdays",
+    "category": "sensory-friendly-museums",
+    "citySlug": "springfield-ma",
+    "address": "21 Edwards St, Springfield, MA 01103",
+    "website": "https://springfieldmuseums.org/",
+    "phone": "",
+    "lat": 42.1043,
+    "lng": -72.5859,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Saturday",
+        "weeks": [
+          2
+        ],
+        "note": "9–11am early opening, modified exhibits"
+      }
+    ],
+    "schedule": "Sensory Friendly Saturdays on the second Saturday of each month, 9–11am",
+    "sensoryFeatures": [
+      "Dr. Seuss Museum & Science Museum open early with modified exhibits",
+      "less noise, less bright light & cool-down spaces",
+      "trained staff & volunteers on hand; sensory-friendly crafts in the Cat's Corner",
+      "preview guides available; return voucher if the visit is cut short"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission — see website",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://springfieldmuseums.org/press-release/sensory-friendly-saturdays-provide-quiet-welcome-springfield-museums-2/",
+    "parentTip": "If your child needs to leave before 10am, ask the Welcome Center for the free try-again voucher — it removes all the pressure from a first visit to the Dr. Seuss museum."
+  },
+  {
+    "id": "gilbert-house-salem",
+    "name": "Gilbert House Children's Museum (Sensory Portal)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "salem-or",
+    "address": "116 Marion St NE, Salem, OR 97301",
+    "website": "https://www.acgilbert.org/",
+    "phone": "",
+    "lat": 44.9459,
+    "lng": -123.0343,
+    "status": "documented",
+    "sensoryFeatures": [
+      "'Sensory Portal' room built for calm sensory exploration",
+      "noise-cancelling headphones to borrow at the front desk",
+      "listed venue with the Autism Society of Oregon",
+      "big Outdoor Discovery Area with space to spread out"
+    ],
+    "ageRange": "Best for younger kids (0–10)",
+    "cost": "Standard admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://autismsocietyoregon.org/venue/gilbert-house-childrens-museum/",
+    "parentTip": "Head upstairs to the Sensory Portal when the main rooms get lively — and the riverside park next door is a built-in decompression stop on the way out."
+  },
+  {
+    "id": "nc-aquarium-fort-fisher-wilmington",
+    "name": "NC Aquarium at Fort Fisher (Sensory Inclusive Certified)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "wilmington-nc",
+    "address": "900 Loggerhead Rd, Kure Beach, NC 28449",
+    "website": "https://www.ncaquariums.com/fort-fisher",
+    "phone": "",
+    "lat": 33.959,
+    "lng": -77.936,
+    "status": "documented",
+    "sensoryFeatures": [
+      "KultureCity Certified Sensory Inclusive (staff & volunteers trained)",
+      "sensory bags at Guest Services (noise-reducing headphones, fidgets, feelings thermometer)",
+      "social story via the KultureCity app to preview the visit",
+      "calm, darkened gallery tunnels that many sensory-sensitive kids love"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission; sensory bags free",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://www.ncaquariums.com/accessibility-information-",
+    "parentTip": "It's in Kure Beach, ~30 minutes south of Wilmington. Aquariums are naturally dim and cool — go at opening and the albino alligator gallery is nearly silent."
+  },
+  {
+    "id": "florida-childrens-museum-lakeland",
+    "name": "Florida Children's Museum — Sensory-Friendly Hours",
+    "category": "sensory-friendly-museums",
+    "citySlug": "lakeland-fl",
+    "address": "600 Bonnet Springs Blvd, Lakeland, FL 33815",
+    "website": "https://explorefcm.org/",
+    "phone": "",
+    "lat": 28.0553,
+    "lng": -81.9767,
+    "status": "documented",
+    "schedule": "Sensory-Friendly Hours scheduled regularly — dimmed lights, lowered sound, reduced capacity",
+    "sensoryFeatures": [
+      "Autism Friendly partner of USF's Center for Autism & Related Disabilities (CARD)",
+      "sensory kits to check out (noise-reducing headphones, sunglasses, fidget)",
+      "building designed sensory-first: sound-dampening walls, predictable floor patterns, light control",
+      "regular Sensory-Friendly Hours with reduced capacity"
+    ],
+    "ageRange": "Best for younger kids (0–12)",
+    "cost": "Standard admission",
+    "hours": "See website for current hours and sensory-hour dates",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://explorefcm.org/",
+    "parentTip": "The whole building was designed with sensory needs in mind (it's one of the newest children's museums in the country) — check out a sensory kit at the desk and use Bonnet Springs Park outside as your break space."
+  },
+  {
+    "id": "cmoe-evansville",
+    "name": "Koch Family Children's Museum of Evansville — Sensory Sundays",
+    "category": "sensory-friendly-museums",
+    "citySlug": "evansville-in",
+    "address": "22 SE 5th St, Evansville, IN 47708",
+    "website": "https://cmoekids.org/sensory-sundays",
+    "phone": "",
+    "lat": 37.9707,
+    "lng": -87.5726,
+    "status": "documented",
+    "schedule": "Sensory Sundays with Autism Evansville — free admission, see calendar for dates",
+    "sensoryFeatures": [
+      "free Sensory Sunday events run with Autism Evansville",
+      "lights and sounds turned down throughout the exhibits",
+      "extra staff on hand to support families",
+      "welcoming space for all neurodivergent kids & siblings"
+    ],
+    "ageRange": "Best for younger kids (0–10)",
+    "cost": "Sensory Sundays free; standard admission otherwise",
+    "hours": "See website for current hours and Sensory Sunday dates",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://cmoekids.org/sensory-sundays",
+    "parentTip": "Sensory Sundays are completely free — check cMoe's calendar and Autism Evansville's event page for the next date, and arrive early since local families know about it."
+  },
+  {
+    "id": "discovery-center-museum-rockford",
+    "name": "Discovery Center Museum — Fun For Everyone Mornings",
+    "category": "sensory-friendly-museums",
+    "citySlug": "rockford-il",
+    "address": "711 N Main St, Rockford, IL 61103",
+    "website": "https://discoverycentermuseum.org/",
+    "phone": "",
+    "lat": 42.2786,
+    "lng": -89.0954,
+    "status": "documented",
+    "schedule": "'Fun For Everyone' hour-long sessions before/after public hours — free, registration required",
+    "sensoryFeatures": [
+      "free hour-long special-needs sessions outside public hours (advance registration)",
+      "social stories to review before the visit",
+      "headsets & fidgets to borrow; sensory map & sensory app available",
+      "designated quiet spaces plus periodic dimmed-light sensory hours"
+    ],
+    "ageRange": "Best for younger kids (0–12)",
+    "cost": "Fun For Everyone sessions free; standard admission otherwise",
+    "hours": "See website for current hours and session dates",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://www.twentyonesenses.org/places/united-states/il/rockford/discovery-center-museum/",
+    "parentTip": "Register ahead for a Fun For Everyone morning — it's free, capped, and one of the top-rated children's museums in the country with the building all to yourselves."
   }
 ]
