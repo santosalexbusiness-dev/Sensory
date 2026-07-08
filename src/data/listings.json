@@ -10026,5 +10026,613 @@
     "lastVerified": "2026-07-06",
     "sourceUrl": "https://www.mopop.org/programs/sensory-friendly-programs",
     "parentTip": "Request the social story and museum map they send before a Sensory-Friendly Morning — previewing the space makes the big, loud music exhibits far less overwhelming."
+  },
+  {
+    "id": "liberty-science-center-jersey-city",
+    "name": "Liberty Science Center — Sensory Days",
+    "category": "sensory-friendly-museums",
+    "citySlug": "jersey-city-nj",
+    "address": "222 Jersey City Blvd, Jersey City, NJ 07305",
+    "website": "https://lsc.org/visit/health-accessibility-and-safety/sensory-days",
+    "phone": "",
+    "lat": 40.7082,
+    "lng": -74.0546,
+    "status": "documented",
+    "schedule": "Dedicated Sensory Days on select dates — see website for the next date",
+    "sensoryFeatures": [
+      "KultureCity Certified Sensory Inclusive venue (staff trained)",
+      "Sensory Days with smaller crowds and reduced wait times",
+      "sensory kits with fidgets & noise-reducing headphones to borrow",
+      "multiple low-sensory zones for quiet breaks",
+      "social narrative & picture-based sensory map shared in advance"
+    ],
+    "ageRange": "All ages",
+    "cost": "See website for Sensory Day tickets",
+    "hours": "See website for current hours and Sensory Day dates",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://lsc.org/visit/health-accessibility-and-safety/sensory-days",
+    "parentTip": "Download the social narrative and sensory map before you go — the map flags bright, loud, and tight spaces so you can plan a calm route through the exhibits."
+  },
+  {
+    "id": "belle-isle-nature-center-detroit",
+    "name": "Belle Isle Nature Center (Sensory Inclusive Certified)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "detroit-mi",
+    "address": "176 Lakeside Dr, Detroit, MI 48207",
+    "website": "https://belleislenaturecenter.detroitzoo.org/",
+    "phone": "",
+    "lat": 42.3487,
+    "lng": -82.9636,
+    "status": "documented",
+    "sensoryFeatures": [
+      "KultureCity Certified Sensory Inclusive (run by the Detroit Zoological Society)",
+      "sensory bags with noise-canceling headphones & fidget tools",
+      "staff trained to support guests with sensory needs",
+      "small, calm indoor nature center with outdoor trails to spread out"
+    ],
+    "ageRange": "All ages",
+    "cost": "Free admission (vehicle entry to Belle Isle requires a Michigan Recreation Passport)",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://belleislenaturecenter.detroitzoo.org/accessibility/",
+    "parentTip": "It's much smaller and quieter than the main Detroit Zoo — a good first outing if big venues are overwhelming. Weekday mornings are calmest."
+  },
+  {
+    "id": "brenner-childrens-museum-greensboro",
+    "name": "Miriam P. Brenner Children's Museum — Sensory Hours",
+    "category": "sensory-friendly-museums",
+    "citySlug": "greensboro-nc",
+    "address": "220 N Church St, Greensboro, NC 27401",
+    "website": "https://mbcmuseum.com/sensory-hours/",
+    "phone": "",
+    "lat": 36.0768,
+    "lng": -79.7867,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Wednesday",
+        "weeks": [
+          1
+        ],
+        "note": "3–5pm (9–11am in July & August)"
+      }
+    ],
+    "schedule": "Sensory Hours the first Wednesday of every month, 3–5pm (9–11am in July & August)",
+    "sensoryFeatures": [
+      "lowered lighting and sounds during Sensory Hours",
+      "admission capped at 100 guests for a calm environment",
+      "noise-canceling headphones & sunglasses available on peg boards",
+      "multiple quiet spaces throughout the museum",
+      "social stories & visual schedules to prepare for the visit"
+    ],
+    "ageRange": "All ages",
+    "cost": "$12.95/person (under 12 months free); $6 with WIC, SNAP, or EBT",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://mbcmuseum.com/sensory-hours/",
+    "parentTip": "No reservations needed for Sensory Hours, and siblings are welcome — arrive near the start for the quietest stretch before the 100-guest cap fills."
+  },
+  {
+    "id": "impression-5-lansing",
+    "name": "Impression 5 Science Center — Sensory Friendly Hours",
+    "category": "sensory-friendly-museums",
+    "citySlug": "lansing-mi",
+    "address": "200 Museum Dr, Lansing, MI 48933",
+    "website": "https://impression5.org/sensoryfriendly",
+    "phone": "",
+    "lat": 42.7287,
+    "lng": -84.5472,
+    "status": "documented",
+    "schedule": "Select Sundays 9:30–11:30am and select Wednesdays 5:30–7:30pm — dates posted on website",
+    "sensoryFeatures": [
+      "exhibits altered to reduce sounds, scents & lighting stimuli",
+      "limited building capacity during sensory hours",
+      "sensory backpacks (social stories, noise-reducing earphones, PEC cards, tactiles)",
+      "compression/weighted vests & weighted blankets available",
+      "360° interactive map online to preview the building"
+    ],
+    "ageRange": "All ages",
+    "cost": "Regular admission; free for members",
+    "hours": "See website for current hours and sensory-friendly dates",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://impression5.org/sensoryfriendly",
+    "parentTip": "Walk through the 360° virtual map together before your visit — previewing the rooms at home makes the first trip much more predictable."
+  },
+  {
+    "id": "anchorage-museum-anchorage",
+    "name": "Anchorage Museum — Sensory Friendly Second Sundays",
+    "category": "sensory-friendly-museums",
+    "citySlug": "anchorage-ak",
+    "address": "625 C St, Anchorage, AK 99501",
+    "website": "https://www.anchoragemuseum.org/visit/access/sensory-friendly-and-access-programs/",
+    "phone": "",
+    "lat": 61.2156,
+    "lng": -149.8846,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          2
+        ],
+        "note": "$5 admission to select galleries during a quieter time"
+      }
+    ],
+    "schedule": "Sensory Friendly Second Sundays ($5 admission); Sensory Friendly & Access Mornings October–April before public opening",
+    "sensoryFeatures": [
+      "Sensory Friendly Second Sundays — quieter visits to select galleries",
+      "access mornings (Oct–Apr) when the museum is closed to the public",
+      "fidget toys, sunglasses & chewing gum available",
+      "designated safe space for breaks"
+    ],
+    "ageRange": "All ages",
+    "cost": "$5 on Sensory Friendly Second Sundays; access mornings $5 per family/group",
+    "hours": "Times change seasonally — check the online calendar",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.anchoragemuseum.org/visit/access/sensory-friendly-and-access-programs/",
+    "parentTip": "Email access@anchoragemuseum.org to register for an access morning — the museum is closed to the general public during those sessions, so crowds are minimal."
+  },
+  {
+    "id": "fort-wayne-childrens-zoo",
+    "name": "Fort Wayne Children's Zoo — Sensory-Friendly Sundays",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "fort-wayne-in",
+    "address": "3411 Sherman Blvd, Fort Wayne, IN 46808",
+    "website": "https://fwzoo.com/",
+    "phone": "",
+    "lat": 41.0993,
+    "lng": -85.1627,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          1
+        ],
+        "note": "no music, reduced ride noise, dimmer lights"
+      }
+    ],
+    "schedule": "Sensory-Friendly Sundays on the first Sunday of each month (seasonal, as part of the 'Zoo for All' initiative)",
+    "sensoryFeatures": [
+      "KultureCity Certified Sensory Inclusive + IBCCES Certified Autism Center",
+      "Sensory-Friendly Sundays: no music, reduced ride noise, dimmer lights",
+      "free sensory bags at Guest Services (communication board, headphones, fidgets)",
+      "clearly marked Quiet Areas & Headphone Zones throughout the zoo"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard zoo admission",
+    "hours": "Seasonal — see website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://fwzoo.com/accessibility/",
+    "parentTip": "Aim for the first Sunday of the month right at opening — you get the modified atmosphere plus the smallest crowds of the day."
+  },
+  {
+    "id": "da-vinci-science-center-allentown",
+    "name": "Da Vinci Science Center — Sensory Hour",
+    "category": "sensory-friendly-museums",
+    "citySlug": "allentown-pa",
+    "address": "815 Hamilton St, Allentown, PA 18101",
+    "website": "https://www.davincisciencecenter.org/experience/sensory-hour/",
+    "phone": "",
+    "lat": 40.6034,
+    "lng": -75.4718,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          1
+        ],
+        "note": "10–11am"
+      }
+    ],
+    "schedule": "Sensory Hour on the first Sunday of the month, 10–11am",
+    "sensoryFeatures": [
+      "adjusted lighting, sound & exhibit effects during Sensory Hour",
+      "social narrative & downloadable sensory map to plan your visit",
+      "noise-cancelling headphones & weighted lap pads to borrow",
+      "'The Haven' quiet room on the first floor near the bathrooms"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.davincisciencecenter.org/experience/sensory-hour/",
+    "parentTip": "If the Sensory Hour crowd builds, the Haven quiet room has comfy chairs and a frosted window — a good reset spot before heading back out."
+  },
+  {
+    "id": "fcmod-fort-collins",
+    "name": "Fort Collins Museum of Discovery (Sensory Accommodations)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "fort-collins-co",
+    "address": "408 Mason Ct, Fort Collins, CO 80524",
+    "website": "https://fcmod.org/",
+    "phone": "",
+    "lat": 40.5897,
+    "lng": -105.0827,
+    "status": "documented",
+    "sensoryFeatures": [
+      "sensory bags with sunglasses & earplugs available",
+      "sensory advisory warnings posted on all loud exhibits",
+      "quiet space located in The Archive",
+      "periodic sensory-friendly hours with dimmed lights & reduced sound"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://fcmod.org/blog/2023/04/10/prepare-for-the-autism-resource-fair/",
+    "parentTip": "Ask at the front desk for a sensory bag on arrival and note the sensory advisory signs — the music studio and Soundscapes areas are the loudest zones."
+  },
+  {
+    "id": "museum-natural-curiosity-provo",
+    "name": "Museum of Natural Curiosity at Thanksgiving Point",
+    "category": "sensory-friendly-museums",
+    "citySlug": "provo-ut",
+    "address": "3605 Garden Dr, Lehi, UT 84043",
+    "website": "https://thanksgivingpoint.org/attractions-tickets/museum-of-natural-curiosity/",
+    "phone": "",
+    "lat": 40.4266,
+    "lng": -111.889,
+    "status": "documented",
+    "sensoryFeatures": [
+      "free sensory backpacks (noise-reduction headphones, fidgets, timer, sunglasses, 'if lost' wristbands)",
+      "sensory maps flag areas with heightened stimulation",
+      "hands-on indoor & outdoor exhibits with room to spread out",
+      "backpacks also available at Museum of Ancient Life & Butterfly Biosphere next door"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission; sensory backpacks free (first-come, first-served)",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://thanksgivingpoint.org/attractions-tickets/accessibility/",
+    "parentTip": "Thanksgiving Point is in Lehi, about 20 minutes north of Provo — grab the sensory backpack at guest services first and use the sensory map to route around the loudest zones."
+  },
+  {
+    "id": "turtle-back-zoo-newark",
+    "name": "Essex County Turtle Back Zoo (Sensory Inclusive Certified)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "newark-nj",
+    "address": "560 Northfield Ave, West Orange, NJ 07052",
+    "website": "https://www.turtlebackzoo.com/",
+    "phone": "",
+    "lat": 40.742,
+    "lng": -74.304,
+    "status": "documented",
+    "sensoryFeatures": [
+      "KultureCity Certified Sensory Inclusive",
+      "sensory bags at Guest Services (free checkout with ID)",
+      "quiet zone & headphone zone signage throughout the grounds",
+      "accessibility map showing loud vs. quiet areas",
+      "annual registered Sensory-Friendly Morning with muted carousel & train"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard zoo admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.turtlebackzoo.com/accessibility/",
+    "parentTip": "About 20 minutes from downtown Newark. Check the accessibility map first — the carousel and train areas are the loudest, and the marked quiet zones make good break spots."
+  },
+  {
+    "id": "six-flags-over-texas-arlington",
+    "name": "Six Flags Over Texas (Certified Autism Center)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "arlington-tx",
+    "address": "2201 E Road to Six Flags St, Arlington, TX 76011",
+    "website": "https://www.sixflags.com/overtexas",
+    "phone": "",
+    "lat": 32.7541,
+    "lng": -97.07,
+    "status": "documented",
+    "sensoryFeatures": [
+      "IBCCES Certified Autism Center (staff trained)",
+      "sensory guide for every ride rating impact across the five senses",
+      "low-sensory break areas inside the park",
+      "IBCCES Accessibility Card streamlines ride accommodations"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard park admission",
+    "hours": "Seasonal — see website for park calendar",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://ibcces.org/blog/2022/07/14/sixflags/",
+    "parentTip": "Apply for the free IBCCES Accessibility Card at accessibilitycard.org at least 48 hours before your visit — it covers up to three companions and is valid for a year."
+  },
+  {
+    "id": "misci-albany",
+    "name": "miSci (Museum of Innovation & Science) — Sensory Sundays",
+    "category": "sensory-friendly-museums",
+    "citySlug": "albany-ny",
+    "address": "15 Museum Dr, Schenectady, NY 12308",
+    "website": "https://www.misci.org/",
+    "phone": "",
+    "lat": 42.8014,
+    "lng": -73.9271,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          2
+        ],
+        "note": "9–11am, dimmed lights & lowered sound"
+      }
+    ],
+    "schedule": "Sensory Sundays on the second Sunday of each month, 9–11am",
+    "sensoryFeatures": [
+      "IBCCES Certified Autism Center (designation renewed 2025)",
+      "Sensory Sundays: dimmed lights, lowered sounds, smaller crowds",
+      "open planetarium show — enter and leave freely",
+      "social stories, ear plugs & a dedicated quiet space"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission — see website",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://autismtravel.com/2025/08/13/misci-renewal/",
+    "parentTip": "miSci is in Schenectady, about 20 minutes from Albany — the come-and-go planetarium show during Sensory Sundays is a rare chance to try a dome theater without committing to a full show."
+  },
+  {
+    "id": "honolulu-zoo-honolulu",
+    "name": "Honolulu Zoo (Sensory Inclusive Certified)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "honolulu-hi",
+    "address": "151 Kapahulu Ave, Honolulu, HI 96815",
+    "website": "https://www.honoluluzoo.org/",
+    "phone": "",
+    "lat": 21.2708,
+    "lng": -157.8218,
+    "status": "documented",
+    "sensoryFeatures": [
+      "KultureCity Sensory Inclusive certified (one of the first in Hawaiʻi)",
+      "staff trained to support guests with sensory processing needs",
+      "sensory bags with noise-canceling headphones & fidget tools to borrow",
+      "open-air zoo with space to spread out"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard zoo admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.honolulu.gov/mayor/honolulu-zoo-achieves-sensory-inclusive-certification-to-support-guests-with-special-needs/",
+    "parentTip": "Ask for a sensory bag at the front entrance or gift shop when you arrive — mornings before the mid-day heat are the calmest time to visit."
+  },
+  {
+    "id": "challenger-learning-center-tallahassee",
+    "name": "Challenger Learning Center — Sensory Friendly Screenings",
+    "category": "sensory-friendly-movies",
+    "citySlug": "tallahassee-fl",
+    "address": "200 S Duval St, Tallahassee, FL 32301",
+    "website": "https://www.challengertlh.com/sensoryfriendly/",
+    "phone": "",
+    "lat": 30.4374,
+    "lng": -84.2843,
+    "status": "documented",
+    "schedule": "Sensory-friendly IMAX screenings on select dates — see website",
+    "sensoryFeatures": [
+      "lights turned up and sound decreased in the IMAX theater",
+      "limited capacity so kids can move around freely",
+      "low-pressure environment — talking and movement welcome",
+      "downtown Kleman Plaza location with planetarium & exhibits"
+    ],
+    "ageRange": "All ages",
+    "cost": "See website for screening tickets",
+    "hours": "See website for screening dates and times",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.challengertlh.com/sensoryfriendly/",
+    "parentTip": "This is Tallahassee's home for sensory movie screenings — check the schedule for both IMAX films and sensory-friendly planetarium shows."
+  },
+  {
+    "id": "eugene-science-center-eugene",
+    "name": "Eugene Science Center — Sensory Sensitive Evenings",
+    "category": "sensory-friendly-museums",
+    "citySlug": "eugene-or",
+    "address": "2300 Leo Harris Pkwy, Eugene, OR 97401",
+    "website": "https://eugenesciencecenter.org/sensoryhours/",
+    "phone": "",
+    "lat": 44.0597,
+    "lng": -123.0656,
+    "status": "documented",
+    "schedule": "Sensory Sensitive Evenings on select dates — free with pre-registration",
+    "sensoryFeatures": [
+      "evening sessions with a calmer, sensory-sensitive atmosphere",
+      "sensory-friendly planetarium shows",
+      "noise-reduction headphones, sunglasses, fidgets & weighted lap pads",
+      "museum social story available to prepare for the visit"
+    ],
+    "ageRange": "All ages",
+    "cost": "Sensory Sensitive Evenings free with pre-registration",
+    "hours": "See website for dates — evenings run until 7pm",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://eugenesciencecenter.org/sensoryhours/",
+    "parentTip": "Pre-register online (it's free) and arrive whenever works for your family — the come-when-you-can format takes the pressure off transitions."
+  },
+  {
+    "id": "surge-adventure-park-winston-salem",
+    "name": "Surge Adventure Park — Sensory Play Sunday",
+    "category": "sensory-friendly-play",
+    "citySlug": "winston-salem-nc",
+    "address": "2051 Griffith Rd, Winston-Salem, NC 27103",
+    "website": "https://www.visitwinstonsalem.com/event/sensory-sunday-surge-adventure-park",
+    "phone": "",
+    "lat": 36.0575,
+    "lng": -80.322,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          1,
+          3
+        ],
+        "note": "10am–12pm, no loud music or flashing lights"
+      }
+    ],
+    "schedule": "Sensory Play Sunday on the 1st & 3rd Sunday of every month, 10am–12pm",
+    "sensoryFeatures": [
+      "no loud music or flashing lights during Sensory Play Sunday",
+      "designed for children with special needs and their families",
+      "trampoline park attractions at a calmer pace",
+      "morning time slot before regular crowds arrive"
+    ],
+    "ageRange": "Kids & teens",
+    "cost": "See venue for current pricing",
+    "hours": "Sensory sessions 10am–12pm on 1st & 3rd Sundays",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.visitwinstonsalem.com/event/sensory-sunday-surge-adventure-park",
+    "parentTip": "Grippy socks are usually required at trampoline parks — bring a pair from a previous visit or budget for them at the desk."
+  },
+  {
+    "id": "kaleideum-winston-salem",
+    "name": "Kaleideum — Sensory Friendly Mondays",
+    "category": "sensory-friendly-museums",
+    "citySlug": "winston-salem-nc",
+    "address": "120 W 3rd St, Winston-Salem, NC 27101",
+    "website": "https://kaleideum.org/",
+    "phone": "",
+    "lat": 36.0999,
+    "lng": -80.2442,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Monday",
+        "weeks": [
+          1
+        ],
+        "note": "9am–12pm, September–May"
+      }
+    ],
+    "schedule": "Sensory Friendly Mondays on the first Monday of the month (September–May), 9am–12pm",
+    "sensoryFeatures": [
+      "held during low-attendance Members Only Mondays — open to non-members too",
+      "sensory backpacks with noise-canceling headphones, fidgets & visual aids",
+      "choice boards & a designated quiet room",
+      "downtown museum with hands-on STEAM exhibits & rooftop playground"
+    ],
+    "ageRange": "All ages",
+    "cost": "Admission or membership required; non-members welcome",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://kaleideum.org/accessibility/",
+    "parentTip": "You don't need a membership to come on Sensory Friendly Mondays — attendance is usually light, so it's the calmest regular window to explore the museum."
+  },
+  {
+    "id": "wonders-of-wildlife-springfield",
+    "name": "Wonders of Wildlife National Museum & Aquarium",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "springfield-mo",
+    "address": "500 W Sunshine St, Springfield, MO 65807",
+    "website": "https://wondersofwildlife.org/",
+    "phone": "",
+    "lat": 37.1806,
+    "lng": -93.2985,
+    "status": "documented",
+    "sensoryFeatures": [
+      "quiet hours & sensory-friendly kits available for visitors",
+      "detailed exhibit descriptions & visual aids",
+      "self-guided tour app lets you set your own pace",
+      "fully wheelchair accessible with elevators & ramps"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.springfieldmo.org/blog/post/a-visitors-guide-to-accessible-attractions-in-springfield-mo/",
+    "parentTip": "Call guest services before you go to ask about the next quiet hours and to reserve a sensory kit — the aquarium tunnels are calmer early in the day."
+  },
+  {
+    "id": "childrens-museum-cleveland",
+    "name": "The Children's Museum of Cleveland (Sensory Resources)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "cleveland-oh",
+    "address": "3813 Euclid Ave, Cleveland, OH 44115",
+    "website": "https://cmcleveland.org/sensoryresources/",
+    "phone": "",
+    "lat": 41.502,
+    "lng": -81.666,
+    "status": "documented",
+    "sensoryFeatures": [
+      "calming room with special lighting, calming music & sensory supports",
+      "'Welcoming Spaces' supports built with the Monarch Center for Autism",
+      "social narratives, visual schedules & visual/sensory maps",
+      "video models online to preview the visit"
+    ],
+    "ageRange": "Best for younger kids (0–8)",
+    "cost": "Standard admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://cmcleveland.org/sensoryresources/",
+    "parentTip": "Watch the video models on the museum's sensory resources page together before you visit — seeing the rooms in advance takes the surprise out of the big two-story climber."
+  },
+  {
+    "id": "buffalo-zoo-buffalo",
+    "name": "Buffalo Zoo (KultureCity Sensory Partner)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "buffalo-ny",
+    "address": "300 Parkside Ave, Buffalo, NY 14214",
+    "website": "https://buffalozoo.org/",
+    "phone": "",
+    "lat": 42.9385,
+    "lng": -78.853,
+    "status": "documented",
+    "sensoryFeatures": [
+      "KultureCity partner for sensory accessibility",
+      "free sensory bags at admissions (license held as deposit)",
+      "bags include noise-reducing headphones, sunglasses, fidgets & visual cue cards",
+      "social story available to prepare for the visit"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard zoo admission; sensory bags free",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://buffalozoo.org/tickets/visitor-info/",
+    "parentTip": "Read the zoo's social story with your child the night before, and pick up the sensory bag at admissions on the way in rather than doubling back later."
+  },
+  {
+    "id": "grand-rapids-childrens-museum",
+    "name": "Grand Rapids Children's Museum — Sensory Friendly Playtime",
+    "category": "sensory-friendly-museums",
+    "citySlug": "grand-rapids-mi",
+    "address": "11 Sheldon Ave NE, Grand Rapids, MI 49503",
+    "website": "https://www.grcm.org/",
+    "phone": "",
+    "lat": 42.9631,
+    "lng": -85.6665,
+    "status": "documented",
+    "schedule": "Sensory Friendly Playtime sessions outside regular hours — registration required via the museum's events page",
+    "sensoryFeatures": [
+      "after-hours Sensory Friendly Playtime with Autism Support of Kent County",
+      "reduced lights & sound with limited visitor numbers",
+      "sensory resource toolkits in backpacks (headphones, weighted vest, fidgets, social storybook)",
+      "call ahead to reserve a toolkit for any regular visit"
+    ],
+    "ageRange": "Best for younger kids (0–10)",
+    "cost": "See events page for session pricing",
+    "hours": "See website for current hours and playtime dates",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.experiencegr.com/articles/post/childrens-museum-offers-sensory-friendly-play/",
+    "parentTip": "The sensory toolkits are available on regular days too — call (616) 235-4726 ahead of time to reserve one so it's waiting when you arrive."
+  },
+  {
+    "id": "okcmoa-oklahoma-city",
+    "name": "Oklahoma City Museum of Art (Sensory Booster Packs)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "oklahoma-city-ok",
+    "address": "415 Couch Dr, Oklahoma City, OK 73102",
+    "website": "https://www.okcmoa.com/visit/accessibility/",
+    "phone": "",
+    "lat": 35.4712,
+    "lng": -97.5195,
+    "status": "documented",
+    "sensoryFeatures": [
+      "free sensory booster packs at the Admissions Desk (noise-canceling headphones, wiggle seats, fidgets)",
+      "designated quiet space for breaks",
+      "four downloadable social narratives (Visiting, Tours, Manners, Helpful Staff)",
+      "complimentary admission for one companion/aide per visitor with a disability"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission; sensory packs free",
+    "hours": "See website for current hours (closed Mondays)",
+    "lastVerified": "2026-07-07",
+    "sourceUrl": "https://www.okcmoa.com/visit/accessibility/",
+    "parentTip": "Print or preview the social narratives from the accessibility page before your visit — the 'Visiting' guide walks kids through exactly what they'll see from the front door onward."
   }
 ]
