@@ -11418,5 +11418,56 @@
     "lastVerified": "2026-07-08",
     "sourceUrl": "https://www.twentyonesenses.org/places/united-states/il/rockford/discovery-center-museum/",
     "parentTip": "Register ahead for a Fun For Everyone morning — it's free, capped, and one of the top-rated children's museums in the country with the building all to yourselves."
+  },
+  {
+    "id": "legoland-discovery-center-michigan-detroit",
+    "name": "LEGOLAND Discovery Center Michigan — Sensory Friendly Mornings",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "detroit-mi",
+    "address": "4240 Baldwin Rd, Auburn Hills, MI 48326",
+    "website": "https://www.legolanddiscoverycenter.com/michigan/plan-your-day/before-you-visit/sensory-inclusive-resources/",
+    "phone": "",
+    "lat": 42.7079,
+    "lng": -83.2745,
+    "status": "documented",
+    "schedule": "Sensory Friendly & Inclusive Mornings on select dates — one hour before public opening",
+    "sensoryFeatures": [
+      "KultureCity Certified Sensory Inclusive venue (staff trained)",
+      "sensory bags with fidgets, noise-canceling headphones & feelings thermometer",
+      "digital social story online to preview the visit",
+      "Sensory Friendly Mornings: reduced lighting, music off, stimuli disabled"
+    ],
+    "ageRange": "Best for ages 3–12",
+    "cost": "Standard admission; see website for sensory-morning tickets",
+    "hours": "See website for current hours and sensory-morning dates",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://www.legolanddiscoverycenter.com/michigan/plan-your-day/before-you-visit/sensory-inclusive-resources/",
+    "parentTip": "It is inside Great Lakes Crossing Outlets in Auburn Hills, ~35 minutes from Detroit — book the sensory morning slot and you get the rides and build zones before the mall crowds even arrive."
+  },
+  {
+    "id": "nc-museum-of-art-raleigh",
+    "name": "North Carolina Museum of Art — Sensory-Friendly Resources",
+    "category": "sensory-friendly-museums",
+    "citySlug": "raleigh-nc",
+    "address": "2110 Blue Ridge Rd, Raleigh, NC 27607",
+    "website": "https://ncartmuseum.org/accessibility/",
+    "phone": "",
+    "lat": 35.8103,
+    "lng": -78.7028,
+    "status": "documented",
+    "schedule": "Periodic sensory-friendly hours (free care-partner admission) — see events calendar",
+    "sensoryFeatures": [
+      "visual schedules for the museum, park & special exhibitions",
+      "noise-canceling headphones & earplugs at the Tickets/Information Desk",
+      "sensory-friendly hours in a quieter, less crowded museum",
+      "low-sensory early-morning programs for preschoolers with ASD",
+      "free 164-acre outdoor art park to decompress"
+    ],
+    "ageRange": "All ages",
+    "cost": "General admission free; sensory-friendly hour events free",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://ncartmuseum.org/accessibility/",
+    "parentTip": "Admission is free, so there is zero pressure — download the visual schedule first, and if the galleries get to be too much, the outdoor park trails work as a giant built-in break space."
   }
 ]

@@ -418,5 +418,41 @@
     "cost": "Morning Movies (reduced) pricing",
     "parentTip": "Landmark runs roughly one sensory-friendly Saturday a month — the exact date varies by location, so confirm on the cinema page.",
     "lastVerified": "2026-06-21"
+  },
+  {
+    "id": "urban-air-sensory-play",
+    "name": "Urban Air Adventure Park — Sensory Friendly Play",
+    "operator": "Urban Air Adventure Park",
+    "category": "sensory-friendly-play",
+    "availableIn": [
+      "houston-tx",
+      "dallas-tx",
+      "fort-worth-tx",
+      "philadelphia-pa",
+      "miami-fl",
+      "jacksonville-fl",
+      "st-louis-mo",
+      "boston-ma",
+      "albany-ny",
+      "harrisburg-pa",
+      "springfield-mo",
+      "pittsburgh-pa",
+      "akron-oh",
+      "albuquerque-nm",
+      "phoenix-az"
+    ],
+    "website": "https://www.urbanair.com/activities/sensory-friendly-play/",
+    "sourceUrl": "https://www.urbanair.com/activities/sensory-friendly-play/",
+    "schedule": "Sensory Friendly Play events at participating parks — dates vary by location",
+    "sensoryFeatures": [
+      "no loud music and no flashing lights during Sensory Play events",
+      "calmer atmosphere designed for kids with autism & sensory processing differences",
+      "trampolines, climbing & attractions at a gentler pace",
+      "participating locations only — confirm with your local park"
+    ],
+    "ageRange": "Kids & teens",
+    "cost": "See your local park for Sensory Play pricing",
+    "parentTip": "Call your nearest Urban Air or check its local events page for the next Sensory Friendly Play date — participation and frequency vary by park, so always confirm before promising the trip.",
+    "lastVerified": "2026-07-08"
   }
 ]
