@@ -37,7 +37,7 @@ const pickerCountries = getCitiesByCountry()
 const popularCities = getAllCitiesWithCounts()
   .filter((c) => c.qualifies)
   .sort((a, b) => b.count - a.count)
-  .slice(0, 16);
+  .slice(0, 36);
 
 const jsonLd = [
   websiteSchema(site),
