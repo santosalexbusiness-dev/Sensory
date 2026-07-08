@@ -2925,5 +2925,689 @@
     "lat": 47.9253,
     "lng": -97.0329,
     "seeded": true
+  },
+  {
+    "slug": "niagara-falls-ny",
+    "city": "Niagara Falls",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 43.0962,
+    "lng": -79.0377,
+    "seeded": true
+  },
+  {
+    "slug": "ithaca-ny",
+    "city": "Ithaca",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 42.4406,
+    "lng": -76.4966,
+    "seeded": true
+  },
+  {
+    "slug": "saratoga-springs-ny",
+    "city": "Saratoga Springs",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 43.0831,
+    "lng": -73.7846,
+    "seeded": true
+  },
+  {
+    "slug": "state-college-pa",
+    "city": "State College",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 40.7934,
+    "lng": -77.86,
+    "seeded": true
+  },
+  {
+    "slug": "wilkes-barre-pa",
+    "city": "Wilkes-Barre",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 41.2459,
+    "lng": -75.8813,
+    "seeded": true
+  },
+  {
+    "slug": "new-bedford-ma",
+    "city": "New Bedford",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "lat": 41.6362,
+    "lng": -70.9342,
+    "seeded": true
+  },
+  {
+    "slug": "barnstable-ma",
+    "city": "Barnstable (Cape Cod)",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "lat": 41.7003,
+    "lng": -70.3002,
+    "seeded": true
+  },
+  {
+    "slug": "waterbury-ct",
+    "city": "Waterbury",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "lat": 41.5582,
+    "lng": -73.0515,
+    "seeded": true
+  },
+  {
+    "slug": "danbury-ct",
+    "city": "Danbury",
+    "state": "Connecticut",
+    "stateAbbr": "CT",
+    "lat": 41.3948,
+    "lng": -73.454,
+    "seeded": true
+  },
+  {
+    "slug": "concord-nh",
+    "city": "Concord",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "lat": 43.2081,
+    "lng": -71.5376,
+    "seeded": true
+  },
+  {
+    "slug": "portsmouth-nh",
+    "city": "Portsmouth",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "lat": 43.0718,
+    "lng": -70.7626,
+    "seeded": true
+  },
+  {
+    "slug": "lewiston-me",
+    "city": "Lewiston",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "lat": 44.1004,
+    "lng": -70.2148,
+    "seeded": true
+  },
+  {
+    "slug": "salisbury-md",
+    "city": "Salisbury",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "lat": 38.3607,
+    "lng": -75.5994,
+    "seeded": true
+  },
+  {
+    "slug": "hagerstown-md",
+    "city": "Hagerstown",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "lat": 39.6418,
+    "lng": -77.7199,
+    "seeded": true
+  },
+  {
+    "slug": "annapolis-md",
+    "city": "Annapolis",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "lat": 38.9784,
+    "lng": -76.4922,
+    "seeded": true
+  },
+  {
+    "slug": "blacksburg-va",
+    "city": "Blacksburg",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "lat": 37.2296,
+    "lng": -80.4139,
+    "seeded": true
+  },
+  {
+    "slug": "winchester-va",
+    "city": "Winchester",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "lat": 39.1857,
+    "lng": -78.1633,
+    "seeded": true
+  },
+  {
+    "slug": "parkersburg-wv",
+    "city": "Parkersburg",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "lat": 39.2667,
+    "lng": -81.5615,
+    "seeded": true
+  },
+  {
+    "slug": "wheeling-wv",
+    "city": "Wheeling",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "lat": 40.064,
+    "lng": -80.7209,
+    "seeded": true
+  },
+  {
+    "slug": "paducah-ky",
+    "city": "Paducah",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "lat": 37.0834,
+    "lng": -88.6,
+    "seeded": true
+  },
+  {
+    "slug": "jackson-tn",
+    "city": "Jackson",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 35.6145,
+    "lng": -88.8139,
+    "seeded": true
+  },
+  {
+    "slug": "kingsport-tn",
+    "city": "Kingsport",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 36.5484,
+    "lng": -82.5618,
+    "seeded": true
+  },
+  {
+    "slug": "dothan-al",
+    "city": "Dothan",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "lat": 31.2232,
+    "lng": -85.3905,
+    "seeded": true
+  },
+  {
+    "slug": "auburn-al",
+    "city": "Auburn",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "lat": 32.6099,
+    "lng": -85.4808,
+    "seeded": true
+  },
+  {
+    "slug": "tupelo-ms",
+    "city": "Tupelo",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "lat": 34.2576,
+    "lng": -88.7034,
+    "seeded": true
+  },
+  {
+    "slug": "meridian-ms",
+    "city": "Meridian",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "lat": 32.3643,
+    "lng": -88.7037,
+    "seeded": true
+  },
+  {
+    "slug": "alexandria-la",
+    "city": "Alexandria",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "lat": 31.3113,
+    "lng": -92.4451,
+    "seeded": true
+  },
+  {
+    "slug": "houma-la",
+    "city": "Houma",
+    "state": "Louisiana",
+    "stateAbbr": "LA",
+    "lat": 29.5958,
+    "lng": -90.7195,
+    "seeded": true
+  },
+  {
+    "slug": "hot-springs-ar",
+    "city": "Hot Springs",
+    "state": "Arkansas",
+    "stateAbbr": "AR",
+    "lat": 34.5037,
+    "lng": -93.0552,
+    "seeded": true
+  },
+  {
+    "slug": "manhattan-ks",
+    "city": "Manhattan",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "lat": 39.1836,
+    "lng": -96.5717,
+    "seeded": true
+  },
+  {
+    "slug": "grand-island-ne",
+    "city": "Grand Island",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "lat": 40.9264,
+    "lng": -98.342,
+    "seeded": true
+  },
+  {
+    "slug": "cape-girardeau-mo",
+    "city": "Cape Girardeau",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "lat": 37.3059,
+    "lng": -89.5181,
+    "seeded": true
+  },
+  {
+    "slug": "jefferson-city-mo",
+    "city": "Jefferson City",
+    "state": "Missouri",
+    "stateAbbr": "MO",
+    "lat": 38.5767,
+    "lng": -92.1735,
+    "seeded": true
+  },
+  {
+    "slug": "ames-ia",
+    "city": "Ames",
+    "state": "Iowa",
+    "stateAbbr": "IA",
+    "lat": 42.0308,
+    "lng": -93.6319,
+    "seeded": true
+  },
+  {
+    "slug": "mankato-mn",
+    "city": "Mankato",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "lat": 44.1636,
+    "lng": -94.0006,
+    "seeded": true
+  },
+  {
+    "slug": "wausau-wi",
+    "city": "Wausau",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 44.9591,
+    "lng": -89.6301,
+    "seeded": true
+  },
+  {
+    "slug": "kenosha-wi",
+    "city": "Kenosha",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 42.5847,
+    "lng": -87.8212,
+    "seeded": true
+  },
+  {
+    "slug": "decatur-il",
+    "city": "Decatur",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "lat": 39.8403,
+    "lng": -88.9548,
+    "seeded": true
+  },
+  {
+    "slug": "muncie-in",
+    "city": "Muncie",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "lat": 40.1934,
+    "lng": -85.3864,
+    "seeded": true
+  },
+  {
+    "slug": "lafayette-in",
+    "city": "Lafayette",
+    "state": "Indiana",
+    "stateAbbr": "IN",
+    "lat": 40.4167,
+    "lng": -86.8753,
+    "seeded": true
+  },
+  {
+    "slug": "springfield-oh",
+    "city": "Springfield",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 39.9242,
+    "lng": -83.8088,
+    "seeded": true
+  },
+  {
+    "slug": "lima-oh",
+    "city": "Lima",
+    "state": "Ohio",
+    "stateAbbr": "OH",
+    "lat": 40.7426,
+    "lng": -84.1052,
+    "seeded": true
+  },
+  {
+    "slug": "saginaw-mi",
+    "city": "Saginaw",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 43.4195,
+    "lng": -83.9508,
+    "seeded": true
+  },
+  {
+    "slug": "muskegon-mi",
+    "city": "Muskegon",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 43.2342,
+    "lng": -86.2484,
+    "seeded": true
+  },
+  {
+    "slug": "durango-co",
+    "city": "Durango",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "lat": 37.2753,
+    "lng": -107.8801,
+    "seeded": true
+  },
+  {
+    "slug": "roswell-nm",
+    "city": "Roswell",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "lat": 33.3943,
+    "lng": -104.523,
+    "seeded": true
+  },
+  {
+    "slug": "farmington-nm",
+    "city": "Farmington",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "lat": 36.7281,
+    "lng": -108.2187,
+    "seeded": true
+  },
+  {
+    "slug": "yuma-az",
+    "city": "Yuma",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "lat": 32.6927,
+    "lng": -114.6277,
+    "seeded": true
+  },
+  {
+    "slug": "prescott-az",
+    "city": "Prescott",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "lat": 34.54,
+    "lng": -112.4685,
+    "seeded": true
+  },
+  {
+    "slug": "lake-havasu-city-az",
+    "city": "Lake Havasu City",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "lat": 34.4839,
+    "lng": -114.3225,
+    "seeded": true
+  },
+  {
+    "slug": "logan-ut",
+    "city": "Logan",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "lat": 41.731,
+    "lng": -111.8338,
+    "seeded": true
+  },
+  {
+    "slug": "carson-city-nv",
+    "city": "Carson City",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "lat": 39.1638,
+    "lng": -119.7674,
+    "seeded": true
+  },
+  {
+    "slug": "twin-falls-id",
+    "city": "Twin Falls",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "lat": 42.5558,
+    "lng": -114.4701,
+    "seeded": true
+  },
+  {
+    "slug": "pocatello-id",
+    "city": "Pocatello",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "lat": 42.8713,
+    "lng": -112.4455,
+    "seeded": true
+  },
+  {
+    "slug": "helena-mt",
+    "city": "Helena",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "lat": 46.5891,
+    "lng": -112.0391,
+    "seeded": true
+  },
+  {
+    "slug": "kalispell-mt",
+    "city": "Kalispell",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "lat": 48.1958,
+    "lng": -114.3129,
+    "seeded": true
+  },
+  {
+    "slug": "laramie-wy",
+    "city": "Laramie",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "lat": 41.3114,
+    "lng": -105.5911,
+    "seeded": true
+  },
+  {
+    "slug": "minot-nd",
+    "city": "Minot",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "lat": 48.2325,
+    "lng": -101.2963,
+    "seeded": true
+  },
+  {
+    "slug": "aberdeen-sd",
+    "city": "Aberdeen",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "lat": 45.4647,
+    "lng": -98.4865,
+    "seeded": true
+  },
+  {
+    "slug": "wenatchee-wa",
+    "city": "Wenatchee",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "lat": 47.4235,
+    "lng": -120.3103,
+    "seeded": true
+  },
+  {
+    "slug": "corvallis-or",
+    "city": "Corvallis",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "lat": 44.5646,
+    "lng": -123.262,
+    "seeded": true
+  },
+  {
+    "slug": "hilo-hi",
+    "city": "Hilo",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "lat": 19.7297,
+    "lng": -155.09,
+    "seeded": true
+  },
+  {
+    "slug": "kahului-hi",
+    "city": "Kahului (Maui)",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "lat": 20.8893,
+    "lng": -156.4729,
+    "seeded": true
+  },
+  {
+    "slug": "visalia-ca",
+    "city": "Visalia",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 36.3302,
+    "lng": -119.2921,
+    "seeded": true
+  },
+  {
+    "slug": "santa-cruz-ca",
+    "city": "Santa Cruz",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 36.9741,
+    "lng": -122.0308,
+    "seeded": true
+  },
+  {
+    "slug": "temecula-ca",
+    "city": "Temecula",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 33.4936,
+    "lng": -117.1484,
+    "seeded": true
+  },
+  {
+    "slug": "san-luis-obispo-ca",
+    "city": "San Luis Obispo",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 35.2828,
+    "lng": -120.6596,
+    "seeded": true
+  },
+  {
+    "slug": "redding-ca",
+    "city": "Redding",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 40.5865,
+    "lng": -122.3917,
+    "seeded": true
+  },
+  {
+    "slug": "destin-fl",
+    "city": "Destin–Fort Walton Beach",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 30.3935,
+    "lng": -86.4958,
+    "seeded": true
+  },
+  {
+    "slug": "key-west-fl",
+    "city": "Key West",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 24.5551,
+    "lng": -81.78,
+    "seeded": true
+  },
+  {
+    "slug": "victoria-tx",
+    "city": "Victoria",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 28.8053,
+    "lng": -97.0036,
+    "seeded": true
+  },
+  {
+    "slug": "valdosta-ga",
+    "city": "Valdosta",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "lat": 30.8327,
+    "lng": -83.2785,
+    "seeded": true
+  },
+  {
+    "slug": "albany-ga",
+    "city": "Albany",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "lat": 31.5785,
+    "lng": -84.1557,
+    "seeded": true
+  },
+  {
+    "slug": "florence-sc",
+    "city": "Florence",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "lat": 34.1954,
+    "lng": -79.7626,
+    "seeded": true
+  },
+  {
+    "slug": "hilton-head-sc",
+    "city": "Hilton Head Island",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "lat": 32.2163,
+    "lng": -80.7526,
+    "seeded": true
+  },
+  {
+    "slug": "greenville-nc",
+    "city": "Greenville",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 35.6127,
+    "lng": -77.3664,
+    "seeded": true
   }
 ]

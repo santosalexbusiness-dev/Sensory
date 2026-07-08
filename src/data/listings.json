@@ -11493,5 +11493,317 @@
     "lastVerified": "2026-07-08",
     "sourceUrl": "https://mag.rochester.edu/visit/accessibility/",
     "parentTip": "Read the AutismUp social story together the night before — the outdoor Centennial Sculpture Park is free and makes a good warm-up or wind-down on either side of the visit."
+  },
+  {
+    "id": "wonderworks-myrtle-beach",
+    "name": "WonderWorks Myrtle Beach — Sensory Days",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "myrtle-beach-sc",
+    "address": "1313 Celebrity Cir, Myrtle Beach, SC 29577",
+    "website": "https://www.wonderworksonline.com/myrtle-beach/sensory-nights/",
+    "phone": "",
+    "lat": 33.7126,
+    "lng": -78.877,
+    "status": "documented",
+    "schedule": "Sensory Days on select dates — reduced-price admission, see website",
+    "sensoryFeatures": [
+      "Sensory Days: music lowered, loud exhibits off, inversion tunnel stopped",
+      "exhibits modified for limited stimulation",
+      "participating venue with the Champion Autism Network (CAN card accepted)",
+      "indoor 'upside-down house' science attraction at Broadway at the Beach"
+    ],
+    "ageRange": "All ages",
+    "cost": "Sensory Day special pricing — see website",
+    "hours": "See website for current hours and Sensory Day dates",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://www.wonderworksonline.com/myrtle-beach/sensory-nights/",
+    "parentTip": "Myrtle Beach is a Champion Autism Network certified destination — ask about the CAN card, which unlocks quiet accommodations at many participating attractions and restaurants around town."
+  },
+  {
+    "id": "ripleys-aquarium-myrtle-beach",
+    "name": "Ripley's Aquarium of Myrtle Beach (Certified Autism Center)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "myrtle-beach-sc",
+    "address": "1110 Celebrity Cir, Myrtle Beach, SC 29577",
+    "website": "https://www.ripleyaquariums.com/myrtlebeach/",
+    "phone": "",
+    "lat": 33.7128,
+    "lng": -78.8757,
+    "status": "documented",
+    "sensoryFeatures": [
+      "Certified Autism Center (staff trained)",
+      "sensory-friendly events held through the year",
+      "dim, calm gallery tunnels with a slow-moving glidepath walkway",
+      "part of Myrtle Beach's Champion Autism Network destination program"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://www.visitmyrtlebeach.com/article/myrtle-beach-is-an-autism-friendly-vacation-destination",
+    "parentTip": "The moving glidepath through the shark tunnel does the pacing for you — a calm, predictable way to see the big animals without pushing through crowds."
+  },
+  {
+    "id": "wow-childrens-museum-boulder",
+    "name": "WOW! Children's Museum — Sensory Friendly Playtime",
+    "category": "sensory-friendly-museums",
+    "citySlug": "boulder-co",
+    "address": "110 N Harrison Ave, Lafayette, CO 80026",
+    "website": "https://wowchildrensmuseum.org/museum-programs/sensory-friendly-playtime.html",
+    "phone": "",
+    "lat": 39.9936,
+    "lng": -105.0897,
+    "status": "documented",
+    "schedule": "Sensory Friendly Playtime sessions — see website for dates",
+    "sensoryFeatures": [
+      "dedicated Sensory Friendly Playtime sessions",
+      "lights and sounds turned down with limited capacity",
+      "hands-on exhibits for younger kids at a calmer pace",
+      "small, manageable museum — easy first outing"
+    ],
+    "ageRange": "Best for younger kids (0–10)",
+    "cost": "See website for session pricing",
+    "hours": "See website for current hours and playtime dates",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://wowchildrensmuseum.org/museum-programs/sensory-friendly-playtime.html",
+    "parentTip": "It's in Lafayette, about 15 minutes east of Boulder — small enough that kids can do the whole museum without hitting overwhelm, which makes it a great confidence-builder."
+  },
+  {
+    "id": "great-lakes-aquarium-duluth",
+    "name": "Great Lakes Aquarium (Sensory-Friendly Experiences)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "duluth-mn",
+    "address": "353 Harbor Dr, Duluth, MN 55802",
+    "website": "https://glaquarium.org/visit/amenities-accessibility/sensory-friendly-experiences/",
+    "phone": "",
+    "lat": 46.7791,
+    "lng": -92.0989,
+    "status": "documented",
+    "sensoryFeatures": [
+      "sensory break room available any time (ask a staff member)",
+      "step-by-step visit guide built with the Autism Society of Minnesota",
+      "staff can suggest the quietest days and times to visit",
+      "freshwater exhibits on Duluth's calm harbor front"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://glaquarium.org/visit/amenities-accessibility/sensory-friendly-experiences/",
+    "parentTip": "Read the AuSM visit guide together before you go, and don't hesitate to ask staff for the sensory break room — it's available whenever your child needs it, not just at set times."
+  },
+  {
+    "id": "childrens-museum-green-bay",
+    "name": "Children's Museum of Green Bay — Sensory-Friendly Nights",
+    "category": "sensory-friendly-museums",
+    "citySlug": "green-bay-wi",
+    "address": "1230 Bay Beach Rd, Green Bay, WI 54302",
+    "website": "https://www.gbchildrensmuseum.org/",
+    "phone": "",
+    "lat": 44.534,
+    "lng": -87.978,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Thursday",
+        "weeks": [
+          4
+        ],
+        "note": "3–5pm, museum closed to the general public"
+      }
+    ],
+    "schedule": "Sensory-friendly nights on the fourth Thursday of every month, 3–5pm",
+    "sensoryFeatures": [
+      "monthly sensory-friendly nights closed to the general public",
+      "soft lighting, quieter music and fewer visitors",
+      "outdoor sensory path with different textures underfoot",
+      "hands-on exhibits at a calmer pace"
+    ],
+    "ageRange": "Best for younger kids (0–10)",
+    "cost": "See website for event admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://www.wbay.com/2026/06/19/childrens-museum-green-bay-hosts-sensory-friendly-night-families/",
+    "parentTip": "The fourth-Thursday session runs 3–5pm with the building closed to everyone else — and the outdoor sensory path plus Bay Beach amusement park next door make an easy add-on if the visit goes well."
+  },
+  {
+    "id": "kansas-childrens-discovery-center-topeka",
+    "name": "Kansas Children's Discovery Center — Sensory-Friendly Sunday",
+    "category": "sensory-friendly-museums",
+    "citySlug": "topeka-ks",
+    "address": "4400 SW 10th Ave, Topeka, KS 66604",
+    "website": "https://kansasdiscovery.org/visit/plan-your-visit/admission/sensory-friendly-sunday/",
+    "phone": "",
+    "lat": 39.0446,
+    "lng": -95.7364,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          2
+        ],
+        "note": "10am–12pm, free, closed to the public"
+      }
+    ],
+    "schedule": "Sensory-Friendly Sunday on the second Sunday of every month, 10am–12pm — free admission",
+    "sensoryFeatures": [
+      "free monthly sessions closed to the general public",
+      "lights and sounds kept low with adapted activities",
+      "'Cocoon' sensory room for calming breaks",
+      "caregiver networking and resource connections at each session"
+    ],
+    "ageRange": "Best for younger kids (0–12)",
+    "cost": "Free on Sensory-Friendly Sundays; standard admission otherwise",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://kansasdiscovery.org/visit/plan-your-visit/admission/sensory-friendly-sunday/",
+    "parentTip": "It's completely free on the second Sunday and the museum sits inside Gage Park — pair it with the park's carousel and mini-train if your child has energy left."
+  },
+  {
+    "id": "maine-discovery-museum-bangor",
+    "name": "Maine Discovery Museum — My Day to Play",
+    "category": "sensory-friendly-museums",
+    "citySlug": "bangor-me",
+    "address": "74 Main St, Bangor, ME 04401",
+    "website": "https://www.mainediscoverymuseum.org/",
+    "phone": "",
+    "lat": 44.8006,
+    "lng": -68.7712,
+    "status": "documented",
+    "schedule": "My Day to Play: Sundays 10am–12pm and select Fridays 4–6pm — free, museum closed to the public",
+    "sensoryFeatures": [
+      "grant-funded 'My Day to Play' sessions — free for families",
+      "museum closed to the general public during sessions",
+      "dimmed lights, less crowding and reduced noise",
+      "sensory bags at the front desk on request",
+      "run with the Penobscot Foundation & Maine inclusive-education partners"
+    ],
+    "ageRange": "Best for younger kids (0–12)",
+    "cost": "My Day to Play sessions free; standard admission otherwise",
+    "hours": "See website for current hours and session dates",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://www.mainediscoverymuseum.org/post/my-day-to-play-offers-sensory-friendly-opportunities-for-children-with-special-needs",
+    "parentTip": "Sessions alternate between free-play and STEAM-activity formats — check which one is next, since some kids do better with open exploration and others with a guided activity."
+  },
+  {
+    "id": "launchpad-childrens-museum-sioux-city",
+    "name": "LaunchPAD Children's Museum (Front Porch Sensory Room)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "sioux-city-ia",
+    "address": "623 Pearl St, Sioux City, IA 51101",
+    "website": "https://launchpadmuseum.com/",
+    "phone": "",
+    "lat": 42.4942,
+    "lng": -96.4093,
+    "status": "documented",
+    "sensoryFeatures": [
+      "'Front Porch' sensory room: bubble tubes, sensory swings, tactile wall & mellow lighting",
+      "free sensory-friendly nights for families with special needs",
+      "sensory room funded in part by an Autism Speaks grant",
+      "check in at the front desk for Front Porch access (capacity kept low on purpose)"
+    ],
+    "ageRange": "Best for younger kids (0–10)",
+    "cost": "Standard admission; sensory nights free",
+    "hours": "See website for current hours and sensory-night dates",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://siouxcityjournal.com/news/local/launchpad-childrens-museum-creates-calming-room/article_2d260fa8-3773-11ee-9126-23576e9fdc78.html",
+    "parentTip": "Ask for the Front Porch at check-in — capacity is deliberately limited so it stays calm, and the bubble tubes and sensory swing are worth the short wait."
+  },
+  {
+    "id": "meow-wolf-santa-fe",
+    "name": "Meow Wolf Santa Fe — House of Eternal Return (Certified Autism Center)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "santa-fe-nm",
+    "address": "1352 Rufina Cir, Santa Fe, NM 87507",
+    "website": "https://meowwolf.com/visit/santa-fe",
+    "phone": "",
+    "lat": 35.6633,
+    "lng": -106.0044,
+    "status": "documented",
+    "sensoryFeatures": [
+      "IBCCES Certified Autism Center (all Meow Wolf locations, staff trained)",
+      "noise-reduction headphones available for guests",
+      "immersive art with quieter corners to retreat to",
+      "heads-up: parts are dark, loud or flashing — plan breaks"
+    ],
+    "ageRange": "All ages (intense stimuli — know your child)",
+    "cost": "Timed-entry admission — see website",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://meowwolf.com/blob/certified-autism-centers",
+    "parentTip": "Meow Wolf is gloriously weird but intense — go at opening on a weekday, borrow the noise-reduction headphones, and agree on a meetup room in case anyone needs to step out of the dark sections."
+  },
+  {
+    "id": "meow-wolf-houston",
+    "name": "Meow Wolf Houston — Radio Tave (Certified Autism Center)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "houston-tx",
+    "address": "2103 Lyons Ave, Houston, TX 77020",
+    "website": "https://meowwolf.com/visit/houston",
+    "phone": "",
+    "lat": 29.7726,
+    "lng": -95.3369,
+    "status": "documented",
+    "sensoryFeatures": [
+      "IBCCES Certified Autism Center (all Meow Wolf locations, staff trained)",
+      "noise-reduction headphones available for guests",
+      "self-paced immersive art — linger or move on as needed",
+      "heads-up: parts are dark, loud or flashing — plan breaks"
+    ],
+    "ageRange": "All ages (intense stimuli — know your child)",
+    "cost": "Timed-entry admission — see website",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://meowwolf.com/blob/certified-autism-centers",
+    "parentTip": "Book the first weekday slot of the day for the smallest crowds, and preview photos of the space together first — knowing the portals and tunnels are coming makes them exciting instead of startling."
+  },
+  {
+    "id": "meow-wolf-las-vegas",
+    "name": "Meow Wolf Las Vegas — Omega Mart (Certified Autism Center)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "las-vegas-nv",
+    "address": "3215 S Rancho Dr, Las Vegas, NV 89102",
+    "website": "https://meowwolf.com/visit/las-vegas",
+    "phone": "",
+    "lat": 36.1355,
+    "lng": -115.1941,
+    "status": "documented",
+    "sensoryFeatures": [
+      "IBCCES Certified Autism Center (all Meow Wolf locations, staff trained)",
+      "noise-reduction headphones available for guests",
+      "the 'supermarket' front section is bright but calm — a gentle on-ramp",
+      "heads-up: parts are dark, loud or flashing — plan breaks"
+    ],
+    "ageRange": "All ages (intense stimuli — know your child)",
+    "cost": "Timed-entry admission — see website",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://meowwolf.com/blob/certified-autism-centers",
+    "parentTip": "It's inside AREA15, which is its own sensory gauntlet — head straight to Omega Mart's calmer supermarket section first and treat the neon midway as optional."
+  },
+  {
+    "id": "meow-wolf-denver",
+    "name": "Meow Wolf Denver — Convergence Station (Certified Autism Center)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "denver-co",
+    "address": "1338 1st St, Denver, CO 80204",
+    "website": "https://meowwolf.com/visit/denver",
+    "phone": "",
+    "lat": 39.7405,
+    "lng": -105.011,
+    "status": "documented",
+    "sensoryFeatures": [
+      "IBCCES Certified Autism Center (all Meow Wolf locations, staff trained)",
+      "noise-reduction headphones available for guests",
+      "four floors — easy to retreat to a quieter level",
+      "heads-up: parts are dark, loud or flashing — plan breaks"
+    ],
+    "ageRange": "All ages (intense stimuli — know your child)",
+    "cost": "Timed-entry admission — see website",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-08",
+    "sourceUrl": "https://meowwolf.com/blob/certified-autism-centers",
+    "parentTip": "Weekday mornings are dramatically calmer than weekends — grab the headphones at entry and start on the quieter upper floors before working down to the busy transit-station level."
   }
 ]
