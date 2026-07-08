@@ -3609,5 +3609,140 @@
     "lat": 35.6127,
     "lng": -77.3664,
     "seeded": true
+  },
+  {
+    "slug": "napa-ca",
+    "city": "Napa",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 38.2975,
+    "lng": -122.2869,
+    "seeded": true
+  },
+  {
+    "slug": "lancaster-ca",
+    "city": "Lancaster",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 34.6868,
+    "lng": -118.1542,
+    "seeded": true
+  },
+  {
+    "slug": "vero-beach-fl",
+    "city": "Vero Beach",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 27.6386,
+    "lng": -80.3973,
+    "seeded": true
+  },
+  {
+    "slug": "punta-gorda-fl",
+    "city": "Punta Gorda",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 26.9298,
+    "lng": -82.0454,
+    "seeded": true
+  },
+  {
+    "slug": "harlingen-tx",
+    "city": "Harlingen",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 26.1906,
+    "lng": -97.6961,
+    "seeded": true
+  },
+  {
+    "slug": "sherman-tx",
+    "city": "Sherman",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 33.6357,
+    "lng": -96.6089,
+    "seeded": true
+  },
+  {
+    "slug": "watertown-ny",
+    "city": "Watertown",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 43.9748,
+    "lng": -75.9108,
+    "seeded": true
+  },
+  {
+    "slug": "elmira-ny",
+    "city": "Elmira",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 42.0898,
+    "lng": -76.8077,
+    "seeded": true
+  },
+  {
+    "slug": "battle-creek-mi",
+    "city": "Battle Creek",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 42.3212,
+    "lng": -85.1797,
+    "seeded": true
+  },
+  {
+    "slug": "sheboygan-wi",
+    "city": "Sheboygan",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 43.7508,
+    "lng": -87.7145,
+    "seeded": true
+  },
+  {
+    "slug": "janesville-wi",
+    "city": "Janesville",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 42.6828,
+    "lng": -89.0187,
+    "seeded": true
+  },
+  {
+    "slug": "kearney-ne",
+    "city": "Kearney",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "lat": 40.6994,
+    "lng": -99.0817,
+    "seeded": true
+  },
+  {
+    "slug": "enid-ok",
+    "city": "Enid",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "lat": 36.3956,
+    "lng": -97.8784,
+    "seeded": true
+  },
+  {
+    "slug": "butte-mt",
+    "city": "Butte",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "lat": 46.0038,
+    "lng": -112.5348,
+    "seeded": true
+  },
+  {
+    "slug": "walla-walla-wa",
+    "city": "Walla Walla",
+    "state": "Washington",
+    "stateAbbr": "WA",
+    "lat": 46.0646,
+    "lng": -118.343,
+    "seeded": true
   }
 ]
