@@ -4329,5 +4329,122 @@
     "lat": 33.9204,
     "lng": -80.3415,
     "seeded": true
+  },
+  {
+    "slug": "cody-wy",
+    "city": "Cody",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "lat": 44.5263,
+    "lng": -109.0565,
+    "seeded": true
+  },
+  {
+    "slug": "jackson-wy",
+    "city": "Jackson",
+    "state": "Wyoming",
+    "stateAbbr": "WY",
+    "lat": 43.4799,
+    "lng": -110.7624,
+    "seeded": true
+  },
+  {
+    "slug": "hershey-pa",
+    "city": "Hershey",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 40.2859,
+    "lng": -76.6502,
+    "seeded": true
+  },
+  {
+    "slug": "gettysburg-pa",
+    "city": "Gettysburg",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 39.8309,
+    "lng": -77.2311,
+    "seeded": true
+  },
+  {
+    "slug": "cape-may-nj",
+    "city": "Cape May",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "lat": 38.9351,
+    "lng": -74.906,
+    "seeded": true
+  },
+  {
+    "slug": "rehoboth-beach-de",
+    "city": "Rehoboth Beach",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "lat": 38.7209,
+    "lng": -75.076,
+    "seeded": true
+  },
+  {
+    "slug": "bar-harbor-me",
+    "city": "Bar Harbor",
+    "state": "Maine",
+    "stateAbbr": "ME",
+    "lat": 44.3876,
+    "lng": -68.2039,
+    "seeded": true
+  },
+  {
+    "slug": "estes-park-co",
+    "city": "Estes Park",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "lat": 40.3772,
+    "lng": -105.5217,
+    "seeded": true
+  },
+  {
+    "slug": "moab-ut",
+    "city": "Moab",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "lat": 38.5733,
+    "lng": -109.5498,
+    "seeded": true
+  },
+  {
+    "slug": "lake-placid-ny",
+    "city": "Lake Placid",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 44.2795,
+    "lng": -73.9799,
+    "seeded": true
+  },
+  {
+    "slug": "stowe-vt",
+    "city": "Stowe",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "lat": 44.4654,
+    "lng": -72.6874,
+    "seeded": true
+  },
+  {
+    "slug": "kill-devil-hills-nc",
+    "city": "Outer Banks (Kill Devil Hills)",
+    "state": "North Carolina",
+    "stateAbbr": "NC",
+    "lat": 36.0307,
+    "lng": -75.676,
+    "seeded": true
+  },
+  {
+    "slug": "north-conway-nh",
+    "city": "North Conway",
+    "state": "New Hampshire",
+    "stateAbbr": "NH",
+    "lat": 44.0537,
+    "lng": -71.1284,
+    "seeded": true
   }
 ]
