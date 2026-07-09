@@ -442,7 +442,23 @@
       "phoenix-az",
       "winston-salem-nc",
       "greensboro-nc",
-      "odessa-tx"
+      "odessa-tx",
+      "midland-tx",
+      "amarillo-tx",
+      "sarasota-fl",
+      "orlando-fl",
+      "daytona-beach-fl",
+      "tampa-fl",
+      "destin-fl",
+      "port-st-lucie-fl",
+      "canton-oh",
+      "cleveland-oh",
+      "columbus-oh",
+      "toledo-oh",
+      "cincinnati-oh",
+      "raleigh-nc",
+      "fayetteville-nc",
+      "charlotte-nc"
     ],
     "website": "https://www.urbanair.com/activities/sensory-friendly-play/",
     "sourceUrl": "https://www.urbanair.com/activities/sensory-friendly-play/",
@@ -456,6 +472,95 @@
     "ageRange": "Kids & teens",
     "cost": "See your local park for Sensory Play pricing",
     "parentTip": "Call your nearest Urban Air or check its local events page for the next Sensory Friendly Play date — participation and frequency vary by park, so always confirm before promising the trip.",
+    "lastVerified": "2026-07-08"
+  },
+  {
+    "id": "walmart-sensory-friendly-hours",
+    "name": "Walmart — Daily Sensory-Friendly Hours",
+    "operator": "Walmart",
+    "category": "sensory-friendly-shopping",
+    "website": "https://corporate.walmart.com/news/2023/11/07/small-changes-big-impact-sensory-friendly-hours-return",
+    "sourceUrl": "https://corporate.walmart.com/news/2023/11/07/small-changes-big-impact-sensory-friendly-hours-return",
+    "schedule": "Every day, 8–10am local time at U.S. Walmart stores",
+    "sensoryFeatures": [
+      "radio and overhead audio turned off",
+      "TV walls set to a calm static image",
+      "lights lowered where possible",
+      "quietest, least-crowded hours of the day"
+    ],
+    "ageRange": "All ages",
+    "cost": "Free — regular shopping",
+    "parentTip": "The 8–10am window is company-wide and permanent, so you can build it into a weekly routine — checkout scanners still beep, so pack the headphones for the register.",
+    "lastVerified": "2026-07-08"
+  },
+  {
+    "id": "sky-zone-sensory-hours",
+    "name": "Sky Zone — Sensory Hours",
+    "operator": "Sky Zone Trampoline Park",
+    "category": "sensory-friendly-play",
+    "website": "https://www.skyzone.com/programs/sensory-hours/",
+    "sourceUrl": "https://www.skyzone.com/programs/sensory-hours/",
+    "schedule": "Sensory Hours at participating parks — days and times vary by location",
+    "sensoryFeatures": [
+      "quieter music and reduced overhead noise",
+      "Calm Down Zone with sensory toys",
+      "visual cues placed around the park",
+      "participating locations only — confirm with your local park"
+    ],
+    "ageRange": "Kids & teens",
+    "cost": "See your local park for Sensory Hour pricing",
+    "parentTip": "Call your nearest Sky Zone or check its local page for the next Sensory Hours session — participation varies by park, so always confirm before promising the trip.",
+    "lastVerified": "2026-07-08"
+  },
+  {
+    "id": "marcus-reel-movies",
+    "name": "Marcus Theatres — Reel Movies for Real Needs",
+    "operator": "Marcus Theatres",
+    "category": "sensory-friendly-movies",
+    "availableIn": [
+      "chicago-il",
+      "green-bay-wi",
+      "bloomington-il",
+      "cape-girardeau-mo",
+      "cedar-rapids-ia",
+      "duluth-mn",
+      "philadelphia-pa",
+      "baton-rouge-la",
+      "little-rock-ar",
+      "milwaukee-wi",
+      "minneapolis-mn",
+      "columbus-oh",
+      "madison-wi",
+      "rochester-mn",
+      "st-louis-mo",
+      "appleton-wi",
+      "omaha-ne",
+      "fargo-nd"
+    ],
+    "website": "https://www.marcustheatres.com/amenities/theatre-technology/reel-movies-for-real-needs",
+    "sourceUrl": "https://www.marcustheatres.com/amenities/theatre-technology/reel-movies-for-real-needs",
+    "schedule": "Select Saturday mornings at 11am at participating Marcus Theatres",
+    "recurrence": [
+      {
+        "weekday": "Saturday",
+        "weeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "note": "11am on select Saturdays — check the lineup"
+      }
+    ],
+    "sensoryFeatures": [
+      "lower sound and brighter, gentle lighting",
+      "first-run family films (plus some PG-13 dates for older kids & adults)",
+      "moving around and making noise is welcome — no shushing",
+      "runs at a named list of participating theatres — check yours"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard ticket price",
+    "parentTip": "Check the Reel Movies lineup page for the next Saturday title and confirm your theatre is on the participating list before you go.",
     "lastVerified": "2026-07-08"
   }
 ]

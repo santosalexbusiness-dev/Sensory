@@ -226,5 +226,40 @@
         "answer": "Library sensory storytimes are free. Many are small-group and require advance registration (one sign-up per family), and some are drop-in. Schedules vary by branch and can change each season, so check the library's events calendar for the next date and whether you need to sign up."
       }
     ]
+  },
+  {
+    "slug": "sensory-friendly-shopping",
+    "name": "Sensory-Friendly Shopping",
+    "shortLabel": "Shopping",
+    "nameSingular": "Sensory-Friendly Shopping Hour",
+    "serviceNoun": "shopping hours",
+    "placeNoun": "store",
+    "placeNounPlural": "stores",
+    "schemaType": "Store",
+    "tagline": "Quiet store hours with the lights lowered and the noise turned off.",
+    "description": "A regular grocery or big-box run can be one of the hardest everyday outings for a sensory-sensitive child — overhead announcements, bright fluorescent lights, crowded aisles, and a wall of TVs all at once. A growing number of retailers now run dedicated sensory-friendly hours: the radio goes off, screens switch to static images, and lights are dimmed where possible, so families can shop without the overload.",
+    "guide": "Sensory-friendly shopping hours are usually in the first hours after opening, when stores are quietest anyway. It still helps to go with a plan: keep the first trips short, bring headphones for checkout beeps (the one sound stores cannot turn off), let your child push the cart or hold the list for a sense of control, and know where the calmest exit is. If a store near you does not advertise sensory hours, ask a manager — many will dim a section or turn down music on request.",
+    "faqs": [
+      {
+        "question": "What are sensory-friendly shopping hours?",
+        "answer": "They are set times — usually early morning — when a store deliberately lowers its sensory load: no radio or announcements, TV walls set to a still image, and dimmed lighting where the store can. The store is also naturally less crowded at those hours. The changes sound small, but together they turn an overwhelming errand into a manageable one for many autistic and sensory-sensitive shoppers."
+      },
+      {
+        "question": "Which stores have sensory-friendly hours?",
+        "answer": "Walmart runs sensory-friendly hours from 8 to 10 a.m. local time every day at its U.S. stores — the radio is off, TV walls show a static image, and lights are lowered where possible. Many regional grocers, malls, and big-box stores run their own quiet hours too, often weekly. Check each listing here, and ask customer service at your local stores — programs are added often."
+      },
+      {
+        "question": "Do I need to sign up or show anything to use them?",
+        "answer": "No. Sensory-friendly hours are open to everyone — you just shop during the posted window. There is no registration, card, or diagnosis required, and the quieter environment benefits plenty of shoppers beyond the autism community."
+      },
+      {
+        "question": "How can I make regular shopping trips easier for my child?",
+        "answer": "Go at opening time when stores are quietest, keep early trips short with a clear end point, and give your child a job — holding the list, finding items, pushing the cart. Noise-reducing headphones help with checkout beeps and cart noise. A quick social story about what will happen, including the noisy checkout part, makes the trip predictable."
+      },
+      {
+        "question": "How do you choose and verify these listings?",
+        "answer": "Every listing is reviewed against a written checklist before it is published, and each one shows the date it was last verified. We explain exactly what that process involves on our How We Verify page, and we re-check listings periodically because store programs change over time."
+      }
+    ]
   }
 ]

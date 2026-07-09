@@ -4176,5 +4176,158 @@
     "lat": 35.7479,
     "lng": -95.3697,
     "seeded": true
+  },
+  {
+    "slug": "williamsburg-va",
+    "city": "Williamsburg",
+    "state": "Virginia",
+    "stateAbbr": "VA",
+    "lat": 37.2707,
+    "lng": -76.7075,
+    "seeded": true
+  },
+  {
+    "slug": "st-augustine-fl",
+    "city": "St. Augustine",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 29.9012,
+    "lng": -81.3124,
+    "seeded": true
+  },
+  {
+    "slug": "wisconsin-dells-wi",
+    "city": "Wisconsin Dells",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 43.6275,
+    "lng": -89.771,
+    "seeded": true
+  },
+  {
+    "slug": "sedona-az",
+    "city": "Sedona",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "lat": 34.8697,
+    "lng": -111.761,
+    "seeded": true
+  },
+  {
+    "slug": "monterey-ca",
+    "city": "Monterey",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 36.6002,
+    "lng": -121.8947,
+    "seeded": true
+  },
+  {
+    "slug": "south-lake-tahoe-ca",
+    "city": "South Lake Tahoe",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 38.9399,
+    "lng": -119.9772,
+    "seeded": true
+  },
+  {
+    "slug": "ocean-city-md",
+    "city": "Ocean City",
+    "state": "Maryland",
+    "stateAbbr": "MD",
+    "lat": 38.3365,
+    "lng": -75.0849,
+    "seeded": true
+  },
+  {
+    "slug": "gulf-shores-al",
+    "city": "Gulf Shores",
+    "state": "Alabama",
+    "stateAbbr": "AL",
+    "lat": 30.246,
+    "lng": -87.7008,
+    "seeded": true
+  },
+  {
+    "slug": "gatlinburg-tn",
+    "city": "Gatlinburg",
+    "state": "Tennessee",
+    "stateAbbr": "TN",
+    "lat": 35.7143,
+    "lng": -83.5102,
+    "seeded": true
+  },
+  {
+    "slug": "kissimmee-fl",
+    "city": "Kissimmee",
+    "state": "Florida",
+    "stateAbbr": "FL",
+    "lat": 28.292,
+    "lng": -81.4076,
+    "seeded": true
+  },
+  {
+    "slug": "vineland-nj",
+    "city": "Vineland",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "lat": 39.4864,
+    "lng": -75.0257,
+    "seeded": true
+  },
+  {
+    "slug": "fall-river-ma",
+    "city": "Fall River",
+    "state": "Massachusetts",
+    "stateAbbr": "MA",
+    "lat": 41.7015,
+    "lng": -71.155,
+    "seeded": true
+  },
+  {
+    "slug": "carbondale-il",
+    "city": "Carbondale",
+    "state": "Illinois",
+    "stateAbbr": "IL",
+    "lat": 37.7273,
+    "lng": -89.2168,
+    "seeded": true
+  },
+  {
+    "slug": "bartlesville-ok",
+    "city": "Bartlesville",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "lat": 36.7473,
+    "lng": -95.9808,
+    "seeded": true
+  },
+  {
+    "slug": "stillwater-ok",
+    "city": "Stillwater",
+    "state": "Oklahoma",
+    "stateAbbr": "OK",
+    "lat": 36.1156,
+    "lng": -97.0584,
+    "seeded": true
+  },
+  {
+    "slug": "elizabethtown-ky",
+    "city": "Elizabethtown",
+    "state": "Kentucky",
+    "stateAbbr": "KY",
+    "lat": 37.7031,
+    "lng": -85.8591,
+    "seeded": true
+  },
+  {
+    "slug": "sumter-sc",
+    "city": "Sumter",
+    "state": "South Carolina",
+    "stateAbbr": "SC",
+    "lat": 33.9204,
+    "lng": -80.3415,
+    "seeded": true
   }
 ]
