@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { cities, getCityListings } from '../../lib/data';
+import { absoluteUrl, formatTitle } from '../../lib/utils';
+import { breadcrumbSchema, itemListSchema } from '../../lib/seo';
+
+function stateSlugOf(state: string): string {
+  return state.toLowerCase().replace(/[^a-z]+/g, '-');
+}
+
+const site = Astro.site;
+const byState = new Map<string, { state: string; stateAbbr: string; count: number; cityCount: number }>();
+for (const c of cities) {
+  if (c.country) continue;
+  const entry = byState.get(c.state) ?? { state: c.state, stateAbbr: c.stateAbbr, count: 0, cityCount: 0 };
+  entry.count += getCityListings(c.slug).length;
+  entry.cityCount += 1;
+  byState.set(c.state, entry);
+}
+const states = [...byState.values()].sort((a, b) => a.state.localeCompare(b.state));
+
+const description =
+  'Sensory-friendly and autism-friendly activities for kids in every US state — pick your state to find quiet hours, sensory days, and certified venues near you.';
+
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', site) },
+    { name: 'States', url: absoluteUrl('/states/', site) },
+  ]),
+  itemListSchema(
+    'Sensory-friendly activities by state',
+    states.map((s) => ({ name: s.state, url: absoluteUrl(`/states/${stateSlugOf(s.state)}/`, site) })),
+  ),
+];
+---
+
+<BaseLayout
+  title={formatTitle('Sensory-Friendly Activities by State')}
+  description={description}
+  canonicalPath="/states/"
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'States' }]} />
+
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      Sensory-friendly activities in every state
+    </h1>
+    <p class="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
+      Every US state has documented sensory-friendly options for kids — pick yours to see the
+      cities, venues, quiet hours, and upcoming dates near you.
+    </p>
+
+    <ul class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        states.map((s) => (
+          <li>
+            <a
+              href={`/states/${stateSlugOf(s.state)}/`}
+              class="flex items-baseline justify-between rounded-card border border-line bg-surface px-4 py-3 transition-colors hover:border-brand hover:bg-brand-soft/30"
+            >
+              <span class="font-semibold text-ink">{s.state}</span>
+              <span class="text-sm text-muted">
+                {s.count} activities · {s.cityCount} {s.cityCount === 1 ? 'city' : 'cities'}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>

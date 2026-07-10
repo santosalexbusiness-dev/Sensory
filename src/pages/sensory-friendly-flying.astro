@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import GearStrip from '../components/GearStrip.astro';
+import Faq from '../components/Faq.astro';
+import { getGearSection } from '../lib/gear';
+import { absoluteUrl, formatTitle } from '../lib/utils';
+import { breadcrumbSchema, faqSchema } from '../lib/seo';
+
+const site = Astro.site;
+const gear = getGearSection('flying');
+
+const description =
+  'Flying with an autistic or sensory-sensitive child: how TSA Cares works, airport ' +
+  'rehearsal programs, sensory rooms, and a calm boarding-day plan.';
+
+const faqs = [
+  {
+    question: 'What is TSA Cares and how do I use it?',
+    answer:
+      'TSA Cares is the TSA’s free assistance program for travelers with disabilities and medical conditions. Contact them at least 72 hours before your flight — through the online TSA Cares form or by phone at (855) 787-2227 — and you can request a Passenger Support Specialist: a TSA officer with specialized training who meets your family and walks you through screening. Kids with developmental disabilities can be screened without being separated from a traveling companion, and you never have to explain your child’s needs from scratch at the front of an impatient line.',
+  },
+  {
+    question: 'Can we practice the airport before flying for real?',
+    answer:
+      'Often, yes. Wings for Autism / Wings for All — run by The Arc with airports and airlines around the country — are rehearsal events where families check in, pass security, board a real plane, and taxi without taking off. Many airports also run their own practice programs and publish social stories of their terminals. Check your airport’s accessibility page and The Arc’s Wings for All schedule; a one-hour rehearsal removes most of the unknowns that make flight day hard.',
+  },
+  {
+    question: 'What helps most on the plane itself?',
+    answer:
+      'Board strategy beats luck: most airlines offer pre-boarding for passengers who need extra time — ask at the gate — but some kids do better boarding last and minimizing seat time. Ear defenders or ear plugs help with engine noise and the painful pressure changes (chewing, a chewable necklace, or a drink helps ears equalize on descent). Load a tablet with familiar shows and don’t debut new content, pack snacks you know work, and put your child’s kit in the seat pocket before takeoff so nothing requires digging through a bag mid-flight.',
+  },
+];
+
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', site) },
+    { name: 'Flying with a sensory-sensitive child', url: absoluteUrl('/sensory-friendly-flying/', site) },
+  ]),
+  faqSchema(faqs),
+];
+---
+
+<BaseLayout
+  title={formatTitle('Flying with an Autistic Child — TSA Cares & Airport Guide')}
+  description={description}
+  canonicalPath="/sensory-friendly-flying/"
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <Breadcrumbs
+      items={[{ name: 'Home', href: '/' }, { name: 'Flying with a sensory-sensitive child' }]}
+    />
+
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      Flying with an autistic or sensory-sensitive child
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
+      Airports concentrate everything hard about public spaces — lines, noise,
+      strangers touching your things, and zero control over the schedule. But a
+      surprising amount of official help exists if you know to ask for it: free
+      TSA escorts through security, practice-run programs on real planes, and
+      sensory rooms in a growing number of terminals. Here's the playbook.
+    </p>
+
+    <div class="mt-10 space-y-9 prose-readable">
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Book TSA Cares — 72 hours before you fly</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          <a
+            class="link-underline font-medium text-brand-strong"
+            href="https://www.tsa.gov/travel/tsa-cares"
+            target="_blank"
+            rel="noopener noreferrer">TSA Cares</a
+          > is the TSA's free assistance line for travelers with disabilities.
+          Submit the online form or call <strong>(855) 787-2227</strong> at least
+          72 hours before departure and request a
+          <strong> Passenger Support Specialist</strong> — a specially trained
+          officer who meets your family at the checkpoint and guides you through
+          screening. Your child won't be separated from you, you can explain
+          triggers once to someone trained to listen, and the whole checkpoint
+          stops being an unknown.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Do a practice run if you can</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          <strong>Wings for Autism / Wings for All</strong> events — run by The
+          Arc with dozens of airports — let families rehearse the entire journey:
+          check-in, security, gate, boarding a real aircraft, even taxiing. Check
+          your airport's accessibility page too: many publish social stories and
+          terminal sensory maps, and a growing number (Pittsburgh, Atlanta,
+          Phoenix, Myrtle Beach, and more) have opened dedicated
+          <strong> sensory rooms</strong> where you can decompress before boarding.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Plan the boarding moment deliberately</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          Ask the gate agent about pre-boarding — nearly all airlines offer it for
+          passengers needing extra time. But know your child: pre-boarding means
+          more minutes in the seat, so some families board <em>last</em> instead.
+          Choose seats intentionally (window contains, aisle escapes), and if you
+          fly a carrier with open seating or tight connections, tell the crew
+          early — flight attendants are consistently great allies once they know.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Survive the sensory parts of the flight</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          Engine noise runs loud for the whole flight — ear defenders on before
+          the engines spool up. Pressure changes hurt: chewing gum, a chewable
+          necklace, a lollipop, or a drink during descent helps little ears
+          equalize. Familiar beats novel: the shows they already love, the snacks
+          they already eat, the fidget they already like. And a visual timer or
+          flight-tracker map answers "how much longer" a hundred times so you
+          don't have to.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink">Stack the odds before the airport</h2>
+        <p class="mt-3 leading-relaxed text-muted">
+          Fly at your child's best time of day, pay for nonstop if you possibly
+          can, and build a real buffer so nobody is running. Read a social story
+          about flying in the week before, watch takeoff videos together, and
+          pack the carry-on kit where your child can reach it. Many families also
+          use the <strong>Hidden Disabilities Sunflower lanyard</strong> — widely
+          recognized by airport and airline staff as a discreet signal that your
+          family may need patience or help.
+        </p>
+      </section>
+    </div>
+
+    {gear && <GearStrip section={gear} />}
+
+    <div class="mt-14">
+      <Faq faqs={faqs} heading="Flying with a sensory-sensitive child: FAQ" id="flying-faq" />
+    </div>
+
+    <div
+      class="mt-12 rounded-card border border-line bg-surface-soft p-5 text-sm leading-relaxed text-muted"
+    >
+      <p>
+        Headed somewhere fun? See our
+        <a
+          class="link-underline font-medium text-brand-strong"
+          href="/sensory-friendly-disney-world/">Disney World sensory guide</a
+        > and the
+        <a class="link-underline font-medium text-brand-strong" href="/cities/"
+          >sensory-friendly activities at your destination</a
+        >. However you fly, the right plan is the one that works for your family.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
