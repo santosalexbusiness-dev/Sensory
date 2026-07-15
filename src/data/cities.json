@@ -4446,5 +4446,167 @@
     "lat": 44.0537,
     "lng": -71.1284,
     "seeded": true
+  },
+  {
+    "slug": "rutland-vt",
+    "city": "Rutland",
+    "state": "Vermont",
+    "stateAbbr": "VT",
+    "lat": 43.6106,
+    "lng": -72.9726,
+    "seeded": true
+  },
+  {
+    "slug": "lihue-hi",
+    "city": "Lihue (Kauai)",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "lat": 21.9811,
+    "lng": -159.3711,
+    "seeded": true
+  },
+  {
+    "slug": "kailua-kona-hi",
+    "city": "Kailua-Kona",
+    "state": "Hawaii",
+    "stateAbbr": "HI",
+    "lat": 19.64,
+    "lng": -155.9969,
+    "seeded": true
+  },
+  {
+    "slug": "ketchikan-ak",
+    "city": "Ketchikan",
+    "state": "Alaska",
+    "stateAbbr": "AK",
+    "lat": 55.3422,
+    "lng": -131.6461,
+    "seeded": true
+  },
+  {
+    "slug": "newark-de",
+    "city": "Newark",
+    "state": "Delaware",
+    "stateAbbr": "DE",
+    "lat": 39.6837,
+    "lng": -75.7497,
+    "seeded": true
+  },
+  {
+    "slug": "brookings-sd",
+    "city": "Brookings",
+    "state": "South Dakota",
+    "stateAbbr": "SD",
+    "lat": 44.3114,
+    "lng": -96.7984,
+    "seeded": true
+  },
+  {
+    "slug": "elko-nv",
+    "city": "Elko",
+    "state": "Nevada",
+    "stateAbbr": "NV",
+    "lat": 40.8324,
+    "lng": -115.7631,
+    "seeded": true
+  },
+  {
+    "slug": "north-platte-ne",
+    "city": "North Platte",
+    "state": "Nebraska",
+    "stateAbbr": "NE",
+    "lat": 41.1239,
+    "lng": -100.7654,
+    "seeded": true
+  },
+  {
+    "slug": "williston-nd",
+    "city": "Williston",
+    "state": "North Dakota",
+    "stateAbbr": "ND",
+    "lat": 48.147,
+    "lng": -103.618,
+    "seeded": true
+  },
+  {
+    "slug": "carlsbad-nm",
+    "city": "Carlsbad",
+    "state": "New Mexico",
+    "stateAbbr": "NM",
+    "lat": 32.4207,
+    "lng": -104.2288,
+    "seeded": true
+  },
+  {
+    "slug": "brainerd-mn",
+    "city": "Brainerd",
+    "state": "Minnesota",
+    "stateAbbr": "MN",
+    "lat": 46.358,
+    "lng": -94.2008,
+    "seeded": true
+  },
+  {
+    "slug": "hutchinson-ks",
+    "city": "Hutchinson",
+    "state": "Kansas",
+    "stateAbbr": "KS",
+    "lat": 38.0608,
+    "lng": -97.9298,
+    "seeded": true
+  },
+  {
+    "slug": "moscow-id",
+    "city": "Moscow",
+    "state": "Idaho",
+    "stateAbbr": "ID",
+    "lat": 46.7324,
+    "lng": -117.0002,
+    "seeded": true
+  },
+  {
+    "slug": "oxford-ms",
+    "city": "Oxford",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "lat": 34.3665,
+    "lng": -89.5192,
+    "seeded": true
+  },
+  {
+    "slug": "biloxi-ms",
+    "city": "Biloxi",
+    "state": "Mississippi",
+    "stateAbbr": "MS",
+    "lat": 30.396,
+    "lng": -88.8853,
+    "seeded": true
+  },
+  {
+    "slug": "beckley-wv",
+    "city": "Beckley",
+    "state": "West Virginia",
+    "stateAbbr": "WV",
+    "lat": 37.7782,
+    "lng": -81.1882,
+    "seeded": true
+  },
+  {
+    "slug": "park-city-ut",
+    "city": "Park City",
+    "state": "Utah",
+    "stateAbbr": "UT",
+    "lat": 40.6461,
+    "lng": -111.498,
+    "seeded": true
+  },
+  {
+    "slug": "gainesville-ga",
+    "city": "Gainesville",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "lat": 34.2979,
+    "lng": -83.8241,
+    "seeded": true
   }
 ]

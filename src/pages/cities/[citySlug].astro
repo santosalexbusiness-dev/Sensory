@@ -4,6 +4,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ListingCard from '../../components/ListingCard.astro';
 import PlaceholderNotice from '../../components/PlaceholderNotice.astro';
 import CityCalendar from '../../components/CityCalendar.astro';
+import CityMap from '../../components/CityMap.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
 import SensoryIdeas from '../../components/SensoryIdeas.astro';
 import GearStrip from '../../components/GearStrip.astro';
@@ -69,6 +70,18 @@ const nearbyLinks = getNearbyCityHubs(city, 6).map((c) => ({
   href: cityHubPath(c),
 }));
 
+// Pins for the city map: hand-researched local venues with exact coordinates
+// (chain programs are metro-level and stay in the list, not on the map).
+const mapPins = allListings
+  .filter((l) => !l.operator && typeof l.lat === 'number' && typeof l.lng === 'number')
+  .map((l) => ({
+    id: l.id,
+    name: l.name,
+    feature: l.sensoryFeatures[0] ?? '',
+    lat: l.lat as number,
+    lng: l.lng as number,
+  }));
+
 const placeholderCount = allListings.filter(isPlaceholder).length;
 const showNotice = SHOW_PLACEHOLDER_WARNING && placeholderCount > 0;
 
@@ -125,6 +138,8 @@ const jsonLd = [
         </div>
       )
     }
+
+    <CityMap city={city} pins={mapPins} />
 
     <CityCalendar city={city} items={calendarItems} />
 

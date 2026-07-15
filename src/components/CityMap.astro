@@ -1,0 +1,147 @@
+---
+/**
+ * Interactive per-city map of the hand-researched local venues.
+ *
+ * - Pins are the local (non-chain) listings that carry exact coordinates;
+ *   metro-level chain programs (AMC, Walmart, …) stay in the list below.
+ * - Leaflet + OpenStreetMap tiles: free, no API key, no cookies.
+ * - Lazily initialized via IntersectionObserver so the JS/tiles only load
+ *   when a visitor actually scrolls to the map.
+ * - Each pin's popup links to the listing's card anchor further down the page.
+ */
+import 'leaflet/dist/leaflet.css';
+import type { City } from '../lib/data';
+
+export interface MapPin {
+  id: string;
+  name: string;
+  feature: string;
+  lat: number;
+  lng: number;
+}
+
+interface Props {
+  city: City;
+  pins: MapPin[];
+}
+const { city, pins } = Astro.props;
+
+const payload = {
+  center: { lat: city.lat, lng: city.lng },
+  cityName: city.city,
+  pins,
+};
+---
+
+{
+  pins.length > 0 && (
+    <section aria-labelledby="city-map-heading" class="mt-12">
+      <h2 id="city-map-heading" class="text-2xl font-bold text-ink">
+        Map: sensory-friendly places in {city.city}
+      </h2>
+      <p class="mt-2 text-sm text-muted">
+        The {pins.length === 1 ? 'venue' : `${pins.length} local venues`} we've researched near{' '}
+        {city.city} — tap a pin for details. National programs (movies, Walmart hours, and more)
+        are in the list below and use their own location finders.
+      </p>
+      <div
+        id="city-map"
+        class="mt-4 h-[380px] w-full overflow-hidden rounded-card border border-line bg-surface-soft"
+        role="region"
+        aria-label={`Map of sensory-friendly venues in ${city.city}`}
+      >
+        <p class="p-6 text-sm text-muted">Loading map…</p>
+      </div>
+      <script type="application/json" id="city-map-data" set:html={JSON.stringify(payload)} />
+    </section>
+  )
+}
+
+<script>
+  // ---- Lazy-initialised Leaflet map of local venues ----
+  const mapEl = document.getElementById('city-map');
+  const dataEl = document.getElementById('city-map-data');
+
+  if (mapEl && dataEl) {
+    let started = false;
+
+    const init = async () => {
+      if (started) return;
+      started = true;
+
+      try {
+      // Handle every bundler interop shape (namespace, default, nested default).
+      const mod: any = await import('leaflet');
+      const L: typeof import('leaflet') = mod.map ? mod : (mod.default?.map ? mod.default : mod.default);
+      const data = JSON.parse(dataEl.textContent || '{}');
+
+      mapEl.innerHTML = '';
+      const map = L.map(mapEl, { scrollWheelZoom: false });
+
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      }).addTo(map);
+
+      // Brand-coloured SVG pin (divIcon avoids Leaflet's bundler-broken image icons).
+      const pinIcon = L.divIcon({
+        className: '',
+        html: `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="42" viewBox="0 0 30 42" aria-hidden="true">
+            <path d="M15 0C6.7 0 0 6.7 0 15c0 11 15 27 15 27s15-16 15-27C30 6.7 23.3 0 15 0z" fill="#2f6f5e"/>
+            <circle cx="15" cy="15" r="6.5" fill="#fff"/>
+          </svg>`,
+        iconSize: [30, 42],
+        iconAnchor: [15, 42],
+        popupAnchor: [0, -40],
+      });
+
+      const escape = (s: string) =>
+        s.replace(/[&<>"']/g, (ch) =>
+          ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch] as string,
+        );
+
+      const bounds: [number, number][] = [];
+      for (const pin of data.pins || []) {
+        bounds.push([pin.lat, pin.lng]);
+        L.marker([pin.lat, pin.lng], { icon: pinIcon, title: pin.name })
+          .addTo(map)
+          .bindPopup(
+            `<strong style="display:block;margin-bottom:2px">${escape(pin.name)}</strong>` +
+              `<span style="display:block;margin-bottom:6px">${escape(pin.feature)}</span>` +
+              `<a href="#${escape(pin.id)}" style="font-weight:600">More info ↓</a>`,
+          );
+      }
+
+      if (bounds.length > 1) {
+        map.fitBounds(bounds, { padding: [36, 36], maxZoom: 13 });
+      } else if (bounds.length === 1) {
+        map.setView(bounds[0], 12);
+      } else {
+        map.setView([data.center.lat, data.center.lng], 10);
+      }
+      } catch (err) {
+        console.error('[city-map] failed to initialise:', err);
+        mapEl.innerHTML =
+          '<p class="p-6 text-sm text-muted">Map unavailable — the venues are all listed below.</p>';
+      }
+    };
+
+    // Initialise when the map scrolls near the viewport (or instantly if
+    // IntersectionObserver is unavailable).
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) {
+            io.disconnect();
+            init();
+          }
+        },
+        { rootMargin: '400px' },
+      );
+      io.observe(mapEl);
+    } else {
+      init();
+    }
+  }
+</script>
