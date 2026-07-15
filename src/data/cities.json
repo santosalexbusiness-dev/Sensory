@@ -4608,5 +4608,86 @@
     "lat": 34.2979,
     "lng": -83.8241,
     "seeded": true
+  },
+  {
+    "slug": "corning-ny",
+    "city": "Corning",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 42.1428,
+    "lng": -77.0547,
+    "seeded": true
+  },
+  {
+    "slug": "cooperstown-ny",
+    "city": "Cooperstown",
+    "state": "New York",
+    "stateAbbr": "NY",
+    "lat": 42.7006,
+    "lng": -74.9243,
+    "seeded": true
+  },
+  {
+    "slug": "newport-or",
+    "city": "Newport",
+    "state": "Oregon",
+    "stateAbbr": "OR",
+    "lat": 44.6368,
+    "lng": -124.0535,
+    "seeded": true
+  },
+  {
+    "slug": "stroudsburg-pa",
+    "city": "Stroudsburg (Poconos)",
+    "state": "Pennsylvania",
+    "stateAbbr": "PA",
+    "lat": 40.9868,
+    "lng": -75.1946,
+    "seeded": true
+  },
+  {
+    "slug": "wildwood-nj",
+    "city": "Wildwood",
+    "state": "New Jersey",
+    "stateAbbr": "NJ",
+    "lat": 38.9918,
+    "lng": -74.8149,
+    "seeded": true
+  },
+  {
+    "slug": "loveland-co",
+    "city": "Loveland",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "lat": 40.3978,
+    "lng": -105.0749,
+    "seeded": true
+  },
+  {
+    "slug": "brunswick-ga",
+    "city": "Brunswick (Golden Isles)",
+    "state": "Georgia",
+    "stateAbbr": "GA",
+    "lat": 31.1499,
+    "lng": -81.4915,
+    "seeded": true
+  },
+  {
+    "slug": "holland-mi",
+    "city": "Holland",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 42.7875,
+    "lng": -86.1089,
+    "seeded": true
+  },
+  {
+    "slug": "south-padre-island-tx",
+    "city": "South Padre Island",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 26.1118,
+    "lng": -97.1681,
+    "seeded": true
   }
 ]
