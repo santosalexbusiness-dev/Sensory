@@ -4689,5 +4689,50 @@
     "lat": 26.1118,
     "lng": -97.1681,
     "seeded": true
+  },
+  {
+    "slug": "vail-co",
+    "city": "Vail",
+    "state": "Colorado",
+    "stateAbbr": "CO",
+    "lat": 39.6403,
+    "lng": -106.3742,
+    "seeded": true
+  },
+  {
+    "slug": "whitefish-mt",
+    "city": "Whitefish",
+    "state": "Montana",
+    "stateAbbr": "MT",
+    "lat": 48.4111,
+    "lng": -114.3376,
+    "seeded": true
+  },
+  {
+    "slug": "page-az",
+    "city": "Page",
+    "state": "Arizona",
+    "stateAbbr": "AZ",
+    "lat": 36.9147,
+    "lng": -111.4558,
+    "seeded": true
+  },
+  {
+    "slug": "lake-geneva-wi",
+    "city": "Lake Geneva",
+    "state": "Wisconsin",
+    "stateAbbr": "WI",
+    "lat": 42.5917,
+    "lng": -88.4334,
+    "seeded": true
+  },
+  {
+    "slug": "mackinaw-city-mi",
+    "city": "Mackinaw City",
+    "state": "Michigan",
+    "stateAbbr": "MI",
+    "lat": 45.7775,
+    "lng": -84.7271,
+    "seeded": true
   }
 ]

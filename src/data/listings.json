@@ -13029,5 +13029,77 @@
     "cost": "Standard park admission",
     "sourceUrl": "https://sesameplace.com/san-diego/help/autism-resources/",
     "parentTip": "Built for little kids and far gentler than the big parks — check the ride sensory guides online first and email accessibility services with any specific needs before your visit."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "All ages",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "legoland-discovery-center-chicago",
+    "name": "LEGOLAND Discovery Center Chicago (Sensory Inclusive Certified)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "chicago-il",
+    "address": "601 N Martingale Rd, Schaumburg, IL 60173",
+    "website": "https://www.legolanddiscoverycenter.com/chicago/plan-your-day/before-you-visit/accessibility-guide/",
+    "lat": 42.045,
+    "lng": -88.043,
+    "sensoryFeatures": [
+      "KultureCity Certified Sensory Inclusive venue (staff trained)",
+      "sensory bags with fidgets & noise-canceling headphones to borrow",
+      "social story available via KultureCity to preview the visit",
+      "build zones you can take at your own pace"
+    ],
+    "cost": "Standard admission; sensory bags free",
+    "sourceUrl": "https://venue.kulturecity.org/venues/legoland-discovery-center-chicago",
+    "parentTip": "It is in Schaumburg, about 45 minutes from the Loop — weekday mornings after school starts are the quiet window, and the 4D cinema is the one loud surprise to preview first."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "All ages",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "sea-life-orlando",
+    "name": "SEA LIFE Orlando Aquarium (Sensory Inclusive)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "orlando-fl",
+    "address": "8449 International Dr, Orlando, FL 32819",
+    "website": "https://www.visitsealife.com/orlando/policies/accessibility/",
+    "lat": 28.443,
+    "lng": -81.468,
+    "sensoryFeatures": [
+      "KultureCity partnership for a sensory-friendly experience",
+      "sensory bags with headphones & fidget toys to borrow",
+      "detailed social story to preview the visit",
+      "calm, dim 360-degree ocean tunnel"
+    ],
+    "cost": "Standard admission; sensory bags free",
+    "sourceUrl": "https://www.visitsealife.com/orlando/policies/accessibility/",
+    "parentTip": "A calm counterpoint to the big Orlando parks — it is at ICON Park on I-Drive, so go at opening before the entertainment district wakes up."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "All ages",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "field-museum-chicago",
+    "name": "Field Museum (Sensory Bags & Sensory-Friendly App)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "chicago-il",
+    "address": "1400 S DuSable Lake Shore Dr, Chicago, IL 60605",
+    "website": "https://www.fieldmuseum.org/landing/accessibility",
+    "lat": 41.8663,
+    "lng": -87.617,
+    "sensoryFeatures": [
+      "free sensory bags at the Visitor Center (fidgets, sunglasses, headphones, emotion cards)",
+      "sensory-friendly app to plan a calm route",
+      "vast, quiet upper-floor galleries away from the main hall",
+      "SUE the T. rex is in a large open gallery — visible from a distance first"
+    ],
+    "cost": "Standard admission; sensory bags free",
+    "sourceUrl": "https://www.fieldmuseum.org/landing/accessibility",
+    "parentTip": "Grab the free sensory bag at the Visitor Center and use their app to route around the busy main hall — the upper botany and gem galleries are reliably near-empty."
   }
 ]
