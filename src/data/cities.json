@@ -5005,5 +5005,23 @@
     "lat": 42.7261,
     "lng": -87.7829,
     "seeded": true
+  },
+  {
+    "slug": "eureka-ca",
+    "city": "Eureka",
+    "state": "California",
+    "stateAbbr": "CA",
+    "lat": 40.8021,
+    "lng": -124.1637,
+    "seeded": true
+  },
+  {
+    "slug": "san-marcos-tx",
+    "city": "San Marcos",
+    "state": "Texas",
+    "stateAbbr": "TX",
+    "lat": 29.8833,
+    "lng": -97.9414,
+    "seeded": true
   }
 ]
