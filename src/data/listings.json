@@ -13149,5 +13149,207 @@
     "cost": "Free admission (Wonderlab gallery may be ticketed)",
     "sourceUrl": "https://www.railwaymuseum.org.uk/visit/facilities-and-accessibility",
     "parentTip": "Admission is free, so short visits cost nothing — read the visual story first and book a Relaxed Wonderlab session if the dates line up; for train-loving kids this museum is the holy grail."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "Best for younger kids (0-10)",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "kidzeum-springfield-il",
+    "name": "Kidzeum of Health and Science — Sensory-Friendly Visit Time",
+    "category": "sensory-friendly-museums",
+    "citySlug": "springfield-il",
+    "address": "412 E Adams St, Springfield, IL 62701",
+    "website": "https://kidzeum.org/events/sensory-friendly-visit-time/",
+    "lat": 39.8,
+    "lng": -89.644,
+    "sensoryFeatures": [
+      "Sensory-Friendly Visit Time on the first Sunday: lights and noises reduced",
+      "weekly sensory-friendly visit times in summer (9am-12pm)",
+      "headphones available at the Admissions desk",
+      "accessibility-first children's museum in downtown Springfield"
+    ],
+    "cost": "Standard admission",
+    "sourceUrl": "https://kidzeum.org/events/sensory-friendly-visit-time/",
+    "parentTip": "Aim for the 9am start of a sensory morning — and in summer the sensory-friendly window runs weekly, so check the calendar before assuming it's only monthly."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "All ages",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "mayborn-museum-waco",
+    "name": "Mayborn Museum at Baylor (Sensory Backpacks)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "waco-tx",
+    "address": "1300 S University Parks Dr, Waco, TX 76706",
+    "website": "https://mayborn.web.baylor.edu/visit/accessibility",
+    "lat": 31.543,
+    "lng": -97.118,
+    "sensoryFeatures": [
+      "free sensory backpacks at the ticketing desk (noise-reducing headphones, fidget tools)",
+      "natural science + hands-on discovery rooms at kid pace",
+      "on the Baylor campus with calm outdoor space",
+      "quietest on weekday afternoons"
+    ],
+    "cost": "Standard admission; sensory backpacks free",
+    "sourceUrl": "https://mayborn.web.baylor.edu/visit/accessibility",
+    "parentTip": "Grab the sensory backpack at ticketing before you head in — the historic village out back is the built-in calm break between the louder discovery rooms."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "All ages",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "peoria-riverfront-museum-access",
+    "name": "Peoria Riverfront Museum — Access for All Days",
+    "category": "sensory-friendly-museums",
+    "citySlug": "peoria-il",
+    "address": "222 SW Washington St, Peoria, IL 61602",
+    "website": "https://www.peoriariverfrontmuseum.org/",
+    "lat": 40.687,
+    "lng": -89.594,
+    "sensoryFeatures": [
+      "Access for All: free sensory-friendly days with The Autism Collective (second Sundays)",
+      "sensory-friendly evenings series (Exceptional Night at the Museum)",
+      "partnership with OSF Autism Pathways",
+      "planetarium + galleries at a calm pace on access days"
+    ],
+    "cost": "Access for All days free; standard admission otherwise",
+    "sourceUrl": "https://www.peoriariverfrontmuseum.org/plan-your-visit/access-for-all-days-every-second-sunday/access-for-all-with-the-autism-collective-july-2024",
+    "parentTip": "The second-Sunday Access for All afternoons are free — pair one with the noon sensory movie upstairs and you have a full, calm museum day at zero cost."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "All ages",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "peoria-riverfront-kids-pix",
+    "name": "Peoria Riverfront Museum — Sensory Friendly Kids Pix (Giant Screen)",
+    "category": "sensory-friendly-movies",
+    "citySlug": "peoria-il",
+    "address": "222 SW Washington St, Peoria, IL 61602",
+    "website": "https://www.peoriariverfrontmuseum.org/giant-screen-theater/sensory-friendly-kids-pix",
+    "lat": 40.687,
+    "lng": -89.594,
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          1
+        ],
+        "note": "noon — sensory-friendly giant-screen film"
+      }
+    ],
+    "schedule": "Sensory-friendly Kids Pix film at noon on the first Sunday of every month",
+    "sensoryFeatures": [
+      "giant-screen theater with lights up and sound lowered",
+      "move around, talk, and take breaks freely",
+      "run with OSF Autism Pathways & The Autism Collective",
+      "a local, museum-quality alternative to chain sensory screenings"
+    ],
+    "cost": "See website for Kids Pix tickets",
+    "sourceUrl": "https://www.peoriariverfrontmuseum.org/giant-screen-theater/sensory-friendly-kids-pix",
+    "parentTip": "This is one of the few sensory screenings on a giant museum screen anywhere — first Sunday at noon, and the museum galleries make a calm before-or-after add-on."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "Best for younger kids (0-10)",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "santa-fe-childrens-museum",
+    "name": "Santa Fe Children's Museum — Access for All",
+    "category": "sensory-friendly-museums",
+    "citySlug": "santa-fe-nm",
+    "address": "1050 Old Pecos Trail, Santa Fe, NM 87505",
+    "website": "https://santafechildrensmuseum.org/access-for-all/",
+    "lat": 35.671,
+    "lng": -105.935,
+    "sensoryFeatures": [
+      "bilingual staff trained in sensory-sensitive practices",
+      "sensory-friendly tools always available at the front desk",
+      "alternative entrance for visitors who need a quieter arrival",
+      "Sensory Friendly Morning events through the year"
+    ],
+    "cost": "Standard admission",
+    "sourceUrl": "https://santafechildrensmuseum.org/access-for-all/",
+    "parentTip": "Ask about the alternative entrance when you arrive — skipping the busy lobby is a genuinely thoughtful touch, and the outdoor garden is the reset space."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "Kids & teens",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "sky-zone-pensacola",
+    "name": "Sky Zone Pensacola — Sensory Hours",
+    "category": "sensory-friendly-play",
+    "citySlug": "pensacola-fl",
+    "address": "5007 N Davis Hwy, Unit 8A, Pensacola, FL 32503",
+    "website": "https://www.skyzone.com/pensacola/",
+    "lat": 30.477,
+    "lng": -87.22,
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          1,
+          3
+        ],
+        "note": "sensory hours — quieter, toned-down jumping"
+      }
+    ],
+    "schedule": "Sensory hours on the 1st & 3rd Sunday of the month",
+    "sensoryFeatures": [
+      "sensory hours on the 1st & 3rd Sunday: music down, lights steady",
+      "quieter, toned-down jumping for kids with sensory needs",
+      "part of Sky Zone's national Sensory Hours program",
+      "confirm times with the park before visiting"
+    ],
+    "cost": "See park for sensory-hour pricing",
+    "sourceUrl": "https://www.visitpensacola.com/blog/sensory-friendly-pensacola-attractions-and-activities-for-kids/",
+    "parentTip": "Grippy socks required as at all trampoline parks — arrive at the start of the sensory window before the session fills up."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "Best for ages 2-8",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "hands-on-house-lancaster",
+    "name": "Hands-on House Children's Museum — Sensory Friendly Hours",
+    "category": "sensory-friendly-museums",
+    "citySlug": "lancaster-pa",
+    "address": "721 Landis Valley Rd, Lancaster, PA 17601",
+    "website": "https://handsonhouse.org/programs/sensory-friendly-hours.html",
+    "lat": 40.077,
+    "lng": -76.307,
+    "recurrence": [
+      {
+        "weekday": "Wednesday",
+        "weeks": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "note": "3-5pm — lights & loud exhibits turned down"
+      }
+    ],
+    "schedule": "Sensory Friendly Hours every Wednesday, 3-5pm",
+    "sensoryFeatures": [
+      "weekly sensory-friendly hours — rare among children's museums",
+      "bright lights and loud exhibits turned down or off",
+      "designed for kids ages 2-8 with autism & sensory sensitivities",
+      "calmer, lower-sensory museum environment"
+    ],
+    "cost": "Standard admission",
+    "sourceUrl": "https://handsonhouse.org/programs/sensory-friendly-hours.html",
+    "parentTip": "A weekly Wednesday slot means this can become a standing routine rather than a special occasion — often the single most valuable thing for a sensory-sensitive kid."
   }
 ]
