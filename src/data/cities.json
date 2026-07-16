@@ -4822,5 +4822,170 @@
     "seeded": true,
     "country": "Ireland",
     "countryCode": "IE"
+  },
+  {
+    "slug": "exeter-uk",
+    "city": "Exeter",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 50.7184,
+    "lng": -3.5339,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "chester-uk",
+    "city": "Chester",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 53.1934,
+    "lng": -2.8931,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "durham-uk",
+    "city": "Durham",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 54.7761,
+    "lng": -1.5733,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "inverness-uk",
+    "city": "Inverness",
+    "state": "Scotland",
+    "stateAbbr": "UK",
+    "lat": 57.4778,
+    "lng": -4.2247,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "canterbury-uk",
+    "city": "Canterbury",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 51.2802,
+    "lng": 1.0789,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "windsor-uk",
+    "city": "Windsor",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 51.4839,
+    "lng": -0.6044,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "stratford-upon-avon-uk",
+    "city": "Stratford-upon-Avon",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 52.1917,
+    "lng": -1.7073,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "middlesbrough-uk",
+    "city": "Middlesbrough",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 54.5742,
+    "lng": -1.235,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "ipswich-uk",
+    "city": "Ipswich",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 52.0567,
+    "lng": 1.1482,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "wolverhampton-uk",
+    "city": "Wolverhampton",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 52.587,
+    "lng": -2.1288,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "sunderland-uk",
+    "city": "Sunderland",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 54.9069,
+    "lng": -1.3838,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "northampton-uk",
+    "city": "Northampton",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 52.2405,
+    "lng": -0.9027,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "sligo-ie",
+    "city": "Sligo",
+    "state": "Ireland",
+    "stateAbbr": "Ireland",
+    "lat": 54.2766,
+    "lng": -8.4761,
+    "seeded": true,
+    "country": "Ireland",
+    "countryCode": "IE"
+  },
+  {
+    "slug": "wexford-ie",
+    "city": "Wexford",
+    "state": "Ireland",
+    "stateAbbr": "Ireland",
+    "lat": 52.3369,
+    "lng": -6.4633,
+    "seeded": true,
+    "country": "Ireland",
+    "countryCode": "IE"
+  },
+  {
+    "slug": "tralee-ie",
+    "city": "Tralee",
+    "state": "Ireland",
+    "stateAbbr": "Ireland",
+    "lat": 52.2713,
+    "lng": -9.7016,
+    "seeded": true,
+    "country": "Ireland",
+    "countryCode": "IE"
   }
 ]
