@@ -40,8 +40,11 @@ this file when a batch discovers a new vein or confirms a new dead-end.
   one. Weekly programs (Hands-on House Lancaster, Buffalo History Museum) are
   gold.
 - **IBCCES Certified Autism Centers** — theme parks, aquariums, whole resorts.
-  Chain-wide certs found so far: all Meow Wolf locations, all US LEGOLAND
-  resorts, Sesame Place (both), Story Land (first amusement park ever).
+  Chain-wide certs found so far: **all Six Flags parks** (2020 announcement,
+  ibcces.org/blog/2020/02/06/six-flags/ — 7 parks listed as of 2026-07-16;
+  Six Flags America MD is PERMANENTLY CLOSED, never add), all Meow Wolf
+  locations, all US LEGOLAND resorts, Sesame Place (both), Story Land (first
+  amusement park ever). CALM Zoo Bakersfield is also CAC.
 - **Big-city ART museums** — sensory-friendly mornings/sensory kits; the
   reliable "3rd museum" that unlocks a museums page.
 - **Destination parks/resorts** — calming rooms are now standard at the top
@@ -100,7 +103,8 @@ Myers, Don Harrington (Amarillo), NEW Zoo (Green Bay), Discovery Children's
 Museum (Las Vegas), WonderLab Bloomington (immunocompromised hours only),
 Terre Haute CM (baby class only), Morey's Piers (access guide only), Heritage
 Farm WV (unconfirmed), Science Spectrum Lubbock (page removed), Exploreum
-Mobile (2019-only), Great Wolf Lodge, MIM & Phoenix Art Museum, Yale Peabody,
+Mobile (2019-only), Great Wolf Lodge, Children's Museum of Stockton,
+Montana Science Center Bozeman (PERMANENTLY CLOSED 2024ish), MIM & Phoenix Art Museum, Yale Peabody,
 Savannah venues, Greensboro 3rd museum (History/Weatherspoon/ICRCM), Houston
 3rd attraction (Downtown Aquarium/Kemah), Seattle 3rd attraction, Atlanta 3rd
 theater, SEA LIFE Blackpool quiet page, NYC-borough Urban Air.
