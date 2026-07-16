@@ -13101,5 +13101,53 @@
     "cost": "Standard admission; sensory bags free",
     "sourceUrl": "https://www.fieldmuseum.org/landing/accessibility",
     "parentTip": "Grab the free sensory bag at the Visitor Center and use their app to route around the busy main hall — the upper botany and gem galleries are reliably near-empty."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "All ages",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "sandcastle-waterpark-blackpool",
+    "name": "Sandcastle Waterpark (Autism-Friendly Quiet Room)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "blackpool-uk",
+    "address": "Ocean Blvd, South Promenade, Blackpool FY4 1BB",
+    "website": "https://www.sandcastle-waterpark.co.uk/",
+    "lat": 53.79,
+    "lng": -3.056,
+    "sensoryFeatures": [
+      "Autism-Friendly Quiet Room inside the UK's largest indoor waterpark",
+      "pre-visit Sensory Story preparing kids for sights, sounds & smells",
+      "familiarisation visits & queue-bypass available",
+      "trained Access Ambassadors & Essential Companion scheme"
+    ],
+    "cost": "Standard admission — see website",
+    "sourceUrl": "https://accessibleuk.co.uk/case-study-sandcastle-waterpark-blackpool-sensory-story/",
+    "parentTip": "Ask about a familiarisation visit before your first swim day — walking the park while it's calm, with the Sensory Story read at home first, takes most of the unknowns out of a very loud building."
+  },
+  {
+    "phone": "",
+    "status": "documented",
+    "ageRange": "All ages",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-15",
+    "id": "national-railway-museum-york",
+    "name": "National Railway Museum — Relaxed Wonderlab (York)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "york-uk",
+    "address": "Leeman Rd, York YO26 4XJ",
+    "website": "https://www.railwaymuseum.org.uk/visit/facilities-and-accessibility",
+    "lat": 53.9597,
+    "lng": -1.0969,
+    "sensoryFeatures": [
+      "Relaxed Wonderlab sessions: adjusted lighting & sound, designated quiet areas",
+      "published visual story to preview the whole museum",
+      "free admission national museum full of real locomotives",
+      "quietest zones: Highlights Gallery & the back of North Shed"
+    ],
+    "cost": "Free admission (Wonderlab gallery may be ticketed)",
+    "sourceUrl": "https://www.railwaymuseum.org.uk/visit/facilities-and-accessibility",
+    "parentTip": "Admission is free, so short visits cost nothing — read the visual story first and book a Relaxed Wonderlab session if the dates line up; for train-loving kids this museum is the holy grail."
   }
 ]

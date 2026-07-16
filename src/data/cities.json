@@ -4734,5 +4734,93 @@
     "lat": 45.7775,
     "lng": -84.7271,
     "seeded": true
+  },
+  {
+    "slug": "bath-uk",
+    "city": "Bath",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 51.3811,
+    "lng": -2.359,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "york-uk",
+    "city": "York",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 53.96,
+    "lng": -1.0873,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "oxford-uk",
+    "city": "Oxford",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 51.752,
+    "lng": -1.2577,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "cambridge-uk",
+    "city": "Cambridge",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 52.2053,
+    "lng": 0.1218,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "blackpool-uk",
+    "city": "Blackpool",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 53.8175,
+    "lng": -3.0357,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "bournemouth-uk",
+    "city": "Bournemouth",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 50.7192,
+    "lng": -1.8808,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "milton-keynes-uk",
+    "city": "Milton Keynes",
+    "state": "England",
+    "stateAbbr": "UK",
+    "lat": 52.0406,
+    "lng": -0.7594,
+    "seeded": true,
+    "country": "United Kingdom",
+    "countryCode": "GB"
+  },
+  {
+    "slug": "kilkenny-ie",
+    "city": "Kilkenny",
+    "state": "Ireland",
+    "stateAbbr": "Ireland",
+    "lat": 52.6541,
+    "lng": -7.2448,
+    "seeded": true,
+    "country": "Ireland",
+    "countryCode": "IE"
   }
 ]
