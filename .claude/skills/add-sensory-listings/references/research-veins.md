@@ -103,7 +103,7 @@ Myers, Don Harrington (Amarillo), NEW Zoo (Green Bay), Discovery Children's
 Museum (Las Vegas), WonderLab Bloomington (immunocompromised hours only),
 Terre Haute CM (baby class only), Morey's Piers (access guide only), Heritage
 Farm WV (unconfirmed), Science Spectrum Lubbock (page removed), Exploreum
-Mobile (2019-only), Great Wolf Lodge, Children's Museum of Stockton,
+Mobile (2019-only), Great Wolf Lodge, Children's Museum of Stockton, Sci-Tech Discovery Center Frisco (case-by-case only),
 Montana Science Center Bozeman (PERMANENTLY CLOSED 2024ish), MIM & Phoenix Art Museum, Yale Peabody,
 Savannah venues, Greensboro 3rd museum (History/Weatherspoon/ICRCM), Houston
 3rd attraction (Downtown Aquarium/Kemah), Seattle 3rd attraction, Atlanta 3rd
