@@ -13649,5 +13649,169 @@
     "lastVerified": "2026-07-16",
     "sourceUrl": "https://www.belikebuddy.com/montana",
     "parentTip": "Show your child the Calming Cave first thing — knowing the quiet spot exists before they need it is what makes it work."
+  },
+  {
+    "id": "brevard-zoo-melbourne",
+    "name": "Brevard Zoo (Sensory Inclusive Certified)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "melbourne-fl",
+    "address": "8225 N Wickham Rd, Melbourne, FL 32940",
+    "website": "https://brevardzoo.org/accessibility/",
+    "phone": "",
+    "lat": 28.217,
+    "lng": -80.687,
+    "status": "documented",
+    "sensoryFeatures": [
+      "KultureCity Sensory Inclusive certified (staff trained)",
+      "sensory bags with headphones, weighted lap pad & fidget toys to borrow",
+      "sensory lanyards available for guests",
+      "Exceptional Nature Space built for visitors with exceptional needs"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard zoo admission; sensory bags free",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-16",
+    "sourceUrl": "https://brevardzoo.org/accessibility/",
+    "parentTip": "Grab a sensory bag at the entrance and ask for the Exceptional Nature Space — Florida mornings before the heat are the calm window, and the kayak-viewable exhibits reward early arrivals."
+  },
+  {
+    "id": "cmon-naples",
+    "name": "Golisano Children's Museum of Naples — Exceptional Nights",
+    "category": "sensory-friendly-museums",
+    "citySlug": "naples-fl",
+    "address": "15080 Livingston Rd, Naples, FL 34109",
+    "website": "https://www.cmon.org/accessibility/",
+    "phone": "",
+    "lat": 26.226,
+    "lng": -81.769,
+    "status": "documented",
+    "sensoryFeatures": [
+      "Exceptional Wednesdays/Nights built for kids with autism & sensory differences",
+      "Calm & Comfort Kits available at the museum",
+      "calm, comforting adjustments to lights and sound during sessions",
+      "two floors of hands-on exhibits at a gentle pace"
+    ],
+    "ageRange": "Best for younger kids (0-10)",
+    "cost": "See website for Exceptional Night details",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-16",
+    "sourceUrl": "https://www.cmon.org/exceptionalwednesdays/",
+    "parentTip": "Check the Exceptional Nights calendar and pre-register — the sessions are built specifically for sensory-sensitive kids, and a Calm & Comfort Kit is available on regular days too."
+  },
+  {
+    "id": "experience-childrens-museum-erie",
+    "name": "expERIEnce Children's Museum — Au-Some Mornings",
+    "category": "sensory-friendly-museums",
+    "citySlug": "erie-pa",
+    "address": "420 French St, Erie, PA 16507",
+    "website": "https://www.eriechildrensmuseum.org/accessibility/",
+    "phone": "",
+    "lat": 42.131,
+    "lng": -80.085,
+    "status": "documented",
+    "sensoryFeatures": [
+      "Au-Some Mornings: sensory-friendly sessions for kids with autism",
+      "sensory backpacks at the front desk (noise-reduction headphones, communication cards, light-reduction glasses)",
+      "Sensory Time Mondays with soothing fine & gross motor play",
+      "downtown museum with a manageable footprint"
+    ],
+    "ageRange": "Best for younger kids (0-10)",
+    "cost": "Standard admission; sensory backpacks free",
+    "hours": "See website for current hours and Au-Some Morning dates",
+    "lastVerified": "2026-07-16",
+    "sourceUrl": "https://www.eriechildrensmuseum.org/accessibility/",
+    "parentTip": "The sensory backpacks include light-reduction glasses — rare and genuinely useful in the bright exhibit halls; check the calendar for the next Au-Some Morning."
+  },
+  {
+    "id": "longway-planetarium-flint",
+    "name": "Sloan Museum & Longway Planetarium — Sensory Saturdays",
+    "category": "sensory-friendly-museums",
+    "citySlug": "flint-mi",
+    "address": "1310 E Kearsley St, Flint, MI 48503",
+    "website": "https://sloanlongway.org/faq-2/",
+    "phone": "",
+    "lat": 43.018,
+    "lng": -83.679,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Saturday",
+        "weeks": [
+          1
+        ],
+        "note": "11am sensory-friendly planetarium feature"
+      }
+    ],
+    "schedule": "Sensory-friendly planetarium features on the first Saturday of each month at 11am",
+    "sensoryFeatures": [
+      "monthly sensory-friendly planetarium shows (lights up, sound softened)",
+      "$2 museum admission on Sensory Saturday",
+      "built for kids on the spectrum & anyone wanting a less intense show",
+      "rebuilt Sloan Museum of Discovery on the same campus"
+    ],
+    "ageRange": "All ages",
+    "cost": "$5 planetarium show; $2 museum admission on Sensory Saturdays",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-16",
+    "sourceUrl": "https://sloanlongway.org/faq-2/",
+    "parentTip": "First Saturday, doors at 10:30 for the 11am show — a planetarium with the lights up is one of the best 'big experience, low overwhelm' outings anywhere, and the $2 museum add-on makes a full morning."
+  },
+  {
+    "id": "virginia-discovery-museum-charlottesville",
+    "name": "Virginia Discovery Museum (Sensory Studio)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "charlottesville-va",
+    "address": "524 E Main St, Charlottesville, VA 22902",
+    "website": "https://www.vadm.org/museum-exhibits-sensory-studio",
+    "phone": "",
+    "lat": 38.03,
+    "lng": -78.478,
+    "status": "documented",
+    "sensoryFeatures": [
+      "dedicated Sensory Studio — a safe, calming room for kids with special needs",
+      "gross & fine motor exploration in a controlled space",
+      "sensory-friendly play spaces through the museum",
+      "on the Downtown Mall pedestrian street"
+    ],
+    "ageRange": "Best for younger kids (0-8)",
+    "cost": "Standard admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-16",
+    "sourceUrl": "https://www.vadm.org/museum-exhibits-sensory-studio",
+    "parentTip": "Start in the Sensory Studio so your child knows the calm room before exploring — and the pedestrian-only Downtown Mall outside means no traffic stress at the exit."
+  },
+  {
+    "id": "oh-wow-youngstown",
+    "name": "OH WOW! Science Center — Sensory Sunday",
+    "category": "sensory-friendly-museums",
+    "citySlug": "youngstown-oh",
+    "address": "11 W Federal St, Youngstown, OH 44503",
+    "website": "https://ohwowkids.org/pages/accessibility",
+    "phone": "",
+    "lat": 41.099,
+    "lng": -80.651,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          2
+        ],
+        "note": "free sensory-friendly afternoon, pre-registration required"
+      }
+    ],
+    "schedule": "Sensory Sunday on the second Sunday of every month — free, pre-registration required",
+    "sensoryFeatures": [
+      "free monthly Sensory Sunday afternoons of sensory-friendly science",
+      "pre-registration keeps attendance low and calm",
+      "official accessibility page flags which exhibits use lights & sound",
+      "hands-on STEM center in downtown Youngstown"
+    ],
+    "ageRange": "Best for younger kids (0-12)",
+    "cost": "Sensory Sunday free with pre-registration; standard admission otherwise",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-16",
+    "sourceUrl": "https://exploremahoning.com/visits/oh-wow-childrens-center-for-science-technology/",
+    "parentTip": "Pre-register for the second-Sunday session — it's free and capped, which means the quietest science-center experience you'll find in the region."
   }
 ]
