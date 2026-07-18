@@ -13929,5 +13929,132 @@
     "lastVerified": "2026-07-17",
     "sourceUrl": "https://www.playwilmington.org/accessibility",
     "parentTip": "Wilmington NC (not to be confused with our Wilmington DE listing) — check the accessibility page for the next sensory Sunday, and the historic downtown riverfront is an easy calm stroll afterward."
+  },
+  {
+    "id": "family-museum-bettendorf-davenport",
+    "name": "Family Museum (Certified Autism Center)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "davenport-ia",
+    "address": "2900 Learning Campus Dr, Bettendorf, IA 52722",
+    "website": "https://familymuseum.org/visit/hours-and-admission",
+    "phone": "",
+    "lat": 41.564,
+    "lng": -90.482,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          -1
+        ],
+        "note": "Sensory Friendly Night 6–7:30pm"
+      }
+    ],
+    "schedule": "Sensory Friendly Night on the last Sunday of every month, 6–7:30pm",
+    "sensoryFeatures": [
+      "IBCCES Certified Autism Center (staff trained)",
+      "special sensory kits available for visitors",
+      "Sensory Friendly Nights for families with sensory sensitivities",
+      "hands-on children's museum in the Quad Cities"
+    ],
+    "ageRange": "Best for younger kids (0-10)",
+    "cost": "Standard admission; sensory kits available",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://familymuseum.org/visit/hours-and-admission",
+    "parentTip": "It's in Bettendorf, across the river from Davenport. Ask for a sensory kit at the desk on any visit, and the last-Sunday Sensory Friendly Night is the calmest window with attendance limited."
+  },
+  {
+    "id": "iowa-childrens-museum-coralville",
+    "name": "Iowa Children's Museum — Sensory Friendly Night",
+    "category": "sensory-friendly-museums",
+    "citySlug": "iowa-city-ia",
+    "address": "1451 Coral Ridge Ave, Coralville, IA 52241",
+    "website": "https://theicm.org/visit/sensory-inclusive/",
+    "phone": "",
+    "lat": 41.69,
+    "lng": -91.601,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          -1
+        ],
+        "note": "Sensory Friendly Night — adjusted sound, limited attendance"
+      }
+    ],
+    "schedule": "Sensory Friendly Night on the last Sunday of each month; Sensory Friendly Playtime 1st Saturday 9–10am",
+    "sensoryFeatures": [
+      "KultureCity Sensory Inclusive certified",
+      "Sensory Friendly Night: adjusted sound levels & limited attendance",
+      "free Sensory Friendly Playtime on the first Saturday (9–10am)",
+      "sensory bags available to borrow"
+    ],
+    "ageRange": "Best for younger kids (0-10)",
+    "cost": "Sensory Friendly Playtime free; standard admission otherwise",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://theicm.org/visit/sensory-inclusive/",
+    "parentTip": "It's in Coralville, 10 minutes from Iowa City inside the Coral Ridge Mall. The free first-Saturday Playtime is exclusive and capped — a low-stakes way to try the museum before a full visit."
+  },
+  {
+    "id": "grout-museum-waterloo",
+    "name": "Grout Museum District — Sensory Friendly Planetarium Shows",
+    "category": "sensory-friendly-museums",
+    "citySlug": "waterloo-ia",
+    "address": "503 South St, Waterloo, IA 50701",
+    "website": "https://www.groutmuseumdistrict.org/",
+    "phone": "",
+    "lat": 42.492,
+    "lng": -92.339,
+    "status": "documented",
+    "schedule": "Monthly sensory-friendly planetarium shows — see the calendar for dates",
+    "sensoryFeatures": [
+      "monthly sensory-friendly planetarium shows ($3, geared to ages 5+)",
+      "lights and sound adjusted for sensory comfort",
+      "hands-on history & science museum district",
+      "come and go freely during the show"
+    ],
+    "ageRange": "Best for ages 5+",
+    "cost": "$3 sensory-friendly planetarium show",
+    "hours": "See website for current hours and show dates",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://www.groutmuseumdistrict.org/calendar/sensory-friendly-planetarium-shows-D12062025.aspx",
+    "parentTip": "A $3 planetarium show with the lights and sound softened is one of the best 'big experience, low overwhelm' outings for a young child — check the calendar for the next monthly date."
+  },
+  {
+    "id": "river-museum-dubuque",
+    "name": "National Mississippi River Museum & Aquarium — Low Sensory Morning",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "dubuque-ia",
+    "address": "350 E 3rd St, Dubuque, IA 52001",
+    "website": "https://www.rivermuseum.org/events/low-sensory",
+    "phone": "",
+    "lat": 42.494,
+    "lng": -90.659,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Monday",
+        "weeks": [
+          3
+        ],
+        "note": "Low Sensory Morning 8–9am, early access"
+      }
+    ],
+    "schedule": "Low Sensory Morning on select Mondays, 8–9am (early access before opening)",
+    "sensoryFeatures": [
+      "KultureCity Sensory Inclusive certified",
+      "Low Sensory Mornings: limited ambient sound, no distracting exhibit motion",
+      "KultureCity sensory bags available for checkout",
+      "Smithsonian-affiliate river museum & aquarium"
+    ],
+    "ageRange": "All ages",
+    "cost": "See website for Low Sensory Morning details",
+    "hours": "See website for current hours and Low Sensory dates",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://www.rivermuseum.org/events/low-sensory",
+    "parentTip": "The Low Sensory Mornings run before public opening with exhibit motion switched off — grab a sensory bag at checkout, and the otter and river-life tanks are calmest with the early-morning crowd near zero."
   }
 ]
