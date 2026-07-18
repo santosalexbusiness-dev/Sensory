@@ -14379,5 +14379,53 @@
     "lastVerified": "2026-07-18",
     "sourceUrl": "https://www.rsc.org.uk/your-visit/access/assisted-performances/relaxed-performances",
     "parentTip": "Relaxed Performances sell out — book early on the RSC access page, and the riverside setting means an easy calm walk before or after the show."
+  },
+  {
+    "id": "christchurch-mansion-ipswich",
+    "name": "Christchurch Mansion — Relaxed Visits",
+    "category": "sensory-friendly-museums",
+    "citySlug": "ipswich-uk",
+    "address": "Soane St, Ipswich IP4 2BE",
+    "website": "https://ipswich.cimuseums.org.uk/christchurchmansionaccess/",
+    "phone": "",
+    "lat": 52.0597,
+    "lng": 1.1607,
+    "status": "documented",
+    "sensoryFeatures": [
+      "Relaxed Visits with speakers and screens switched off for a calmer environment",
+      "aimed at visitors with autism or additional sensory requirements",
+      "hands-on and sensory experiences throughout the Tudor mansion",
+      "pre-visit access film to watch before you come"
+    ],
+    "ageRange": "All ages",
+    "cost": "Free admission",
+    "hours": "See website for current hours and Relaxed Visit dates",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://ipswich.cimuseums.org.uk/christchurchmansionaccess/",
+    "parentTip": "Admission is free and the surrounding Christchurch Park is a big green space to decompress in — watch the access film at home first, then aim for a Relaxed Visit date."
+  },
+  {
+    "id": "smithwicks-experience-kilkenny",
+    "name": "Smithwick's Experience Kilkenny (AsIAm Autism Friendly)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "kilkenny-ie",
+    "address": "44 Parliament St, Gardens, Kilkenny, R95 X560",
+    "website": "https://www.smithwicksexperience.com/the-final-draft/official_asiam_autism_friendly_visitor_experience",
+    "phone": "",
+    "lat": 52.6541,
+    "lng": -7.2559,
+    "status": "documented",
+    "sensoryFeatures": [
+      "official AsIAm Autism Friendly Visitor Experience accreditation",
+      "adapted first-Thursday experience with reduced noise & lighting",
+      "sensory kits on request (ear plugs, sensory maps, visual guide to the building)",
+      "high-sensory areas flagged in advance"
+    ],
+    "ageRange": "All ages (a guided heritage experience)",
+    "cost": "See website for tickets",
+    "hours": "See website for current hours and the adapted experience times",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://www.smithwicksexperience.com/the-final-draft/official_asiam_autism_friendly_visitor_experience",
+    "parentTip": "It's a guided heritage tour in central Kilkenny — request a sensory kit at reception, and the first-Thursday adapted experience is the one to book for the calmest visit."
   }
 ]
