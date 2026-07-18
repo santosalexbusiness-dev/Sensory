@@ -14427,5 +14427,29 @@
     "lastVerified": "2026-07-18",
     "sourceUrl": "https://www.smithwicksexperience.com/the-final-draft/official_asiam_autism_friendly_visitor_experience",
     "parentTip": "It's a guided heritage tour in central Kilkenny — request a sensory kit at reception, and the first-Thursday adapted experience is the one to book for the calmest visit."
+  },
+  {
+    "id": "national-waterfront-museum-swansea",
+    "name": "National Waterfront Museum — Quiet Hours & Chill-Out Room",
+    "category": "sensory-friendly-museums",
+    "citySlug": "swansea-uk",
+    "address": "Oystermouth Rd, Maritime Quarter, Swansea SA1 3RD",
+    "website": "https://museum.wales/swansea/",
+    "phone": "",
+    "lat": 51.6197,
+    "lng": -3.9447,
+    "status": "documented",
+    "sensoryFeatures": [
+      "dedicated chill-out room — a safe, quiet space especially for autistic visitors",
+      "Quiet Hours sessions for families and visitors with autism",
+      "sensory maps and sensory backpacks available",
+      "free-admission national museum on the Swansea waterfront"
+    ],
+    "ageRange": "All ages",
+    "cost": "Free admission",
+    "hours": "See website for current hours and Quiet Hours dates",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://museum.wales/blog/2020-04-02/A-place-to-chill-out-at-the-Waterfront-Museum-/",
+    "parentTip": "Admission is free and the chill-out room means a break is always close — borrow a sensory backpack at the desk and use the marina promenade outside for fresh-air resets."
   }
 ]
