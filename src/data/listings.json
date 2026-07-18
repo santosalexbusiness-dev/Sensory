@@ -14283,5 +14283,101 @@
     "lastVerified": "2026-07-18",
     "sourceUrl": "https://canterburymuseums.co.uk/the-beaney/accessibility/send-at-the-beaney/",
     "parentTip": "Borrow a SEND Family Backpack at the desk — it's free — and the Beaney sits right on the High Street, so it pairs easily with a calm cathedral-city stroll."
+  },
+  {
+    "id": "mk-gallery-milton-keynes",
+    "name": "MK Gallery — Sensory Kits & Relaxed Screenings",
+    "category": "sensory-friendly-museums",
+    "citySlug": "milton-keynes-uk",
+    "address": "900 Midsummer Blvd, Milton Keynes MK9 3QA",
+    "website": "https://mkgallery.org/visit/accessibility/",
+    "phone": "",
+    "lat": 52.0403,
+    "lng": -0.7594,
+    "status": "documented",
+    "sensoryFeatures": [
+      "Sensory Kits at the front desk (ear defenders, fidget spinners, sensory toys, sensory map)",
+      "Relaxed Screenings with reduced sound, low lighting, no trailers & freedom to move",
+      "downloadable visual story to plan the visit",
+      "free-entry art gallery with a cinema and cafe"
+    ],
+    "ageRange": "All ages",
+    "cost": "Free entry; Relaxed Screening tickets vary",
+    "hours": "See website for current hours and Relaxed Screening dates",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://mkgallery.org/visit/accessibility/",
+    "parentTip": "Borrow a Sensory Kit at the desk (free) — the sensory map inside shows the calmest galleries — and the Relaxed Screenings in the on-site cinema are a gentle first cinema experience."
+  },
+  {
+    "id": "russell-cotes-bournemouth",
+    "name": "Russell-Cotes Art Gallery & Museum — Relaxed Hour",
+    "category": "sensory-friendly-museums",
+    "citySlug": "bournemouth-uk",
+    "address": "East Cliff, Bournemouth BH1 3AA",
+    "website": "https://ragm.co.uk/relaxedhour",
+    "phone": "",
+    "lat": 50.7185,
+    "lng": -1.8676,
+    "status": "documented",
+    "sensoryFeatures": [
+      "regular Relaxed Hour sessions for neurodivergent visitors & those with sensory needs",
+      "calmer, quieter environment to explore at your own pace",
+      "clifftop Victorian house museum with sea views",
+      "quiet corners and gardens to retreat to"
+    ],
+    "ageRange": "All ages",
+    "cost": "See website for admission and Relaxed Hour details",
+    "hours": "See website for current hours and Relaxed Hour dates",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://ragm.co.uk/relaxedhour",
+    "parentTip": "Time your visit to a Relaxed Hour and the clifftop gardens outside make a perfect calm break — the sea view is a natural reset with the crowds kept low."
+  },
+  {
+    "id": "legoland-windsor",
+    "name": "LEGOLAND Windsor Resort (Sensory Space & Ride Access Pass)",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "windsor-uk",
+    "address": "Winkfield Rd, Windsor SL4 4AY",
+    "website": "https://www.legoland.co.uk/plan-your-day/before-you-visit/accessibility/theme-park-accessibility/",
+    "phone": "",
+    "lat": 51.4657,
+    "lng": -0.6414,
+    "status": "documented",
+    "sensoryFeatures": [
+      "Sensory Space in Heartlake City — a calm, quiet room available any time",
+      "Ride Access Pass so guests who can't queue can wait elsewhere",
+      "downloadable sensory guides rating each ride & attraction",
+      "built for younger children — gentler than the big thrill parks"
+    ],
+    "ageRange": "Best for ages 2-12",
+    "cost": "Standard park admission",
+    "hours": "Seasonal — see website for the park calendar",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://www.legoland.co.uk/plan-your-day/before-you-visit/accessibility/theme-park-accessibility/",
+    "parentTip": "Register for the Ride Access Pass ahead of time and note where the Sensory Space is in Heartlake City — knowing the quiet room is there changes how the whole day feels."
+  },
+  {
+    "id": "rsc-stratford",
+    "name": "Royal Shakespeare Company — Relaxed Performances",
+    "category": "sensory-friendly-theater",
+    "citySlug": "stratford-upon-avon-uk",
+    "address": "Waterside, Stratford-upon-Avon CV37 6BB",
+    "website": "https://www.rsc.org.uk/your-visit/access/assisted-performances/relaxed-performances",
+    "phone": "",
+    "lat": 52.1917,
+    "lng": -1.7073,
+    "status": "documented",
+    "sensoryFeatures": [
+      "Relaxed Performances with adjusted lighting & sound and a welcoming atmosphere",
+      "ideal for people with learning disabilities or autism",
+      "freedom to move around and make noise during the show",
+      "chill-out space available at the theatre"
+    ],
+    "ageRange": "All ages",
+    "cost": "See website for performance tickets",
+    "hours": "See website for the relaxed performance schedule",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://www.rsc.org.uk/your-visit/access/assisted-performances/relaxed-performances",
+    "parentTip": "Relaxed Performances sell out — book early on the RSC access page, and the riverside setting means an easy calm walk before or after the show."
   }
 ]
