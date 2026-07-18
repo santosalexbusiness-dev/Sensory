@@ -13813,5 +13813,121 @@
     "lastVerified": "2026-07-16",
     "sourceUrl": "https://exploremahoning.com/visits/oh-wow-childrens-center-for-science-technology/",
     "parentTip": "Pre-register for the second-Sunday session — it's free and capped, which means the quietest science-center experience you'll find in the region."
+  },
+  {
+    "id": "moas-daytona-beach",
+    "name": "Museum of Arts & Sciences (MOAS) — Sensory Sunday",
+    "category": "sensory-friendly-museums",
+    "citySlug": "daytona-beach-fl",
+    "address": "352 S Nova Rd, Daytona Beach, FL 32114",
+    "website": "https://www.moas.org/Sensory-Sunday-7-19191.html",
+    "phone": "",
+    "lat": 29.194,
+    "lng": -81.03,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          1
+        ],
+        "note": "10–11:30am early opening, closed to the public"
+      }
+    ],
+    "schedule": "Sensory Sunday on the first Sunday of every month, 10–11:30am (museum opens an hour early, closed to the public)",
+    "sensoryFeatures": [
+      "museum opens an hour early and closes to the general public for a calm environment",
+      "for kids, teens & young adults who are neurodiverse or have sensory processing differences",
+      "sensory-friendly children's planetarium show at 11am",
+      "free for members or with paid admission"
+    ],
+    "ageRange": "All ages",
+    "cost": "Free for members or with paid museum admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-17",
+    "sourceUrl": "https://www.moas.org/Sensory-Sunday-7-19191.html",
+    "parentTip": "The 11am sensory planetarium show is the highlight — email the Youth & Family Program Manager ahead to confirm the show, and arrive at 10 for the calm early hour before it."
+  },
+  {
+    "id": "kids-square-roanoke",
+    "name": "Kids Square Children's Museum (Sensory Cove & Hideout)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "roanoke-va",
+    "address": "1 Market Square SE, Roanoke, VA 24011",
+    "website": "https://kidssquare.org/exhibits/",
+    "phone": "",
+    "lat": 37.271,
+    "lng": -79.939,
+    "status": "documented",
+    "sensoryFeatures": [
+      "Sensory Cove exhibit built for kids with sensory challenges (cause-and-effect lighting, tactile walls, mirrors, glow-fish aquarium)",
+      "Sensory Hideout and Hallway designed for all developmental levels",
+      "play environments designed for sensory sensitivities of kids on the spectrum",
+      "private rooms for nursing and changing"
+    ],
+    "ageRange": "Best for younger kids (0-10)",
+    "cost": "Standard admission",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-17",
+    "sourceUrl": "https://kidssquare.org/exhibits/",
+    "parentTip": "It's on the third floor of Center in the Square — head to the Sensory Cove first so your child knows where the calm corner is, and the Science Museum upstairs also has a sensory zone if you want to make a day of it."
+  },
+  {
+    "id": "fascinate-u-fayetteville",
+    "name": "Fascinate-U Children's Museum — Sensory Mornings",
+    "category": "sensory-friendly-museums",
+    "citySlug": "fayetteville-nc",
+    "address": "116 Green St, Fayetteville, NC 28301",
+    "website": "https://www.fascinate-u.com/accessibility",
+    "phone": "",
+    "lat": 35.053,
+    "lng": -78.879,
+    "status": "documented",
+    "sensoryFeatures": [
+      "Sensory Mornings for kids to play at their own pace",
+      "inclusive environment embracing each child's unique abilities",
+      "downtown children's museum with a pretend-town layout",
+      "official accessibility page with visit-planning info"
+    ],
+    "ageRange": "Best for younger kids (0-10)",
+    "cost": "Standard admission",
+    "hours": "See website for current hours and Sensory Morning dates",
+    "lastVerified": "2026-07-17",
+    "sourceUrl": "https://www.fascinate-u.com/accessibility",
+    "parentTip": "The museum is a miniature pretend town, which is naturally calmer and more predictable than big open exhibit halls — check the accessibility page for the next Sensory Morning."
+  },
+  {
+    "id": "childrens-museum-wilmington",
+    "name": "Children's Museum of Wilmington — Sensory Sunday",
+    "category": "sensory-friendly-museums",
+    "citySlug": "wilmington-nc",
+    "address": "116 Orange St, Wilmington, NC 28401",
+    "website": "https://www.playwilmington.org/accessibility",
+    "phone": "",
+    "lat": 34.233,
+    "lng": -77.948,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Sunday",
+        "weeks": [
+          2
+        ],
+        "note": "10am–12pm sensory-friendly experience on select Sundays"
+      }
+    ],
+    "schedule": "Sensory-friendly experience 10am–12pm on select Sundays",
+    "sensoryFeatures": [
+      "select-Sunday sensory-friendly experience with adjusted exhibits",
+      "reduced sound and lower stimulation during sessions",
+      "hands-on downtown children's museum",
+      "official accessibility page lists what's adapted"
+    ],
+    "ageRange": "Best for younger kids (0-10)",
+    "cost": "Standard admission",
+    "hours": "See website for current hours and sensory Sunday dates",
+    "lastVerified": "2026-07-17",
+    "sourceUrl": "https://www.playwilmington.org/accessibility",
+    "parentTip": "Wilmington NC (not to be confused with our Wilmington DE listing) — check the accessibility page for the next sensory Sunday, and the historic downtown riverfront is an easy calm stroll afterward."
   }
 ]
