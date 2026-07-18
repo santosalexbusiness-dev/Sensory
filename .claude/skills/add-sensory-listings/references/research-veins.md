@@ -56,8 +56,7 @@ this file when a batch discovers a new vein or confirms a new dead-end.
 - **Library sensory storytimes** — library systems publish these well.
 - **UK/IE**: museum "relaxed sessions / early birds / quiet mornings", SEA LIFE
   "Quiet at the Aquarium" (UK sites only), theatre relaxed performances,
-  National Autistic Society-affiliated venues. Bath/Oxford/Cambridge museums
-  still unresearched (open vein).
+  National Autistic Society-affiliated venues. **UK RELAXED-SESSION VEIN IS THE HIGHEST-YIELD REMAINING (6 clean wins in ~10 searches, 2026-07-18).** Pattern: <venue>/access or /accessibility pages reliably document Relaxed Sessions/Openings. DONE: Roman Baths (bath), OUMNH+HSM (oxford), Univ Cambridge Museums 7-museum program (cambridge), Chester Zoo Quiet Room (chester), RAMM (exeter), Beaney SEND (canterbury). OPEN UK cities still chains-only: Durham, Windsor, Stratford-upon-Avon, Middlesbrough, Ipswich, Wolverhampton, Sunderland, Northampton, Bournemouth, Milton Keynes + all IE cities. autisminmuseums.com is a strong UK aggregator to mine.
 
 ## Chains already covered (don't re-add; extend `availableIn` instead)
 
