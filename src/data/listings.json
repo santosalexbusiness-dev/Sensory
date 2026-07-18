@@ -14056,5 +14056,88 @@
     "lastVerified": "2026-07-18",
     "sourceUrl": "https://www.rivermuseum.org/events/low-sensory",
     "parentTip": "The Low Sensory Mornings run before public opening with exhibit motion switched off — grab a sensory bag at checkout, and the otter and river-life tanks are calmest with the early-morning crowd near zero."
+  },
+  {
+    "id": "st-george-childrens-museum",
+    "name": "St. George Children's Museum — Sensory Friendly Tuesday Evenings",
+    "category": "sensory-friendly-museums",
+    "citySlug": "st-george-ut",
+    "address": "86 S Main St, St. George, UT 84770",
+    "website": "https://www.sgchildrensmuseum.org/schedule-event/sensorytuesdays/",
+    "phone": "",
+    "lat": 37.106,
+    "lng": -113.583,
+    "status": "documented",
+    "recurrence": [
+      {
+        "weekday": "Tuesday",
+        "weeks": [
+          4
+        ],
+        "note": "5–7pm sensory-modified environment, free with RSVP"
+      }
+    ],
+    "schedule": "Sensory Friendly Tuesday Evenings on the fourth Tuesday of every month, 5–7pm — free with RSVP",
+    "sensoryFeatures": [
+      "monthly evening in a sensory-modified environment",
+      "free admission with a required RSVP",
+      "quieter, lower-stimulation museum after hours",
+      "three floors of hands-on imaginative-play exhibits"
+    ],
+    "ageRange": "Best for younger kids (0-10)",
+    "cost": "Free with required RSVP",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://www.sgchildrensmuseum.org/schedule-event/sensorytuesdays/",
+    "parentTip": "The fourth-Tuesday evening is free but RSVP is required — reserve ahead, since capping attendance is exactly what keeps it calm."
+  },
+  {
+    "id": "high-desert-museum-bend",
+    "name": "High Desert Museum — Museum & Me",
+    "category": "sensory-friendly-attractions",
+    "citySlug": "bend-or",
+    "address": "59800 S Hwy 97, Bend, OR 97702",
+    "website": "https://highdesertmuseum.org/accessibility/",
+    "phone": "",
+    "lat": 43.976,
+    "lng": -121.331,
+    "status": "documented",
+    "schedule": "Museum & Me quieter-time events on select dates — see the museum calendar",
+    "sensoryFeatures": [
+      "Museum & Me: a quieter time for visitors with physical, intellectual or social disabilities",
+      "sensory bags for any guest (textured items, communication cards, noise-cancelling headphones)",
+      "sensory packs to borrow during Museum & Me events",
+      "indoor & outdoor high-desert wildlife and history exhibits with room to spread out"
+    ],
+    "ageRange": "All ages",
+    "cost": "Museum & Me events often free/discounted; sensory bags free — see website",
+    "hours": "See website for current hours and Museum & Me dates",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://highdesertmuseum.org/events/museum-me/",
+    "parentTip": "Sensory bags are available on any regular visit, not just event days — ask at admissions. The outdoor otter and raptor areas are the calmest spots when the indoor halls get busy."
+  },
+  {
+    "id": "mas-macon",
+    "name": "Museum of Arts & Sciences Macon (Accessibility & Inclusivity Program)",
+    "category": "sensory-friendly-museums",
+    "citySlug": "macon-ga",
+    "address": "4182 Forsyth Rd, Macon, GA 31210",
+    "website": "https://masmacon.org/field-trip/accessibility-and-inclusivity-experience/",
+    "phone": "",
+    "lat": 32.876,
+    "lng": -83.706,
+    "status": "documented",
+    "sensoryFeatures": [
+      "accessibility & inclusivity programming for visitors with disabilities",
+      "inclusive, quieter programming designed with sensory needs in mind",
+      "combined art, science, planetarium & mini-zoo under one roof",
+      "call ahead to arrange specific accommodations"
+    ],
+    "ageRange": "All ages",
+    "cost": "Standard admission — see website",
+    "hours": "See website for current hours",
+    "lastVerified": "2026-07-18",
+    "sourceUrl": "https://masmacon.org/field-trip/accessibility-and-inclusivity-experience/",
+    "parentTip": "Call ahead to ask about the next low-sensory day and to arrange accommodations — the planetarium and the small on-site zoo are the highlights worth timing for a quieter window."
   }
 ]
