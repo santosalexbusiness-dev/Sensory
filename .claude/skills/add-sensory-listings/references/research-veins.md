@@ -79,6 +79,19 @@ differently — the URL pattern does NOT generalize; verify per location
 (unverified: LDC Columbus/Arizona/San Antonio/NJ; SEA LIFE
 Charlotte/Arizona/San Antonio/NJ).
 
+## ⚠️ Thin-content rule (added after the AdSense rejection)
+
+AdSense rejected the site for **"Low value content"** because ~298 cities had no
+local venue and rendered only the same national chain programs. City and
+category pages with **no** hand-researched local listing are now  and
+excluded from the sitemap (see src/lib/data.ts → hasLocalListing).
+
+**So: adding a chains-only city no longer produces an indexable page.** Do not
+add cities for volume. Add a city only when you can pair it with at least one
+documented local venue — otherwise spend the effort enriching one of the ~298
+chains-only cities that already exist. This supersedes the "US cities are
+zero-touch/near-free" note below.
+
 ## Per-country notes
 
 - **US city = zero-touch**: seeded city auto-gets 6 program listings → hub +
