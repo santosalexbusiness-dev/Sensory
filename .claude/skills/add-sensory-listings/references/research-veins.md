@@ -83,8 +83,8 @@ Charlotte/Arizona/San Antonio/NJ).
 
 AdSense rejected the site for **"Low value content"** because ~298 cities had no
 local venue and rendered only the same national chain programs. City and
-category pages with **no** hand-researched local listing are now  and
-excluded from the sitemap (see src/lib/data.ts → hasLocalListing).
+category pages with **no** hand-researched local listing are now `noindex` and
+excluded from the sitemap (see `src/lib/data.ts` → `hasLocalListing`).
 
 **So: adding a chains-only city no longer produces an indexable page.** Do not
 add cities for volume. Add a city only when you can pair it with at least one
