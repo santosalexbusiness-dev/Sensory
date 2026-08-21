@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { absoluteUrl, formatTitle } from '../lib/utils';
+import { breadcrumbSchema } from '../lib/seo';
+import { SITE } from '../site.config';
+
+const site = Astro.site;
+const email = SITE.contactEmail;
+
+const description =
+  'Get in touch with Sensory-Friendly Kids — suggest a sensory-friendly place, ' +
+  'correct a listing, or reach us about partnerships and press.';
+
+const reasons = [
+  {
+    title: 'Suggest a place',
+    body: "Know a venue with a real sensory-friendly program we've missed? Send us the name, the city, and a link to the page where the accommodation is described. That last part matters — we only list places whose program is documented by the venue or a certifying body.",
+    subject: 'Suggest a place',
+  },
+  {
+    title: 'Correct or remove a listing',
+    body: "Schedules change and programs end. If something we've listed is out of date, wrong, or no longer offered, tell us and we'll verify and fix it. Venue owners: if you'd like your listing amended or taken down, just ask.",
+    subject: 'Correction to a listing',
+  },
+  {
+    title: 'Partnerships & press',
+    body: 'Autism organizations, clinics, libraries, and parenting publications are welcome to use and link to our city guides. Get in touch if you would like to collaborate or need something specific for your community.',
+    subject: 'Partnership enquiry',
+  },
+];
+
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', site) },
+    { name: 'Contact', url: absoluteUrl('/contact/', site) },
+  ]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Sensory-Friendly Kids',
+    description,
+    url: absoluteUrl('/contact/', site),
+  },
+];
+---
+
+<BaseLayout
+  title={formatTitle('Contact Us')}
+  description={description}
+  canonicalPath="/contact/"
+  jsonLd={jsonLd}
+>
+  <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Contact' }]} />
+
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      Contact us
+    </h1>
+    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
+      {SITE.name} is a small, parent-built directory — a real person reads every
+      message. Whether you've found a sensory-friendly place worth adding, spotted
+      something out of date, or want to work together, we'd genuinely like to hear
+      from you.
+    </p>
+
+    {/* Primary contact */}
+    <div class="mt-8 rounded-card border-2 border-brand bg-surface p-6">
+      <p class="text-sm font-semibold uppercase tracking-wide text-brand-strong">
+        Email us
+      </p>
+      <p class="mt-2 text-2xl font-bold text-ink">
+        <a class="link-underline" href={`mailto:${email}`}>{email}</a>
+      </p>
+      <p class="mt-3 text-sm leading-relaxed text-muted">
+        We aim to reply within a few days. There's no contact form to wrestle with
+        and no newsletter signup hiding behind this — just an inbox.
+      </p>
+    </div>
+
+    {/* What to write about */}
+    <section class="mt-12">
+      <h2 class="text-2xl font-bold text-ink">What we can help with</h2>
+      <ul class="mt-6 space-y-4">
+        {
+          reasons.map((r) => (
+            <li class="rounded-card border border-line bg-surface p-5">
+              <h3 class="font-bold text-ink">{r.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-muted">{r.body}</p>
+              <a
+                class="mt-3 inline-block text-sm font-semibold text-brand-strong link-underline"
+                href={`mailto:${email}?subject=${encodeURIComponent(r.subject)}`}
+              >
+                Email us about this →
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    {/* Who we are */}
+    <section class="mt-12 rounded-card border border-line bg-surface-soft p-6">
+      <h2 class="text-xl font-bold text-ink">Who's behind this</h2>
+      <p class="mt-3 leading-relaxed text-muted">
+        {SITE.name} is an independent directory of sensory-friendly and
+        autism-friendly places for children, run by {SITE.author}. Every listing is
+        checked against a written standard and links to the source that documents
+        it — you can read exactly how that works on our
+        {' '}<a class="link-underline font-medium text-brand-strong" href="/how-we-verify/">How We Verify</a>{' '}
+        page, and more about the project on our
+        {' '}<a class="link-underline font-medium text-brand-strong" href="/about/">About</a>{' '}
+        page.
+      </p>
+      <p class="mt-3 text-sm leading-relaxed text-muted">
+        We are not affiliated with any of the venues listed, and we can't book
+        visits or answer questions on their behalf — for schedules, pricing, and
+        specific accommodations, please contact the venue directly using the link
+        on its listing.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

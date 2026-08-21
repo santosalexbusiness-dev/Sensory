@@ -17,6 +17,7 @@ import {
   getCityCategoryGroups,
   getCityCalendarItems,
   getListingsFor,
+  hasLocalListing,
   isPlaceholder,
   logQualityGate,
   MIN_LISTINGS_PER_CITY,
@@ -82,6 +83,11 @@ const mapPins = allListings
     lng: l.lng as number,
   }));
 
+// Thin-content guard: a hub built only from national chain programs is a
+// near-duplicate of every other such hub. Keep it live for visitors, but out of
+// the index (see hasLocalListing in lib/data.ts).
+const thin = !hasLocalListing(allListings);
+
 const placeholderCount = allListings.filter(isPlaceholder).length;
 const showNotice = SHOW_PLACEHOLDER_WARNING && placeholderCount > 0;
 
@@ -108,6 +114,7 @@ const jsonLd = [
   title={title}
   description={description}
   canonicalPath={path}
+  noindex={thin}
   jsonLd={jsonLd}
 >
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6">

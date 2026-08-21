@@ -191,6 +191,27 @@ export function getCityListings(citySlug: string): Listing[] {
   return listings.filter((l) => l.citySlug === citySlug);
 }
 
+/**
+ * True when a set of listings contains at least one hand-researched LOCAL venue
+ * (as opposed to a national chain program, which carries an `operator`).
+ *
+ * This is our thin-content test. A page built only from national programs shows
+ * the same handful of chain entries as every other city's page — near-duplicate
+ * content that Google treats as low value, and that AdSense rejected the site
+ * for. Such pages stay live and useful for visitors, but are marked `noindex`
+ * and kept out of the sitemap so the indexed site is only substantive pages.
+ * The moment a city gains a sourced local venue, its pages become indexable
+ * again automatically.
+ */
+export function hasLocalListing(items: Listing[]): boolean {
+  return items.some((l) => !l.operator);
+}
+
+/** True if this city has any hand-researched local venue at all. */
+export function cityHasLocalListing(citySlug: string): boolean {
+  return hasLocalListing(getCityListings(citySlug));
+}
+
 /** True for the clearly-marked sample data shipped with the starter. */
 export function isPlaceholder(listing: Listing): boolean {
   return /placeholder/i.test(listing.name);

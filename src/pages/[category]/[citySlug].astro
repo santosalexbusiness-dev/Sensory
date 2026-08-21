@@ -13,6 +13,7 @@ import {
   categories,
   getQualifyingCitiesForCategory,
   getNearbyCitiesForCategory,
+  hasLocalListing,
   isPlaceholder,
   logQualityGate,
   toCalendarItems,
@@ -112,6 +113,7 @@ const jsonLd = [
   title={title}
   description={description}
   canonicalPath={path}
+  noindex={!hasLocalListing(listings)}
   jsonLd={jsonLd}
 >
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6">
