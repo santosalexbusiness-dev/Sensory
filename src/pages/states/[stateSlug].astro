@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import type { City, Listing } from '../../lib/data';
-import { cities, getCityListings, cityHubQualifies } from '../../lib/data';
+import { cities, getCityListings, cityHubQualifies, hasIndexableLocalContent } from '../../lib/data';
 import { absoluteUrl, cityHubPath } from '../../lib/utils';
 import { breadcrumbSchema, faqSchema, itemListSchema } from '../../lib/seo';
 
@@ -33,7 +33,6 @@ interface Props {
 }
 const { state, stateAbbr, cities: stateCities } = Astro.props;
 const site = Astro.site;
-const year = new Date().getFullYear();
 
 // Cities with counts, qualifying hubs first, most listings first.
 const cityRows = stateCities
@@ -42,45 +41,42 @@ const cityRows = stateCities
 const qualifying = cityRows.filter((r) => r.qualifies);
 const totalListings = cityRows.reduce((s, r) => s + r.count, 0);
 
-// Hand-researched local venues in this state (program listings carry `operator`).
+// Source-linked local venues in this state, including researched chain branches.
 const localVenues: { listing: Listing; city: City }[] = [];
 for (const r of cityRows) {
   for (const l of getCityListings(r.city.slug)) {
-    if (!l.operator) localVenues.push({ listing: l, city: r.city });
+    localVenues.push({ listing: l, city: r.city });
   }
 }
 localVenues.sort((a, b) => a.listing.name.localeCompare(b.listing.name));
 const featured = localVenues.slice(0, 12);
 
-const title = `${state} Sensory-Friendly Activities for Kids (${year})`;
+const title = `${state} Sensory-Friendly Activities for Kids`;
 const description =
-  `${totalListings} sensory-friendly and autism-friendly activities for kids across ` +
-  `${qualifying.length} ${state} ${qualifying.length === 1 ? 'city' : 'cities'} — quiet hours, ` +
-  `sensory days, and certified venues, with the details parents need.`;
+  `Explore ${totalListings} source-linked sensory-friendly local listings in ${state}. ` +
+  `Compare accommodations and check official venue information before visiting.`;
 
 const faqs = [
   {
     question: `What sensory-friendly activities are there in ${state}?`,
     answer:
-      `We track ${totalListings} documented sensory-friendly options across ${qualifying.length} ` +
-      `${state} ${qualifying.length === 1 ? 'city' : 'cities'} — sensory-friendly movie screenings, museum quiet hours, ` +
-      `certified zoos and attractions, sensory gyms, and daily sensory-friendly shopping hours. Pick your city below ` +
-      `to see everything near you with schedules, costs, and a parent tip for each.`,
+      `We list ${totalListings} source-linked local places across ${qualifying.length} ` +
+      `${state} ${qualifying.length === 1 ? 'city' : 'cities'}. Coverage varies by location. Pick a city below ` +
+      `to compare the listed accommodations, planning details, and official sources.`,
   },
   {
     question: `How do I find sensory-friendly events near me in ${state}?`,
     answer:
-      `Choose the city closest to you below — every city page includes an upcoming-dates calendar that works out the ` +
-      `next concrete dates for recurring sensory-friendly times (like monthly sensory mornings and quiet screenings). ` +
-      `You can also use our zip-code search to sort everything by distance from your home.`,
+      `Choose a city below and check each venue's source for upcoming events. Where a listing includes a recurring ` +
+      `schedule, its calendar calculates estimated dates; confirm them directly with the venue. ` +
+      `Our zip-code search can help find local listings near you.`,
   },
   {
     question: `Are these ${state} activities verified?`,
     answer:
-      `Every listing is real and source-linked: it comes from the venue's own accessibility page, an official program ` +
-      `announcement, or a certification body like KultureCity or IBCCES. Most listings are marked "documented — confirm ` +
-      `locally," which means the program is real and sourced but schedules change, so always confirm details with the ` +
-      `venue before you go.`,
+      `Listings are based on published sources and include a source-check date. "Documented — confirm locally" ` +
+      `describes desk research, not a personal visit or a guarantee that the venue suits every child. ` +
+      `Contact the venue to confirm current schedules and the accommodations your family needs.`,
   },
 ];
 
@@ -98,7 +94,7 @@ const jsonLd = [
 ];
 ---
 
-<BaseLayout title={title} description={description} canonicalPath={`/states/${stateSlugOf(state)}/`} jsonLd={jsonLd}>
+<BaseLayout title={title} description={description} canonicalPath={`/states/${stateSlugOf(state)}/`} noindex={!hasIndexableLocalContent(localVenues.map((entry) => entry.listing))} jsonLd={jsonLd}>
   <div class="mx-auto max-w-5xl px-4 py-10 sm:px-6">
     <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'States', href: '/states/' }, { name: state }]} />
 
@@ -107,10 +103,10 @@ const jsonLd = [
     </h1>
     <p class="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
       Looking for autism-friendly and sensory-friendly things to do in {state}? We've gathered
-      {' '}{totalListings} documented options across {qualifying.length}
-      {qualifying.length === 1 ? ' city' : ' cities'} — quiet museum mornings, sensory-friendly movie
-      screenings, certified zoos and attractions, sensory gyms, and daily low-sensory shopping hours.
-      Choose your city for schedules, costs, and a practical parent tip with every listing.
+      {' '}{totalListings} source-linked local listings across {qualifying.length}
+      {qualifying.length === 1 ? ' city' : ' cities'}.
+      Choose a city to compare the listed accommodations and planning details.
+      Check each official source for current information before you travel.
     </p>
 
     {/* City grid */}
@@ -137,9 +133,9 @@ const jsonLd = [
     {
       featured.length > 0 && (
         <section class="mt-12">
-          <h2 class="text-2xl font-bold text-ink">Standout sensory-friendly venues in {state}</h2>
+          <h2 class="text-2xl font-bold text-ink">Local sensory-friendly listings in {state}</h2>
           <p class="mt-2 max-w-2xl text-muted">
-            Hand-researched local venues with documented sensory programs — beyond the national chains.
+            A selection of source-linked local places. Each city's guide contains its full list.
           </p>
           <ul class="mt-6 grid gap-4 sm:grid-cols-2">
             {featured.map(({ listing, city }) => (

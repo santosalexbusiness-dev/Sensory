@@ -4,5 +4,4262 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "trailingSlash": true,
-  "cleanUrls": false
+  "cleanUrls": false,
+  "redirects": [
+    {
+      "source": "/cities/aberdeen-sd/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/abilene-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/albany-ga/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/alexandria-la/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/altoona-pa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/amarillo-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/ames-ia/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/annapolis-md/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/appleton-wi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/athens-ga/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/atlantic-city-nj/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/auburn-al/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/augusta-ga/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/augusta-me/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/bar-harbor-me/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/barnstable-ma/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/bartlesville-ok/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/battle-creek-mi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/beaumont-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/beckley-wv/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/bellingham-wa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/biloxi-ms/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/binghamton-ny/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/bismarck-nd/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/blacksburg-va/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/bloomington-il/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/bloomington-in/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/boone-nc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/bowling-green-ky/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/bozeman-mt/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/brainerd-mn/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/brookings-sd/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/brownsville-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/brunswick-ga/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/burlington-nc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/butte-mt/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/canton-oh/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/cape-girardeau-mo/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/cape-may-nj/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/carbondale-il/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/carlsbad-nm/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/carson-city-nv/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/casper-wy/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/cedar-rapids-ia/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/champaign-il/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/cheyenne-wy/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/chico-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/clarksville-tn/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/coeur-dalene-id/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/college-station-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/columbia-mo/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/columbus-ga/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/concord-nh/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/conway-ar/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/cookeville-tn/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/cooperstown-ny/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/corvallis-or/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/council-bluffs-ia/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/danbury-ct/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/decatur-il/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/destin-fl/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/dothan-al/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/dover-de/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/dundalk-ie/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/durango-co/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/durham-uk/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/eau-claire-wi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/elizabethtown-ky/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/elkhart-in/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/elko-nv/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/elmira-ny/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/enid-ok/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/estes-park-co/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/eureka-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/fall-river-ma/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/farmington-nm/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/findlay-oh/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/flagstaff-az/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/florence-al/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/florence-sc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/fort-myers-fl/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/fort-smith-ar/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/frederick-md/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/fredericksburg-va/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/gadsden-al/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/gainesville-ga/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/galveston-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/gettysburg-pa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/grand-forks-nd/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/grand-island-ne/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/grand-junction-co/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/great-falls-mt/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/greeley-co/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/greenville-nc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/gulf-shores-al/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/hagerstown-md/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/harlingen-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/harrisonburg-va/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/hattiesburg-ms/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/helena-mt/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/henderson-nv/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/hickory-nc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/hilo-hi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/hilton-head-sc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/holland-mi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/hot-springs-ar/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/houma-la/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/huntington-wv/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/hutchinson-ks/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/idaho-falls-id/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/inverness-uk/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/ithaca-ny/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/jackson-mi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/jackson-tn/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/jackson-wy/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/jacksonville-nc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/janesville-wi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/jefferson-city-mo/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/johnson-city-tn/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/johnstown-pa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/jonesboro-ar/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/joplin-mo/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/juneau-ak/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/kahului-hi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/kailua-kona-hi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/kalispell-mt/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/kearney-ne/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/kennewick-wa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/ketchikan-ak/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/key-west-fl/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/kill-devil-hills-nc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/killeen-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/kingsport-tn/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/kissimmee-fl/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/klamath-falls-or/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/kokomo-in/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/la-crosse-wi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lafayette-in/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lake-charles-la/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lake-geneva-wi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lake-havasu-city-az/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lake-placid-ny/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lancaster-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/laramie-wy/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/laredo-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/las-cruces-nm/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lawrence-ks/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lawton-ok/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lewiston-me/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lihue-hi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lima-oh/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/logan-ut/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/longview-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/loveland-co/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lubbock-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/lynchburg-va/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/mackinaw-city-mi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/manhattan-ks/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/mankato-mn/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/mansfield-oh/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/medford-or/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/merced-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/meridian-ms/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/middlesbrough-uk/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/midland-mi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/midland-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/moab-ut/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/mobile-al/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/modesto-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/monroe-la/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/monterey-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/morgantown-wv/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/moscow-id/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/mount-vernon-wa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/muncie-in/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/murfreesboro-tn/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/muskegon-mi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/muskogee-ok/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/napa-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/nashua-nh/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/new-bedford-ma/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/new-bern-nc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/new-haven-ct/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/newark-de/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/newport-ri/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/niagara-falls-ny/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/north-platte-ne/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/northampton-uk/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/norwich-uk/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/oakland-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/ocala-fl/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/ocean-city-md/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/odessa-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/ogden-ut/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/oshkosh-wi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/owensboro-ky/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/oxford-ms/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/oxnard-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/paducah-ky/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/page-az/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/palm-springs-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/panama-city-fl/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/park-city-ut/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/parkersburg-wv/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/pittsfield-ma/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/plano-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/pocatello-id/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/port-angeles-wa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/port-huron-mi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/port-st-lucie-fl/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/poughkeepsie-ny/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/prescott-az/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/pueblo-co/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/punta-gorda-fl/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/racine-wi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/reading-pa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/redding-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/rehoboth-beach-de/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/riverside-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/rochester-mn/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/rocky-mount-nc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/rome-ga/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/roseburg-or/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/roswell-nm/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/rutland-vt/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/saginaw-mi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/salina-ks/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/salinas-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/salisbury-md/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/san-angelo-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/san-bernardino-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/san-luis-obispo-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/san-marcos-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/santa-cruz-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/santa-maria-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/santa-rosa-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/saratoga-springs-ny/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/savannah-ga/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/scranton-pa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/sedona-az/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/sheboygan-wi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/sherman-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/sierra-vista-az/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/sligo-ie/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/south-lake-tahoe-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/south-padre-island-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/southampton-uk/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/spartanburg-sc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/springfield-oh/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/st-augustine-fl/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/st-cloud-mn/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/st-joseph-mo/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/state-college-pa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/stillwater-ok/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/stockton-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/stoke-on-trent-uk/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/stowe-vt/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/sumter-sc/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/sunderland-uk/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/temecula-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/terre-haute-in/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/texarkana-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/the-villages-fl/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/tralee-ie/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/traverse-city-mi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/trenton-nj/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/tupelo-ms/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/tuscaloosa-al/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/twin-falls-id/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/tyler-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/utica-ny/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/vail-co/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/valdosta-ga/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/vero-beach-fl/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/victoria-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/victorville-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/vineland-nj/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/visalia-ca/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/walla-walla-wa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/warner-robins-ga/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/waterbury-ct/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/waterford-ie/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/watertown-ny/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/wausau-wi/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/wenatchee-wa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/wexford-ie/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/wheeling-wv/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/whitefish-mt/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/wichita-falls-tx/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/wildwood-nj/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/wilkes-barre-pa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/williamsport-pa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/williston-nd/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/winchester-va/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/wolverhampton-uk/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/yakima-wa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/york-pa/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/cities/yuma-az/",
+      "destination": "/cities/",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/aberdeen-sd/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/aberdeen-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/abilene-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/akron-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/albany-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/albany-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/albuquerque-nm/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/alexandria-la/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/allentown-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/altoona-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/amarillo-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/ames-ia/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/anaheim-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/anchorage-ak/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/ann-arbor-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/annapolis-md/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/appleton-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/arlington-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/asheville-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/athens-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/atlanta-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/atlantic-city-nj/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/auburn-al/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/augusta-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/augusta-me/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/austin-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bakersfield-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/baltimore-md/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bangor-me/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bar-harbor-me/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/barnstable-ma/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bartlesville-ok/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bath-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/baton-rouge-la/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/battle-creek-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/beaumont-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/beckley-wv/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/belfast-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bellingham-wa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bend-or/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/billings-mt/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/biloxi-ms/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/binghamton-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/birmingham-al/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/birmingham-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bismarck-nd/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/blackpool-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/blacksburg-va/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bloomington-il/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bloomington-in/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/boise-id/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/boone-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/boston-ma/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/boulder-co/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bournemouth-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bowling-green-ky/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bozeman-mt/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/brainerd-mn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/branson-mo/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bridgeport-ct/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/brighton-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/bristol-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/brookings-sd/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/brownsville-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/brunswick-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/buffalo-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/burlington-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/burlington-vt/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/butte-mt/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cambridge-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/canterbury-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/canton-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cape-girardeau-mo/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cape-may-nj/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/carbondale-il/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cardiff-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/carlsbad-nm/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/carson-city-nv/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/casper-wy/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cedar-rapids-ia/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/champaign-il/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/charleston-sc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/charleston-wv/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/charlotte-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/charlottesville-va/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/chattanooga-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/chester-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cheyenne-wy/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/chicago-il/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/chico-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cincinnati-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/clarksville-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cleveland-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cody-wy/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/coeur-dalene-id/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/college-station-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/colorado-springs-co/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/columbia-mo/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/columbia-sc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/columbus-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/columbus-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/concord-nh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/conway-ar/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cookeville-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cooperstown-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/cork-ie/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/corning-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/corpus-christi-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/corvallis-or/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/council-bluffs-ia/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/coventry-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/dallas-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/danbury-ct/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/davenport-ia/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/dayton-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/daytona-beach-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/decatur-il/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/denver-co/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/derby-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/des-moines-ia/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/destin-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/detroit-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/dothan-al/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/dover-de/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/dublin-ie/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/dubuque-ia/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/duluth-mn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/dundalk-ie/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/dundee-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/durango-co/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/durham-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/durham-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/eau-claire-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/edinburgh-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/el-paso-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/elizabethtown-ky/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/elkhart-in/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/elko-nv/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/elmira-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/enid-ok/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/erie-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/estes-park-co/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/eugene-or/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/eureka-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/evansville-in/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/exeter-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fairbanks-ak/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fall-river-ma/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fargo-nd/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/farmington-nm/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fayetteville-ar/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fayetteville-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/findlay-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/flagstaff-az/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/flint-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/florence-al/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/florence-sc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fort-collins-co/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fort-lauderdale-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fort-myers-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fort-smith-ar/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fort-wayne-in/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fort-worth-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/frederick-md/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fredericksburg-va/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/fresno-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/gadsden-al/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/gainesville-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/gainesville-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/galveston-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/galway-ie/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/gatlinburg-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/gettysburg-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/glasgow-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/glens-falls-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/grand-forks-nd/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/grand-island-ne/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/grand-junction-co/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/grand-rapids-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/great-falls-mt/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/greeley-co/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/green-bay-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/greensboro-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/greenville-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/greenville-sc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/gulf-shores-al/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/gulfport-ms/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/hagerstown-md/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/harlingen-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/harrisburg-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/harrisonburg-va/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/hartford-ct/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/hattiesburg-ms/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/helena-mt/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/henderson-nv/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/hershey-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/hickory-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/hilo-hi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/hilton-head-sc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/holland-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/honolulu-hi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/hot-springs-ar/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/houma-la/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/houston-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/hull-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/huntington-wv/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/huntsville-al/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/hutchinson-ks/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/idaho-falls-id/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/indianapolis-in/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/inverness-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/iowa-city-ia/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/ipswich-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/ithaca-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/jackson-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/jackson-ms/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/jackson-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/jackson-wy/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/jacksonville-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/jacksonville-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/janesville-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/jefferson-city-mo/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/jersey-city-nj/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/johnson-city-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/johnstown-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/jonesboro-ar/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/joplin-mo/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/juneau-ak/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kahului-hi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kailua-kona-hi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kalamazoo-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kalispell-mt/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kansas-city-mo/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kearney-ne/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kennewick-wa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kenosha-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/ketchikan-ak/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/key-west-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kilkenny-ie/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kill-devil-hills-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/killeen-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kingsport-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kissimmee-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/klamath-falls-or/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/knoxville-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/kokomo-in/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/la-crosse-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lafayette-in/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lafayette-la/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lake-charles-la/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lake-geneva-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lake-havasu-city-az/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lake-placid-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lakeland-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lancaster-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lancaster-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lansing-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/laramie-wy/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/laredo-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/las-cruces-nm/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/las-vegas-nv/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lawrence-ks/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lawton-ok/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/leeds-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/leicester-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lewiston-me/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lexington-ky/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lihue-hi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lima-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/limerick-ie/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lincoln-ne/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/little-rock-ar/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/liverpool-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/logan-ut/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/london-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/longview-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/los-angeles-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/louisville-ky/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/loveland-co/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lowell-ma/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lubbock-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/lynchburg-va/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/mackinaw-city-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/macon-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/madison-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/manchester-nh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/manchester-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/manhattan-ks/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/mankato-mn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/mansfield-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/mcallen-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/medford-or/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/melbourne-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/melbourne-vic/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/memphis-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/merced-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/meridian-ms/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/mesa-az/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/miami-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/middlesbrough-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/midland-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/midland-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/milton-keynes-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/milwaukee-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/minot-nd/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/missoula-mt/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/moab-ut/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/mobile-al/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/modesto-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/monroe-la/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/monterey-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/montgomery-al/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/morgantown-wv/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/moscow-id/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/mount-vernon-wa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/muncie-in/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/murfreesboro-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/muskegon-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/muskogee-ok/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/myrtle-beach-sc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/napa-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/naples-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/nashua-nh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/nashville-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/new-bedford-ma/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/new-bern-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/new-haven-ct/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/new-orleans-la/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/new-york-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/newark-de/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/newark-nj/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/newcastle-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/newport-or/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/newport-ri/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/niagara-falls-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/norfolk-va/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/north-conway-nh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/north-platte-ne/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/northampton-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/norwich-ct/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/norwich-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/nottingham-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/oakland-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/ocala-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/ocean-city-md/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/odessa-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/ogden-ut/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/oklahoma-city-ok/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/olympia-wa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/omaha-ne/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/orlando-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/oshkosh-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/owensboro-ky/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/oxford-ms/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/oxford-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/oxnard-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/paducah-ky/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/page-az/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/palm-springs-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/panama-city-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/park-city-ut/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/parkersburg-wv/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/pensacola-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/peoria-il/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/philadelphia-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/phoenix-az/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/pigeon-forge-tn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/pittsburgh-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/pittsfield-ma/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/plano-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/plymouth-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/pocatello-id/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/port-angeles-wa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/port-huron-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/port-st-lucie-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/portland-me/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/portland-or/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/portsmouth-nh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/portsmouth-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/poughkeepsie-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/prescott-az/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/providence-ri/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/provo-ut/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/pueblo-co/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/punta-gorda-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/racine-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/raleigh-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/rapid-city-sd/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/reading-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/reading-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/redding-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/rehoboth-beach-de/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/reno-nv/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/richmond-va/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/riverside-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/roanoke-va/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/rochester-mn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/rochester-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/rockford-il/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/rocky-mount-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/rome-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/roseburg-or/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/roswell-nm/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/rutland-vt/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sacramento-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/saginaw-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/salem-or/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/salina-ks/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/salinas-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/salisbury-md/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/salt-lake-city-ut/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/san-angelo-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/san-antonio-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/san-bernardino-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/san-diego-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/san-francisco-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/san-jose-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/san-luis-obispo-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/san-marcos-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sandusky-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/santa-barbara-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/santa-cruz-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/santa-fe-nm/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/santa-maria-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/santa-rosa-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sarasota-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/saratoga-springs-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/savannah-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/scranton-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/seattle-wa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sedona-az/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sheboygan-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sheffield-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sherman-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/shreveport-la/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sierra-vista-az/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sioux-city-ia/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sioux-falls-sd/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sligo-ie/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/south-bend-in/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/south-lake-tahoe-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/south-padre-island-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/southampton-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/spartanburg-sc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/spokane-wa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/springfield-il/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/springfield-ma/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/springfield-mo/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/springfield-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/st-augustine-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/st-cloud-mn/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/st-george-ut/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/st-joseph-mo/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/st-louis-mo/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/st-petersburg-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/stamford-ct/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/state-college-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/stillwater-ok/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/stockton-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/stoke-on-trent-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/stowe-vt/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/stratford-upon-avon-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/stroudsburg-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sumter-sc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/sunderland-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/swansea-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/syracuse-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/tacoma-wa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/tampa-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/temecula-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/terre-haute-in/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/texarkana-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/the-villages-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/toledo-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/toms-river-nj/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/topeka-ks/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/tralee-ie/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/traverse-city-mi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/trenton-nj/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/tucson-az/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/tulsa-ok/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/tupelo-ms/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/tuscaloosa-al/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/twin-falls-id/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/tyler-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/utica-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/vail-co/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/valdosta-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/vallejo-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/vero-beach-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/victoria-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/victorville-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/vineland-nj/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/virginia-beach-va/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/visalia-ca/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/waco-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/walla-walla-wa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/warner-robins-ga/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/washington-dc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/waterbury-ct/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/waterford-ie/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/waterloo-ia/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/watertown-ny/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wausau-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wenatchee-wa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/west-palm-beach-fl/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wexford-ie/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wheeling-wv/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/whitefish-mt/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wichita-falls-tx/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wichita-ks/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wildwood-nj/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wilkes-barre-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/williamsburg-va/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/williamsport-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/williston-nd/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wilmington-de/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wilmington-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/winchester-va/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/windsor-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/winston-salem-nc/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wisconsin-dells-wi/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/wolverhampton-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/worcester-ma/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/yakima-wa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/york-pa/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/york-uk/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/youngstown-oh/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-movies/yuma-az/",
+      "destination": "/sensory-friendly-movies/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/akron-oh/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/albany-ny/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/albuquerque-nm/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/amarillo-tx/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/canton-oh/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/charlotte-nc/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/cincinnati-oh/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/cleveland-oh/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/columbus-oh/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/daytona-beach-fl/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/destin-fl/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/fayetteville-nc/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/fort-worth-tx/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/greensboro-nc/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/harrisburg-pa/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/midland-tx/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/odessa-tx/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/phoenix-az/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/pittsburgh-pa/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/port-st-lucie-fl/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/raleigh-nc/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/sarasota-fl/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/springfield-mo/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    },
+    {
+      "source": "/sensory-friendly-play/toledo-oh/",
+      "destination": "/sensory-friendly-play/#programs",
+      "permanent": true
+    }
+  ]
 }

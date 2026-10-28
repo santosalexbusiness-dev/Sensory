@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { formatTitle, absoluteUrl } from '../lib/utils';
+import { breadcrumbSchema } from '../lib/seo';
+
+const description = 'Make a sensory-friendly outing plan with venue questions, an arrival plan, break options and an exit plan. Free to print or save as a PDF; no signup.';
+const questions = [
+  ['Sound', 'Which areas have sudden sounds, announcements or background music? Is anything different during the sensory session?'],
+  ['Light', 'Are there flashing effects, dark transitions or bright displays on the route we would take?'],
+  ['Waiting', 'Where do we queue, how long might we wait, and can a companion hold our place while we step aside?'],
+  ['Breaks', 'Where can we take a quieter break? Is that space available on our date, and how do we reach it?'],
+  ['Leaving', 'Can we leave early or go outside and return with the same ticket? What happens if we need to cancel?'],
+  ['What to bring', 'Can we bring our usual headphones, comfort item, communication device, food and drink? Are there entry restrictions?'],
+];
+const activityQuestions = {
+  museum: ['Which exhibits have moving parts, loud demonstrations or immersive effects?', 'Can you send a floor plan or picture guide? Which exhibits can we bypass?'],
+  movies: ['Is this exact screening a sensory-friendly session? What changes are made to lighting and volume?', 'Are trailers included, can we choose an aisle seat, and can we leave and return?'],
+  haircut: ['Can we book a familiarization visit or a short appointment with the same stylist?', 'Can you use scissors instead of clippers and skip a dryer, cape or scented product if needed?'],
+  play: ['Are sessions capacity-limited, and do games, music or hand dryers still run?', 'Can we start in one area and take breaks without losing our time slot?'],
+  outdoors: ['Which route has shade, toilets and a shorter way back to the entrance?', 'Are there scheduled feeding demonstrations, maintenance noise or other busy periods?'],
+  performance: ['What changes are made for this relaxed performance, and are there still sudden effects?', 'Can we see a synopsis with sound and lighting notes, and can we move to a break area during the show?'],
+};
+const fields = [
+  { id: 'destination', label: 'Place and date', placeholder: 'Example: museum, Saturday morning' },
+  { id: 'booking', label: 'What the venue confirmed', placeholder: 'Session, booking, price, re-entry and who confirmed it' },
+  { id: 'arrival', label: 'Arrival and first activity', placeholder: 'Entrance, meeting point and one thing we want to try' },
+  { id: 'bring', label: 'Things to bring', placeholder: 'The familiar items that work for this outing' },
+  { id: 'break', label: 'Break plan', placeholder: 'Where to pause and how we will ask for a break' },
+  { id: 'leave', label: 'Leaving and backup plan', placeholder: 'How we will leave, get home, or switch to another plan' },
+];
+const jsonLd = [breadcrumbSchema([
+  { name: 'Home', url: absoluteUrl('/', Astro.site) },
+  { name: 'Outing planner', url: absoluteUrl('/outing-planner/', Astro.site) },
+])];
+---
+
+<BaseLayout title={formatTitle('Free Sensory-Friendly Outing Planner & Checklist')} description={description} jsonLd={jsonLd}>
+  <div class="planner-page mx-auto max-w-5xl px-4 py-10 sm:px-6">
+    <div class="no-print"><Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Outing planner' }]} /></div>
+    <p class="mt-6 text-sm font-semibold text-brand-strong">Free resource · no account or email needed</p>
+    <h1 class="mt-2 max-w-3xl text-3xl font-bold tracking-tight text-ink sm:text-4xl">A sensory-friendly outing, one decision at a time</h1>
+    <p class="mt-4 max-w-3xl text-lg leading-relaxed text-muted">A “sensory-friendly” label is a starting point. Use this planner to find out what actually changes at a venue and decide what works for your visit. A short outing, a break or a change of plan can all be good outcomes.</p>
+    <p class="mt-3 text-sm text-muted">Published September 10, 2026 · <a class="link-underline" href="/about/">Sensory-Friendly Kids</a> · An original planning worksheet, not a clinical assessment.</p>
+
+    <section class="mt-9 rounded-card border border-line bg-surface p-5 sm:p-7 no-print" aria-labelledby="use-title">
+      <h2 id="use-title" class="text-xl font-bold">How to use this planner</h2>
+      <ol class="mt-3 list-decimal space-y-2 pl-5 leading-relaxed text-muted">
+        <li>Pick one activity and a place from the <a class="link-underline text-brand-strong" href="/cities/">local directory</a>. Open its source and check the exact date and branch.</li>
+        <li>Ask the questions below that matter for your visit. An unanswered question means you still need information; it does not mean an accommodation is available.</li>
+        <li>Write a simple plan with the person going. Print it or save it as a PDF using your browser’s print menu.</li>
+      </ol>
+    </section>
+
+    <section class="mt-10" aria-labelledby="questions-title">
+      <h2 id="questions-title" class="text-2xl font-bold">1. Ask about the actual visit</h2>
+      <p class="mt-3 max-w-3xl leading-relaxed text-muted">A useful opening: “We’re considering visiting on [date]. Before we book, could you help us understand the sound, lighting, waiting and break options for that session?” You can describe what you need without sharing a diagnosis.</p>
+      <div class="mt-5 grid gap-4 sm:grid-cols-2">
+        {questions.map(([label, question]) => <div class="question-card rounded-card border border-line bg-surface p-5"><h3 class="font-bold text-brand-strong">{label}</h3><p class="mt-2 leading-relaxed text-muted">{question}</p></div>)}
+      </div>
+      <div class="mt-5 rounded-card border border-brand-soft bg-brand-soft/40 p-5">
+        <label class="block font-bold" for="activity">Add questions for your activity</label>
+        <select id="activity" class="mt-3 w-full max-w-md rounded-lg border border-line bg-surface px-3 py-3 text-ink">
+          <option value="museum">Museum or aquarium</option><option value="movies">Movie screening</option><option value="haircut">Haircut</option><option value="play">Indoor play or games</option><option value="outdoors">Zoo, park or outdoor attraction</option><option value="performance">Theater or performance</option>
+        </select>
+        <ul id="activity-questions" class="mt-4 list-disc space-y-2 pl-5 leading-relaxed text-muted" aria-live="polite">{activityQuestions.museum.map(q => <li>{q}</li>)}</ul>
+        <noscript><p class="mt-3">Activity selection needs JavaScript. The six questions above and the worksheet below work without it.</p></noscript>
+      </div>
+    </section>
+
+    <section class="mt-10" aria-labelledby="plan-title">
+      <h2 id="plan-title" class="text-2xl font-bold">2. Make your plan</h2>
+      <p class="mt-3 leading-relaxed text-muted">Keep it brief. Start with one activity, an available break space and a way to leave. The planner does not send or save your entries. Keep a copy before closing the page.</p>
+      <form id="outing-form" class="mt-5 grid gap-5 sm:grid-cols-2" autocomplete="off">
+        {fields.map(field => <div class="plan-field"><label class="block font-semibold" for={field.id}>{field.label}</label><textarea class="mt-2 min-h-28 w-full rounded-lg border border-line bg-surface p-3 text-ink" id={field.id} rows="3" placeholder={field.placeholder}></textarea><p class="print-answer" data-answer={field.id}></p></div>)}
+      </form>
+      <div class="mt-5 flex flex-wrap gap-3 no-print" id="planner-actions" hidden>
+        <button type="button" id="print-plan" class="rounded-lg bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-strong">Print / save as PDF</button>
+        <button type="button" id="copy-plan" class="rounded-lg border border-brand bg-surface px-5 py-3 font-semibold text-brand-strong">Copy plan</button>
+      </div>
+      <p id="planner-status" class="mt-3 text-sm text-muted no-print" role="status"></p>
+      <noscript><p class="mt-4">Print a blank worksheet from your browser menu and fill it in by hand, or enter notes above and print them.</p></noscript>
+    </section>
+
+    <section class="mt-10" aria-labelledby="decision-title">
+      <h2 id="decision-title" class="text-2xl font-bold">3. Decide what you still need to know</h2>
+      <div class="mt-5 grid gap-4 sm:grid-cols-3">
+        <div class="rounded-card border border-line bg-surface p-5"><h3 class="font-bold">A detail is missing</h3><p class="mt-2 leading-relaxed text-muted">Ask again or choose an option you can check. “We have a sensory bag” does not tell you whether a show has loud effects or a queue is crowded.</p></div>
+        <div class="rounded-card border border-line bg-surface p-5"><h3 class="font-bold">You want a smaller start</h3><p class="mt-2 leading-relaxed text-muted">Ask about visiting the entrance, exploring a single area or choosing a shorter session before committing to a full day.</p></div>
+        <div class="rounded-card border border-line bg-surface p-5"><h3 class="font-bold">The plan changes</h3><p class="mt-2 leading-relaxed text-muted">Use the break or leaving plan you agreed on. You can skip an activity, change the route or try again another day.</p></div>
+      </div>
+      <p class="mt-5 leading-relaxed text-muted">Afterwards, note one thing to repeat and one thing to change next time. If the venue’s published details were wrong, <a href="/contact/" class="link-underline text-brand-strong">send a listing correction</a> with the place, date and official source.</p>
+    </section>
+
+    <section class="mt-10 border-t border-line pt-6 no-print" aria-labelledby="source-title">
+      <h2 id="source-title" class="text-xl font-bold">Understanding the labels</h2>
+      <p class="mt-3 leading-relaxed text-muted">KultureCity describes its sensory inclusion program in terms of staff training, sensory bags and support resources. Those are useful details to investigate; they do not promise that an entire venue will be quiet. Read <a href="https://www.kulturecity.org/sensory-inclusive/" class="link-underline text-brand-strong" target="_blank" rel="noopener noreferrer">KultureCity’s program explanation</a> and <a href="/how-we-verify/" class="link-underline text-brand-strong">how we document listings</a>. Program source consulted September 7, 2026.</p>
+      <p class="mt-3 leading-relaxed text-muted">The questions and worksheet here are our own practical planning format. Families, libraries and support organizations may print and share this worksheet for free with credit to sensoryfriendly.guide. Share the blank planner link rather than somebody’s personal notes.</p>
+      <div class="mt-5 flex flex-wrap gap-4"><a href="/sensory-friendly-halloween/" class="link-underline text-brand-strong">Plan for Halloween</a><a href="/sensory-friendly-flying/" class="link-underline text-brand-strong">Plan a flight</a><a href="/search/" class="link-underline text-brand-strong">Find a local place</a></div>
+    </section>
+    <p class="print-credit">Free worksheet from sensoryfriendly.guide/outing-planner/ · Confirm details with the venue before visiting.</p>
+  </div>
+  <script id="activity-data" type="application/json" set:html={JSON.stringify(activityQuestions).replace(/</g, '\\u003c')} />
+  <script>
+    const form = document.querySelector<HTMLFormElement>('#outing-form');
+    const activity = document.querySelector<HTMLSelectElement>('#activity');
+    const questionsEl = document.querySelector<HTMLUListElement>('#activity-questions');
+    const status = document.querySelector<HTMLElement>('#planner-status');
+    const activityData: Record<string, string[]> = JSON.parse(document.querySelector('#activity-data')?.textContent || '{}');
+    document.querySelector('#planner-actions')?.removeAttribute('hidden');
+    document.documentElement.classList.add('planner-js');
+    activity?.addEventListener('change', () => {
+      questionsEl?.replaceChildren(...(activityData[activity.value] || []).map(question => {
+        const item = document.createElement('li'); item.textContent = question; return item;
+      }));
+    });
+    const syncPrint = () => form?.querySelectorAll<HTMLTextAreaElement>('textarea').forEach(field => {
+      const answer = form.querySelector<HTMLElement>(`[data-answer="${field.id}"]`);
+      if (answer) answer.textContent = field.value.trim() || ' ';
+    });
+    form?.addEventListener('input', syncPrint);
+    form?.addEventListener('submit', event => event.preventDefault());
+    window.addEventListener('beforeprint', syncPrint);
+    document.querySelector('#print-plan')?.addEventListener('click', () => { syncPrint(); window.print(); });
+    document.querySelector('#copy-plan')?.addEventListener('click', async () => {
+      const notes = Array.from(form?.querySelectorAll<HTMLTextAreaElement>('textarea') || []).map(field => `${form?.querySelector(`label[for="${field.id}"]`)?.textContent}: ${field.value.trim() || '(to confirm)'}`);
+      const text = ['MY OUTING PLAN', ...notes, '', 'Questions for the venue:', ...(activityData[activity?.value || 'museum'] || []), '', 'Made at https://sensoryfriendly.guide/outing-planner/'].join('\n\n');
+      try { await navigator.clipboard.writeText(text); if (status) status.textContent = 'Plan copied. Paste it into your own notes or a message.'; }
+      catch { if (status) status.textContent = 'Your browser could not copy the plan. Use Print / save as PDF to keep a copy.'; }
+    });
+  </script>
+</BaseLayout>
+<style>
+  .print-answer, .print-credit { display: none; }
+  @media print {
+    :global(header), :global(footer), :global(body > a), .no-print { display: none !important; }
+    .planner-page { padding: 0; max-width: none; }
+    .planner-page h1 { font-size: 24pt; }
+    .question-card, .plan-field { break-inside: avoid; }
+    .print-credit { display: block; margin-top: 24px; font-size: 10pt; }
+    :global(.planner-js) textarea { display: none; }
+    :global(.planner-js) .print-answer { display: block; white-space: pre-wrap; overflow-wrap: anywhere; min-height: 4em; border-bottom: 1px solid #999; padding: 8px 0; }
+    a { color: inherit; }
+    #activity { border: 0; padding: 0; appearance: none; }
+  }
+</style>

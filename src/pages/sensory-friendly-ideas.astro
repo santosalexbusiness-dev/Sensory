@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Faq from '../components/Faq.astro';
+import { absoluteUrl, formatTitle } from '../lib/utils';
+import { breadcrumbSchema, faqSchema } from '../lib/seo';
+
+/**
+ * Evergreen "what to try when nothing near you is listed" guide.
+ *
+ * This content used to sit on all 71 city hubs as an identical block, which made
+ * roughly a sixth of every hub page duplicate text. It is general strategy, not
+ * venue data, so it belongs on one page that every hub links to.
+ *
+ * Keep the rule the old component carried: no named venues, addresses or
+ * schedules here. Anything specific belongs in listings.json with a sourceUrl.
+ */
+const title = 'Sensory-Friendly Things to Do When Nothing Is Listed Near You';
+const heading = 'Sensory-friendly ideas that work almost anywhere';
+const crumb = 'Sensory-friendly ideas';
+const description =
+  'Six places that often run quieter sessions even without a formal program — and the exact questions to ask so you find out before you travel.';
+const intro =
+  "Most towns have no published sensory-friendly program, and that is not the same as having no quiet options. Plenty of ordinary places already run a calmer session, or will tell you their quietest hour if you ask. These are approaches to try rather than venues we have checked, so the useful part is knowing what to ask for.";
+const provenance =
+  'General guidance, not a venue list. Nothing here is a confirmed accommodation at a specific place — always confirm with the venue. For places we have checked against an official source, see the city guides.';
+
+const sections = [
+  {
+    heading: 'Ask for the quietest hour, not a sensory session',
+    body: "A venue that has never heard the phrase \"sensory-friendly\" can usually tell you exactly when it is least busy, and that answer is often more useful than a formal program held once a month. Ask three things: which hour of which day is quietest, whether music or announcements can be turned down, and whether there is anywhere to sit away from the main room.<br /><br />Phrasing it as a practical question about timing gets a better answer than asking whether somewhere is \"autism-friendly\", which staff may not feel qualified to confirm.",
+  },
+  {
+    heading: 'Library storytime and quiet hours',
+    body: 'Most public library branches run quieter morning sessions, and some host a sensory or "relaxed" storytime that is never advertised beyond a noticeboard. Call your nearest branch and ask what they are running this month, and whether numbers are capped.<br /><br />Libraries are often the single best starting point: entry is free, leaving early costs nothing, and staff tend to know which other local services run adapted sessions.',
+  },
+  {
+    heading: 'Parks, trails and botanic gardens at off-peak',
+    body: 'Open green space is naturally low-stimulation, and you control the exit. Go right after opening or late afternoon on a weekday to skip crowds, and pick out a quiet bench on the way in so there is an agreed reset spot before anyone needs it.<br /><br />A short first visit that ends while it is still going well is worth more than a long one that ends badly.',
+  },
+  {
+    heading: 'Supermarket quiet hours',
+    body: 'Several major grocery chains dim the lights and cut the music for a weekly low-sensory hour, usually a weekday morning or early evening. Participation is set store by store, so a chain-wide announcement does not mean your branch takes part.<br /><br />Ask the customer-service desk directly whether this store runs one, and on which day — the shop floor often will not know.',
+  },
+  {
+    heading: 'Pools and leisure centres',
+    body: 'Council pools and leisure centres sometimes hold quieter family or all-abilities swim sessions, often outside the main timetable. If there is no dedicated session, ring ahead and ask which times have the fewest swimmers and whether the hall music can be turned down.<br /><br />Also worth asking: whether a carer swims free, and whether there is a changing room you can use without queuing.',
+  },
+  {
+    heading: 'Indoor play, bowling and trampoline parks',
+    body: 'These are loudest after school and at weekends, which is exactly when most families visit. Many run toddler or sensory sessions earlier in the day that are far calmer than the headline session, so ask before you book rather than after.<br /><br />Check what the lights and music do during the session you are booking, not what the venue does generally.',
+  },
+  {
+    heading: 'Cinema sensory screenings',
+    body: 'The big cinema chains run regular sensory-friendly screenings with the lights up and the sound down. These rotate by location and film, so the chain\'s national page is a starting point rather than an answer for your branch.<br /><br />Ask any local cinema when their next one is scheduled — independents sometimes run them without listing them anywhere.',
+  },
+];
+
+const faqs = [
+  {
+    question: 'There is nothing sensory-friendly listed in my town. What now?',
+    answer:
+      'Start with the library and a supermarket quiet hour, since both are free or already part of your week. Then ask one venue your child already likes for its quietest hour. A formal program is not required for a calm visit.',
+  },
+  {
+    question: 'What should I ask a venue that has no sensory program?',
+    answer:
+      'Ask which hour is quietest, whether music and announcements can be lowered, and whether there is somewhere to take a break away from the main room. These are practical questions staff can answer without needing training.',
+  },
+  {
+    question: 'Does a chain running a sensory program mean my local branch does?',
+    answer:
+      'No. Participation is usually decided location by location, so a national page is not evidence about your nearest branch. Call that branch and ask for the specific session and time.',
+  },
+];
+
+const jsonLd = [
+  breadcrumbSchema([
+    { name: 'Home', url: absoluteUrl('/', Astro.site) },
+    { name: crumb, url: absoluteUrl('/sensory-friendly-ideas/', Astro.site) },
+  ]),
+  faqSchema(faqs),
+];
+---
+
+<BaseLayout
+  title={formatTitle(title)}
+  description={description}
+  canonicalPath="/sensory-friendly-ideas/"
+  jsonLd={jsonLd}
+>
+  <article class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: crumb }]} />
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{heading}</h1>
+    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">{intro}</p>
+    <p
+      class="mt-5 rounded-card border border-line bg-surface-soft p-4 text-sm leading-relaxed text-muted"
+    >
+      {provenance}
+    </p>
+    <div class="mt-10 space-y-9 prose-readable">
+      {
+        sections.map((section) => (
+          <section>
+            <h2 class="text-2xl font-bold text-ink">{section.heading}</h2>
+            <p class="mt-3 leading-relaxed text-muted" set:html={section.body} />
+          </section>
+        ))
+      }
+    </div>
+    <div class="mt-12">
+      <Faq faqs={faqs} heading="Questions" id="sensory-friendly-ideas-faq" />
+    </div>
+    <p class="mt-10 leading-relaxed text-muted">
+      Looking for somewhere we have already checked against an official source?{' '}
+      <a class="link-underline text-brand-strong" href="/cities/">Browse the city guides</a>, or
+      plan the visit itself with the{' '}
+      <a class="link-underline text-brand-strong" href="/outing-planner/">outing planner</a>.
+    </p>
+  </article>
+</BaseLayout>

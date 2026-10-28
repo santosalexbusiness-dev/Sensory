@@ -60,12 +60,12 @@ const jsonLd = [
 
 const howItWorks = [
   {
-    title: 'Verified, not scraped',
-    body: 'Every listing is checked against a written standard before it goes live, and each one shows the date it was last verified.',
+    title: 'See the source',
+    body: "Listings link to a venue or accessibility source and show the recorded research date. Check the source, then confirm the details for your visit.",
   },
   {
     title: 'Sensory details up front',
-    body: "Quiet hours, noise-reducing headphones, lighting, smells, pacing — the things that actually decide how a visit goes are listed on every card.",
+    body: "Compare documented accommodations such as quieter sessions, sensory bags and break spaces. Our outing planner helps you ask about details that are still unknown.",
   },
   {
     title: 'Organized by city',
@@ -91,13 +91,14 @@ const howItWorks = [
         <h1
           class="mt-3 text-4xl font-bold tracking-tight text-ink sm:text-5xl"
         >
-          Calm, verified places for sensory-sensitive kids
+          Calm, well-researched places for sensory-sensitive kids
         </h1>
         <p class="mt-5 text-lg leading-relaxed text-muted prose-readable">
           {SITE.name} is a parent-built directory of sensory-friendly and
           autism-friendly places and services for children. We list the
-          accommodations that matter — and verify every entry — so an everyday
-          outing feels manageable instead of overwhelming.
+          accommodations that matter, sourced from each venue's own program or
+          certification, so an everyday outing feels manageable instead of
+          overwhelming.
         </p>
         <div id="find" class="mt-8 scroll-mt-24">
           <div
@@ -242,7 +243,8 @@ const howItWorks = [
         <a
           class="link-underline font-semibold text-brand-strong"
           href="/sensory-friendly-fireworks/">fireworks</a
-        > — all sensory-friendly, all parent-tested.
+        > — practical, sensory-first guides to the trips that take the most
+        planning.
       </p>
     </div>
   </section>
@@ -269,7 +271,7 @@ const howItWorks = [
       <p class="mt-2 max-w-2xl text-muted">
         New categories — museums, indoor play gyms, sensory-friendly Santa
         events, and more — are added over time. Each links through to the cities
-        where we have verified listings.
+        where we have listings.
       </p>
       <ul class="mt-8 grid gap-5 sm:grid-cols-2">
         {
@@ -298,11 +300,11 @@ const howItWorks = [
   {/* Popular cities */}
   <section class="border-t border-line">
     <div class="mx-auto max-w-5xl px-4 py-14 sm:px-6">
-      <h2 class="text-2xl font-bold text-ink">Popular cities — every state covered</h2>
+      <h2 class="text-2xl font-bold text-ink">Explore cities with local listings</h2>
       <p class="mt-2 max-w-2xl text-muted">
-        The most-listed metro in every US state (plus the other big ones),
-        sorted by state — jump straight to the sensory-friendly activities near
-        you. Outside the US? Use the worldwide picker above or browse all cities.
+        Start with cities where we have researched specific venues. Coverage
+        varies by location. Outside the US? Use the worldwide picker above or
+        browse all cities.
       </p>
       <ul class="mt-6 flex flex-wrap gap-3">
         {
@@ -331,6 +333,14 @@ const howItWorks = [
   </section>
 
   {/* Why it matters */}
+  <section class="border-y border-line bg-brand-soft/50">
+    <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+      <p class="text-sm font-semibold text-brand-strong">Free planning resource · no signup</p>
+      <h2 class="mt-2 text-2xl font-bold text-ink">Turn a place you found into a plan you can use</h2>
+      <p class="mt-3 max-w-2xl leading-relaxed text-muted">Choose an activity, get specific questions to ask the venue, and write down your arrival, break and leaving plans. Print a copy or save it as a PDF for the people going with you.</p>
+      <a href="/outing-planner/" class="mt-5 inline-block rounded-lg bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-strong">Make an outing plan →</a>
+    </div>
+  </section>
   <section class="mx-auto max-w-5xl px-4 py-14 sm:px-6">
     <div class="max-w-3xl">
       <h2 class="text-2xl font-bold text-ink">Why we built this</h2>

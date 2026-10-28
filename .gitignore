@@ -31,3 +31,7 @@ Thumbs.db
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Private working notes (outreach logs, third-party contacts). The GitHub repo
+# is public, so these stay local — .vercelignore excludes them from deploys too.
+docs/

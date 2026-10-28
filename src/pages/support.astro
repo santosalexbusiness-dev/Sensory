@@ -8,8 +8,7 @@ import { SITE } from '../site.config';
 const site = Astro.site;
 const description =
   `Help keep ${SITE.name} free and online. We take no paid listings — small ` +
-  `donations from families cover the domain, hosting, and the time it takes to ` +
-  `research and verify places.`;
+  `donations cover the domain, hosting, and the research behind each listing.`;
 const jsonLd = [
   breadcrumbSchema([
     { name: 'Home', url: absoluteUrl('/', site) },
@@ -41,7 +40,7 @@ const methods = [
     <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
       {SITE.name} is free for every family, and it always will be. It's run by one
       parent, not a company — and it does cost real money and hours to keep going:
-      the domain, the hosting, and the time it takes to research and verify each
+      the domain, the hosting, and the time it takes to research and check each
       place. If the site has helped you, a small donation keeps it online and
       independent.
     </p>

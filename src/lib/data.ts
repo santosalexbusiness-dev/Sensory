@@ -4,9 +4,9 @@
  * Site content is driven by the JSON files in `src/data`:
  *   - cities.json      the metros we cover (with coordinates + a `seeded` flag)
  *   - categories.json  the category definitions
- *   - listings.json    individual places (placeholders + specific verified venues)
- *   - programs.json    national sensory-friendly programs, expanded into a listing
- *                      for every `seeded` city at load time
+ *   - listings.json    individually sourced local venues
+ *   - programs.json    national program references shown on category pages;
+ *                      never treated as evidence of a local branch
  *
  * Adding a city, a listing, a program, or an entirely new category never requires
  * touching page code. The QUALITY GATE below decides which pages get built.
@@ -16,8 +16,10 @@ import listingsData from '../data/listings.json';
 import categoriesData from '../data/categories.json';
 import programsData from '../data/programs.json';
 import { MIN_LISTINGS_PER_CITY } from '../site.config';
+import { hasIndexableLocalContent, isSourcedLocalListing, legacyDirectoryPaths } from './content-policy.mjs';
 
 export { MIN_LISTINGS_PER_CITY };
+export { hasIndexableLocalContent } from './content-policy.mjs';
 
 export type ListingStatus = 'placeholder' | 'documented' | 'verified';
 
@@ -27,6 +29,8 @@ export interface Recurrence {
   weekday: string;
   /** Weeks of the month it falls on (1–5). Empty array = every week. */
   weeks: number[];
+  /** Optional explicit active months, January = 1 through December = 12. */
+  months?: number[];
   /** Optional short note, e.g. "morning" or "opens 2 hrs early". */
   note?: string;
 }
@@ -38,7 +42,7 @@ export interface City {
   stateAbbr: string;
   lat: number;
   lng: number;
-  /** When true, national programs are expanded into listings for this city. */
+  /** Legacy program-coverage flag; used only to preserve old route history. */
   seeded: boolean;
   /** Full country name. Defaults to "United States" when omitted (legacy US data). */
   country?: string;
@@ -70,14 +74,19 @@ export interface Listing {
   /** Optional precise coordinates; falls back to the city centroid if absent. */
   lat?: number;
   lng?: number;
-  /** Trust level. Defaults to "placeholder" for sample data, "verified" otherwise. */
+  /** Trust level. Unspecified source-linked entries default to "documented". */
   status?: ListingStatus;
-  /** Set for national-program listings (e.g. "AMC Theatres"). */
+  /** Optional operator of a sourced local branch (e.g. "AMC Theatres"). */
   operator?: string;
   /** Human-readable schedule, used instead of `hours` for program listings. */
   schedule?: string;
   /** Recurring sensory-friendly times, used to build the per-city calendar. */
   recurrence?: Recurrence[];
+  /**
+   * Program id associated with a researched local branch. Retained to reconstruct
+   * previously published routes during the migration away from program expansion.
+   */
+  supersedesProgram?: string;
 }
 
 export interface Faq {
@@ -101,16 +110,14 @@ export interface Category {
   faqs: Faq[];
 }
 
-interface ProgramDef {
+export interface ProgramDef {
   id: string;
   name: string;
   operator: string;
   category: string;
-  /** If set, expand only into these city slugs (a franchise that isn't national).
-   *  If omitted, expand into every `seeded` city in the program's country. */
+  /** Historical program coverage; never evidence of a participating local venue. */
   availableIn?: string[];
-  /** ISO country code this program operates in. Defaults to "US". Scopes the
-   *  "expand into every seeded city" path so US chains never leak into, say, London. */
+  /** ISO country code where this program operates. Defaults to "US". */
   country?: string;
   website: string;
   sourceUrl: string;
@@ -126,48 +133,15 @@ interface ProgramDef {
 export const cities = citiesData as City[];
 export const categories = categoriesData as Category[];
 const rawListings = listingsData as Listing[];
-const programs = programsData as ProgramDef[];
+export const programs = programsData as ProgramDef[];
+const legacyPaths = legacyDirectoryPaths(cities, rawListings, programs);
 
-/** Expand each national program into a "documented" listing per seeded city. */
-function expandProgramsToListings(): Listing[] {
-  const seeded = cities.filter((c) => c.seeded);
-  const out: Listing[] = [];
-  for (const p of programs) {
-    const targetCities =
-      p.availableIn && p.availableIn.length
-        ? cities.filter((c) => p.availableIn!.includes(c.slug))
-        : // No explicit list → every seeded city in the program's country only.
-          seeded.filter((c) => cityCountryCode(c) === (p.country ?? 'US'));
-    for (const city of targetCities) {
-      out.push({
-        id: `${p.id}__${city.slug}`,
-        name: p.name,
-        category: p.category,
-        citySlug: city.slug,
-        address: `Participating ${p.operator} locations in ${city.city} — see official schedule`,
-        website: p.website,
-        phone: '',
-        sensoryFeatures: p.sensoryFeatures,
-        ageRange: p.ageRange,
-        cost: p.cost,
-        hours: '',
-        schedule: p.schedule,
-        recurrence: p.recurrence,
-        lastVerified: p.lastVerified,
-        sourceUrl: p.sourceUrl,
-        parentTip: p.parentTip,
-        operator: p.operator,
-        status: 'documented',
-        lat: city.lat,
-        lng: city.lng,
-      });
-    }
-  }
-  return out;
+/** Local results require their own source. Program references are separate. */
+export const listings: Listing[] = rawListings.filter(isSourcedLocalListing);
+
+export function getProgramsForCategory(categorySlug: string): ProgramDef[] {
+  return programs.filter((program) => program.category === categorySlug);
 }
-
-/** All listings: hand-authored ones plus expanded national programs. */
-export const listings: Listing[] = [...rawListings, ...expandProgramsToListings()];
 
 /** Look up a single city by slug. */
 export function getCity(slug: string): City | undefined {
@@ -191,20 +165,9 @@ export function getCityListings(citySlug: string): Listing[] {
   return listings.filter((l) => l.citySlug === citySlug);
 }
 
-/**
- * True when a set of listings contains at least one hand-researched LOCAL venue
- * (as opposed to a national chain program, which carries an `operator`).
- *
- * This is our thin-content test. A page built only from national programs shows
- * the same handful of chain entries as every other city's page — near-duplicate
- * content that Google treats as low value, and that AdSense rejected the site
- * for. Such pages stay live and useful for visitors, but are marked `noindex`
- * and kept out of the sitemap so the indexed site is only substantive pages.
- * The moment a city gains a sourced local venue, its pages become indexable
- * again automatically.
- */
+/** Whether local data exists; this alone does not make a page indexable. */
 export function hasLocalListing(items: Listing[]): boolean {
-  return items.some((l) => !l.operator);
+  return items.some(isSourcedLocalListing);
 }
 
 /** True if this city has any hand-researched local venue at all. */
@@ -220,7 +183,7 @@ export function isPlaceholder(listing: Listing): boolean {
 /** Resolve a listing's trust level. */
 export function effectiveStatus(listing: Listing): ListingStatus {
   if (listing.status) return listing.status;
-  return isPlaceholder(listing) ? 'placeholder' : 'verified';
+  return isPlaceholder(listing) ? 'placeholder' : 'documented';
 }
 
 /** A listing's coordinates, falling back to its city's centroid. */
@@ -257,15 +220,25 @@ export interface CityWithListings {
 }
 
 /**
- * QUALITY GATE (category × city).
- * Cities with at least MIN_LISTINGS_PER_CITY listings for the given category.
+ * Category pages with sufficient complete local evidence for indexing.
  */
 export function getQualifyingCitiesForCategory(
   categorySlug: string,
 ): CityWithListings[] {
   return cities
     .map((city) => ({ city, listings: getListingsFor(categorySlug, city.slug) }))
-    .filter((entry) => entry.listings.length >= MIN_LISTINGS_PER_CITY)
+    .filter((entry) => hasIndexableLocalContent(entry.listings))
+    .sort((a, b) => a.city.city.localeCompare(b.city.city));
+}
+
+/** Preserve local content at existing URLs, even while a sparse page is noindex. */
+export function getPublishedCitiesForCategory(categorySlug: string): CityWithListings[] {
+  return cities
+    .map((city) => ({ city, listings: getListingsFor(categorySlug, city.slug) }))
+    .filter((entry) => entry.listings.length > 0 && (
+      hasIndexableLocalContent(entry.listings) ||
+      legacyPaths.has(`/${categorySlug}/${entry.city.slug}/`)
+    ))
     .sort((a, b) => a.city.city.localeCompare(b.city.city));
 }
 
@@ -319,9 +292,8 @@ export interface CityWithCategory {
 
 /**
  * Every city that has at least one listing in the category, flagged with whether
- * it earns a dedicated category-in-city page (qualifies) and whether its city
- * hub exists (hubQualifies). Lets a category index link to hubs for cities that
- * have the category but not yet 3 of them.
+ * it has enough complete local content for indexing (qualifies) and whether its
+ * city hub exists (hubQualifies). Sparse selections link to their city hub.
  */
 export function getCitiesWithCategory(categorySlug: string): CityWithCategory[] {
   return cities
@@ -330,7 +302,7 @@ export function getCitiesWithCategory(categorySlug: string): CityWithCategory[] 
       return {
         city,
         count,
-        qualifies: count >= MIN_LISTINGS_PER_CITY,
+        qualifies: hasIndexableLocalContent(getListingsFor(categorySlug, city.slug)),
         hubQualifies: cityHubQualifies(city.slug),
       };
     })
@@ -373,7 +345,7 @@ export function toCalendarItems(items: Listing[]): CalendarItem[] {
         categoryName: cat ? cat.name : l.category,
         recurrence: l.recurrence ?? [],
         dates: l.sensoryEventDates ?? [],
-        scheduleText: l.schedule ?? '',
+        scheduleText: l.schedule ?? l.hours ?? '',
       };
     })
     .filter((i) => i.recurrence.length > 0 || i.dates.length > 0);
@@ -385,17 +357,22 @@ export function getCityCalendarItems(citySlug: string): CalendarItem[] {
 }
 
 /**
- * QUALITY GATE (city hub). A city hub page is built when the city has at least
- * MIN_LISTINGS_PER_CITY listings across all categories combined.
+ * A sourced local venue earns a usable hub; sparse hubs stay noindex.
  */
 export function cityHubQualifies(citySlug: string): boolean {
-  return getCityListings(citySlug).length >= MIN_LISTINGS_PER_CITY;
+  return getCityListings(citySlug).length > 0;
 }
 
-/** All cities whose hub page qualifies, alphabetical. */
+/** All cities whose hub has sufficient local evidence for indexing. */
 export function getQualifyingCities(): City[] {
   return cities
-    .filter((c) => cityHubQualifies(c.slug))
+    .filter((c) => hasIndexableLocalContent(getCityListings(c.slug)))
+    .sort((a, b) => a.city.localeCompare(b.city));
+}
+
+/** All available local hubs, including sparse pages retained for visitors. */
+export function getPublishedCities(): City[] {
+  return cities.filter((city) => cityHubQualifies(city.slug))
     .sort((a, b) => a.city.localeCompare(b.city));
 }
 
@@ -435,7 +412,7 @@ export function getAllCitiesWithCounts(): CityCount[] {
   return cities
     .map((city) => {
       const count = getCityListings(city.slug).length;
-      return { city, count, qualifies: count >= MIN_LISTINGS_PER_CITY };
+      return { city, count, qualifies: cityHubQualifies(city.slug) };
     })
     .sort((a, b) => a.city.city.localeCompare(b.city.city));
 }
@@ -475,8 +452,7 @@ export function getCitiesByCountry(): CountryGroup[] {
 }
 
 /**
- * Build-time summary of the quality gate. Prints the (category × city) combos
- * that have any data and whether each is built or skipped, plus a city-hub count.
+ * Build-time summary of local evidence and which category-city pages can index.
  * Runs once per build.
  */
 let qualityGateLogged = false;
@@ -486,13 +462,13 @@ export function logQualityGate(): void {
 
   /* eslint-disable no-console */
   console.log(
-    `\n[quality-gate] Minimum ${MIN_LISTINGS_PER_CITY} listings required per page.`,
+    `\n[quality-gate] Editorial indexing rule: ${MIN_LISTINGS_PER_CITY} complete, sourced local entries; not a Google minimum.`,
   );
   for (const category of categories) {
     for (const city of cities) {
       const count = getListingsFor(category.slug, city.slug).length;
       if (count === 0) continue;
-      const status = count >= MIN_LISTINGS_PER_CITY ? 'BUILD' : 'skip ';
+      const status = hasIndexableLocalContent(getListingsFor(category.slug, city.slug)) ? 'INDEX' : 'sparse';
       console.log(`[quality-gate] ${status} ${category.slug}/${city.slug} — ${count}`);
     }
   }

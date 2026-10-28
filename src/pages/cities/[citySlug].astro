@@ -6,21 +6,19 @@ import PlaceholderNotice from '../../components/PlaceholderNotice.astro';
 import CityCalendar from '../../components/CityCalendar.astro';
 import CityMap from '../../components/CityMap.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
-import SensoryIdeas from '../../components/SensoryIdeas.astro';
 import GearStrip from '../../components/GearStrip.astro';
 import Faq from '../../components/Faq.astro';
 import CityLinks from '../../components/CityLinks.astro';
 import { getGearSection } from '../../lib/gear';
 import {
-  getQualifyingCities,
+  getPublishedCities,
   getNearbyCityHubs,
   getCityCategoryGroups,
   getCityCalendarItems,
   getListingsFor,
-  hasLocalListing,
+  hasIndexableLocalContent,
   isPlaceholder,
   logQualityGate,
-  MIN_LISTINGS_PER_CITY,
   type City,
 } from '../../lib/data';
 import { SHOW_PLACEHOLDER_WARNING } from '../../site.config';
@@ -47,8 +45,8 @@ interface Props {
 
 export function getStaticPaths() {
   logQualityGate();
-  // QUALITY GATE: only cities with >= MIN total listings get a hub page.
-  return getQualifyingCities().map((city) => ({
+  // Preserve useful local details; sparse hubs are noindex and outside the sitemap.
+  return getPublishedCities().map((city) => ({
     params: { citySlug: city.slug },
     props: { city },
   }));
@@ -71,10 +69,9 @@ const nearbyLinks = getNearbyCityHubs(city, 6).map((c) => ({
   href: cityHubPath(c),
 }));
 
-// Pins for the city map: hand-researched local venues with exact coordinates
-// (chain programs are metro-level and stay in the list, not on the map).
+// Map pins require venue coordinates. National programs never become local pins.
 const mapPins = allListings
-  .filter((l) => !l.operator && typeof l.lat === 'number' && typeof l.lng === 'number')
+  .filter((l) => typeof l.lat === 'number' && typeof l.lng === 'number')
   .map((l) => ({
     id: l.id,
     name: l.name,
@@ -83,10 +80,7 @@ const mapPins = allListings
     lng: l.lng as number,
   }));
 
-// Thin-content guard: a hub built only from national chain programs is a
-// near-duplicate of every other such hub. Keep it live for visitors, but out of
-// the index (see hasLocalListing in lib/data.ts).
-const thin = !hasLocalListing(allListings);
+const thin = !hasIndexableLocalContent(allListings);
 
 const placeholderCount = allListings.filter(isPlaceholder).length;
 const showNotice = SHOW_PLACEHOLDER_WARNING && placeholderCount > 0;
@@ -105,7 +99,8 @@ const jsonLd = [
     allListings.map((l) => ({ name: l.name, url: `${absoluteUrl(path, site)}#${l.id}` })),
   ),
   ...groups.flatMap((g) =>
-    g.listings.map((l) => localBusinessSchema(l, city, g.category, site)),
+    // `path` (this hub), not the category page — many of those are never built.
+    g.listings.map((l) => localBusinessSchema(l, city, g.category, site, path)),
   ),
 ];
 ---
@@ -131,6 +126,12 @@ const jsonLd = [
         Sensory-Friendly Activities in {city.city}, {city.state}
       </h1>
       <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">{intro}</p>
+      <p class="mt-3 text-sm leading-relaxed text-muted">
+        {thin ? 'Our local coverage is still limited. ' : ''}
+        Each place below has its own source. A national chain's program is not
+        evidence that a nearby branch participates; use our category guides to
+        check national program location finders.
+      </p>
       <p class="mt-4 text-sm">
         <a class="link-underline font-semibold text-brand-strong" href={`/search/`}>
           Searching a specific neighborhood? Filter by zip code →
@@ -154,9 +155,9 @@ const jsonLd = [
 
     {
       groups.map((group) => {
-        const categoryQualifies =
-          getListingsFor(group.category.slug, city.slug).length >=
-          MIN_LISTINGS_PER_CITY;
+        const categoryQualifies = hasIndexableLocalContent(
+          getListingsFor(group.category.slug, city.slug),
+        );
         const moreHref = categoryQualifies
           ? cityPath(group.category, city)
           : categoryPath(group.category);
@@ -183,7 +184,18 @@ const jsonLd = [
       })
     }
 
-    <SensoryIdeas cityName={city.city} />
+    {/* The general "ideas anywhere" advice lives on one page rather than being
+        repeated verbatim on every city hub. */}
+    <section class="mt-14 max-w-3xl rounded-card border border-line bg-surface-soft p-5">
+      <h2 class="text-xl font-bold text-ink">Not enough listed in {city.city} yet?</h2>
+      <p class="mt-2 leading-relaxed text-muted">
+        Libraries, supermarkets, pools and play centres often run a quieter session
+        without advertising one.{' '}
+        <a class="link-underline font-medium text-brand-strong" href="/sensory-friendly-ideas/"
+          >See the ideas that work almost anywhere</a
+        >, including the questions to ask a venue that has no sensory program.
+      </p>
+    </section>
 
     <div class="mt-14 max-w-3xl">
       <Faq

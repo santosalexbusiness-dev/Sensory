@@ -1,146 +1,62 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import productsData from '../data/products.json';
+import { products, productLink } from '../lib/gear';
 import { absoluteUrl, formatTitle } from '../lib/utils';
 import { breadcrumbSchema } from '../lib/seo';
 import { SITE } from '../site.config';
-
-interface Product {
-  name: string;
-  category: string;
-  blurb: string;
-  search: string;
-  /** Specific Amazon product to link. Falls back to a tagged search when absent. */
-  asin?: string;
-  /** Short "best for" use case, shown under the blurb. */
-  useCase?: string;
-}
-
-const site = Astro.site;
-const products = productsData as Product[];
-const tag = SITE.amazonAssociateTag.trim();
-const amazonLink = (search: string) =>
-  `https://www.amazon.com/s?k=${encodeURIComponent(search)}${
-    tag ? `&tag=${encodeURIComponent(tag)}` : ''
-  }`;
-const productLink = (p: Product) =>
-  p.asin
-    ? // `ref=nosim` stops Amazon's canonical redirect from stripping the ?tag=
-      // associate ID, so the tag survives the click and the visit is tracked.
-      `https://www.amazon.com/dp/${encodeURIComponent(p.asin)}/ref=nosim${
-        tag ? `?tag=${encodeURIComponent(tag)}` : ''
-      }`
-    : amazonLink(p.search);
-
-const order = [
-  'Sound & noise',
-  'Light & visual',
-  'Calming & pressure',
-  'Movement & body',
-  'Chewing & oral',
-  'Fidget & focus',
-  'Calm-down & regulation',
-  'Tactile & sensory play',
-  'Communication & learning',
-  'Bedtime & sleep',
-  'Clothing & comfort',
-  'Mealtime',
-  'Out-and-about',
-  'Safety & peace of mind',
-];
-const groups = order
-  .map((category) => ({
-    category,
-    items: products.filter((p) => p.category === category),
-  }))
-  .filter((g) => g.items.length > 0);
-
-const description =
-  `Sensory gear we recommend for sensory-sensitive and autistic kids — ` +
-  `noise-reducing headphones, weighted lap pads, fidgets, and more, and why each helps.`;
-const jsonLd = [
-  breadcrumbSchema([
-    { name: 'Home', url: absoluteUrl('/', site) },
-    { name: 'Sensory gear', url: absoluteUrl('/sensory-gear/', site) },
-  ]),
-];
+const description = 'Build a sensory outing kit from familiar items. Compare fit, sound, portability and no-purchase alternatives before choosing equipment.';
+const jsonLd = [breadcrumbSchema([
+  { name: 'Home', url: absoluteUrl('/', Astro.site) },
+  { name: 'Sensory kit guide', url: absoluteUrl('/sensory-gear/', Astro.site) },
+])];
 ---
+<BaseLayout title={formatTitle('Sensory Outing Kit: What to Check Before Buying')} description={description} canonicalPath="/sensory-gear/" jsonLd={jsonLd}>
+  <article class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Sensory kit guide' }]} />
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">Build a sensory outing kit that fits your child</h1>
+    <p class="mt-4 max-w-3xl text-lg leading-relaxed text-muted">Start with one situation you want to plan for: a wait, unfamiliar lighting, noise, or asking for a break. Choose familiar items your child already uses and keep the bag small enough to carry when you need to leave.</p>
+    <p class="mt-5 rounded-card border border-line bg-surface-soft p-4 text-sm leading-relaxed text-muted">This is a comparison of product types and practical packing choices. We have not personally tested or independently verified the products in retailer search results. General NIDCD and CPSC guidance linked below was checked September 7, 2026; that check does not certify an individual product.</p>
 
-<BaseLayout
-  title={formatTitle('Sensory Gear We Recommend')}
-  description={description}
-  canonicalPath="/sensory-gear/"
-  jsonLd={jsonLd}
->
-  <div class="mx-auto max-w-4xl px-4 py-10 sm:px-6">
-    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'Sensory gear' }]} />
+    <section class="mt-10 max-w-3xl space-y-4 leading-relaxed text-muted">
+      <h2 class="text-2xl font-bold text-ink">Before adding anything to the bag</h2>
+      <ol class="list-decimal space-y-3 pl-5">
+        <li><strong class="text-ink">Ask about the venue.</strong> Check bag restrictions, available loans, a place for breaks, and whether you can return after stepping outside.</li>
+        <li><strong class="text-ink">Offer a choice at home.</strong> Let your child decide whether an item's feel, sound, weight, or appearance is acceptable before relying on it during a trip.</li>
+        <li><strong class="text-ink">Check the actual product.</strong> Read age limits, fit instructions, care requirements, and current recall information. A category name such as “sensory” does not establish suitability.</li>
+        <li><strong class="text-ink">Keep an alternative.</strong> Decide how you will take a break or finish if the item does not help. Equipment is only one part of the outing.</li>
+      </ol>
+    </section>
 
-    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-      Sensory gear we recommend
-    </h1>
-    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
-      The small kit that makes a hard outing manageable — headphones for a loud
-      room, something to fidget with in a queue, a weighted lap pad for a haircut.
-      Here's the gear we'd actually pack, grouped by what it helps with.
-    </p>
+    <section class="mt-10 max-w-3xl space-y-4 leading-relaxed text-muted">
+      <h2 class="text-2xl font-bold text-ink">Hearing protection and toy selection</h2>
+      <p><a class="link-underline text-brand-strong" href="https://www.nidcd.nih.gov/health/protect-your-childs-hearing" target="_blank" rel="noopener noreferrer">NIDCD's hearing guide</a> explains that protection depends on proper fit and use; no protector blocks all sound. Music headphones and protective earmuffs serve different purposes, so check the manufacturer's stated use instead of relying on an appearance or marketing label.</p>
+      <p><a class="link-underline text-brand-strong" href="https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Toys" target="_blank" rel="noopener noreferrer">CPSC's toy guidance</a> covers age suitability and small parts. We do not include water beads in this kit: <a class="link-underline text-brand-strong" href="https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Water-Beads-Information-Center" target="_blank" rel="noopener noreferrer">CPSC warns about serious ingestion hazards</a>. This guide also does not prescribe weighted, compression, oral-motor, or sleep equipment; suitability needs an individual assessment beyond a shopping list.</p>
+    </section>
 
-    <div
-      class="mt-6 rounded-card border border-line bg-brand-soft/40 p-5 text-sm leading-relaxed text-muted"
-    >
-      <p>
-        <span class="font-semibold text-ink">Affiliate disclosure:</span> As an
-        Amazon Associate, {SITE.name} earns from qualifying purchases — at no extra
-        cost to you. Buying through these links is one way to{' '}
-        <a class="link-underline font-medium text-brand-strong" href="/support/"
-          >support the site</a
-        >. We only suggest gear that genuinely helps, and it never affects which
-        places we list. Each link opens the product on Amazon, where you can check
-        the current price and read recent reviews yourself.
-      </p>
-    </div>
+    <section class="mt-10">
+      <h2 class="text-2xl font-bold text-ink">Compare seven simple options</h2>
+      <p class="mt-3 text-sm leading-relaxed text-muted"><strong class="text-ink">Affiliate disclosure:</strong> As an Amazon Associate, {SITE.name} earns from qualifying purchases. The optional links below open retailer searches, which may include ads and unsuitable results. Compare the seller's full details yourself; you can use this guide without buying anything.</p>
+      <div class="mt-6 space-y-5">
+        {products.map((product) => (
+          <section id={product.id} class="scroll-mt-24 rounded-card border border-line bg-surface p-5 sm:p-6">
+            <p class="text-xs font-semibold uppercase tracking-wide text-brand-strong">{product.category}</p>
+            <h3 class="mt-1 text-xl font-semibold text-ink">{product.name}</h3>
+            <p class="mt-2 leading-relaxed text-muted">{product.useCase}.</p>
+            <dl class="mt-4 grid gap-4 sm:grid-cols-2">
+              <div><dt class="font-semibold text-ink">What to check</dt><dd class="mt-1 text-sm leading-relaxed text-muted">{product.blurb}</dd></div>
+              <div><dt class="font-semibold text-ink">Before buying</dt><dd class="mt-1 text-sm leading-relaxed text-muted">{product.alternative}</dd></div>
+            </dl>
+            <a href={productLink(product)} target="_blank" rel="sponsored nofollow noopener noreferrer" class="mt-4 inline-block text-sm font-medium text-brand-strong link-underline">Optional: compare retailer search results →</a>
+          </section>
+        ))}
+      </div>
+    </section>
 
-    {
-      groups.map((group) => (
-        <section class="mt-12">
-          <h2 class="text-2xl font-bold text-ink">{group.category}</h2>
-          <ul class="mt-5 grid gap-4 sm:grid-cols-2">
-            {group.items.map((p) => (
-              <li class="flex h-full flex-col rounded-card border border-line bg-surface p-5">
-                <h3 class="text-lg font-semibold text-ink">{p.name}</h3>
-                <div class="flex-1">
-                  <p class="mt-1.5 leading-relaxed text-muted">{p.blurb}</p>
-                  {p.useCase && (
-                    <p class="mt-2 text-sm leading-relaxed text-muted">
-                      <span class="font-semibold text-ink">Best for:</span> {p.useCase}
-                    </p>
-                  )}
-                </div>
-                <a
-                  href={productLink(p)}
-                  target="_blank"
-                  rel="sponsored nofollow noopener noreferrer"
-                  class="mt-4 inline-flex w-fit items-center rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-strong"
-                >
-                  View on Amazon →
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))
-    }
-
-    <div class="mt-14 max-w-3xl space-y-5 leading-relaxed text-muted prose-readable">
-      <h2 class="text-xl font-bold text-ink">How we choose</h2>
-      <p>
-        These are everyday sensory tools that parents and occupational therapists
-        commonly reach for. The specific products we link are well-reviewed,
-        widely available starting points — not brands we've been paid to feature.
-        Read recent reviews and compare options to pick what fits your child and
-        your budget. Every child is different; what calms one can overwhelm
-        another, so introduce new gear gently and follow your child's lead.
-      </p>
-    </div>
-  </div>
+    <section class="mt-10 max-w-3xl space-y-4 leading-relaxed text-muted">
+      <h2 class="text-2xl font-bold text-ink">Review the kit after a visit</h2>
+      <p>Record what your child chose to use, what stayed in the bag, and what was difficult to reach. Remove unnecessary items before the next outing. Check anything worn or damaged against its instructions and keep communication tools available even if the rest of the kit changes.</p>
+      <p>For a correction to this guide, <a href="/contact/" class="link-underline text-brand-strong">send us the detail and its official source</a>. Our <a href="/how-we-verify/" class="link-underline text-brand-strong">research process</a> explains what a source check means. Then <a href="/cities/" class="link-underline text-brand-strong">find an outing near you</a> and check the venue's specific accommodations.</p>
+    </section>
+  </article>
 </BaseLayout>

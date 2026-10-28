@@ -1,0 +1,8 @@
+.mcp.json
+.agents
+.claude
+docs
+outreach-prospects.csv
+.astro
+node_modules
+dist

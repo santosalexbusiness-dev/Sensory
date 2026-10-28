@@ -6,7 +6,7 @@ import { breadcrumbSchema } from '../lib/seo';
 import { SITE } from '../site.config';
 
 const site = Astro.site;
-const description = `How ${SITE.name} verifies listings: the checklist every sensory-friendly place is checked against, what "last verified" means, and how often we re-check.`;
+const description = `How ${SITE.name} documents venues, labels source research and direct verification, separates national programs, and handles corrections.`;
 const jsonLd = [
   breadcrumbSchema([
     { name: 'Home', url: absoluteUrl('/', site) },
@@ -59,18 +59,22 @@ const checklist = [
       </ul>
 
       <h2 class="pt-2 text-xl font-bold text-ink">
-        What "last verified" means
+        Source research and direct verification
       </h2>
       <p>
-        Every listing shows a "Last verified" date — the day we most recently
-        checked the details against the venue's official page or a recognized
-        certification or source, which we link on the listing. We have not
-        personally visited every place, so most listings are marked
-        "Documented — confirm locally." Treat them as a well-researched starting
+        A "Source checked" date records the research date saved with a documented
+        listing. It is not a visit date or proof that a program is running today.
+        "Verified" is reserved for entries explicitly marked as directly confirmed.
+        An entry without an explicit verification status is treated as documented.
+        Most listings are marked "Documented — confirm locally." Treat them as a research starting
         point, and confirm the specifics — especially the exact dates and times
         for sensory hours or relaxed performances — directly with the venue
         before you go.
       </p>
+
+      <h2 class="pt-2 text-xl font-bold text-ink">Local venues and national programs</h2>
+      <p>City pages and nearby results use individually sourced venues with a local address. A national chain’s program appears separately on its category page: it is a route to the official program finder, not evidence of participation by every branch. Dates calculated from a recurring schedule are planning prompts, not confirmed bookings.</p>
+      <p>We retain small city pages when they contain useful local information, label their limited coverage and keep them out of our search sitemap until they have several complete entries. This is an editorial rule for this directory, not a Google approval requirement.</p>
 
       <h2 class="pt-2 text-xl font-bold text-ink">How often we re-check</h2>
       <p>

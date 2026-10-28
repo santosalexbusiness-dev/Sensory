@@ -2,36 +2,36 @@
 import fs from 'node:fs';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import { hasIndexableLocalContent, isSourcedLocalListing } from './src/lib/content-policy.mjs';
 
-// ── Thin-content exclusion for the sitemap ───────────────────────────────────
-// listings.json holds only hand-researched LOCAL venues; national chain
-// programs live in programs.json and are expanded across cities at build time.
-// So a city/category page has original content exactly when listings.json has
-// an entry for it. Pages built purely from chain programs are near-duplicates
-// of every other city's page — they stay live for visitors but are `noindex`
-// (see src/lib/data.ts → hasLocalListing) and must not be submitted here.
+// Pages and sitemap share one editorial policy. National programs never count
+// as local venues, and sparse retained pages remain outside the sitemap.
 /** @param {string} p @returns {any[]} */
 const readJson = (p) => JSON.parse(fs.readFileSync(new URL(p, import.meta.url), 'utf8'));
-/** @type {{ category: string, citySlug: string }[]} */
-const localListings = readJson('./src/data/listings.json');
+const localListings = readJson('./src/data/listings.json').filter(isSourcedLocalListing);
+const cities = readJson('./src/data/cities.json');
 const categorySlugs = new Set(
   readJson('./src/data/categories.json').map((/** @type {{slug: string}} */ c) => c.slug),
 );
-const citiesWithLocal = new Set(localListings.map((l) => l.citySlug));
-const categoryCitiesWithLocal = new Set(
-  localListings.map((l) => `${l.category}/${l.citySlug}`),
-);
 
 /**
- * False for pages whose content is only national chain programs.
+ * Apply the same local-content rule used by page robots tags.
  * @param {string} pathname
  */
 function hasOriginalContent(pathname) {
   const parts = pathname.split('/').filter(Boolean);
-  if (parts.length !== 2) return true; // not a city/category-city page
+  if (['/search/', '/404.html', '/google832ac6a0b63ad660.html'].includes(pathname)) return false;
+  if (parts.length !== 2) return true;
   const [first, second] = parts;
-  if (first === 'cities') return citiesWithLocal.has(second);
-  if (categorySlugs.has(first)) return categoryCitiesWithLocal.has(`${first}/${second}`);
+  if (first === 'cities') return hasIndexableLocalContent(localListings.filter((l) => l.citySlug === second));
+  if (categorySlugs.has(first)) return hasIndexableLocalContent(
+    localListings.filter((l) => l.category === first && l.citySlug === second),
+  );
+  if (first === 'states') {
+    const stateCities = new Set(cities.filter((city) => !city.country &&
+      city.state.toLowerCase().replace(/[^a-z]+/g, '-') === second).map((city) => city.slug));
+    return hasIndexableLocalContent(localListings.filter((l) => stateCities.has(l.citySlug)));
+  }
   return true;
 }
 

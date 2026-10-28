@@ -14,6 +14,12 @@ interface Props {
   image?: string;
   /** Override the canonical path (defaults to the current URL path). */
   canonicalPath?: string;
+  /**
+   * Omit the canonical link entirely. Only for pages that aren't a real,
+   * addressable resource — the 404, which is served under every unmatched URL
+   * and so has no canonical of its own. Ordinary `noindex` pages keep theirs.
+   */
+  noCanonical?: boolean;
   type?: 'website' | 'article';
   noindex?: boolean;
   /** JSON-LD objects to embed as <script type="application/ld+json">. */
@@ -25,6 +31,7 @@ const {
   description,
   image = '/og-default.png',
   canonicalPath,
+  noCanonical = false,
   type = 'website',
   noindex = false,
   jsonLd = [],
@@ -33,6 +40,10 @@ const {
 const site = Astro.site;
 const canonicalURL = absoluteUrl(canonicalPath ?? Astro.url.pathname, site);
 const ogImage = absoluteUrl(image, site);
+// Verification is separate from serving ads. Utility, search and incomplete
+// directory pages must never become Auto ads inventory.
+const adFreePaths = new Set(['/search/', '/contact/', '/privacy/', '/support/', '/about/', '/how-we-verify/', '/cities/', '/states/', '/outing-planner/', '/404/']);
+const canServeAds = SITE.adsenseAdsEnabled && !noindex && !noCanonical && !adFreePaths.has(Astro.url.pathname);
 ---
 
 <meta charset="utf-8" />
@@ -45,7 +56,10 @@ const ogImage = absoluteUrl(image, site);
   )
 }
 {
-  SITE.adsensePublisherId && (
+  SITE.adsensePublisherId && <meta name="google-adsense-account" content={SITE.adsensePublisherId} />
+}
+{
+  SITE.adsensePublisherId && canServeAds && (
     <script
       is:inline
       async
@@ -57,8 +71,8 @@ const ogImage = absoluteUrl(image, site);
 
 <title>{title}</title>
 <meta name="description" content={description} />
-<link rel="canonical" href={canonicalURL} />
-<meta name="robots" content={noindex ? 'noindex, nofollow' : 'index, follow'} />
+{!noCanonical && <link rel="canonical" href={canonicalURL} />}
+<meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
 <meta name="theme-color" content="#1f5e54" />
 
 {/* Open Graph */}
@@ -66,7 +80,7 @@ const ogImage = absoluteUrl(image, site);
 <meta property="og:site_name" content={SITE.name} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:url" content={canonicalURL} />
+{!noCanonical && <meta property="og:url" content={canonicalURL} />}
 <meta property="og:image" content={ogImage} />
 <meta property="og:locale" content={SITE.locale} />
 

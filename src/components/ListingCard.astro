@@ -9,10 +9,11 @@ interface Props {
 }
 const { listing } = Astro.props;
 
-const isProgram = !!listing.operator;
 const hasPhone = listing.phone.trim().length > 0;
 const hasHours = listing.hours.trim().length > 0;
-const hasEvents = !!listing.sensoryEventDates?.length;
+const today = new Date().toISOString().slice(0, 10);
+const upcomingDates = (listing.sensoryEventDates ?? []).filter((date) => date.slice(0, 10) >= today);
+const hasEvents = upcomingDates.length > 0;
 
 const telHref = hasPhone ? `tel:${listing.phone.replace(/[^+\d]/g, '')}` : '';
 const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -47,20 +48,14 @@ const dateLabel = status === 'documented' ? 'Source checked' : 'Last verified';
   </header>
 
   <p class="mt-1 text-sm text-muted">
-    {
-      isProgram ? (
-        <span>{listing.address}</span>
-      ) : (
-        <a
-          class="link-underline hover:text-brand-strong"
-          href={mapsHref}
-          target="_blank"
-          rel="noopener"
-        >
-          {listing.address}
-        </a>
-      )
-    }
+    <a
+      class="link-underline hover:text-brand-strong"
+      href={mapsHref}
+      target="_blank"
+      rel="noopener"
+    >
+      {listing.address}
+    </a>
   </p>
 
   <h4 class="sr-only">Sensory features</h4>
@@ -115,7 +110,7 @@ const dateLabel = status === 'documented' ? 'Source checked' : 'Last verified';
       hasEvents && (
         <div class="sm:col-span-2">
           <dt class="font-semibold text-ink">Sensory-friendly dates</dt>
-          <dd class="text-muted">{listing.sensoryEventDates!.join('; ')}</dd>
+          <dd class="text-muted">{upcomingDates.join('; ')}</dd>
         </div>
       )
     }
@@ -123,7 +118,7 @@ const dateLabel = status === 'documented' ? 'Source checked' : 'Last verified';
 
   <div class="mt-5 rounded-lg border-l-4 border-brand bg-surface-soft p-4">
     <p class="text-sm leading-relaxed">
-      <span class="font-semibold text-ink">Parent tip:</span>
+      <span class="font-semibold text-ink">Planning tip:</span>
       <span class="text-muted">{listing.parentTip}</span>
     </p>
   </div>
@@ -147,4 +142,8 @@ const dateLabel = status === 'documented' ? 'Source checked' : 'Last verified';
       {dateLabel} {formatDate(listing.lastVerified)}
     </span>
   </footer>
+  <p class="mt-3 text-xs leading-relaxed text-muted">
+    Source-linked information; schedules, prices, and accommodations may change.
+    Confirm current arrangements with the venue before visiting.
+  </p>
 </article>

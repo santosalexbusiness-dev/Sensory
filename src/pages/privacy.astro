@@ -6,11 +6,10 @@ import { breadcrumbSchema } from '../lib/seo';
 import { SITE } from '../site.config';
 
 const site = Astro.site;
-const lastUpdated = 'June 18, 2026';
+const lastUpdated = 'September 10, 2026';
 const description =
-  `Privacy policy and disclaimer for ${SITE.name}: what the site does and ` +
-  `doesn't collect, how the "find near you" search works, and the limits of ` +
-  `the information here.`;
+  `Privacy policy and disclaimer for ${SITE.name}: what we do and don't ` +
+  `collect, how "find near you" works, and the limits of what's here.`;
 const jsonLd = [
   breadcrumbSchema([
     { name: 'Home', url: absoluteUrl('/', site) },
@@ -51,8 +50,9 @@ const jsonLd = [
       <p>
         We use Vercel Web Analytics, a privacy-friendly, cookieless tool, to count
         visits — which pages are popular and roughly where traffic comes from. It
-        does not use cookies, track you across the web, sell your data, or identify
-        you personally, so the site needs no cookie-consent banner.
+        does not use analytics cookies or track visitors across different sites.
+        Vercel also hosts this site and processes requests to deliver its pages.
+        See <a class="link-underline text-brand-strong" href="https://vercel.com/docs/analytics/privacy-policy">Vercel’s analytics privacy explanation</a>.
       </p>
 
       <h2 class="pt-2 text-xl font-bold text-ink">The "find near you" search</h2>
@@ -64,9 +64,9 @@ const jsonLd = [
         <li class="flex gap-3">
           <span aria-hidden="true" class="mt-1 font-bold text-brand-strong">•</span>
           <span>
-            <strong class="text-ink">Zip code:</strong> to turn a zip code into an
-            approximate location, your browser sends just that zip code to a
-            third-party lookup service (Zippopotam.us). We don't store it.
+            <strong class="text-ink">Zip / postal code:</strong> to turn a zip or
+            postal code into an approximate location, your browser sends just that
+            code to a third-party lookup service (Zippopotam.us). We don't store it.
           </span>
         </li>
         <li class="flex gap-3">
@@ -86,8 +86,37 @@ const jsonLd = [
         Sensory gear page uses Amazon affiliate links: if you buy something after
         clicking one, we may earn a small commission at no extra cost to you. We
         disclose this on that page, and it never changes which places we list or how
-        they're ranked. We don't run display ads.
+        they're ranked.
       </p>
+      <p>
+        We use Google AdSense code on eligible content pages. Ads can appear
+        only when Google approves the site and enables serving. Our printable
+        outing planner and search results do not load advertising code.
+        Google's consent message gives visitors in the EEA, UK and Switzerland
+        choices to consent, decline, or manage their options. Where available,
+        use the privacy and cookie settings link to revisit those choices.
+        Google advertising can use cookies, web
+        beacons, IP addresses and other identifiers to deliver and measure ads,
+        and third parties may read or place cookies. Learn <a class="link-underline text-brand-strong" href="https://policies.google.com/technologies/partner-sites">how Google uses information from partner sites</a>.
+      </p>
+      <h2 class="pt-2 text-xl font-bold text-ink">Email updates</h2>
+      <p>
+        If you use an email signup form, your email address is sent to Kit
+        (formerly ConvertKit) to manage subscriptions and
+        deliver updates. Subscribing is optional. You can unsubscribe using the
+        link in an email or contact us to request removal. Kit processes data
+        according to its <a class="link-underline text-brand-strong" href="https://kit.com/privacy">privacy policy</a>.
+      </p>
+      <h2 class="pt-2 text-xl font-bold text-ink">Outing planner</h2>
+      <p>
+        The outing planner keeps your typed notes in the current page only.
+        It does not send them to us or store them in browser storage, and the
+        planner page does not load analytics or ad scripts. Copying uses your
+        device clipboard; printing or saving a PDF uses your browser. You choose
+        where to keep or share that copy. Closing the page discards the entries.
+      </p>
+      <h2 class="pt-2 text-xl font-bold text-ink">Maps</h2>
+      <p>City maps load map tiles from OpenStreetMap when they come into view. Your browser sends tile requests, including its IP address and requested map area, to that provider. See <a class="link-underline text-brand-strong" href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Foundation’s privacy policy</a>.</p>
 
       <h2 class="pt-2 text-xl font-bold text-ink">Children's privacy</h2>
       <p>
@@ -97,7 +126,7 @@ const jsonLd = [
 
       <h2 class="pt-2 text-xl font-bold text-ink">Disclaimer</h2>
       <p>
-        {SITE.name} shares practical, lived-experience and well-researched
+        {SITE.name} shares practical planning and source-based
         information — it is <strong class="text-ink"
           >not medical, legal, or professional advice</strong
         >, and we are not medical professionals.

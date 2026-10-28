@@ -64,6 +64,68 @@ const rows: Row[] = listings
       a.categoryName.localeCompare(b.categoryName),
   );
 
+/**
+ * Compact, dictionary-encoded payload for the client.
+ *
+ * Server-rendering all ~3,700 rows as markup produced a 4.4 MB page with
+ * ~37,000 DOM nodes, and every filter change re-appended all of them. Instead
+ * we ship the rows as data and render only the handful actually on screen
+ * (see RENDER_CAP in the client script below). Category names, city labels and
+ * sensory-feature strings repeat heavily across rows, so they are interned into
+ * lookup tables and referenced by index.
+ */
+const catSlugs = categories.map((c) => c.slug);
+const catNames = categories.map((c) => c.name);
+
+const placeLabels: string[] = [];
+const placeIndex = new Map<string, number>();
+const featureLabels: string[] = [];
+const featureIndex = new Map<string, number>();
+
+const intern = (
+  value: string,
+  table: string[],
+  index: Map<string, number>,
+): number => {
+  const existing = index.get(value);
+  if (existing !== undefined) return existing;
+  const id = table.push(value) - 1;
+  index.set(value, id);
+  return id;
+};
+
+/** [id, name, categoryIdx, placeIdx, lat, lng, featureIdxs, href] */
+type PackedRow = [string, string, number, number, number, number, number[], string];
+
+const packedRows: PackedRow[] = rows.map((r) => {
+  const catIdx = catSlugs.indexOf(r.categorySlug);
+  // A -1 here would make the row invisible in every filter with no error, so
+  // fail the build instead of shipping a silently missing listing.
+  if (catIdx < 0) {
+    throw new Error(
+      `search: listing "${r.id}" has category "${r.categorySlug}", which is not in categories.json`,
+    );
+  }
+  return [
+    r.id,
+    r.name,
+    catIdx,
+    intern(`${r.cityName}, ${r.stateAbbr}`, placeLabels, placeIndex),
+    Number(r.lat.toFixed(4)),
+    Number(r.lng.toFixed(4)),
+    r.features.map((f) => intern(f, featureLabels, featureIndex)),
+    r.href,
+  ];
+});
+
+const searchPayload = {
+  cats: catSlugs,
+  catNames,
+  places: placeLabels,
+  feats: featureLabels,
+  rows: packedRows,
+};
+
 // Calendar data (recurring times + specific dates) keyed by listing id. The
 // search-page calendar is rebuilt from whichever listings are within the radius.
 const hrefById: Record<string, string> = Object.fromEntries(
@@ -71,7 +133,7 @@ const hrefById: Record<string, string> = Object.fromEntries(
 );
 const calData: Record<
   string,
-  { name: string; recurrence: unknown[]; dates: string[]; href: string }
+  { name: string; recurrence: unknown[]; dates: string[]; href: string; scheduleText: string }
 > = {};
 for (const l of listings) {
   const recurrence = l.recurrence ?? [];
@@ -82,15 +144,17 @@ for (const l of listings) {
       recurrence,
       dates,
       href: hrefById[l.id] || l.website,
+      scheduleText: l.schedule ?? l.hours ?? '',
     };
   }
 }
 
 const description =
-  'Enter your zip code to find sensory-friendly and autism-friendly places for kids near you — movies, museums, play, haircuts, and more, sorted by distance.';
+  'Enter your zip or postal code to find sensory-friendly and autism-friendly places for kids near you — movies, museums, play, and more, sorted by distance.';
 ---
 
 <BaseLayout
+  noindex={true}
   title={formatTitle('Find Sensory-Friendly Places Near You')}
   description={description}
   canonicalPath="/search/"
@@ -101,8 +165,9 @@ const description =
         Find sensory-friendly places near you
       </h1>
       <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
-        Enter your zip code to see sensory-friendly places for kids sorted by
-        distance. You can also filter by what you're looking for.
+        Enter your zip or postal code to see sensory-friendly places for kids
+        sorted by approximate distance — US, UK, Canada, and Australia. You can also filter
+        by what you're looking for.
       </p>
     </header>
 
@@ -111,19 +176,21 @@ const description =
       <div class="flex flex-wrap items-end gap-4">
         <div>
           <label for="zip" class="block text-sm font-semibold text-ink">
-            Zip code
+            Zip / postal code
           </label>
           <input
             id="zip"
             name="zip"
             type="text"
-            inputmode="numeric"
             autocomplete="postal-code"
-            pattern="[0-9]{5}"
-            maxlength="5"
-            placeholder="e.g. 78205"
-            class="mt-1 w-40 rounded-lg border border-line bg-canvas px-3 py-2 text-ink placeholder:text-muted/70 focus:border-brand"
+            maxlength="8"
+            placeholder="e.g. 78205 or SW1A"
+            aria-describedby="zip-help"
+            class="mt-1 w-44 rounded-lg border border-line bg-canvas px-3 py-2 text-ink placeholder:text-muted/70 focus:border-brand"
           />
+          <p id="zip-help" class="mt-1 text-xs text-muted">
+            US, UK, Canada, or Australia
+          </p>
         </div>
         <div>
           <label for="radius" class="block text-sm font-semibold text-ink">
@@ -185,7 +252,14 @@ const description =
     </form>
 
     <p id="result-summary" class="mt-6 text-sm font-medium text-ink" aria-live="polite">
-      Showing all {rows.length} places. Enter a zip code to find what's nearest you.
+      {rows.length} places listed. Enter a zip or postal code to find what's nearest you.
+    </p>
+
+    {/* Shown alongside a lookup failure, so "browse by city" is always a real link. */}
+    <p id="search-fallback" class="mt-2 text-sm text-muted" hidden>
+      <a class="link-underline font-medium text-brand-strong" href="/cities/">
+        Browse every city instead →
+      </a>
     </p>
 
     {/* Calendar — rebuilt from the places within the searched radius */}
@@ -208,45 +282,30 @@ const description =
       set:html={JSON.stringify(calData)}
     />
 
-    <ul id="results" class="mt-4 grid gap-3">
-      {
-        rows.map((row, i) => (
-          <li
-            class="result-item"
-            data-id={row.id}
-            data-cat={row.categorySlug}
-            data-lat={row.lat}
-            data-lng={row.lng}
-            data-order={i}
-          >
-            <a
-              href={row.href}
-              class="block rounded-card border border-line bg-surface p-4 transition-colors hover:border-brand hover:bg-brand-soft/20"
-            >
-              <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                <span class="font-semibold text-ink">{row.name}</span>
-                <span class="result-distance text-sm font-medium text-brand-strong" hidden />
-              </div>
-              <p class="mt-0.5 text-sm text-muted">
-                {row.categoryName} · {row.cityName}, {row.stateAbbr}
-              </p>
-              <ul class="mt-2 flex flex-wrap gap-1.5">
-                {row.features.map((f) => (
-                  <li class="rounded-full bg-brand-soft px-2.5 py-0.5 text-xs font-medium text-brand-strong">
-                    {f}
-                  </li>
-                ))}
-              </ul>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <script
+      type="application/json"
+      id="search-rows-data"
+      set:html={JSON.stringify(searchPayload)}
+    />
+
+    <ul id="results" class="mt-4 grid gap-3"></ul>
+
+    <p id="results-more" class="mt-4 text-sm text-muted" hidden></p>
+
+    <noscript>
+      <p class="mt-4 rounded-card border border-line bg-surface p-6 text-muted">
+        Distance search needs JavaScript. You can still
+        <a class="link-underline font-medium text-brand-strong" href="/cities/">
+          browse every city
+        </a>
+        — each city page lists the sensory-friendly places near it.
+      </p>
+    </noscript>
 
     <p id="no-results" class="mt-4 rounded-card border border-line bg-surface p-6 text-muted" hidden>
       No places match within that distance yet. Try a larger radius, or
       <a class="link-underline font-medium text-brand-strong" href="/cities/">browse by city</a>.
-      We add new verified listings regularly.
+      We add new listings regularly.
     </p>
   </div>
 </BaseLayout>
@@ -278,10 +337,40 @@ const description =
     document.querySelectorAll<HTMLInputElement>('.cat-filter'),
   );
 
+  /** How many result cards we put in the DOM at once. Results are distance-sorted,
+   *  so the nearest ones are always the ones shown. */
+  const RENDER_CAP = 60;
+
+  type PackedRow = [string, string, number, number, number, number, number[], string];
+  interface SearchPayload {
+    cats: string[];
+    catNames: string[];
+    places: string[];
+    feats: string[];
+    rows: PackedRow[];
+  }
+
   if (form && zipInput && radiusSel && resultsEl && summaryEl && noResultsEl) {
-    const items = Array.from(
-      resultsEl.querySelectorAll<HTMLLIElement>('.result-item'),
-    );
+    const rowsDataEl = document.getElementById('search-rows-data');
+    const empty: SearchPayload = { cats: [], catNames: [], places: [], feats: [], rows: [] };
+    // A throw here would take the whole script down — no submit handler, no
+    // Clear, no render — and the page would sit on its server-rendered text
+    // forever. Fail loudly to the visitor instead, and give them a way out.
+    let payload: SearchPayload = empty;
+    let payloadOk = false;
+    try {
+      const parsed = JSON.parse(rowsDataEl?.textContent || 'null');
+      if (parsed && Array.isArray(parsed.rows)) {
+        payload = parsed;
+        payloadOk = true;
+      }
+    } catch {
+      /* handled below */
+    }
+    const allRows = payload.rows || [];
+    const moreEl = document.getElementById('results-more');
+    const fallbackEl = document.getElementById('search-fallback');
+
     let center: { lat: number; lng: number; label: string } | null = null;
 
     const calSection = document.getElementById('search-calendar');
@@ -294,44 +383,97 @@ const description =
     const activeCats = () =>
       new Set(catFilters.filter((c) => c.checked).map((c) => c.value));
 
+    /** Build one result card. Kept as DOM calls (not innerHTML) so listing
+     *  names and feature text can never be interpreted as markup. */
+    function buildCard(row: PackedRow, dist: number | null): HTMLLIElement {
+      const [, name, catIdx, placeIdx, , , featIdxs, href] = row;
+
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = href;
+      a.className =
+        'block rounded-card border border-line bg-surface p-4 transition-colors hover:border-brand hover:bg-brand-soft/20';
+
+      const head = document.createElement('div');
+      head.className = 'flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1';
+      const nameEl = document.createElement('span');
+      nameEl.className = 'font-semibold text-ink';
+      nameEl.textContent = name;
+      head.appendChild(nameEl);
+      if (dist !== null) {
+        const distEl = document.createElement('span');
+        distEl.className = 'text-sm font-medium text-brand-strong';
+        distEl.textContent = `${dist < 10 ? dist.toFixed(1) : Math.round(dist)} mi`;
+        head.appendChild(distEl);
+      }
+
+      const meta = document.createElement('p');
+      meta.className = 'mt-0.5 text-sm text-muted';
+      meta.textContent = `${payload.catNames[catIdx] ?? ''} · ${payload.places[placeIdx] ?? ''}`;
+
+      const feats = document.createElement('ul');
+      feats.className = 'mt-2 flex flex-wrap gap-1.5';
+      for (const fi of featIdxs) {
+        const f = document.createElement('li');
+        f.className =
+          'rounded-full bg-brand-soft px-2.5 py-0.5 text-xs font-medium text-brand-strong';
+        f.textContent = payload.feats[fi] ?? '';
+        feats.appendChild(f);
+      }
+
+      a.append(head, meta, feats);
+      li.appendChild(a);
+      return li;
+    }
+
+    /** Show or hide the standing 'browse every city' escape hatch. */
+    const showFallback = (on: boolean) => { if (fallbackEl) fallbackEl.hidden = !on; };
+
     function render() {
+      if (!payloadOk) {
+        showFallback(true);
+        summaryEl!.textContent =
+          "Something went wrong loading the list of places. Reload the page, or browse by city instead.";
+        resultsEl!.replaceChildren();
+        if (moreEl) moreEl.hidden = true;
+        noResultsEl!.hidden = false;
+        return;
+      }
+      showFallback(false);
       const cats = activeCats();
       const radius = Number(radiusSel!.value);
-      let visible = 0;
-      const visibleIds: string[] = [];
 
-      const scored = items.map((li) => {
-        const inCat = cats.has(li.dataset.cat || '');
-        const lat = Number(li.dataset.lat);
-        const lng = Number(li.dataset.lng);
-        const dist = center ? haversine(center.lat, center.lng, lat, lng) : null;
-        const distEl = li.querySelector<HTMLElement>('.result-distance');
-        if (dist !== null && distEl) {
-          distEl.textContent = `${dist < 10 ? dist.toFixed(1) : Math.round(dist)} mi`;
-          distEl.hidden = false;
-        } else if (distEl) {
-          distEl.hidden = true;
-        }
-        const show = inCat && (dist === null || dist <= radius);
-        li.hidden = !show;
-        if (show) {
-          visible++;
-          visibleIds.push(li.dataset.id || '');
-        }
-        return { li, dist };
-      });
-
-      // Sort by distance when a center is set; otherwise keep original order.
-      const order = scored.slice();
-      if (center) {
-        order.sort((a, b) => (a.dist ?? Infinity) - (b.dist ?? Infinity));
-      } else {
-        order.sort(
-          (a, b) =>
-            Number(a.li.dataset.order) - Number(b.li.dataset.order),
-        );
+      // Score every row, but only the matches ever become DOM nodes.
+      const matches: { row: PackedRow; dist: number | null }[] = [];
+      for (const row of allRows) {
+        if (!cats.has(payload.cats[row[2]])) continue;
+        const dist = center ? haversine(center.lat, center.lng, row[4], row[5]) : null;
+        if (dist !== null && dist > radius) continue;
+        matches.push({ row, dist });
       }
-      order.forEach(({ li }) => resultsEl!.appendChild(li));
+      if (center) matches.sort((a, b) => (a.dist ?? Infinity) - (b.dist ?? Infinity));
+
+      const visible = matches.length;
+      const visibleIds = matches.map((m) => m.row[0]);
+
+      const shown = matches.slice(0, RENDER_CAP);
+      const frag = document.createDocumentFragment();
+      for (const m of shown) frag.appendChild(buildCard(m.row, m.dist));
+      resultsEl!.replaceChildren(frag);
+
+      if (moreEl) {
+        const hidden = visible - shown.length;
+        moreEl.hidden = hidden <= 0;
+        // Matches are distance-sorted, so the ones on screen are always the
+        // nearest: a smaller radius only ever returns a prefix of them. Don't
+        // suggest it — unticking a category, or opening a city page, is what
+        // actually reaches the rest.
+        moreEl.textContent = hidden > 0
+          ? center
+            ? `Showing the ${shown.length} closest of ${visible}. Untick a category above to narrow the list, or open a city page to see everything there.`
+            : `Showing the first ${shown.length} of ${visible}. Enter a zip or postal code above to see what's nearest you.`
+          : '';
+      }
 
       noResultsEl!.hidden = visible > 0;
       if (center) {
@@ -339,9 +481,9 @@ const description =
           visible === 1 ? 'place' : 'places'
         } within ${radius} miles of ${center.label}.`;
       } else {
-        summaryEl!.textContent = `Showing ${visible} ${
+        summaryEl!.textContent = `${visible} ${
           visible === 1 ? 'place' : 'places'
-        }. Enter a zip code to find what's nearest you.`;
+        } listed. Enter a zip or postal code to find what's nearest you.`;
       }
       if (resetBtn) resetBtn.hidden = !center;
       renderCalendar(visibleIds);
@@ -383,27 +525,111 @@ const description =
       }
     }
 
+    /**
+     * Candidate lookups for a typed code, most likely first.
+     *
+     * The geocoder covers US, UK, Canada and Australia. A three-character code
+     * like "M5V" is a valid Canadian FSA *and* a valid UK outward code, so
+     * ambiguous inputs yield more than one candidate and we try each in turn.
+     * Irish Eircodes are not in the dataset — handled separately below.
+     */
+    function postalCandidates(raw: string): { country: string; code: string }[] {
+      const v = raw.trim().toUpperCase().replace(/\s+/g, ' ');
+      const compact = v.replace(/ /g, '');
+      const out: { country: string; code: string }[] = [];
+      if (/^\d{5}$/.test(v)) out.push({ country: 'us', code: v });
+      if (/^\d{4}$/.test(v)) out.push({ country: 'au', code: v });
+      // Canadian FSA: first three chars of "A1A 1A1" (no D, F, I, O, Q, U, W, Z lead).
+      if (/^[ABCEGHJKLMNPRSTVXY]\d[A-Z]( ?\d[A-Z]\d)?$/.test(v))
+        out.push({ country: 'ca', code: compact.slice(0, 3) });
+      // UK outward code — the "SW1A" of "SW1A 1AA". The inward code is always
+      // three characters, so anything longer than a bare outward code (max 4)
+      // has its last three trimmed. Splitting on the space would not do: people
+      // routinely type the postcode without one.
+      if (/^[A-Z]{1,2}\d[A-Z\d]?( ?\d[A-Z]{2})?$/.test(v))
+        out.push({
+          country: 'gb',
+          code: compact.length > 4 ? compact.slice(0, -3) : compact,
+        });
+      return out;
+    }
+
+    /** True for something that looks like an Irish Eircode ("D02 X285"). */
+    const looksIrish = (raw: string) =>
+      /^[AC-FHKNPRTV-Y]\d[\dW] ?[0-9AC-FHKNPRTV-Y]{4}$/.test(
+        raw.trim().toUpperCase(),
+      );
+
     async function searchZip(zip: string) {
-      if (!/^\d{5}$/.test(zip)) {
-        summaryEl!.textContent = 'Please enter a valid 5-digit US zip code.';
+      const candidates = postalCandidates(zip);
+      if (candidates.length === 0) {
+        summaryEl!.textContent = looksIrish(zip)
+          ? "We can't look up Eircodes yet — pick your city from the full list instead."
+          : 'Enter a US zip code, or a UK, Canadian, or Australian postal code.';
+        showFallback(true);
         return;
       }
+
       summaryEl!.textContent = 'Looking up your area…';
-      try {
-        const res = await fetch(`https://api.zippopotam.us/us/${zip}`);
-        if (!res.ok) throw new Error('not found');
-        const data = await res.json();
-        const place = data.places && data.places[0];
-        center = {
-          lat: Number(place.latitude),
-          lng: Number(place.longitude),
-          label: `${zip} (${place['place name']}, ${place['state abbreviation']})`,
-        };
-        render();
-      } catch {
-        summaryEl!.textContent =
-          "We couldn't find that zip code. Check the digits and try again.";
+
+      // Three outcomes to tell apart: we got a clean "no such code" answer, the
+      // service answered but was broken (5xx / unparseable), or we never
+      // reached it at all. Only the first is the user's problem to fix.
+      let gotCleanAnswer = false;
+      let serviceBroken = false;
+      let found: { lat: number; lng: number; label: string } | null = null;
+
+      for (const { country, code } of candidates) {
+        try {
+          const res = await fetch(`https://api.zippopotam.us/${country}/${code}`);
+          if (res.status >= 500) {
+            serviceBroken = true;
+            continue;
+          }
+          if (!res.ok) {
+            gotCleanAnswer = true; // a real 404: this country has no such code.
+            continue;
+          }
+          const data = await res.json();
+          const place = data.places && data.places[0];
+          if (!place) {
+            gotCleanAnswer = true;
+            continue;
+          }
+          const region = place['state abbreviation'] || place.state || '';
+          // Some postal areas carry very long official names (Canadian FSAs
+          // list every neighbourhood) — keep the label to the first one.
+          const placeName = String(place['place name'] || '')
+            .split('/')[0]
+            // Splitting can leave a parenthesis open ("Downtown Toronto (CN
+            // Tower"); drop the dangling fragment rather than show it.
+            .replace(/\s*\([^)]*$/, '')
+            .trim();
+          found = {
+            lat: Number(place.latitude),
+            lng: Number(place.longitude),
+            label: `${zip.trim().toUpperCase()} (${placeName}${region ? `, ${region}` : ''})`,
+          };
+          break;
+        } catch {
+          // Network/CORS failure, or a non-JSON body from a captive portal.
+          serviceBroken = true;
+        }
       }
+
+      // render() stays outside the try: a bug in rendering must not be caught
+      // here and reported to the user as a bad postal code.
+      if (found) {
+        center = found;
+        render();
+        return;
+      }
+
+      showFallback(true);
+      summaryEl!.textContent =
+        gotCleanAnswer && !serviceBroken
+          ? "We couldn't find that postal code. Check it and try again."
+          : "We couldn't reach the location lookup service just now. Please try again in a moment, or browse by city.";
     }
 
     form.addEventListener('submit', (e) => {
@@ -453,6 +679,11 @@ const description =
     if (presetRadius && ['10', '25', '50', '100'].includes(presetRadius)) {
       radiusSel.value = presetRadius;
     }
+
+    // Rows live in a JSON payload, so the list starts empty — paint the browse
+    // state before anything else. searchZip() re-renders once it has a centre.
+    render();
+
     if (presetZip) {
       zipInput.value = presetZip;
       searchZip(presetZip);

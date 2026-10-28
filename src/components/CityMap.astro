@@ -2,8 +2,7 @@
 /**
  * Interactive per-city map of the hand-researched local venues.
  *
- * - Pins are the local (non-chain) listings that carry exact coordinates;
- *   metro-level chain programs (AMC, Walmart, …) stay in the list below.
+ * - Pins are sourced local listings that carry venue coordinates.
  * - Leaflet + OpenStreetMap tiles: free, no API key, no cookies.
  * - Lazily initialized via IntersectionObserver so the JS/tiles only load
  *   when a visitor actually scrolls to the map.
@@ -41,8 +40,8 @@ const payload = {
       </h2>
       <p class="mt-2 text-sm text-muted">
         The {pins.length === 1 ? 'venue' : `${pins.length} local venues`} we've researched near{' '}
-        {city.city} — tap a pin for details. National programs (movies, Walmart hours, and more)
-        are in the list below and use their own location finders.
+        {city.city} — tap a pin for details. Only venues with coordinates are shown;
+        check the listing's address before traveling.
       </p>
       <div
         id="city-map"

@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import ListingCard from '../../components/ListingCard.astro';
-import Faq from '../../components/Faq.astro';
 import PlaceholderNotice from '../../components/PlaceholderNotice.astro';
 import CityCalendar from '../../components/CityCalendar.astro';
 import EmailSignup from '../../components/EmailSignup.astro';
@@ -11,9 +10,9 @@ import CityLinks from '../../components/CityLinks.astro';
 import { getGearSection } from '../../lib/gear';
 import {
   categories,
-  getQualifyingCitiesForCategory,
+  getPublishedCitiesForCategory,
   getNearbyCitiesForCategory,
-  hasLocalListing,
+  hasIndexableLocalContent,
   isPlaceholder,
   logQualityGate,
   toCalendarItems,
@@ -33,7 +32,6 @@ import {
   buildCityIntro,
   cityMetaDescription,
   cityTitle,
-  faqSchema,
   itemListSchema,
   localBusinessSchema,
 } from '../../lib/seo';
@@ -55,9 +53,8 @@ export function getStaticPaths() {
 
   const paths: PathEntry[] = [];
   for (const category of categories) {
-    // QUALITY GATE: only cities with >= MIN_LISTINGS_PER_CITY come back here,
-    // so thin pages are never generated.
-    for (const { city, listings } of getQualifyingCitiesForCategory(category.slug)) {
+    // Preserve sourced entries at existing URLs; sparse pages remain noindex.
+    for (const { city, listings } of getPublishedCitiesForCategory(category.slug)) {
       paths.push({
         params: { category: category.slug, citySlug: city.slug },
         props: { category, city, listings },
@@ -104,8 +101,7 @@ const jsonLd = [
       url: `${absoluteUrl(path, site)}#${l.id}`,
     })),
   ),
-  ...listings.map((l) => localBusinessSchema(l, city, category, site)),
-  faqSchema(category.faqs),
+  ...listings.map((l) => localBusinessSchema(l, city, category, site, path)),
 ];
 ---
 
@@ -113,7 +109,7 @@ const jsonLd = [
   title={title}
   description={description}
   canonicalPath={path}
-  noindex={!hasLocalListing(listings)}
+  noindex={!hasIndexableLocalContent(listings)}
   jsonLd={jsonLd}
 >
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6">
@@ -130,6 +126,11 @@ const jsonLd = [
         {category.name} in {city.city}, {city.state}
       </h1>
       <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">{intro}</p>
+      <p class="mt-3 text-sm leading-relaxed text-muted">
+        These are source-linked local listings. Check the venue's current accessibility
+        information before booking. National program participation is listed separately
+        on our <a class="link-underline text-brand-strong" href={`${categoryPath(category)}#programs`}>{category.shortLabel.toLowerCase()} guide</a>.
+      </p>
       <p class="mt-4 text-sm">
         <a
           class="link-underline font-semibold text-brand-strong"
@@ -157,16 +158,25 @@ const jsonLd = [
       </div>
     </section>
 
+    {/* The category guide and its FAQs live on the category index, which is the
+        one page where they are unique. Repeating them here made roughly half of
+        every city variant identical to the other 35 and emitted the same
+        FAQPage schema 36 times over. */}
     <section class="mt-14 max-w-3xl rounded-card border border-brand-soft bg-brand-soft/40 p-6 sm:p-8">
-      <h2 class="text-2xl font-bold text-ink">What to look for in {city.city}</h2>
-      <p class="mt-4 leading-relaxed text-muted prose-readable">{category.guide}</p>
+      <h2 class="text-2xl font-bold text-ink">
+        What to look for, and what to ask
+      </h2>
+      <p class="mt-4 leading-relaxed text-muted prose-readable">
+        Our{' '}
+        <a class="link-underline font-medium text-brand-strong" href={categoryPath(category)}
+          >{category.name.toLowerCase()} guide</a
+        >{' '}
+        covers what makes a venue genuinely sensory-friendly, the questions worth
+        asking before you book, and how to prepare for the visit itself.
+      </p>
     </section>
 
     {gear && <GearStrip section={gear} />}
-
-    <div class="mt-14 max-w-3xl">
-      <Faq faqs={category.faqs} />
-    </div>
 
     <EmailSignup cityName={city.city} />
 

@@ -9,11 +9,24 @@ import type { Category, CategoryGroup, City, Faq, Listing } from './data';
 import { SITE } from '../site.config';
 import { absoluteUrl, cityPath, hashString, humanList, truncate } from './utils';
 
+/**
+ * Features that don't survive being dropped into a sentence.
+ *
+ * Both callers splice these into running prose ("… offering X and more."), so a
+ * feature that is really a caveat, an instruction, or a superlative claim about
+ * one venue reads badly or becomes untrue of the others: "offering participating
+ * locations only — confirm with your local park and more." Cards still show
+ * every feature verbatim; this only governs generated prose.
+ */
+const readsAsProse = (feature: string): boolean =>
+  !/ — |confirm|^participating\b|^verified\b|\bfirst\b/i.test(feature);
+
 /** Most-common sensory features across a set of listings (for intros/meta). */
 export function topSensoryFeatures(listings: Listing[], n = 2): string[] {
   const freq = new Map<string, number>();
   for (const listing of listings) {
     for (const feature of listing.sensoryFeatures) {
+      if (!readsAsProse(feature)) continue;
       freq.set(feature, (freq.get(feature) ?? 0) + 1);
     }
   }
@@ -38,19 +51,42 @@ export function cityTitle(category: Category, city: City): string {
   return `${city.city}, ${city.stateAbbr} Sensory-Friendly ${category.shortLabel} (${TITLE_YEAR})`;
 }
 
-/** Meta description for a category-in-city page, kept under ~160 characters. */
+/**
+ * Meta description for a category-in-city page, kept under ~160 characters.
+ *
+ * Like the city-hub version, this is built to fit rather than cut to fit.
+ * Preference order: features + the closing "Hours, cost, ages…" line, then the
+ * longest feature phrase that fits on its own, then the opening alone. Features
+ * are what differ between two cities' pages, so they outrank the boilerplate.
+ */
 export function cityMetaDescription(
   category: Category,
   city: City,
   listings: Listing[],
 ): string {
-  const features = topSensoryFeatures(listings, 2).filter(Boolean).join(', ');
-  const featurePhrase = features ? ` offering ${features} and more` : '';
-  const text =
+  const features = topSensoryFeatures(listings, 2).filter(Boolean);
+  const head =
     `${listings.length} sensory-friendly, autism-friendly ${category.serviceNoun} in ` +
-    `${city.city}, ${city.stateAbbr}${featurePhrase}. ` +
-    `Hours, cost, ages, upcoming dates, and a parent tip for each.`;
-  return truncate(text, 160);
+    `${city.city}, ${city.stateAbbr}`;
+  const tail = ' Hours, cost, ages, upcoming dates, and a parent tip for each.';
+
+  const withFeatures = (n: number) =>
+    `${head} offering ${features.slice(0, n).join(', ')} and more.`;
+
+  // Prefer the complete sentence: as many features as will fit *alongside* the
+  // closing line. Failing that, spend the whole budget on features, since those
+  // are what differs from one city's page to the next.
+  for (let n = features.length; n >= 1; n--) {
+    const candidate = withFeatures(n);
+    if (candidate.length + tail.length <= 160) return candidate + tail;
+  }
+  if (`${head}.`.length + tail.length <= 160 && features.length === 0)
+    return `${head}.${tail}`;
+  for (let n = features.length; n >= 1; n--) {
+    const candidate = withFeatures(n);
+    if (candidate.length <= 160) return candidate;
+  }
+  return truncate(`${head}.`, 160);
 }
 
 /**
@@ -114,27 +150,53 @@ export function breadcrumbSchema(items: Crumb[]): object {
   };
 }
 
+/**
+ * True when an address string is specific enough to publish as a
+ * `streetAddress`. Rows that only name a locality and defer to the venue's own
+ * site ("Dallas, TX — see location page for address", "Select Broadway
+ * theaters …") are not, and are better described by locality alone.
+ */
+function isStreetAddress(address: string): boolean {
+  if (!address.trim()) return false;
+  return !/see (location page|website|schedule|official)|^select |^participating |^various |^multiple /i.test(
+    address,
+  );
+}
+
 /** LocalBusiness (or a more specific subtype) schema for one listing. */
 export function localBusinessSchema(
   listing: Listing,
   city: City,
   category: Category,
   site: URL | undefined,
+  /**
+   * Path of the page this schema is being emitted on, used to build the node's
+   * `@id`. Defaults to the category-in-city page — but a city hub also lists
+   * categories that never earned their own page, and defaulting there produced
+   * `@id`s pointing at URLs that do not exist. Pass the current page's path.
+   */
+  pagePath: string = cityPath(category, city),
 ): object {
   // National-program listings (operator set) describe a chain offering across a
   // metro, not one address — so omit streetAddress to keep the schema honest.
+  // A handful of hand-authored rows are the same shape: they name a locality
+  // and point at the venue's own site rather than giving a street address
+  // ("Dallas, TX — see location page for address"). Emitting those as
+  // streetAddress claims a precision the data does not have.
   const address: Record<string, unknown> = {
     '@type': 'PostalAddress',
     addressLocality: city.city,
     addressRegion: city.stateAbbr,
     addressCountry: city.countryCode ?? 'US',
   };
-  if (!listing.operator) address.streetAddress = listing.address;
+  if (!listing.operator && isStreetAddress(listing.address)) {
+    address.streetAddress = listing.address;
+  }
 
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': category.schemaType || 'LocalBusiness',
-    '@id': `${absoluteUrl(cityPath(category, city), site)}#${listing.id}`,
+    '@id': `${absoluteUrl(pagePath, site)}#${listing.id}`,
     name: listing.name,
     address,
     areaServed: `${city.city}, ${city.stateAbbr}`,
@@ -214,15 +276,49 @@ export function cityHubTitle(city: City): string {
   return `${city.city}, ${city.stateAbbr} Sensory-Friendly Activities for Kids (${TITLE_YEAR})`;
 }
 
-/** Meta description for a city hub page. */
+/**
+ * Meta description for a city hub page.
+ *
+ * Built to fit the ~160-character budget rather than composed long and cut
+ * short: truncating a fixed sentence left most city hubs ending mid-list
+ * ("…, and zoos, aquariums & attractions,…").
+ *
+ * Preference order, best first:
+ *   1. category list + the closing line,
+ *   2. the longest category list that fits on its own,
+ *   3. the opening alone, truncated.
+ *
+ * In practice the opening runs ~78 characters and the closing line 70, so most
+ * hubs land on (2) — which is the better outcome anyway: the real category
+ * list is what distinguishes one city's page from the next, while the closing
+ * line is the same boilerplate on all 543 of them.
+ */
 export function cityHubMetaDescription(city: City, groups: CategoryGroup[]): string {
   const total = groups.reduce((sum, g) => sum + g.listings.length, 0);
-  const cats = humanList(groups.slice(0, 3).map((g) => shortCategoryNoun(g.category)));
-  const text =
+  const nouns = groups.map((g) => shortCategoryNoun(g.category));
+  const head =
     `${total} sensory-friendly and autism-friendly things to do with kids in ` +
-    `${city.city}, ${city.stateAbbr} — ${cats}${groups.length > 3 ? ', and more' : ''}. ` +
-    `See upcoming dates, quiet hours, and the sensory details that matter.`;
-  return truncate(text, 160);
+    `${city.city}, ${city.stateAbbr}`;
+  const tail = ' See upcoming dates, quiet hours, and the sensory details that matter.';
+
+  const withNouns = (n: number) => {
+    const list =
+      n < nouns.length ? `${nouns.slice(0, n).join(', ')}, and more` : humanList(nouns);
+    return `${head} — ${list}.`;
+  };
+
+  // Prefer the complete sentence: as many categories as will fit *alongside*
+  // the closing line. Failing that, spend the whole budget on categories, since
+  // those are what differs from one city's page to the next.
+  for (let n = nouns.length; n >= 1; n--) {
+    const candidate = withNouns(n);
+    if (candidate.length + tail.length <= 160) return candidate + tail;
+  }
+  for (let n = nouns.length; n >= 1; n--) {
+    const candidate = withNouns(n);
+    if (candidate.length <= 160) return candidate;
+  }
+  return truncate(`${head}.`, 160);
 }
 
 /**
@@ -230,34 +326,71 @@ export function cityHubMetaDescription(city: City, groups: CategoryGroup[]): str
  * for a metro ("…near me", "…this weekend", "are they free"). Honest, useful
  * answers; also emitted as FAQPage structured data.
  */
+/** Cost wording that unambiguously means the visit itself is free. Deliberately
+ *  strict: "General admission; sensory tools free" is not a free visit. */
+const FREE_COST = /^free\b|\bfree admission\b|\bfree entry\b|\badmission is free\b|\bno charge\b/i;
+
+/**
+ * City-hub FAQ, built from that city's actual listings.
+ *
+ * These were previously three fixed paragraphs with the city name dropped in,
+ * which made them identical across every hub and — on cities with no recurring
+ * sessions — pointed readers at a calendar that is not rendered there. Each
+ * answer now names real venues from the page, so it differs city to city and
+ * only claims what the data supports.
+ */
 export function buildCityHubFaqs(city: City, groups: CategoryGroup[]): Faq[] {
-  const total = groups.reduce((sum, g) => sum + g.listings.length, 0);
+  const all = groups.flatMap((g) => g.listings);
+  const total = all.length;
   const cats = humanList(groups.map((g) => shortCategoryNoun(g.category)));
+  const where = `${city.city}, ${city.stateAbbr}`;
+
+  const shortName = (l: Listing) => l.name.split(/\s+[—–]\s+/)[0].trim();
+  const names = all.map(shortName);
+  const extra = total - Math.min(3, total);
+  // humanList already supplies the final "and", so only use it when the list is
+  // complete — otherwise "a, b, and c, and 2 more" doubles the conjunction.
+  const named = extra > 0 ? names.slice(0, 3).join(', ') : humanList(names.slice(0, 3));
+
+  const features = topSensoryFeatures(all, 3);
+  const featurePhrase = features.length
+    ? ` Between them the listed accommodations include ${humanList(features)}.`
+    : '';
+
+  const recurring = all.filter((l) => (l.recurrence ?? []).length > 0);
+  const freeOnes = all.filter((l) => FREE_COST.test(l.cost || ''));
+
   return [
     {
       question: `What sensory-friendly activities are there in ${city.city}?`,
       answer:
-        `We've gathered ${total} sensory-friendly and autism-friendly ${total === 1 ? 'option' : 'options'} in ` +
-        `${city.city}, ${city.stateAbbr} across ${cats}. Each listing shows the specific ` +
-        `accommodations — quieter times, lighting, headphones, and space to take a break — ` +
-        `alongside hours, cost, and age range.`,
+        `We list ${total} source-linked ${total === 1 ? 'place' : 'places'} in ${where}, across ` +
+        `${cats}: ${named}${extra > 0 ? `, and ${extra} more` : ''}.${featurePhrase} ` +
+        `Every listing links the official page the details came from.`,
     },
     {
       question: `How do I find sensory-friendly events near me this weekend in ${city.city}?`,
-      answer:
-        `Check the "Upcoming sensory-friendly events near ${city.city}" calendar near the top of ` +
-        `this page. It lists recurring sensory-friendly times — like monthly sensory-friendly ` +
-        `movie screenings and play sessions — with the next concrete dates worked out, including ` +
-        `anything coming up this week or this weekend. Always confirm the exact date and time ` +
-        `with the venue before you go.`,
+      answer: recurring.length
+        ? `${recurring.length} of the ${city.city} listings ${recurring.length === 1 ? 'runs' : 'run'} on a repeating schedule — ` +
+          `${humanList(recurring.slice(0, 3).map(shortName))} — ` +
+          `and the calendar on this page works out the next dates from it. Treat those as estimates ` +
+          `and confirm the exact time with the venue, since schedules change without notice.`
+        : `None of the ${city.city} venues we list publish a fixed recurring session, so there is no ` +
+          `reliable "this weekend" answer we can give you here. Open each listing's official source ` +
+          `for its current dates, and ask the venue directly which hours are quietest — that is often ` +
+          `more useful than waiting for a scheduled event.`,
     },
     {
       question: `Are sensory-friendly activities in ${city.city} free?`,
-      answer:
-        `Many are. Sensory-friendly movie screenings and play sessions are usually priced the ` +
-        `same as a regular visit, and a lot of museum sensory mornings, library sensory ` +
-        `storytimes, and inclusive playgrounds are free or run on standard admission. Each ` +
-        `listing's cost line tells you what to expect.`,
+      answer: freeOnes.length
+        ? `${freeOnes.length} of the ${total} we list ${freeOnes.length === 1 ? 'is' : 'are'} free` +
+          `${freeOnes.length === 1 ? ': ' : ', including '}` +
+          `${humanList(freeOnes.slice(0, 2).map(shortName))}. ` +
+          `The rest run on the venue's standard admission, sometimes with the sensory session itself ` +
+          `included at no extra cost. Each listing's cost line shows what we found.`
+        : `The ${city.city} venues we list run on their standard admission rather than charging extra ` +
+          `for the sensory session, and some include sensory kits or quiet rooms at no cost. We have ` +
+          `not found a free option here yet — each listing's cost line shows exactly what we found.`,
     },
   ];
 }

@@ -14,7 +14,6 @@ interface Props {
   /** City to name in the heading, e.g. "Dallas". Omit for a generic prompt. */
   cityName?: string;
 }
-const { cityName } = Astro.props;
 
 const endpoint = SITE.newsletter.actionUrl.trim();
 const publicKey = SITE.newsletter.publicKey.trim();
@@ -26,9 +25,7 @@ const mailtoAction = `mailto:${SITE.contactEmail}?subject=${encodeURIComponent(
   'Sign me up for sensory-friendly events',
 )}`;
 
-const heading = cityName
-  ? `Get sensory-friendly events near ${cityName}`
-  : 'Get sensory-friendly events near you';
+const heading = 'Get occasional sensory-friendly planning updates';
 ---
 
 <section
@@ -38,9 +35,8 @@ const heading = cityName
   <div class="max-w-2xl">
     <h2 id="signup-heading" class="text-2xl font-bold text-ink">{heading}</h2>
     <p class="mt-2 leading-relaxed text-muted">
-      New sensory-friendly screenings, quiet hours, and family events land all the
-      time. Get an occasional email with what's coming up near you — no spam, and
-      you can unsubscribe in one click.
+      Sign up for occasional directory and planning updates. This list does not
+      currently filter emails by city. You can unsubscribe using the link in an email.
     </p>
 
     <form
@@ -109,6 +105,9 @@ const heading = cityName
     const hp = form.querySelector('input[name="hp_website"]') as HTMLInputElement | null;
     const emailInput = form.querySelector('input[type="email"]') as HTMLInputElement | null;
     const btn = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+    // The success copy is the element's authored text. Keep a copy: a failed
+    // attempt overwrites it, and a later successful retry has to restore it.
+    const successText = status?.textContent ?? '';
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -129,7 +128,10 @@ const heading = cityName
         });
         if (!res.ok) throw new Error(String(res.status));
         form.hidden = true;
-        if (status) status.hidden = false;
+        if (status) {
+          status.textContent = successText;
+          status.hidden = false;
+        }
       } catch {
         btn.disabled = false;
         btn.textContent = original;

@@ -7,7 +7,9 @@ import { absoluteUrl, cityHubPath, formatTitle } from '../../lib/utils';
 import { breadcrumbSchema, itemListSchema } from '../../lib/seo';
 
 const site = Astro.site;
-const countries = getCitiesByCountry();
+const countries = getCitiesByCountry()
+  .map((group) => ({ ...group, cities: group.cities.filter((entry) => entry.qualifies) }))
+  .filter((group) => group.cities.length > 0);
 const available = countries.flatMap((g) => g.cities.filter((c) => c.qualifies));
 
 const FLAG: Record<string, string> = {
@@ -21,7 +23,7 @@ const countrySlug = (name: string) =>
   name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 const description =
-  'Browse sensory-friendly and autism-friendly places for kids by country and city — across the US, UK, Ireland, Australia and Canada. Pick your city to see movies, museums, play, and attractions with real sensory accommodations.';
+  'Browse sensory-friendly and autism-friendly places for kids by city across the US, UK, Ireland, Australia and Canada — movies, museums, play, and attractions.';
 
 const jsonLd = [
   breadcrumbSchema([
@@ -53,11 +55,12 @@ const jsonLd = [
           Browse by country &amp; city
         </h1>
         <p class="mt-4 leading-relaxed text-muted prose-readable">
-          Pick your city to see every sensory-friendly option we've gathered
+          Pick your city to see the source-linked local places we've gathered
           there. In the US you can also
           <a class="link-underline font-medium text-brand-strong" href="/#find"
             >search by zip code</a
-          >. New cities open up as they reach three verified listings.
+          >. Coverage varies by city, and each count represents local listings.
+          National program references are available in our category guides.
         </p>
         <nav aria-label="Jump to country" class="mt-5 flex flex-wrap gap-2">
           {
@@ -81,8 +84,7 @@ const jsonLd = [
     {
       countries.map((group) => {
         const avail = group.cities.filter((c) => c.qualifies);
-        const soon = group.cities.filter((c) => !c.qualifies);
-        if (avail.length === 0 && soon.length === 0) return null;
+        if (avail.length === 0) return null;
         return (
           <section id={countrySlug(group.country)} class="mt-12 scroll-mt-24">
             <h2 class="flex items-center gap-2 text-2xl font-bold text-ink">
@@ -113,18 +115,6 @@ const jsonLd = [
               </ul>
             )}
 
-            {soon.length > 0 && (
-              <div class="mt-5">
-                <p class="text-sm font-semibold text-muted">Coming soon</p>
-                <ul class="mt-2 flex flex-wrap gap-2">
-                  {soon.map((c) => (
-                    <li class="rounded-full border border-line bg-surface-soft px-3 py-1 text-sm text-muted">
-                      {c.city.city}, {c.city.stateAbbr}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
           </section>
         );
       })

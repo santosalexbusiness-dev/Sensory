@@ -1,180 +1,89 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import GearStrip from '../components/GearStrip.astro';
 import Faq from '../components/Faq.astro';
-import { getGearSection } from '../lib/gear';
 import { absoluteUrl, formatTitle } from '../lib/utils';
 import { breadcrumbSchema, faqSchema } from '../lib/seo';
-
-const site = Astro.site;
-const gear = getGearSection('fireworks');
-
-const description =
-  "A parent's guide to sensory-friendly fireworks: how to prepare an autistic or " +
-  'sensory-sensitive child for July 4th, what to pack, and how to find quieter shows.';
-
+const title = "Sensory-Friendly Fireworks & July 4th";
+const heading = "Planning around fireworks and the Fourth of July";
+const crumb = "Sensory-friendly fireworks";
+const description = "Decide whether a fireworks outing suits your family, check event conditions, understand hearing-protection basics, and prepare a quieter alternative.";
+const intro = "Fireworks can combine sudden bangs, flashes, crowds, smoke, and a late journey home. Your plan can include a display, watching something at home, or an ordinary evening. Start with what your child wants to experience and the conditions you can actually confirm.";
+const provenance = "Research guide. NIDCD hearing-protection guidance and CPSC fireworks safety information were checked September 7, 2026. No local display or product has been tested or certified by this guide.";
+const sections = [
+  {
+    "heading": "Ask what “sensory-friendly” changes",
+    "body": "A label does not tell you the sound level, lighting, crowd size, or distance from fireworks. Ask the organizer whether explosives are used, whether there is amplified music, what flashing effects to expect, and where spectators may stand or sit.<br /><br />For a drone or laser event, ask the same questions about music and lighting. These shows should not be described as silent just because they use no fireworks. If the organizer cannot answer, record the detail as unknown when deciding whether to attend."
+  },
+  {
+    "heading": "Treat hearing protection as one part of the decision",
+    "body": "The <a href=\"https://www.nidcd.nih.gov/health/protect-your-childs-hearing\" class=\"link-underline text-brand-strong\">National Institute on Deafness and Other Communication Disorders</a> recommends reducing or avoiding loud sound and using properly fitted hearing protection when needed. Earmuffs made for hearing protection can be easier for young children to use than earplugs. No protector removes every sound.<br /><br />Check the manufacturer's age, fit, and use instructions. Do not assume music headphones provide the same protection. If your child cannot tolerate appropriate protection, choose a quieter activity or leave the noise; buying equipment does not make every viewing location suitable."
+  },
+  {
+    "heading": "Preview only if your child wants a preview",
+    "body": "Offer a photograph or a video with the sound low or muted, and let your child decide whether to continue. There is no need to increase volume or rehearse enduring distress. Explain the simple sequence you expect: travel, wait, watch if wanted, then leave.<br /><br />Agree on a gesture, word, or communication-device message for “finished.” Make sure the adult holding tickets or driving understands that signal too."
+  },
+  {
+    "heading": "Choose a permitted location and an exit",
+    "body": "Check the organizer's viewing areas, road closures, parking, and accessible routes. Choose a place where leaving does not require crossing the main crowd. Do not assume a distant car, roof, or private property is an approved viewing space or that its sound level will be suitable.<br /><br />Record where your group will meet if separated and how you will get home. Set a decision time before the display starts so you can leave without waiting for a first loud burst."
+  },
+  {
+    "heading": "Pack familiar items, not a promised solution",
+    "body": "Bring the familiar comfort item your child chooses, water, an appropriate snack, and any communication aid you use. Keep the bag manageable enough to leave promptly. Check admission rules for bags and seating before you travel.<br /><br />A kit can support a plan, but it cannot guarantee a child will enjoy fireworks. Changing your mind on arrival is useful information for the next outing."
+  },
+  {
+    "heading": "Keep a non-firework alternative ready",
+    "body": "A muted fireworks video, drawing a night sky, or a familiar film can provide an optional celebration at home. Choose lights your child enjoys and allow an ordinary bedtime if that works better.<br /><br />Do not replace a public display with sparklers for children. The <a href=\"https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Fireworks\" class=\"link-underline text-brand-strong\">U.S. Consumer Product Safety Commission</a> warns against children playing with or igniting fireworks, including sparklers."
+  }
+];
 const faqs = [
   {
-    question: 'Are there sensory-friendly or "quiet" fireworks displays?',
-    answer:
-      'Yes, and they’re growing. A number of towns now run low-noise (sometimes called "quiet" or "sensory-friendly") fireworks, and some venues hold sensory-friendly July 4th events with lower volume, quiet zones, and sensory bags. They aren’t everywhere, so check your city’s parks & recreation calendar, local autism organizations, and any KultureCity-certified venues near you. Drone light shows and laser shows are an increasingly common silent alternative.',
+    "question": "Are quiet fireworks silent?",
+    "answer": "Do not assume that a “quiet” or “sensory-friendly” label means silence. Ask the organizer about explosives, music, other effects, and the viewing arrangements."
   },
   {
-    question: 'What ear protection is best for fireworks?',
-    answer:
-      'For younger children, over-ear noise-reducing earmuffs (ear defenders) are the easiest and most effective — they cut the peak volume without blocking it out entirely, so your child can still hear you. Older kids, teens, and adults may prefer higher-reduction foldable earmuffs or low-profile reusable ear plugs. Whatever you choose, let your child wear them at home first so they feel familiar before the big night.',
+    "question": "Will ear defenders make fireworks suitable for my child?",
+    "answer": "That cannot be guaranteed. Fit, actual noise, other sensory conditions, and your child's preferences all matter. A quieter alternative is a valid option."
   },
   {
-    question: 'How do I prepare my autistic child for fireworks?',
-    answer:
-      'Preparation is everything. In the days before, watch fireworks videos together (start quiet, build up), read or make a simple social story about what will happen, and talk through the plan: where you’ll be, how long you’ll stay, and how to ask for a break. Pack ear protection and a calm-down kit, plan your exit, and remember it’s completely fine to watch from a distance, from the car, or to skip the crowd entirely.',
+    "question": "Where can I find a local event?",
+    "answer": "Start with your city's official events calendar and the event organizer's accessibility information. Confirm the current year and exact session before making plans."
+  }
+];
+const sources = [
+  {
+    "label": "NIDCD: protecting children's hearing",
+    "url": "https://www.nidcd.nih.gov/health/protect-your-childs-hearing"
   },
+  {
+    "label": "CPSC: fireworks safety",
+    "url": "https://www.cpsc.gov/Safety-Education/Safety-Education-Centers/Fireworks"
+  }
 ];
-
-const jsonLd = [
-  breadcrumbSchema([
-    { name: 'Home', url: absoluteUrl('/', site) },
-    { name: 'Sensory-friendly fireworks', url: absoluteUrl('/sensory-friendly-fireworks/', site) },
-  ]),
-  faqSchema(faqs),
-];
+const jsonLd = [breadcrumbSchema([{ name: 'Home', url: absoluteUrl('/', Astro.site) }, { name: crumb, url: absoluteUrl('/sensory-friendly-fireworks/', Astro.site) }]), faqSchema(faqs)];
 ---
-
-<BaseLayout
-  title={formatTitle('Sensory-Friendly Fireworks & July 4th')}
-  description={description}
-  canonicalPath="/sensory-friendly-fireworks/"
-  jsonLd={jsonLd}
->
-  <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
-    <Breadcrumbs
-      items={[{ name: 'Home', href: '/' }, { name: 'Sensory-friendly fireworks' }]}
-    />
-
-    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-      Sensory-friendly fireworks & the 4th of July
-    </h1>
-    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
-      Fireworks are the loudest, brightest, most unpredictable few minutes of the
-      year — and for a lot of autistic and sensory-sensitive kids, that makes the
-      4th of July genuinely hard. It doesn't have to be. With a little planning,
-      the right ear protection, and permission to do it your own way, your family
-      can still have a good night. Here's how.
-    </p>
-
+<BaseLayout title={formatTitle(title)} description={description} canonicalPath="/sensory-friendly-fireworks/" jsonLd={jsonLd}>
+  <article class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: crumb }]} />
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{heading}</h1>
+    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">{intro}</p>
+    <p class="mt-5 rounded-card border border-line bg-surface-soft p-4 text-sm leading-relaxed text-muted">{provenance}</p>
     <div class="mt-10 space-y-9 prose-readable">
-      <section>
-        <h2 class="text-2xl font-bold text-ink">Prepare in the days before</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          Surprise is the enemy. In the week before, watch fireworks videos
-          together — start with the volume low and build up — so the sound and
-          flashes aren't brand new. Read or make a simple social story about what
-          will happen, and talk through the plan out loud: where you'll be, roughly
-          how long you'll stay, and exactly how to ask for a break. A visual
-          countdown or "first fireworks, then home" board helps a lot.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-ink">Protect ears (and eyes) first</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          This is the single biggest thing you can do. Noise-reducing ear
-          defenders take the edge off the boom without cutting sound out
-          completely — for many kids they're the difference between staying and
-          leaving. Let your child wear them at home first so they feel familiar.
-          A pair of sunglasses or a brimmed hat can soften the sudden bright
-          flashes too.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-ink">Pick your spot carefully</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          You do not have to be in the thick of it. The farther you are from the
-          launch site, the quieter and less overwhelming it is. Watching from a
-          car (windows up) muffles the sound and gives an instant safe space.
-          A hilltop, a parking garage roof, or your own backyard a mile away can
-          be perfect — you still see the show, minus the crowd, the smoke, and the
-          full volume.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-ink">Pack a calm-down kit</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          Bring the things that already work for your child: a weighted lap pad
-          for grounding pressure, a couple of quiet fidgets, a favorite comfort
-          item, plus water and a familiar snack. Keep it all in one bag by the
-          door so leaving the house isn't its own meltdown.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-ink">Have an exit plan</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          Agree on a signal that means "I need to go," know your quickest route
-          out before it starts, and pick a quieter backup spot. Having a clear
-          escape hatch often means your child can actually relax enough to enjoy
-          more of the show — because they know they can leave the moment they need to.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-ink">It's completely okay to skip the big show</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          There's no rule that says you have to stand in a crowd. Backyard
-          sparklers, a family movie with the fireworks on TV, or a
-          <strong> drone or laser light show</strong> (silent, and increasingly
-          common) can be a wonderful 4th of July on your child's terms. A quieter,
-          happier night beats a "proper" one that ends in tears.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-ink">Finding sensory-friendly displays near you</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          More communities are offering <strong>low-noise or "sensory-friendly"
-          fireworks</strong>, and some venues run dedicated sensory-friendly July
-          4th events with quiet zones and sensory bags. They're not everywhere yet,
-          so a few places to check: your city's <em>Parks &amp; Recreation</em>
-          events calendar, local autism organizations and Facebook groups,
-          and any <a
-            class="link-underline font-medium text-brand-strong"
-            href="/cities/">sensory-friendly venues near you</a
-          > (KultureCity-certified zoos and museums often host seasonal events).
-          When in doubt, call ahead and ask.
-        </p>
-      </section>
+      {sections.map((section) => (
+        <section>
+          <h2 class="text-2xl font-bold text-ink">{section.heading}</h2>
+          <p class="mt-3 leading-relaxed text-muted" set:html={section.body} />
+        </section>
+      ))}
     </div>
-
-    {gear && <GearStrip section={gear} />}
-
-    <div class="mt-14">
-      <Faq faqs={faqs} heading="Sensory-friendly fireworks: FAQ" id="fireworks-faq" />
-    </div>
-
-    <div
-      class="mt-12 rounded-card border border-line bg-surface-soft p-5 text-sm leading-relaxed text-muted"
-    >
-      <p>
-        Want more detail? Autism Speaks publishes a helpful
-        <a
-          class="link-underline font-medium text-brand-strong"
-          href="https://www.autismspeaks.org/expert-opinion/tips-autism-friendly-fourth-july"
-          target="_blank"
-          rel="noopener noreferrer">guide to an autism-friendly Fourth of July</a
-        >. More seasonal guides:
-        <a
-          class="link-underline font-medium text-brand-strong"
-          href="/sensory-friendly-halloween/">a sensory-friendly Halloween</a
-        > and
-        <a
-          class="link-underline font-medium text-brand-strong"
-          href="/sensory-friendly-santa/">meeting Santa without the meltdown</a
-        >. And whatever you decide, remember: you know your child best — the right
-        plan is the one that works for your family.
-      </p>
-    </div>
-  </div>
+    <section class="mt-12 rounded-card border border-line bg-surface-soft p-5">
+      <h2 class="text-xl font-bold text-ink">Sources and corrections</h2>
+      <ul class="mt-3 list-disc space-y-2 pl-5 text-sm">
+        {sources.map((source) => <li><a class="link-underline text-brand-strong" href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}
+      </ul>
+      <p class="mt-4 text-sm leading-relaxed text-muted">Source checks describe the documents reviewed, not a guarantee of current local availability. <a class="link-underline text-brand-strong" href="/contact/">Send a correction</a> with the official source and the detail that changed. See <a class="link-underline text-brand-strong" href="/how-we-verify/">how we check information</a>.</p>
+    </section>
+    <div class="mt-12"><Faq faqs={faqs} heading={crumb + ': questions'} id="sensory-friendly-fireworks-faq" /></div>
+    <p class="mt-10 leading-relaxed text-muted">Planning another outing? <a class="link-underline text-brand-strong" href="/cities/">Browse local sensory-friendly venues</a> and use our <a class="link-underline text-brand-strong" href="/sensory-gear/">sensory kit comparison guide</a> to decide what you already have and what to check before buying.</p>
+  </article>
 </BaseLayout>

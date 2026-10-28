@@ -1,170 +1,89 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import GearStrip from '../components/GearStrip.astro';
 import Faq from '../components/Faq.astro';
-import { getGearSection } from '../lib/gear';
 import { absoluteUrl, formatTitle } from '../lib/utils';
 import { breadcrumbSchema, faqSchema } from '../lib/seo';
-
-const site = Astro.site;
-const gear = getGearSection('disney');
-
-const description =
-  'A parent’s guide to Disney World with an autistic or sensory-sensitive child: how ' +
-  'DAS registration works, sensory survival tactics, and where to take a break.';
-
+const title = "Disney World with an Autistic Child — DAS & Sensory Guide";
+const heading = "Disney World with an autistic or sensory-sensitive child";
+const crumb = "Disney World sensory guide";
+const description = "Plan a Disney World visit around your child's needs: current DAS information, questions for Guest Relations, breaks, queues, and an adaptable day plan.";
+const intro = "A useful Disney plan starts with the parts of the day your child finds difficult: waiting, unexpected sounds, heat, travel between places, or close contact. Choose a small number of experiences and decide in advance what you will do if the first plan stops working.";
+const provenance = "Research guide. Disney's DAS and accessibility pages were checked September 7, 2026. The planning examples below are editorial suggestions; they are not reports of a personal park visit.";
+const sections = [
+  {
+    "heading": "Understand what DAS offers",
+    "body": "Disney describes Disability Access Service as support for guests whose developmental disability prevents extended waiting in a standard queue. It provides a return time based on the standby wait, so it does not remove the wait itself. Eligibility is discussed individually with Disney.<br /><br />As checked September 7, 2026, registration uses video chat, starting 60 days before a visit; same-day video registration is also available. The person requesting the accommodation must join the conversation. Disney lists a maximum of four people including the registered guest, and validity until the ticket expires or one year, whichever comes first. Read <a href=\"https://disneyworld.disney.go.com/guest-services/disability-access-service/\" class=\"link-underline text-brand-strong\">Disney's current DAS instructions</a> before arranging your call."
+  },
+  {
+    "heading": "Prepare useful information for the conversation",
+    "body": "Write down your child's actual access needs in your own words. For example: what makes a queue difficult, what support already helps, and which parts of waiting remain difficult even with that support. Include only experiences that apply to your child. Ask how any offered arrangement would work with the people traveling with you.<br /><br />Disney's <a href=\"https://disneyworld.disney.go.com/guest-services/guests-with-disabilities/\" class=\"link-underline text-brand-strong\">accessibility overview</a> also describes other queue arrangements. Ask Guest Relations which options fit your situation and how to use them at a particular attraction."
+  },
+  {
+    "heading": "Build a day with three decision points",
+    "body": "Before leaving your accommodation, choose one priority activity, one optional activity, and a point when you will decide whether to continue. This could be after the first ride, after lunch, or before an evening show. These are decisions, not targets your child has to meet.<br /><br />Allow for the journey back to your accommodation. A break that requires several transport transfers may be harder than an earlier finish. Keep the return route and transport information available offline, and agree which adult will manage tickets, bags, and navigation."
+  },
+  {
+    "heading": "Ask about the whole experience",
+    "body": "An attraction description may not tell you what happens in its queue or exit. Before committing, ask about enclosed waiting areas, sudden effects, darkness, restraints, water, and whether leaving is possible before boarding. Preview official attraction information together if your child finds previews helpful.<br /><br />For a show or parade, check the start time, route, and likely effect on your path out. Do not assume a shop, medical facility, or Baby Care Center will be available as a quiet room. Ask staff where a suitable break space is and what restrictions apply."
+  },
+  {
+    "heading": "Keep meals and character visits flexible",
+    "body": "For dining, check the actual menu, booking terms, and cancellation rules. Ask about noise, seating, and whether a nearby alternative is practical. A reservation can organize your day, but it does not guarantee a quiet table.<br /><br />Before a character encounter, agree whether your child wants to approach, wave, or watch from a distance. Explain any preference to staff. A photograph is optional; leaving before meeting the character can still be the right decision."
+  },
+  {
+    "heading": "Make a short written plan",
+    "body": "Record your priority activity, a place to ask for help, a proposed break location to confirm on arrival, your way home, and the signal your child uses for “finished.” Keep one optional alternative that does not require another long queue. If you are visiting other Orlando attractions, check each operator's accessibility process separately; a Disney arrangement does not establish access elsewhere."
+  }
+];
 const faqs = [
   {
-    question: 'What is DAS and how do I register?',
-    answer:
-      'Disability Access Service (DAS) lets a guest who cannot wait in a conventional queue — due to a developmental disability such as autism or similar — wait elsewhere and return at an assigned time instead. Registration is by live video chat with a Disney cast member, available up to 60 days before your visit (7am–8pm Eastern, and also on the day of your visit). The guest being registered must be present on the call. If approved, DAS covers the registered guest plus up to three party members (four total) and is valid for the length of your ticket, up to one year. Always confirm current rules on Disney’s official DAS page before your trip — the program has changed several times.',
+    "question": "Does an autism diagnosis automatically provide DAS?",
+    "answer": "Disney decides eligibility through an individual conversation. Describe your child's actual needs accurately and ask what support is available."
   },
   {
-    question: 'Does autism automatically qualify for DAS?',
-    answer:
-      'No accommodation is automatic — Disney evaluates each request individually in the video chat, but the program is explicitly described as being for guests who, "due to a developmental disability such as autism or similar," are unable to wait in a conventional queue for an extended period. Be ready to describe concretely what happens when your child waits in a long, enclosed line (eloping, meltdowns, safety concerns) rather than just naming a diagnosis. If DAS isn’t granted, ask the cast member about the other supports: rider switch, breaks in line, and location return times.',
+    "question": "Should we stay for the fireworks?",
+    "answer": "Decide based on your child's preferences and the conditions on the day. Check show times and your exit route in advance; leaving earlier is a complete plan."
   },
   {
-    question: 'What are the best sensory tips for a Disney day?',
-    answer:
-      'Go at rope drop when crowds and heat are lowest, plan a real midday break back at the hotel, and treat the afternoon parade window as quiet-ride time. Pack ear defenders for fireworks and shows (they are far louder than most parents expect), use the First Aid centers as air-conditioned calm-down spaces, and preview rides on YouTube at home so nothing is a surprise. Most importantly: plan one must-do per day, not ten — a short magical day beats a long overwhelming one.',
+    "question": "Where should we plan a break?",
+    "answer": "Ask Guest Relations for a suitable location and confirm whether it is available when you need it. Do not rely on an assumed quiet room."
+  }
+];
+const sources = [
+  {
+    "label": "Disney DAS registration and use",
+    "url": "https://disneyworld.disney.go.com/guest-services/disability-access-service/"
   },
+  {
+    "label": "Disney accessibility services",
+    "url": "https://disneyworld.disney.go.com/guest-services/guests-with-disabilities/"
+  }
 ];
-
-const jsonLd = [
-  breadcrumbSchema([
-    { name: 'Home', url: absoluteUrl('/', site) },
-    { name: 'Disney World sensory guide', url: absoluteUrl('/sensory-friendly-disney-world/', site) },
-  ]),
-  faqSchema(faqs),
-];
+const jsonLd = [breadcrumbSchema([{ name: 'Home', url: absoluteUrl('/', Astro.site) }, { name: crumb, url: absoluteUrl('/sensory-friendly-disney-world/', Astro.site) }]), faqSchema(faqs)];
 ---
-
-<BaseLayout
-  title={formatTitle('Disney World with an Autistic Child — DAS & Sensory Guide')}
-  description={description}
-  canonicalPath="/sensory-friendly-disney-world/"
-  jsonLd={jsonLd}
->
-  <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
-    <Breadcrumbs
-      items={[{ name: 'Home', href: '/' }, { name: 'Disney World sensory guide' }]}
-    />
-
-    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-      Disney World with an autistic or sensory-sensitive child
-    </h1>
-    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">
-      Disney World can be the best trip of your child's life — and it is also
-      crowds, heat, queues, fireworks, and characters with giant heads, all at
-      once. The difference between magic and meltdown is preparation: knowing how
-      the Disability Access Service works, planning around your child's sensory
-      profile, and giving yourselves full permission to do Disney your own way.
-    </p>
-
+<BaseLayout title={formatTitle(title)} description={description} canonicalPath="/sensory-friendly-disney-world/" jsonLd={jsonLd}>
+  <article class="mx-auto max-w-3xl px-4 py-10 sm:px-6">
+    <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: crumb }]} />
+    <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{heading}</h1>
+    <p class="mt-4 text-lg leading-relaxed text-muted prose-readable">{intro}</p>
+    <p class="mt-5 rounded-card border border-line bg-surface-soft p-4 text-sm leading-relaxed text-muted">{provenance}</p>
     <div class="mt-10 space-y-9 prose-readable">
-      <section>
-        <h2 class="text-2xl font-bold text-ink">Start with DAS — before you travel</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          <strong>Disability Access Service (DAS)</strong> is Disney's
-          accommodation for guests who can't tolerate a conventional queue. Instead
-          of standing in line, you get a return time roughly equal to the current
-          wait and spend it somewhere calmer. Registration is by
-          <strong> live video chat only</strong> — up to 60 days before your visit
-          (7am–8pm Eastern) or on the day itself — and your child must be present
-          on the call. If approved, it covers your child plus up to three others
-          (four total) and lasts the length of your ticket, up to a year. Rules
-          have changed several times, so confirm details on
-          <a
-            class="link-underline font-medium text-brand-strong"
-            href="https://disneyworld.disney.go.com/guest-services/disability-access-service/"
-            target="_blank"
-            rel="noopener noreferrer">Disney's official DAS page</a
-          > before the call.
-        </p>
-        <p class="mt-3 leading-relaxed text-muted">
-          On the call, describe concretely what happens in a long enclosed line —
-          eloping, dropping, panic, sensory shutdown — rather than only naming the
-          diagnosis. And if DAS isn't granted, ask about the alternatives: rider
-          switch, the ability to leave the line and rejoin your party, and
-          attraction return times.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-ink">Build the day around breaks, not rides</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          Arrive at rope drop (lowest crowds, coolest temperatures), do your most
-          important ride first, and plan a genuine midday break — back at the
-          hotel with a swim if you're staying close. Baby Care Centers and First
-          Aid stations are quiet and air-conditioned and staff won't blink at an
-          older child needing a reset. Parade time is the secret quiet window:
-          while everyone lines the route, ride queues drop.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-ink">Handle the loud stuff on your terms</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          Fireworks at Disney are enormous — many families watch from inside a
-          shop, from the beach at the Polynesian, or skip them entirely for a
-          calm evening swim. Pack ear defenders and put them on <em>before</em>
-          the show starts, not after the first boom. Preview big rides on YouTube
-          at home so the drops and dark tunnels aren't surprises, and know that
-          every queue has a cast member who can point you to the nearest exit if
-          it's going wrong.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-ink">Characters, dining, and expectations</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          Character meals guarantee meetings without lines — but the characters
-          are big and close, so let your child decide their distance and never
-          force the photo. Book dining ahead at quieter, earlier times; mobile
-          order everything else to skip counter lines. Set expectations low and
-          loose: one must-do per day is a plan, ten is a gamble. A three-hour
-          morning your child loved is a triumph.
-        </p>
-      </section>
-
-      <section>
-        <h2 class="text-2xl font-bold text-ink">Beyond Disney: Universal &amp; the certified parks</h2>
-        <p class="mt-3 leading-relaxed text-muted">
-          Universal Orlando handles accommodations through the free
-          <a
-            class="link-underline font-medium text-brand-strong"
-            href="https://www.accessibilitycard.org/"
-            target="_blank"
-            rel="noopener noreferrer">IBCCES Accessibility Card</a
-          > (apply at least 48 hours ahead), and both SeaWorld Orlando and
-          Aquatica are IBCCES Certified Autism Centers with published sensory
-          guides — see our
-          <a class="link-underline font-medium text-brand-strong" href="/cities/orlando-fl/"
-            >Orlando sensory-friendly page</a
-          > for the full documented list.
-        </p>
-      </section>
+      {sections.map((section) => (
+        <section>
+          <h2 class="text-2xl font-bold text-ink">{section.heading}</h2>
+          <p class="mt-3 leading-relaxed text-muted" set:html={section.body} />
+        </section>
+      ))}
     </div>
-
-    {gear && <GearStrip section={gear} />}
-
-    <div class="mt-14">
-      <Faq faqs={faqs} heading="Disney World sensory guide: FAQ" id="disney-faq" />
-    </div>
-
-    <div
-      class="mt-12 rounded-card border border-line bg-surface-soft p-5 text-sm leading-relaxed text-muted"
-    >
-      <p>
-        Flying to Orlando?  Read our
-        <a
-          class="link-underline font-medium text-brand-strong"
-          href="/sensory-friendly-flying/">guide to flying with a sensory-sensitive child</a
-        > (TSA Cares can meet you at security). And whatever you plan — you know
-        your child best; the right Disney trip is the one that works for your family.
-      </p>
-    </div>
-  </div>
+    <section class="mt-12 rounded-card border border-line bg-surface-soft p-5">
+      <h2 class="text-xl font-bold text-ink">Sources and corrections</h2>
+      <ul class="mt-3 list-disc space-y-2 pl-5 text-sm">
+        {sources.map((source) => <li><a class="link-underline text-brand-strong" href={source.url} target="_blank" rel="noopener noreferrer">{source.label}</a></li>)}
+      </ul>
+      <p class="mt-4 text-sm leading-relaxed text-muted">Source checks describe the documents reviewed, not a guarantee of current local availability. <a class="link-underline text-brand-strong" href="/contact/">Send a correction</a> with the official source and the detail that changed. See <a class="link-underline text-brand-strong" href="/how-we-verify/">how we check information</a>.</p>
+    </section>
+    <div class="mt-12"><Faq faqs={faqs} heading={crumb + ': questions'} id="sensory-friendly-disney-world-faq" /></div>
+    <p class="mt-10 leading-relaxed text-muted">Planning another outing? <a class="link-underline text-brand-strong" href="/cities/">Browse local sensory-friendly venues</a> and use our <a class="link-underline text-brand-strong" href="/sensory-gear/">sensory kit comparison guide</a> to decide what you already have and what to check before buying.</p>
+  </article>
 </BaseLayout>

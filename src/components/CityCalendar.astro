@@ -1,5 +1,6 @@
 ---
 import type { CalendarItem, City } from '../lib/data';
+import { canProjectRecurrence } from '../lib/calendarUtils';
 
 interface Props {
   city: City;
@@ -11,12 +12,15 @@ interface Props {
 }
 const { city, items, heading, subhead } = Astro.props;
 
-const headingText = heading ?? `Upcoming sensory-friendly events near ${city.city}`;
+const headingText = heading ?? `Sensory-friendly schedules near ${city.city}`;
 const subheadText =
   subhead ??
-  `Recurring sensory-friendly times in the ${city.city} area, with the next dates worked out for you. Always confirm the exact date and showtime with each place before you go.`;
+  `Dates below are calculated from the local venue's published recurring schedule; they are planning estimates, not confirmed event bookings. Check the official source for cancellations, holidays, and exact times.`;
 
 const recurring = items.filter((i) => i.recurrence.length > 0);
+const hasUnprojectedSchedules = items.some((item) => item.recurrence.some(
+  (rule) => !canProjectRecurrence(rule, item.scheduleText),
+));
 
 const ORDINAL = ['', '1st', '2nd', '3rd', '4th', '5th'];
 function describe(item: CalendarItem): string {
@@ -24,7 +28,7 @@ function describe(item: CalendarItem): string {
     .map((r) => {
       const note = r.note ? ` — ${r.note}` : '';
       if (r.weeks.length) {
-        const ord = r.weeks.map((n) => ORDINAL[n] ?? `${n}th`).join(' & ');
+        const ord = r.weeks.map((n) => n === -1 ? 'Last' : ORDINAL[n] ?? `${n}th`).join(' & ');
         return `${ord} ${r.weekday}s${note}`;
       }
       return `Every ${r.weekday}${note}`;
@@ -37,6 +41,7 @@ const calendarData = items.map((i) => ({
   name: i.name,
   recurrence: i.recurrence,
   dates: i.dates,
+  scheduleText: i.scheduleText,
   href: `#${i.id}`,
 }));
 ---
@@ -51,6 +56,12 @@ const calendarData = items.map((i) => ({
         {headingText}
       </h2>
       <p class="mt-2 text-sm text-muted">{subheadText}</p>
+      {hasUnprojectedSchedules && (
+        <p class="mt-3 text-sm text-muted">
+          Some schedules include seasons, selected dates, or exceptions. Their
+          dates are not projected below; check the venue's official calendar.
+        </p>
+      )}
 
       <div class="mt-6 grid gap-8 lg:grid-cols-2">
         <div>
@@ -69,7 +80,7 @@ const calendarData = items.map((i) => ({
 
         <div>
           <h3 class="text-sm font-semibold uppercase tracking-wide text-brand-strong">
-            Next dates
+            Estimated next dates — confirm with venue
           </h3>
           <ul id="calendar-upcoming" class="mt-3 space-y-2">
             <li class="text-sm text-muted">Loading upcoming dates…</li>

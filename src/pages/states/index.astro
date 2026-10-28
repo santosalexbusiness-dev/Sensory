@@ -12,7 +12,7 @@ function stateSlugOf(state: string): string {
 const site = Astro.site;
 const byState = new Map<string, { state: string; stateAbbr: string; count: number; cityCount: number }>();
 for (const c of cities) {
-  if (c.country) continue;
+  if ((c.countryCode ?? 'US') !== 'US' || getCityListings(c.slug).length === 0) continue;
   const entry = byState.get(c.state) ?? { state: c.state, stateAbbr: c.stateAbbr, count: 0, cityCount: 0 };
   entry.count += getCityListings(c.slug).length;
   entry.cityCount += 1;
@@ -21,7 +21,7 @@ for (const c of cities) {
 const states = [...byState.values()].sort((a, b) => a.state.localeCompare(b.state));
 
 const description =
-  'Sensory-friendly and autism-friendly activities for kids in every US state — pick your state to find quiet hours, sensory days, and certified venues near you.';
+  'Browse documented sensory-friendly places for kids by US state. Find local venue sources and check quiet sessions, break spaces and booking details.';
 
 const jsonLd = [
   breadcrumbSchema([
@@ -45,11 +45,11 @@ const jsonLd = [
     <Breadcrumbs items={[{ name: 'Home', href: '/' }, { name: 'States' }]} />
 
     <h1 class="mt-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
-      Sensory-friendly activities in every state
+      Sensory-friendly activities by state
     </h1>
     <p class="mt-4 max-w-3xl text-lg leading-relaxed text-muted">
-      Every US state has documented sensory-friendly options for kids — pick yours to see the
-      cities, venues, quiet hours, and upcoming dates near you.
+      Choose a state where we have researched local venues. Coverage varies;
+      check each venue’s source for current accommodations and visit details.
     </p>
 
     <ul class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

@@ -26,6 +26,8 @@ export interface SiteConfig {
   googleSiteVerification: string;
   /** Google AdSense publisher ID (e.g. "ca-pub-6235181222799113"). Empty = no ad loader script. */
   adsensePublisherId: string;
+  /** Ad code eligibility; Google separately controls approval and ad serving. */
+  adsenseAdsEnabled: boolean;
   /** Amazon Associates tracking tag (e.g. "sensoryfri-20"). Appended to affiliate links; leave empty until you have it. */
   amazonAssociateTag: string;
   /** Email-list signup wiring for the "Get sensory-friendly events near you" forms. */
@@ -54,7 +56,11 @@ export interface SiteConfig {
 
 export const SITE: SiteConfig = {
   name: 'Sensory-Friendly Kids',
-  tagline: 'Calm, verified places for sensory-sensitive kids',
+  // Keep this in step with the listing badges and /how-we-verify/: entries are
+  // sourced from official pages and certifications, not personally visited, so
+  // the site must not promise "verified" anywhere a reader will meet a
+  // "Documented · confirm locally" badge a moment later.
+  tagline: 'Calm, well-researched places for sensory-sensitive kids',
   description:
     'A parent-built directory of sensory-friendly and autism-friendly places for kids, organized by category and city — with the sensory details up front.',
   author: 'Alex',
@@ -64,6 +70,8 @@ export const SITE: SiteConfig = {
   googleSiteVerification: '',
   // ── Google AdSense: publisher ID from your AdSense account. Loads the ad code site-wide. Empty = no ad script. ──
   adsensePublisherId: 'ca-pub-6235181222799113',
+  // Ownership remains connected through the meta tag and public/ads.txt.
+  adsenseAdsEnabled: true,
   // ── Affiliate: paste your Amazon Associates tag here once approved (e.g. 'sensoryfri-20'). ──
   amazonAssociateTag: 'sensoryfrie04-20',
   // ── Email list: Kit (ConvertKit). Subscribes visitors to the "Sensory-Friendly Events" tag (id 20533650). publicKey is the v3 api_key — public/safe; the API *secret* is NOT stored here. ──
@@ -88,7 +96,7 @@ export const SITE: SiteConfig = {
  * generated. Cities below this threshold are skipped at build time so we never
  * publish thin, low-value pages that can drag down SEO for the whole site.
  */
-export const MIN_LISTINGS_PER_CITY = 3;
+export { MIN_COMPLETE_LOCAL_LISTINGS as MIN_LISTINGS_PER_CITY } from './lib/content-policy.mjs';
 
 /**
  * When true, any page built from placeholder sample data shows a visible banner.

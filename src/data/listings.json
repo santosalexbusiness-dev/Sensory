@@ -963,24 +963,24 @@
     "name": "Pacific Science Center — Sensory Lounge",
     "category": "sensory-friendly-museums",
     "citySlug": "seattle-wa",
-    "address": "200 2nd Ave N, Seattle, WA 98109",
-    "website": "https://www.pacificsciencecenter.org/",
-    "phone": "",
+    "address": "200 Sue Bird Court North, Seattle, WA 98109",
+    "website": "https://pacificsciencecenter.org/",
+    "phone": "206-443-2844",
     "lat": 47.6196,
     "lng": -122.3517,
     "status": "documented",
     "sensoryFeatures": [
-      "Sensory Lounge — a calm space to decompress",
-      "hands-on science exhibits",
-      "at Seattle Center, near the Space Needle",
-      "quiet regroup space available"
+      "Sensory Lounge in Exhibits East for quieter breaks",
+      "Sensory kits available at the Main Entry",
+      "Adjusted lighting, sound, activities and exhibits during Sensory-Friendly Hours",
+      "Downloadable Social Guide to preview a visit"
     ],
     "ageRange": "All ages",
     "cost": "General admission",
     "hours": "See website for current hours",
-    "lastVerified": "2026-06-17",
-    "sourceUrl": "https://visitseattle.org/explore/accessible-travel-guide/accessible-experiences/sensory-inclusive-activities/",
-    "parentTip": "Note where the Sensory Lounge in Building 2 is when you arrive, so you have a planned calm-down spot if you need one."
+    "lastVerified": "2026-09-07",
+    "sourceUrl": "https://pacificsciencecenter.org/visit/accessibility/",
+    "parentTip": "Ask at the Main Entry where to collect a sensory kit and how to reach the Sensory Lounge in Exhibits East. Check the official events page for Sensory-Friendly Hours dates."
   },
   {
     "id": "boston-childrens-museum",
@@ -1911,7 +1911,7 @@
     "category": "sensory-friendly-museums",
     "citySlug": "charlotte-nc",
     "address": "105 Gilead Road, Huntersville, NC 28078",
-    "website": "https://discoveryplacekids.org/",
+    "website": "https://www.dpkidshuntersville.org/",
     "phone": "704-372-6261",
     "lat": 35.4107,
     "lng": -80.843,
@@ -1935,8 +1935,8 @@
     "ageRange": "Best for ages 0–10",
     "cost": "Included with museum admission",
     "hours": "Sensory-Friendly Hours: 1st Sunday, 2–4:30pm — see website",
-    "lastVerified": "2026-06-18",
-    "sourceUrl": "https://discoveryplacekids.org/event/sensory-friendly-hours",
+    "lastVerified": "2026-10-28",
+    "sourceUrl": "https://www.dpkidshuntersville.org/sensory-friendly-hours",
     "parentTip": "It's in Huntersville, north of Charlotte — grab a sensory backpack on arrival (limited supply, first-come) during the first-Sunday sensory hours."
   },
   {
@@ -2451,27 +2451,27 @@
       {
         "weekday": "Sunday",
         "weeks": [],
-        "note": "Sensory Inclusive Session, 10am–noon"
+        "note": "Sensory Inclusive morning session"
       },
       {
         "weekday": "Monday",
         "weeks": [],
-        "note": "Sensory Inclusive Session, 3–6pm"
+        "note": "Sensory Inclusive afternoon session"
       }
     ],
     "schedule": "Sensory Inclusive Sessions every Sunday 10am–noon and every Monday 3–6pm (dimmed lights, lower volume)",
     "sensoryFeatures": [
-      "Sensory Inclusive Sessions: every Sunday (10am–noon) & every Monday (3–6pm)",
-      "dimmed lights, lower volume and reduced stimulation",
-      "KultureCity partner; sensory bags at the front desk any day",
-      "free entry to sensory sessions with registration (sponsored)"
+      "Sensory Inclusive sessions on Sunday mornings and Monday afternoons",
+      "reduced volume, dimmed lights and less stimulation",
+      "two-hour sessions",
+      "free admission with online pre-registration"
     ],
     "ageRange": "Best for ages 0–10",
-    "cost": "Free during Sensory Inclusive Sessions (registration required)",
-    "hours": "Sensory Inclusive Sessions: Sun 10am–noon & Mon 3–6pm",
-    "lastVerified": "2026-06-18",
-    "sourceUrl": "https://www.discoverygateway.org/sensory-inclusion",
-    "parentTip": "The Sunday-morning and Monday-afternoon sensory sessions are free with registration — register ahead, and you can also ask for a KultureCity sensory bag at the front desk any day."
+    "cost": "Free during Sensory Inclusive sessions with online pre-registration",
+    "hours": "Sensory Inclusive sessions on Sunday mornings and Monday afternoons, two hours each — confirm times with the museum",
+    "lastVerified": "2026-10-28",
+    "sourceUrl": "https://www.visitutah.com/articles/a-sensory-friendly-and-adaptive-survival-guide-to",
+    "parentTip": "The sensory sessions are free but need online pre-registration, so book before you go — and call ahead to confirm the current session times."
   },
   {
     "id": "hogle-zoo-salt-lake-city",
@@ -2772,17 +2772,17 @@
     "lng": -90.2917,
     "status": "documented",
     "sensoryFeatures": [
-      "KultureCity Sensory Inclusive certified",
-      "free sensory backpacks (headphones, sensory tools, feeling thermometer) at the Welcome Desks",
-      "signage marking sensory-challenge areas and quiet spaces",
-      "social story to preview the visit; free admission"
+      "KultureCity Sensory Inclusive certification (announced 2021)",
+      "signage marking areas with sensory challenges — noise, temperature, smells and sounds",
+      "quiet spaces for relaxing",
+      "free general admission"
     ],
     "ageRange": "All ages",
-    "cost": "Free admission; sensory backpacks free to borrow",
+    "cost": "Free admission",
     "hours": "See website for current hours",
-    "lastVerified": "2026-06-18",
-    "sourceUrl": "https://stlzoo.org/visit/kulturecity",
-    "parentTip": "Admission is free, so it's a low-pressure outing — pick up a sensory backpack at the North Entrance, Schnuck Family Plaza, or South Entrance Welcome Desk on arrival."
+    "lastVerified": "2026-10-28",
+    "sourceUrl": "https://stlzoo.org/news/sensory-inclusion-certification",
+    "parentTip": "Admission is free, so it's a low-pressure outing you can cut short. Look for the KultureCity signs that flag noisy or smelly areas, and ask at a Welcome Desk whether sensory bags are currently available."
   },
   {
     "id": "saint-louis-science-center",
@@ -3142,8 +3142,8 @@
     "name": "Magical Bridge Playground — Palo Alto (Mitchell Park)",
     "category": "inclusive-playgrounds",
     "citySlug": "san-jose-ca",
-    "address": "Mitchell Park, 600 E Meadow Dr, Palo Alto, CA 94306",
-    "website": "https://www.magicalbridge.org/paloalto-playground",
+    "address": "Mitchell Park, 3700 Middlefield Rd, Palo Alto, CA 94303",
+    "website": "https://www.magicalbridge.org/paloalto",
     "phone": "",
     "lat": 37.4258,
     "lng": -122.109,
@@ -3156,9 +3156,9 @@
     ],
     "ageRange": "All ages & abilities",
     "cost": "Free",
-    "hours": "Open daily, sunrise to sunset",
-    "lastVerified": "2026-06-18",
-    "sourceUrl": "https://www.magicalbridge.org/paloalto-playground",
+    "hours": "Open daily, dawn to dusk",
+    "lastVerified": "2026-10-28",
+    "sourceUrl": "https://www.magicalbridge.org/paloalto",
     "parentTip": "It's in Mitchell Park near the library — the Retreat Huts are the spot to know about, a quiet refuge right on the playground if the sensory mix gets to be too much."
   },
   {
@@ -3167,7 +3167,7 @@
     "category": "inclusive-playgrounds",
     "citySlug": "san-jose-ca",
     "address": "Fair Oaks Park, 540 N Fair Oaks Ave, Sunnyvale, CA 94085",
-    "website": "https://www.magicalbridge.org/sunnyvale-playground",
+    "website": "https://www.magicalbridge.org/sunnyvale",
     "phone": "408-730-7350",
     "lat": 37.3829,
     "lng": -122.0246,
@@ -3181,8 +3181,8 @@
     "ageRange": "All ages & abilities",
     "cost": "Free",
     "hours": "Open daily — see City of Sunnyvale for park hours",
-    "lastVerified": "2026-06-18",
-    "sourceUrl": "https://www.magicalbridge.org/sunnyvale-playground",
+    "lastVerified": "2026-10-28",
+    "sourceUrl": "https://www.magicalbridge.org/sunnyvale",
     "parentTip": "Set your map to King's Academy in Sunnyvale for the closest parking, then walk down to the playground in Fair Oaks Park near the basketball courts."
   },
   {
@@ -8111,27 +8111,27 @@
   },
   {
     "id": "aberdeen-science-centre",
-    "name": "Aberdeen Science Centre — Relaxed Sessions",
+    "name": "Aberdeen Science Centre — Sensory Space & Sensory Box",
     "category": "sensory-friendly-museums",
     "citySlug": "aberdeen-uk",
     "address": "179 Constitution St, Aberdeen AB24 5TU",
-    "website": "https://aberdeensciencecentre.org/relaxedsessions-aberdeensciencecentre/",
+    "website": "https://www.aberdeensciencecentre.org/visit/accessibility",
     "phone": "",
     "lat": 57.149,
     "lng": -2.079,
     "status": "documented",
     "sensoryFeatures": [
-      "relaxed sessions with volume, lighting and noise levels adjusted",
-      "calm Sensory Space (dark dens, sensory toys, ear defenders)",
-      "Sensory Box to borrow at reception; visual story guide",
-      "free carer tickets (with proof of eligibility)"
+      "calm Sensory Space with dark dens, a weighted lap buddy, sensory fidgets and ear defenders",
+      "Sensory Box of fiddle toys and ear defenders to borrow from reception",
+      "visual story with photos of the building and what to expect",
+      "free carer tickets with proof of eligibility (from reception)"
     ],
     "ageRange": "All ages",
     "cost": "Standard admission; free carer ticket",
     "hours": "See website for current hours",
     "schedule": "Relaxed sessions on select dates; Sensory Space available during opening hours",
-    "lastVerified": "2026-06-22",
-    "sourceUrl": "https://aberdeensciencecentre.org/relaxedsessions-aberdeensciencecentre/",
+    "lastVerified": "2026-10-28",
+    "sourceUrl": "https://www.aberdeensciencecentre.org/visit/accessibility",
     "parentTip": "Borrow the Sensory Box at reception and use the calm Sensory Space when the hands-on exhibits get busy — read the visual story together before you go."
   },
   {
@@ -8809,7 +8809,7 @@
     "category": "sensory-friendly-museums",
     "citySlug": "ottawa-on",
     "address": "1867 St Laurent Blvd, Ottawa, ON K1G 5A3, Canada",
-    "website": "https://ingenium.ca/scitech/en/events/mellow-mornings/",
+    "website": "https://ingenium.ca/scitech/en/",
     "phone": "",
     "lat": 45.4035,
     "lng": -75.6175,
@@ -9813,7 +9813,7 @@
     "category": "sensory-friendly-theater",
     "citySlug": "atlanta-ga",
     "address": "1404 Spring St NW, Atlanta, GA 30309",
-    "website": "https://puppet.org/visit/asd-sensory-friendly-sundays/",
+    "website": "https://www.puppet.org/accessibility/sensory-friendly-sundays/",
     "phone": "",
     "lat": 33.7896,
     "lng": -84.387,
@@ -9829,7 +9829,7 @@
     "cost": "Ticketed; see website",
     "hours": "See website for Sensory-Friendly Sunday dates",
     "lastVerified": "2026-07-06",
-    "sourceUrl": "https://puppet.org/visit/asd-sensory-friendly-sundays/",
+    "sourceUrl": "https://www.puppet.org/accessibility/sensory-friendly-sundays/",
     "parentTip": "Book a Sensory-Friendly Sunday show — house lights stay up and sound is dialed back, and the hands-on puppet-building workshop afterward is a calm way to wind down."
   },
   {
@@ -13219,42 +13219,8 @@
       "planetarium + galleries at a calm pace on access days"
     ],
     "cost": "Access for All days free; standard admission otherwise",
-    "sourceUrl": "https://www.peoriariverfrontmuseum.org/plan-your-visit/access-for-all-days-every-second-sunday/access-for-all-with-the-autism-collective-july-2024",
+    "sourceUrl": "https://www.peoriariverfrontmuseum.org/events/access-all-days",
     "parentTip": "The second-Sunday Access for All afternoons are free — pair one with the noon sensory movie upstairs and you have a full, calm museum day at zero cost."
-  },
-  {
-    "phone": "",
-    "status": "documented",
-    "ageRange": "All ages",
-    "hours": "See website for current hours",
-    "lastVerified": "2026-07-15",
-    "id": "peoria-riverfront-kids-pix",
-    "name": "Peoria Riverfront Museum — Sensory Friendly Kids Pix (Giant Screen)",
-    "category": "sensory-friendly-movies",
-    "citySlug": "peoria-il",
-    "address": "222 SW Washington St, Peoria, IL 61602",
-    "website": "https://www.peoriariverfrontmuseum.org/giant-screen-theater/sensory-friendly-kids-pix",
-    "lat": 40.687,
-    "lng": -89.594,
-    "recurrence": [
-      {
-        "weekday": "Sunday",
-        "weeks": [
-          1
-        ],
-        "note": "noon — sensory-friendly giant-screen film"
-      }
-    ],
-    "schedule": "Sensory-friendly Kids Pix film at noon on the first Sunday of every month",
-    "sensoryFeatures": [
-      "giant-screen theater with lights up and sound lowered",
-      "move around, talk, and take breaks freely",
-      "run with OSF Autism Pathways & The Autism Collective",
-      "a local, museum-quality alternative to chain sensory screenings"
-    ],
-    "cost": "See website for Kids Pix tickets",
-    "sourceUrl": "https://www.peoriariverfrontmuseum.org/giant-screen-theater/sensory-friendly-kids-pix",
-    "parentTip": "This is one of the few sensory screenings on a giant museum screen anywhere — first Sunday at noon, and the museum galleries make a calm before-or-after add-on."
   },
   {
     "phone": "",
@@ -13313,7 +13279,8 @@
     ],
     "cost": "See park for sensory-hour pricing",
     "sourceUrl": "https://www.visitpensacola.com/blog/sensory-friendly-pensacola-attractions-and-activities-for-kids/",
-    "parentTip": "Grippy socks required as at all trampoline parks — arrive at the start of the sensory window before the session fills up."
+    "parentTip": "Grippy socks required as at all trampoline parks — arrive at the start of the sensory window before the session fills up.",
+    "supersedesProgram": "sky-zone-sensory-hours"
   },
   {
     "phone": "",
