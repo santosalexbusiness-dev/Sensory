@@ -7635,18 +7635,18 @@
     "lng": -1.546,
     "status": "documented",
     "sensoryFeatures": [
-      "pop-up sensory room for families with SEND, neurodiversity, autism and/or anxiety",
-      "dark tents, light-up toys, squishy floor tiles, dens and a bubble tube",
-      "come and go freely, no need to queue",
-      "sensory map and easy-read visual guide; 'Give What You Can' pricing"
+      "pop-up sensory room once every school holiday, for families with additional needs",
+      "bubble tube, dark tents and tactile toys",
+      "tickets capped so the room never gets overwhelming — booking essential",
+      "visual story and visual access guide to preview the visit"
     ],
     "ageRange": "Families (SEND/neurodivergent)",
-    "cost": "Free general admission; sensory room 'Give What You Can'",
-    "hours": "See website for current hours",
+    "cost": "Free general admission; free ticket required for the sensory room (limited numbers)",
+    "hours": "Pop-up sensory room once every school holiday — book a free ticket via the museum's What's On page",
     "schedule": "Pop-up sensory room on select dates (check the what's-on)",
-    "lastVerified": "2026-06-22",
-    "sourceUrl": "https://museumsandgalleries.leeds.gov.uk/whats-on/sensory-room-for-send-families-1dlr",
-    "parentTip": "Book the pop-up sensory room session and download the sensory map first — you can drop into the sensory room whenever your child needs to regulate, no queue."
+    "lastVerified": "2026-10-28",
+    "sourceUrl": "https://museumsandgalleries.leeds.gov.uk/access-at-leeds-city-museum-6qcb",
+    "parentTip": "The sensory room only runs once each school holiday and tickets are capped, so book the free ticket as soon as the date appears on What's On — and read the visual story together beforehand."
   },
   {
     "id": "royal-armouries-leeds",
