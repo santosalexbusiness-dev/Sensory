@@ -355,6 +355,7 @@
     "id": "village-cinemas-au",
     "name": "Village Cinemas Sensory Friendly Films",
     "operator": "Village Cinemas",
+    "country": "AU",
     "category": "sensory-friendly-movies",
     "availableIn": [
       "melbourne-vic"
@@ -397,6 +398,7 @@
     "id": "landmark-ca",
     "name": "Landmark Cinemas Sensory Friendly Films",
     "operator": "Landmark Cinemas",
+    "country": "CA",
     "category": "sensory-friendly-movies",
     "availableIn": [
       "vancouver-bc",
