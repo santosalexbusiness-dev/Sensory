@@ -35,6 +35,25 @@ export function hasIndexableLocalContent(listings) {
 }
 
 /**
+ * A category index only presents itself as a directory — in navigation, on the
+ * homepage, in the sitemap, and as ad inventory — once it holds this many
+ * complete local listings. Below it, the page is an empty directory ("0 listings
+ * in 0 cities") wrapped around chain-program references, which is the "page
+ * with little to no content" AdSense names. Such pages stay reachable but are
+ * noindex and ad-free until research fills them.
+ */
+export const MIN_CATEGORY_COMPLETE_LISTINGS = 10;
+
+/**
+ * @param {string} categorySlug
+ * @param {any[]} listings
+ */
+export function isEstablishedCategory(categorySlug, listings) {
+  const complete = listings.filter((l) => l.category === categorySlug && isCompleteLocalListing(l));
+  return new Set(complete.map((l) => l.id)).size >= MIN_CATEGORY_COMPLETE_LISTINGS;
+}
+
+/**
  * Reconstruct the old routes only, to preserve existing links during migration.
  * Program availability is deliberately never converted into venue records.
  * @param {any[]} cities

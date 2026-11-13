@@ -85,6 +85,11 @@ const jsonLd = [
       countries.map((group) => {
         const avail = group.cities.filter((c) => c.qualifies);
         if (avail.length === 0) return null;
+        // Full guides get cards; smaller city pages (not yet enough complete
+        // listings to be indexed) stay reachable but are listed compactly, with
+        // their count, so a visitor knows what to expect before clicking.
+        const guides = avail.filter((c) => c.indexable);
+        const smaller = avail.filter((c) => !c.indexable);
         return (
           <section id={countrySlug(group.country)} class="mt-12 scroll-mt-24">
             <h2 class="flex items-center gap-2 text-2xl font-bold text-ink">
@@ -95,9 +100,9 @@ const jsonLd = [
               </span>
             </h2>
 
-            {avail.length > 0 && (
+            {guides.length > 0 && (
               <ul class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {avail.map((c) => (
+                {guides.map((c) => (
                   <li>
                     <a
                       href={cityHubPath(c.city)}
@@ -115,6 +120,25 @@ const jsonLd = [
               </ul>
             )}
 
+            {smaller.length > 0 && (
+              <div class="mt-6">
+                <h3 class="text-sm font-semibold text-ink">
+                  {guides.length > 0 ? 'More cities, with fewer listings so far' : 'Cities with a few listings so far'}
+                </h3>
+                <ul class="mt-2 flex flex-wrap gap-2">
+                  {smaller.map((c) => (
+                    <li>
+                      <a
+                        href={cityHubPath(c.city)}
+                        class="inline-block rounded-full border border-line bg-surface px-3 py-1 text-sm text-muted transition-colors hover:border-brand hover:text-brand-strong"
+                      >
+                        {c.city.city}, {c.city.stateAbbr} ({c.count})
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </section>
         );
       })

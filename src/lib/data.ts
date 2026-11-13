@@ -16,7 +16,12 @@ import listingsData from '../data/listings.json';
 import categoriesData from '../data/categories.json';
 import programsData from '../data/programs.json';
 import { MIN_LISTINGS_PER_CITY } from '../site.config';
-import { hasIndexableLocalContent, isSourcedLocalListing, legacyDirectoryPaths } from './content-policy.mjs';
+import {
+  hasIndexableLocalContent,
+  isEstablishedCategory,
+  isSourcedLocalListing,
+  legacyDirectoryPaths,
+} from './content-policy.mjs';
 
 export { MIN_LISTINGS_PER_CITY };
 export { hasIndexableLocalContent } from './content-policy.mjs';
@@ -147,6 +152,19 @@ export function getProgramsForCategory(categorySlug: string): ProgramDef[] {
 export function getCity(slug: string): City | undefined {
   return cities.find((c) => c.slug === slug);
 }
+
+/** True when a category has enough local research to present as a directory. */
+export function isCategoryEstablished(categorySlug: string): boolean {
+  return isEstablishedCategory(categorySlug, rawListings);
+}
+
+/**
+ * Categories shown in navigation, on the homepage and in the sitemap. The rest
+ * keep working URLs but stay out of sight until they hold real local content.
+ */
+export const establishedCategories: Category[] = categories.filter((c) =>
+  isCategoryEstablished(c.slug),
+);
 
 /** Look up a single category by slug. */
 export function getCategory(slug: string): Category | undefined {
@@ -404,15 +422,23 @@ export function getNearbyCitiesForCategory(
 export interface CityCount {
   city: City;
   count: number;
+  /** The hub page exists (at least one sourced local listing). */
   qualifies: boolean;
+  /** The hub has enough complete local listings to be a full, indexed guide. */
+  indexable: boolean;
 }
 
 /** Every city with its listing count + whether its hub qualifies (for /cities/). */
 export function getAllCitiesWithCounts(): CityCount[] {
   return cities
     .map((city) => {
-      const count = getCityListings(city.slug).length;
-      return { city, count, qualifies: cityHubQualifies(city.slug) };
+      const cityListings = getCityListings(city.slug);
+      return {
+        city,
+        count: cityListings.length,
+        qualifies: cityHubQualifies(city.slug),
+        indexable: hasIndexableLocalContent(cityListings),
+      };
     })
     .sort((a, b) => a.city.city.localeCompare(b.city.city));
 }

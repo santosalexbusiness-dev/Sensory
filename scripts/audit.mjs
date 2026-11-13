@@ -16,7 +16,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { hasIndexableLocalContent, isSourcedLocalListing, isCompleteLocalListing, legacyDirectoryPaths } from '../src/lib/content-policy.mjs';
+import { hasIndexableLocalContent, isSourcedLocalListing, isCompleteLocalListing, isEstablishedCategory, legacyDirectoryPaths } from '../src/lib/content-policy.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.join(ROOT, 'dist');
@@ -309,6 +309,19 @@ for (const file of htmlFiles) {
       F(`${u}: sparse local page must be noindex`);
     if (/Participating [^<]* locations in /i.test(html))
       F(`${u}: generated national-program city listings remain in the page`);
+  }
+
+  // Category index pages: same depth rule as their robots tag and sitemap entry.
+  if (!localSlug && catSlugs.has(section) &&
+    !isEstablishedCategory(section, listings) && !noindexPages.has(u))
+    F(`${u}: category without enough local listings must be noindex`);
+
+  // AdSense names "pages with little to no content" and unfinished sites. An
+  // indexed page announcing that it has nothing yet is exactly that.
+  if (indexablePages.has(u)) {
+    const main = html.slice(html.indexOf('<main'), html.indexOf('</main>'));
+    const empty = main.match(/we have no [^<.]{0,80}\byet\b|coming soon|under construction|being set up/i);
+    if (empty) F(`${u}: indexed page shows empty/unfinished state ("${empty[0].slice(0, 60)}")`);
   }
 
   const h1s = html.match(/<h1[\s>]/g) || [];

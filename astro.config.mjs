@@ -2,7 +2,11 @@
 import fs from 'node:fs';
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { hasIndexableLocalContent, isSourcedLocalListing } from './src/lib/content-policy.mjs';
+import {
+  hasIndexableLocalContent,
+  isEstablishedCategory,
+  isSourcedLocalListing,
+} from './src/lib/content-policy.mjs';
 
 // Pages and sitemap share one editorial policy. National programs never count
 // as local venues, and sparse retained pages remain outside the sitemap.
@@ -21,6 +25,8 @@ const categorySlugs = new Set(
 function hasOriginalContent(pathname) {
   const parts = pathname.split('/').filter(Boolean);
   if (['/search/', '/404.html', '/google832ac6a0b63ad660.html'].includes(pathname)) return false;
+  // Category index: same rule as its robots tag (see isEstablishedCategory).
+  if (parts.length === 1 && categorySlugs.has(parts[0])) return isEstablishedCategory(parts[0], localListings);
   if (parts.length !== 2) return true;
   const [first, second] = parts;
   if (first === 'cities') return hasIndexableLocalContent(localListings.filter((l) => l.citySlug === second));

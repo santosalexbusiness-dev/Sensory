@@ -6,6 +6,7 @@ import {
   categories,
   getCitiesWithCategory,
   getProgramsForCategory,
+  isCategoryEstablished,
   type Category,
 } from '../../lib/data';
 import {
@@ -76,6 +77,7 @@ const jsonLd = [
   title={formatTitle(title)}
   description={description}
   canonicalPath={path}
+  noindex={!isCategoryEstablished(category.slug)}
   jsonLd={jsonLd}
 >
   <div class="mx-auto max-w-5xl px-4 py-8 sm:px-6">
@@ -153,6 +155,9 @@ const jsonLd = [
       }
     </section>
 
+    {/* Only render the references section when there is something in it; an
+        empty "we have none yet" notice reads as an unfinished page. */}
+    {nationalPrograms.length > 0 && (
     <section id="programs" aria-labelledby="programs-heading" class="mt-14 scroll-mt-24">
       <h2 id="programs-heading" class="text-2xl font-bold text-ink">
         National and multi-location program references
@@ -162,7 +167,6 @@ const jsonLd = [
         location finder or schedule to confirm a specific venue before traveling.
         These references are listed once here and are separate from local venue counts.
       </p>
-      {nationalPrograms.length > 0 ? (
         <div class="mt-6 grid gap-5 sm:grid-cols-2">
           {nationalPrograms.map((program) => (
             <article id={program.id} class="rounded-card border border-line bg-surface p-5">
@@ -187,10 +191,8 @@ const jsonLd = [
             </article>
           ))}
         </div>
-      ) : (
-        <p class="mt-4 text-muted">We have no national program references for this category yet.</p>
-      )}
     </section>
+    )}
 
     <section class="mt-14 max-w-3xl rounded-card border border-line bg-surface p-6">
       <h2 class="text-2xl font-bold text-ink">Questions to ask before you book</h2>

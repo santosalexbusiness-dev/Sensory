@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroArt from '../components/HeroArt.astro';
 import {
-  categories,
+  establishedCategories,
   getAllCitiesWithCounts,
   getCategoryReach,
   getCitiesByCountry,
@@ -12,7 +12,9 @@ import { itemListSchema, websiteSchema } from '../lib/seo';
 import { SITE } from '../site.config';
 
 const site = Astro.site;
-const cats = categories.map((category) => ({
+// Only categories with real local depth are offered as directories here; the
+// rest keep working URLs but would show visitors an empty "0 listings" card.
+const cats = establishedCategories.map((category) => ({
   category,
   stats: getCategoryReach(category.slug),
 }));
@@ -31,12 +33,13 @@ const pickerCountries = getCitiesByCountry()
   }))
   .filter((g) => g.cities.length > 0);
 
-// One pill per US state (its most-listed city) plus every other US metro in
-// the overall top 25 — all 50 states + DC end up one click from the homepage,
-// and big multi-metro states keep their other major cities. Sorted by state
-// so visitors can scan straight to theirs.
+// One pill per state that has a full guide (its most-listed city) plus every
+// other full-guide US metro in the overall top 25. Sorted by state so visitors
+// can scan straight to theirs.
+// Full guides only: the copy below promises "cities where we have researched
+// specific venues", so a one-listing page would break that promise.
 const usCities = getAllCitiesWithCounts()
-  .filter((c) => c.qualifies && (c.city.countryCode ?? 'US') === 'US')
+  .filter((c) => c.indexable && (c.city.countryCode ?? 'US') === 'US')
   .sort((a, b) => b.count - a.count);
 const topPerState = new Map<string, (typeof usCities)[number]>();
 for (const c of usCities) {
@@ -51,7 +54,7 @@ const jsonLd = [
   websiteSchema(site),
   itemListSchema(
     'Categories',
-    categories.map((c) => ({
+    establishedCategories.map((c) => ({
       name: c.name,
       url: absoluteUrl(categoryPath(c), site),
     })),
@@ -269,9 +272,8 @@ const howItWorks = [
     <div class="mx-auto max-w-5xl px-4 py-14 sm:px-6">
       <h2 class="text-2xl font-bold text-ink">Browse by category</h2>
       <p class="mt-2 max-w-2xl text-muted">
-        New categories — museums, indoor play gyms, sensory-friendly Santa
-        events, and more — are added over time. Each links through to the cities
-        where we have listings.
+        Each category links through to the cities where we have researched,
+        source-linked venues, with the sensory details for every one.
       </p>
       <ul class="mt-8 grid gap-5 sm:grid-cols-2">
         {

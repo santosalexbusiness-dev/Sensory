@@ -1,5 +1,5 @@
 ---
-import { categories } from '../lib/data';
+import { establishedCategories } from '../lib/data';
 import { categoryPath } from '../lib/utils';
 import { SITE } from '../site.config';
 
@@ -20,7 +20,7 @@ const year = new Date().getFullYear();
         <p class="text-sm font-semibold text-ink">Browse</p>
         <ul class="mt-3 space-y-2 text-sm">
           {
-            categories.map((c) => (
+            establishedCategories.map((c) => (
               <li>
                 <a
                   class="text-muted hover:text-brand-strong"
